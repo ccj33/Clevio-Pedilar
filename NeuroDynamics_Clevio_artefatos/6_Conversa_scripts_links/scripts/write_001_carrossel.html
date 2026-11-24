@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cx-light:#E3EFEC; --cx-medium:#A9CCC4; --cx-primary:#00594F; --cx-dark:#00352F; --synapse:#CEDC00;
+    --sulco:#0B1210; --ink:#0B1210; --muted:#4F5B57;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#222;font-family:'Instrument Sans',Arial,sans-serif}
+  .s{width:1080px;height:1350px;position:relative;overflow:hidden;padding:96px 90px;display:flex;flex-direction:column}
+  .dark{background:radial-gradient(900px 700px at 0% 0%,rgba(0,89,79,.55),transparent 60%),radial-gradient(700px 600px at 100% 100%,rgba(206,220,0,.10),transparent 60%),#050807;color:#F4F7F6}
+  .dark::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:54px 54px;pointer-events:none}
+  .light{background:var(--cx-light);color:var(--cx-dark)}
+  .top{display:flex;justify-content:space-between;align-items:center;position:relative}
+  .tag{font-family:'Instrument Sans';font-weight:700;font-size:24px;letter-spacing:5px;text-transform:uppercase;display:flex;align-items:center;gap:16px}
+  .tag i{width:16px;height:16px;display:block}
+  .dark .tag{color:#C9D6D2} .dark .tag i{background:var(--synapse)}
+  .light .tag{color:var(--cx-primary)} .light .tag i{background:var(--cx-primary)}
+  .nd{height:44px}
+  h1,h2{font-family:'Archivo',Arial,sans-serif;font-weight:700;letter-spacing:-2.5px;line-height:1.02}
+  h1{font-size:104px} h2{font-size:84px}
+  .lead{font-size:36px;line-height:1.38}
+  .dark .lead{color:#AFC4BE} .light .lead{color:var(--cx-primary)}
+  .grow{flex:1}
+  .rule{height:2px;margin:48px 0 36px}
+  .dark .rule{background:rgba(255,255,255,.12)} .light .rule{background:rgba(0,53,47,.15)}
+  .foot{display:flex;justify-content:space-between;align-items:center;position:relative}
+  .apoio{display:flex;align-items:center;gap:18px;background:#fff;border-radius:999px;padding:14px 30px 14px 30px}
+  .apoio span{font-weight:600;font-size:22px;letter-spacing:3px;text-transform:uppercase;color:#4F5B57}
+  .apoio img{height:58px;display:block}
+  .pg{font-size:24px;font-weight:600;letter-spacing:2px}
+  .dark .pg{color:#7E928C} .light .pg{color:var(--cx-primary)}
+  .stats{display:flex;flex-direction:column;gap:0}
+  .stat{display:flex;align-items:baseline;gap:40px;padding:34px 0;border-top:2px solid rgba(0,53,47,.15)}
+  .stat:last-child{border-bottom:2px solid rgba(0,53,47,.15)}
+  .stat b{font-family:'Archivo';font-weight:800;font-size:128px;letter-spacing:-5px;line-height:.9;width:330px;color:var(--cx-dark)}
+  .stat p{font-size:36px;line-height:1.3;color:var(--cx-primary)}
+  .steps{display:flex;flex-direction:column;gap:22px}
+  .step{display:flex;gap:32px;align-items:center;background:#fff;border-radius:28px;padding:34px 40px}
+  .step b{font-family:'Archivo';font-weight:800;font-size:56px;color:var(--cx-primary);width:60px}
+  .step p{font-size:34px;line-height:1.3;color:var(--sulco)}
+  .ph{border:3px dashed rgba(206,220,0,.7);border-radius:28px;padding:36px 40px;color:#E8F0A0;font-size:34px;line-height:1.35}
+  .photo{position:absolute;left:0;top:0;width:1080px;height:800px;background:#C9DDD8;display:flex;align-items:center;justify-content:center;color:#3B5A54;font-size:30px;letter-spacing:1px}
+  .card{background:#fff;border-radius:32px;padding:56px;display:flex;flex-direction:column;gap:30px;color:var(--sulco)}
+  .card img{width:420px}
+  .card p{font-size:32px;line-height:1.4;color:#33403C}
+</style>
+</head>
+<body>
+
+<!-- 01 capa -->
+<section class="s dark" id="s1">
+  <div class="top"><img class="nd" src="nd-white.png" alt="NeuroDynamics"><div class="tag"><i></i>MIT Hacking Medicine</div></div>
+  <div class="grow"></div>
+  <h1 style="position:relative">Dois dias para criar uma solução em oncologia.</h1>
+  <p class="lead" style="margin-top:36px;position:relative">A NeuroDynamics esteve no MIT Hacking Medicine Brasil 2026, no Einstein, em São Paulo.</p>
+  <div class="rule"></div>
+  <div class="foot">
+    <div><p style="font-family:'Archivo';font-weight:700;font-size:34px">31 de outubro e 1º de novembro</p><p style="font-size:28px;color:#AFC4BE;margin-top:10px">São Paulo</p></div>
+    <div class="apoio"><span>Apoio</span><img src="pedilar.png" alt="PediLar"></div>
+  </div>
+</section>
+
+<!-- 02 o evento -->
+<section class="s light" id="s2">
+  <div class="top"><div class="tag"><i></i>O evento</div><div class="pg">02</div></div>
+  <div class="grow"></div>
+  <h2>Um hackathon de saúde nascido no MIT.</h2>
+  <p class="lead" style="margin-top:40px;color:var(--sulco)">O MIT Hacking Medicine reúne profissionais de saúde, engenheiros, designers e empreendedores para resolver problemas reais da saúde em poucos dias.</p>
+  <p class="lead" style="margin-top:28px">Em 2026, a edição brasileira aconteceu no Hospital Israelita Albert Einstein, com duas trilhas: Longevidade e Oncologia.</p>
+  <div class="rule"></div>
+  <div class="foot"><img class="nd" src="nd-black.png" alt="NeuroDynamics"><div class="apoio" style="padding:10px 24px"><span>Apoio</span><img src="pedilar.png" alt="PediLar" style="height:48px"></div></div>
+</section>
+
+<!-- 03 dimensão -->
+<section class="s light" id="s3">
+  <div class="top"><div class="tag"><i></i>A dimensão</div><div class="pg">03</div></div>
+  <h2 style="margin-top:72px">Uma metodologia testada no mundo todo.</h2>
+  <div class="grow"></div>
+  <div class="stats">
+    <div class="stat"><b>+200</b><p>edições em cerca de 30 países</p></div>
+    <div class="stat"><b>+100</b><p>startups e soluções apoiadas</p></div>
+    <div class="stat"><b>2</b><p>dias do problema à apresentação para a banca</p></div>
+  </div>
+  <div class="rule" style="background:none;margin:28px 0 20px"></div>
+  <div class="foot"><p style="font-size:22px;color:var(--cx-primary)">Fontes: Einstein e MIT Hacking Medicine</p><div class="apoio" style="padding:10px 24px"><span>Apoio</span><img src="pedilar.png" alt="PediLar" style="height:48px"></div></div>
+</section>
+
+<!-- 04 o desafio -->
+<section class="s light" id="s4">
+  <div class="top"><div class="tag"><i></i>O desafio</div><div class="pg">04</div></div>
+  <h2 style="margin-top:72px">Do problema à solução em um fim de semana.</h2>
+  <div class="grow"></div>
+  <div class="steps">
+    <div class="step"><b>1</b><p>Entender um problema real da oncologia</p></div>
+    <div class="step"><b>2</b><p>Formar um time com pessoas de áreas diferentes</p></div>
+    <div class="step"><b>3</b><p>Construir e testar a solução com mentores</p></div>
+    <div class="step"><b>4</b><p>Apresentar para a banca avaliadora</p></div>
+  </div>
+  <div class="rule" style="background:none;margin:28px 0 20px"></div>
+  <div class="foot"><img class="nd" src="nd-black.png" alt="NeuroDynamics"><div class="apoio" style="padding:10px 24px"><span>Apoio</span><img src="pedilar.png" alt="PediLar" style="height:48px"></div></div>
+</section>
+
+<!-- 05 nossa solução -->
+<section class="s dark" id="s5">
+  <div class="top"><div class="tag"><i></i>Nossa solução</div><div class="pg">05</div></div>
+  <div class="grow"></div>
+  <h2 style="position:relative;color:#F4F7F6">[Nome da solução]</h2>
+  <div style="display:flex;flex-direction:column;gap:24px;margin-top:44px;position:relative">
+    <div class="ph"><b style="color:#fff">O problema.</b> [Uma frase: a dor em oncologia que o time escolheu]</div>
+    <div class="ph"><b style="color:#fff">A proposta.</b> [Uma frase: o que a solução faz e para quem]</div>
+    <div class="ph"><b style="color:#fff">O que aprendemos.</b> [Uma frase: o principal aprendizado ou resultado]</div>
+  </div>
+  <div class="rule"></div>
+  <div class="foot"><img class="nd" src="nd-white.png" alt="NeuroDynamics"><div class="apoio" style="padding:10px 24px"><span>Apoio</span><img src="pedilar.png" alt="PediLar" style="height:48px"></div></div>
+</section>
+
+<!-- 06 a equipe (com foto) -->
+<section class="s light" id="s6" style="padding-top:0">
+  <div class="photo">Foto da equipe no evento (sem filtro)</div>
+  <div style="height:800px"></div>
+  <div class="tag" style="margin-top:56px"><i></i>A equipe</div>
+  <h2 style="font-size:64px;margin-top:22px;letter-spacing:-1.5px">Clévio, Matheus, Sarah e Pedro</h2>
+  <p style="font-size:30px;color:var(--cx-primary);margin-top:16px">Integrantes da NeuroDynamics, Escola de Engenharia da UFMG</p>
+  <div class="grow"></div>
+  <div class="foot"><img class="nd" src="nd-black.png" alt="NeuroDynamics"><div class="apoio" style="padding:10px 24px"><span>Apoio</span><img src="pedilar.png" alt="PediLar" style="height:48px"></div></div>
+</section>
+
+<!-- 07 agradecimento -->
+<section class="s dark" id="s7">
+  <div class="top"><img class="nd" src="nd-white.png" alt="NeuroDynamics"><div class="tag"><i></i>Agradecimento</div></div>
+  <div class="grow"></div>
+  <h1 style="position:relative">Obrigado, PediLar.</h1>
+  <p class="lead" style="margin-top:32px;position:relative">Pelo apoio e pela confiança no trabalho da equipe. Este é o começo de uma aproximação para compartilhar o que aprendemos e conversar sobre os projetos que desenvolvemos na UFMG.</p>
+  <div class="card" style="margin-top:56px;position:relative">
+    <img src="pedilar.png" alt="PediLar">
+    <p>Desde 1999 levando cuidado especializado para dentro de casa, em todas as fases da vida.</p>
+  </div>
+  <div class="rule"></div>
+  <div class="foot"><p style="font-size:28px;color:#AFC4BE">neurodynamics.dev</p><div class="pg">07</div></div>
+</section>
+
+</body>
+</html>

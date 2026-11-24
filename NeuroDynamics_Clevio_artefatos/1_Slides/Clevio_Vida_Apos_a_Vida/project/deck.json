@@ -1,0 +1,54 @@
+{
+  "v": 4,
+  "attachments": {},
+  "cover": "cover",
+  "createdOnFiles": {
+    "at": "2026-10-28T12:00:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "faces": {
+    "dm-sans": {
+      "family": "DM Sans",
+      "href": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400..700&display=swap"
+    },
+    "space-grotesk": {
+      "family": "Space Grotesk",
+      "href": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&display=swap"
+    }
+  },
+  "lists": "css",
+  "order": [
+    "cover",
+    "quem",
+    "ses",
+    "vav-1",
+    "vav-2",
+    "vav-3",
+    "vav-4",
+    "vav-5",
+    "vav-6",
+    "vav-7",
+    "fim"
+  ],
+  "sections": {
+    "s1": {
+      "description": "Quem é Clévio: formação, atuação em várias áreas da UFMG e ecossistema de inovação de BH.",
+      "start": "cover"
+    },
+    "s2": {
+      "description": "O trabalho na Secretaria de Estado de Saúde: saúde digital nos 853 municípios, o Radar e o curso.",
+      "start": "ses"
+    },
+    "s3": {
+      "description": "O Vida Após a Vida: história, reconhecimento, o problema e a origem da demanda.",
+      "start": "vav-1"
+    },
+    "s4": {
+      "before": null,
+      "description": "A proposta: organizar a operação e ampliar a cooperação.",
+      "start": "fim"
+    }
+  },
+  "title": "Clévio Clênio | Vida Após a Vida"
+}

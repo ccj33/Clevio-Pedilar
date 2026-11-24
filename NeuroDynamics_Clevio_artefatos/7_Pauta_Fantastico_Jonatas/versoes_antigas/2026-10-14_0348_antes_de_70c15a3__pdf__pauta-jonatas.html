@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>NeuroDynamics UFMG: pauta Jônatas</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cortex:#00352F; --axon:#00594F; --synapse:#CEDC00; --cortex-light:#E3EFEC;
+    --void:#050807; --ink-dark:#1D1D1F; --grafite:#616C68;
+    --ink:#E8EDEB; --nevoa:#9AA5A1; --medula:#F7F4EE; --medula-med:#E6DFD3;
+    --fd:'Archivo',Arial,sans-serif; --f:'Instrument Sans',Arial,sans-serif;
+  }
+  @page{size:1080px 1350px;margin:0}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#1D1D1F}
+  body{font-family:var(--f);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page{position:relative;width:1080px;height:1350px;overflow:hidden;margin:0 auto 40px;break-after:page;page-break-after:always}
+  @media print{.page{margin:0}}
+  .claro{background:var(--medula);color:var(--ink-dark)}
+  .escuro{background:var(--cortex);color:var(--ink)}
+  .void{background:var(--void);color:var(--ink)}
+  .in{position:absolute;inset:80px 80px 120px 80px;display:flex;flex-direction:column}
+  .eyebrow{font-family:var(--fd);font-weight:600;font-size:22px;letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:14px}
+  .eyebrow::before{content:'';width:12px;height:12px;background:var(--synapse);flex:none}
+  .claro .eyebrow{color:var(--axon)}
+  .claro .eyebrow::before{background:var(--axon)}
+  .escuro .eyebrow,.void .eyebrow{color:var(--nevoa)}
+  h1,h2{font-family:var(--fd);font-weight:700;letter-spacing:-.02em;line-height:1.02}
+  h2{font-size:68px;margin-top:26px}
+  .cond{font-stretch:75%}
+  .syn{color:var(--synapse)}
+  .ax{color:var(--axon)}
+  p{font-size:28px;line-height:1.5}
+  .muted{color:var(--nevoa)}
+  .grafite{color:var(--grafite)}
+  .foot{position:absolute;left:80px;right:80px;bottom:52px;display:flex;justify-content:space-between;font-family:var(--fd);font-weight:500;font-size:18px}
+  .claro .foot{color:var(--grafite)}
+  .escuro .foot,.void .foot{color:var(--nevoa)}
+  .rot{font-family:var(--fd);font-weight:600;font-size:20px;letter-spacing:.14em;text-transform:uppercase}
+  .claro .rot{color:var(--axon)}
+  .escuro .rot,.void .rot{color:var(--synapse)}
+  .cap{font-size:19px;line-height:1.45;margin-top:12px}
+  .claro .cap{color:var(--grafite)}
+  .escuro .cap,.void .cap{color:var(--nevoa)}
+  .quote{border-left:4px solid var(--synapse);padding-left:26px}
+  .claro .quote{border-left-color:var(--axon)}
+  .quote p{font-size:28px}
+  .quote .who{font-family:var(--fd);font-weight:600;font-size:19px;letter-spacing:.1em;text-transform:uppercase;margin-top:12px}
+  .shot{border-radius:24px;overflow:hidden}
+  .shot img{display:block;width:100%;height:100%;object-fit:cover}
+
+  /* capa */
+  .capa{background:var(--cortex);color:#fff}
+  .capa .foto{position:absolute;left:0;top:0;width:1080px;height:860px}
+  .capa .foto img{width:100%;height:100%;object-fit:cover;object-position:20% 50%}
+  .capa .veu{position:absolute;left:0;top:0;width:1080px;height:860px;background:linear-gradient(180deg,rgba(0,53,47,0) 45%,rgba(0,53,47,.92) 88%,#00352F 100%)}
+  .capa .txt{position:absolute;left:80px;right:80px;top:640px}
+  .capa h1{font-size:76px;font-stretch:75%;line-height:1.0;margin-top:22px}
+  .capa .sub{font-size:29px;line-height:1.45;color:var(--ink);margin-top:26px;max-width:860px}
+  .capa .base{position:absolute;left:80px;right:80px;bottom:60px;display:flex;justify-content:space-between;align-items:center}
+  .capa .base img{height:44px}
+  .capa .base span{font-family:var(--fd);font-weight:500;font-size:20px;color:var(--nevoa)}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:44px 48px;margin-top:56px}
+  .bloco .rot{margin-bottom:14px}
+  .bloco p{font-size:27px;line-height:1.48}
+
+  .steps{display:grid;grid-template-columns:1fr 1fr;gap:28px 44px;margin-top:34px}
+  .step{display:grid;grid-template-columns:54px 1fr;gap:4px 14px}
+  .step .n{font-family:var(--fd);font-weight:700;font-size:48px;line-height:1;color:var(--axon);grid-row:span 2}
+  .step .rot{font-size:19px}
+  .step p{font-size:24px;line-height:1.42}
+
+  .tl{position:relative;margin-top:44px;padding-left:44px}
+  .tl::before{content:'';position:absolute;left:7px;top:10px;bottom:10px;width:3px;background:var(--axon)}
+  .tl .it{position:relative;margin-bottom:26px}
+  .tl .it::before{content:'';position:absolute;left:-44px;top:9px;width:17px;height:17px;border-radius:50%;background:var(--axon)}
+  .tl .ano{font-family:var(--fd);font-weight:700;font-size:26px;color:var(--axon);letter-spacing:-.01em}
+  .tl p{font-size:24px;line-height:1.4}
+
+  .col h3{font-family:var(--fd);font-weight:600;font-size:20px;letter-spacing:.14em;text-transform:uppercase;color:var(--axon);margin-bottom:18px}
+  .col ul{list-style:none}
+  .col li{position:relative;padding-left:30px;font-size:24px;line-height:1.42;margin-bottom:16px}
+  .col li::before{content:'';position:absolute;left:0;top:16px;width:16px;height:3px;background:var(--axon)}
+
+  .lista{list-style:none}
+  .lista li{font-size:27px;line-height:1.45;margin-bottom:10px;padding-left:30px;position:relative}
+  .lista li::before{content:'';position:absolute;left:0;top:19px;width:16px;height:3px;background:var(--synapse)}
+  a{color:inherit;text-decoration:none}
+</style>
+</head>
+<body>
+
+<!-- 1. CAPA -->
+<section class="page capa">
+  <div class="foto"><img src="img/capa.jpg" alt=""></div>
+  <div class="veu"></div>
+  <div class="txt">
+    <div class="eyebrow" style="color:var(--ink)">NeuroDynamics, Escola de Engenharia da UFMG</div>
+    <h1>Ele não move as pernas desde os 25 anos. Na Suíça, pedalou pelo Brasil <span class="syn">com a força dos próprios músculos.</span></h1>
+    <p class="sub">A história de Jônatas Moreira e da tecnologia criada na UFMG que agora quer chegar às UTIs e ao SUS.</p>
+  </div>
+  <div class="base"><img src="img/logo-imagotipo-white.png" alt="NeuroDynamics"><span>Outubro de 2026</span></div>
+</section>
+
+<!-- 2. A PAUTA EM 30 SEGUNDOS -->
+<section class="page claro">
+  <div class="in">
+    <div class="eyebrow">Em resumo</div>
+    <h2>Quem é Jônatas, o que mudou na vida dele e o que vem agora.</h2>
+    <div class="grid2">
+      <div class="bloco"><div class="rot">Quem é</div><p>Jônatas Moreira perdeu os movimentos e a sensibilidade do peito para baixo depois de um acidente de moto, aos 25 anos. A lesão na medula é completa.</p></div>
+      <div class="bloco"><div class="rot">O que mudou</div><p>Com uma tecnologia da UFMG, os músculos paralisados das pernas dele voltaram a trabalhar, acionados por estímulos elétricos no ritmo da pedalada. Na Suíça, ficou em 9º lugar no mundo.</p></div>
+      <div class="bloco"><div class="rot">O que vem agora</div><p>A mesma tecnologia é estudada para pessoas que tiveram AVC, para pacientes internados em UTI e para a reabilitação no SUS.</p></div>
+      <div class="bloco"><div class="rot">O que há de novo</div><p>Em outubro de 2026, a versão sem fio do sistema, que funciona em bicicletas ergométricas comuns, recebeu menção honrosa no Congresso Brasileiro de Engenharia Biomédica.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>NeuroDynamics, iniciativa da Escola de Engenharia da UFMG</span><span>2/8</span></div>
+</section>
+
+<!-- 3. O PERSONAGEM -->
+<section class="page escuro">
+  <div class="in">
+    <div class="eyebrow">Jônatas</div>
+    <h2 class="cond" style="font-size:88px">“Nunca imaginei chegar <span class="syn">tão longe.</span>”</h2>
+    <div class="shot" style="height:430px;margin-top:36px"><img src="img/jonatas.jpg" alt="Jônatas no triciclo, com eletrodos nas pernas" style="object-position:60% 40%"></div>
+    <p style="margin-top:34px">Jônatas tinha 25 anos quando um acidente de moto lesionou sua medula, na altura da vértebra T4. Com a equipe da UFMG, passou a treinar no Centro de Treinamento Esportivo da universidade. Em março de 2024, já completava 11 voltas seguidas na pista, só com os músculos acionados pelo estímulo elétrico.</p>
+    <div class="quote" style="margin-top:30px"><p>“Foi uma grande emoção viver essa experiência. Foram quatro anos de muito preparo e superação.”</p><div class="who muted">Jônatas, depois do CYBATHLON 2024</div></div>
+  </div>
+  <div class="foot"><span>NeuroDynamics, iniciativa da Escola de Engenharia da UFMG</span><span>3/8</span></div>
+</section>
+
+<!-- 4. COMO FUNCIONA -->
+<section class="page claro">
+  <div class="in">
+    <div class="eyebrow">Como funciona</div>
+    <h2 class="cond" style="font-size:80px">Não tem motor. <span class="ax">Quem gira o pedal são os músculos dele.</span></h2>
+    <p style="margin-top:24px;font-size:26px">A lesão na medula corta o comando que vem do cérebro, mas o músculo continua capaz de se contrair. O sistema faz o papel desse comando: lê cada pedalada e dispara pulsos elétricos leves na hora certa.</p>
+    <div class="shot" style="height:430px;margin-top:30px;background:#050807"><img src="img/trike3d.jpg" alt="Simulação 3D do ciclista no triciclo com eletrodos" style="object-fit:cover;object-position:50% 45%"></div>
+    <div class="cap">Simulação ilustrativa. Em verde, o músculo estimulado naquele instante.</div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div class="rot">Sensor</div><p>Lê, em tempo real, a posição do pedal.</p></div>
+      <div class="step"><div class="n">2</div><div class="rot">Decisão</div><p>O sistema escolhe qual músculo deve contrair.</p></div>
+      <div class="step"><div class="n">3</div><div class="rot">Estímulo</div><p>Eletrodos na pele enviam pulsos elétricos leves.</p></div>
+      <div class="step"><div class="n">4</div><div class="rot">Pedalada</div><p>Os músculos contraem na ordem certa e o pedal gira.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>NeuroDynamics, iniciativa da Escola de Engenharia da UFMG</span><span>4/8</span></div>
+</section>
+
+<!-- 5. A TRAJETÓRIA -->
+<section class="page claro">
+  <div class="in">
+    <div class="eyebrow">A trajetória</div>
+    <h2>Do laboratório da UFMG à arena das “Olimpíadas Biônicas”.</h2>
+    <div style="display:grid;grid-template-columns:1fr 330px;gap:40px;margin-top:8px">
+      <div class="tl">
+        <div class="it"><div class="ano">2016</div><p>Nasce a equipe FreeWheels, parceria da UFMG com a Universidade de Brasília e a Universidade de Montpellier, na França.</p></div>
+        <div class="it"><div class="ano">Out. 2024</div><p>Treino final em Montpellier, na França.</p></div>
+        <div class="it"><div class="ano">25 out. 2024</div><p>CYBATHLON, na Suíça: 9º lugar mundial na prova de ciclismo com estimulação elétrica. O evento reuniu 67 equipes de 24 países.</p></div>
+        <div class="it"><div class="ano">Jun. 2025</div><p>Nasce a NeuroDynamics, que leva a pesquisa a novos projetos de saúde.</p></div>
+        <div class="it"><div class="ano">Abr. 2026</div><p>A pesquisa aparece no Jornal Nacional.</p></div>
+        <div class="it"><div class="ano">Out. 2026</div><p>Menção honrosa no Congresso Brasileiro de Engenharia Biomédica e seleção para os Proceedings do IEEE.</p></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:22px;padding-top:44px">
+        <div class="shot" style="height:400px"><img src="img/aviao.jpg" alt="Jônatas no avião, a caminho da prova" style="object-position:50% 35%"></div>
+        <div class="shot" style="height:400px"><img src="img/equipe.jpg" alt="Equipe com Jônatas no triciclo" style="object-position:50% 50%"></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>NeuroDynamics, iniciativa da Escola de Engenharia da UFMG</span><span>5/8</span></div>
+</section>
+
+<!-- 6. POR QUE IMPORTA -->
+<section class="page void">
+  <div class="in">
+    <div class="eyebrow">Por que isso importa</div>
+    <h2>A mesma tecnologia pode ajudar quem passa dias imóvel numa UTI.</h2>
+    <div class="shot" style="height:400px;margin-top:34px;border:1px solid rgba(232,237,235,.08)"><img src="img/uti3d.jpg" alt="Simulação 3D de paciente deitado pedalando com estímulo elétrico" style="object-position:50% 50%"></div>
+    <div class="cap">Simulação ilustrativa de um projeto em fase de pesquisa: pedalada com estímulo elétrico em paciente deitado.</div>
+    <div style="display:grid;grid-template-columns:420px 1fr;gap:36px;margin-top:34px;align-items:start">
+      <div>
+        <div style="font-family:var(--fd);font-weight:700;font-size:150px;line-height:.9;letter-spacing:-.03em;color:var(--synapse)">17,7%</div>
+        <div class="cap" style="margin-top:16px">Puthucheary et al., JAMA, 2013.</div>
+      </div>
+      <p style="font-size:26px">foi quanto o principal músculo da coxa de pacientes críticos encolheu, em média, em 10 dias de UTI. Sedados, eles não conseguem se exercitar. A pedalada com estímulo elétrico é estudada para manter esses músculos trabalhando.</p>
+    </div>
+    <div class="quote" style="margin-top:34px"><p>“Eu vejo que esse projeto pode estar beneficiando outras pessoas com mobilidade reduzida como eu.”</p><div class="who muted">Jônatas, em março de 2024</div></div>
+  </div>
+  <div class="foot"><span>NeuroDynamics, iniciativa da Escola de Engenharia da UFMG</span><span>6/8</span></div>
+</section>
+
+<!-- 7. PARA A REPORTAGEM -->
+<section class="page claro">
+  <div class="in">
+    <div class="eyebrow">Bastidores</div>
+    <h2>Boa parte dessa história nunca foi mostrada.</h2>
+    <div class="shot" style="height:330px;margin-top:34px"><img src="img/telao.jpg" alt="Telão da arena com o nome Moreira e a bandeira do Brasil" style="object-position:30% 30%"></div>
+    <div class="cap">O nome de Jônatas no telão da arena, durante a prova na Suíça.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:36px">
+      <div class="col"><h3>O que ainda não foi mostrado</h3><ul>
+        <li>A vida de Jônatas além da pedalada, e o que mudou depois da Suíça.</li>
+        <li>Os bastidores: o treino final na França e o dia da prova, gravados pela equipe.</li>
+        <li>A versão sem fio, premiada em 2026, que transforma uma bicicleta ergométrica comum em equipamento de reabilitação.</li>
+      </ul></div>
+      <div class="col"><h3>Onde a pesquisa acontece</h3><ul>
+        <li>O Centro de Treinamento Esportivo da UFMG, onde Jônatas treina.</li>
+        <li>O LABBIO, laboratório da Escola de Engenharia onde a equipe desenvolve a tecnologia.</li>
+        <li>Registros em vídeo da preparação e da prova, e animações 3D de como o sistema funciona.</li>
+      </ul></div>
+    </div>
+    <p class="grafite" style="font-size:20px;margin-top:auto">Parte desta história foi ao ar no Jornal Nacional em 27 de abril de 2026.</p>
+  </div>
+  <div class="foot"><span>NeuroDynamics, iniciativa da Escola de Engenharia da UFMG</span><span>7/8</span></div>
+</section>
+
+<!-- 8. CONTATO -->
+<section class="page escuro">
+  <div class="in">
+    <div class="eyebrow">Contato</div>
+    <h2>Ficamos à disposição para conversar.</h2>
+    <div style="margin-top:56px">
+      <div class="rot" style="margin-bottom:18px">Quem participa</div>
+      <ul class="lista">
+        <li>Jônatas Moreira, atleta.</li>
+        <li>Prof. Henrique Martins, coordenador da pesquisa na Escola de Engenharia da UFMG.</li>
+        <li>Pesquisadores e fisioterapeutas da equipe.</li>
+      </ul>
+    </div>
+    <div style="margin-top:44px">
+      <div class="rot" style="margin-bottom:18px">Arquivo da equipe</div>
+      <p>Mais de 80 vídeos e 130 fotos de 2024, muitos em 4K, da preparação, da viagem e da prova. Animações 3D de como a tecnologia funciona.</p>
+    </div>
+    <div style="margin-top:44px">
+      <div class="rot" style="margin-bottom:18px">A história em 2 minutos</div>
+      <p><a href="https://neuroexperiencia.tech" class="syn" style="font-family:var(--fd);font-weight:600;font-size:40px">neuroexperiencia.tech</a></p>
+      <p style="margin-top:10px">Instagram: <a href="https://www.instagram.com/neurodynamics.ufmg/">@neurodynamics.ufmg</a></p>
+    </div>
+    <div style="margin-top:44px">
+      <div class="rot" style="margin-bottom:18px">Fale com a gente</div>
+      <p>Clévio Clênio, Diretor de Relações Institucionais</p>
+      <p><a href="mailto:clevio@neurodynamics.dev">clevio@neurodynamics.dev</a></p>
+      <p><a href="https://www.linkedin.com/in/clevioclenio/">linkedin.com/in/clevioclenio</a></p>
+    </div>
+  </div>
+  <div class="foot" style="align-items:center"><img src="img/logo-imagotipo-white.png" alt="NeuroDynamics" style="height:40px"><span>LABBIO, Escola de Engenharia, UFMG. Belo Horizonte, MG.</span></div>
+</section>
+
+</body>
+</html>

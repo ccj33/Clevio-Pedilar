@@ -1,0 +1,27 @@
+{
+ "v": 3,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-11-16T18:26:19Z"
+ },
+ "title": "Banner LinkedIn — Saúde Digital",
+ "launch": {
+  "view": "focused",
+  "file": "Main.dc.html"
+ },
+ "pages": [],
+ "boards": {
+  "Main.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 2056,
+   "h": 765,
+   "title": "Seu banner — fundo novo + kanji corrigido"
+  }
+ },
+ "order": [
+  "Main.dc.html"
+ ],
+ "notes": {},
+ "designSystems": []
+}

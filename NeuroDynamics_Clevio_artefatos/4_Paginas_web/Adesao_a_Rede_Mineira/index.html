@@ -1,0 +1,317 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Adesão à Rede Mineira</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: mapa do fluxo à esquerda (destaca caminhos da tela atual), celular clicável à direita, contrato técnico embaixo. */
+:root{
+  --bg:#F2F4F1; --panel:#FFFFFF; --ink:#15241F; --mute:#5B6B65; --line:#D5DCD7;
+  --gest:#0E6B50; --gest-soft:#DDF0E8; --on-gest:#FFFFFF;
+  --deleg:#2B59C3; --deleg-soft:#E0E8FA;
+  --warn:#9A5F06; --warn-soft:#FBEBCB;
+  --phone-bg:#FBFCFB; --phone-frame:#15241F; --field:#EEF2EF;
+  --f-display:'Bricolage Grotesque',system-ui,sans-serif; --f-body:'Figtree',system-ui,sans-serif; --f-mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0F1714; --panel:#17221E; --ink:#E8EFEB; --mute:#9DB0A8; --line:#2B3B35;
+  --gest:#4FCB9F; --gest-soft:#163A2E; --on-gest:#06241A; --deleg:#8FB0FF; --deleg-soft:#1B2A52;
+  --warn:#F0B24A; --warn-soft:#41310F; --phone-bg:#1B2722; --phone-frame:#0A100E; --field:#23332D; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1714; --panel:#17221E; --ink:#E8EFEB; --mute:#9DB0A8; --line:#2B3B35;
+  --gest:#4FCB9F; --gest-soft:#163A2E; --on-gest:#06241A; --deleg:#8FB0FF; --deleg-soft:#1B2A52;
+  --warn:#F0B24A; --warn-soft:#41310F; --phone-bg:#1B2722; --phone-frame:#0A100E; --field:#23332D; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5;padding-inline:20px;padding-block:28px 56px}
+.wrap{max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+header h1{font-family:var(--f-display);font-size:clamp(26px,4vw,40px);line-height:1.1;margin:0 0 8px;text-wrap:balance;letter-spacing:-.01em}
+header p{margin:0;color:var(--mute);max-width:70ch}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gest);margin-bottom:8px}
+.ideas{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.idea{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.idea b{display:block;font-family:var(--f-display);font-size:17px;margin-bottom:4px}
+.idea span{color:var(--mute);font-size:14px}
+.stage{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:24px;align-items:start}
+@media(max-width:1020px){.stage{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}
+.card h2{font-family:var(--f-display);font-size:20px;margin:0 0 4px}
+.card .sub{color:var(--mute);font-size:14px;margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--mute);margin-bottom:10px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;border:2px solid}
+.mapscroll{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--bg)}
+svg.map{display:block;min-width:760px;width:100%;height:auto}
+.node{cursor:pointer;transition:opacity .2s}
+.node rect{fill:var(--panel);stroke-width:1.6}
+.node.g rect{stroke:var(--gest)} .node.d rect{stroke:var(--deleg)} .node.e rect{stroke:var(--ink)}
+.node text{fill:var(--ink);font-family:var(--f-body)}
+.node .t{font-size:13px;font-weight:700}.node .s{font-size:10.5px;fill:var(--mute)}
+.node.sel rect{stroke-width:3;fill:var(--gest-soft)} .node.sel.d rect{fill:var(--deleg-soft)} .node.sel.e rect{fill:var(--field)}
+.node:focus-visible rect{outline:2px solid var(--ink);outline-offset:2px}
+.edge path{fill:none;stroke:var(--mute);stroke-width:1.4}
+.edge.dash path{stroke-dasharray:5 4}
+.edge text{font-size:10.5px;fill:var(--mute);font-family:var(--f-body)}
+.edge rect{fill:var(--bg)}
+.edge.on path{stroke:var(--gest);stroke-width:2.4}
+.edge.on text{fill:var(--ink);font-weight:600}
+.edge.on rect{fill:var(--gest-soft)}
+.dim{opacity:.25}
+.next{margin-top:14px;display:flex;flex-direction:column;gap:6px}
+.next h3{font-size:13px;margin:0;font-family:var(--f-mono);font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.next button{all:unset;cursor:pointer;display:flex;gap:10px;align-items:baseline;padding:8px 10px;border-radius:8px;background:var(--field);font-size:14px}
+.next button:hover,.next button:focus-visible{outline:2px solid var(--gest)}
+.next button em{font-style:normal;font-weight:600;color:var(--gest)}
+/* celular */
+.phonecol{display:flex;flex-direction:column;align-items:center;gap:10px;position:sticky;top:16px}
+@media(max-width:1020px){.phonecol{position:static}}
+.phone{width:340px;max-width:100%;height:660px;background:var(--phone-frame);border-radius:38px;padding:10px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.screen{position:relative;height:100%;background:var(--phone-bg);border-radius:29px;overflow:hidden;display:flex;flex-direction:column}
+.sb{height:26px;display:flex;justify-content:space-between;align-items:center;padding:0 22px;font-size:11px;font-weight:600;color:var(--mute);flex:none}
+.body{flex:1;overflow-y:auto;padding:6px 20px 16px;display:flex;flex-direction:column;gap:12px}
+.foot{flex:none;padding:10px 20px 18px;display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--line);background:var(--phone-bg)}
+.brand{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--gest)}
+.screen h2{font-family:var(--f-display);font-size:24px;line-height:1.15;margin:0;text-wrap:balance}
+.screen p{margin:0;color:var(--mute);font-size:14.5px}
+.back{all:unset;cursor:pointer;color:var(--mute);font-size:13px;font-weight:600}
+.btn{all:unset;box-sizing:border-box;cursor:pointer;text-align:center;padding:14px 16px;border-radius:12px;font-weight:700;font-size:15.5px;background:var(--gest);color:var(--on-gest)}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.btn.ans{background:var(--field);color:var(--ink);text-align:left;border:2px solid transparent}
+.btn.ans:hover{border-color:var(--gest)}
+.btn[aria-disabled="true"]{opacity:.4;cursor:not-allowed}
+.btn:focus-visible,.row:focus-visible,.person:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.bar{height:8px;border-radius:99px;background:var(--field);overflow:hidden}.bar i{display:block;height:100%;background:var(--gest);border-radius:99px;transition:width .3s}
+.row{all:unset;box-sizing:border-box;cursor:pointer;display:flex;gap:10px;align-items:center;justify-content:space-between;padding:11px 12px;border:1px solid var(--line);border-radius:12px;width:100%}
+.row b{font-size:14px;line-height:1.25}
+.chip{flex:none;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:99px}
+.chip.done{background:var(--gest-soft);color:var(--gest)}.chip.wait{background:var(--deleg-soft);color:var(--deleg)}.chip.pend{background:var(--warn-soft);color:var(--warn)}
+.mini{display:flex;gap:14px;margin:-4px 0 4px 12px}
+.mini button{all:unset;cursor:pointer;font-size:12px;font-weight:600;color:var(--deleg);text-decoration:underline}
+.q{font-family:var(--f-display);font-size:23px;line-height:1.2;font-weight:600;text-wrap:balance}
+.hint{background:var(--field);border-radius:10px;padding:10px 12px;font-size:13.5px}
+.person{all:unset;box-sizing:border-box;cursor:pointer;width:100%;display:flex;gap:10px;align-items:center;padding:11px 12px;border:2px solid var(--line);border-radius:12px}
+.person[aria-pressed="true"]{border-color:var(--gest);background:var(--gest-soft)}
+.person small{display:block;color:var(--mute);font-size:12.5px}
+.av{flex:none;width:34px;height:34px;border-radius:50%;background:var(--deleg-soft);color:var(--deleg);display:grid;place-items:center;font-weight:700;font-size:14px}
+input.f{all:unset;box-sizing:border-box;width:100%;padding:11px 12px;border-radius:10px;background:var(--field);font-size:14px}
+input.f:focus-visible{outline:2px solid var(--gest)}
+.bubble{background:var(--gest-soft);border-radius:14px 14px 4px 14px;padding:12px 14px;font-size:14px;color:var(--ink)}
+.bubble u{color:var(--deleg)}
+.banner{background:var(--deleg-soft);color:var(--deleg);font-size:12.5px;font-weight:600;padding:7px 12px;text-align:center}
+.big{width:64px;height:64px;border-radius:50%;background:var(--gest-soft);color:var(--gest);display:grid;place-items:center;font-size:32px;font-weight:700}
+.toast{position:absolute;left:16px;right:16px;bottom:88px;background:var(--ink);color:var(--bg);border-radius:10px;padding:10px 14px;font-size:13.5px;font-weight:600;opacity:0;transform:translateY(8px);transition:.25s;pointer-events:none}
+.toast.show{opacity:1;transform:none}
+.tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:center;font-size:12.5px;color:var(--mute)}
+.tools button{all:unset;cursor:pointer;font-weight:600;color:var(--ink);border-bottom:1.5px solid var(--gest)}
+/* fábrica */
+.fab{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.fab h3{font-size:12.5px;font-family:var(--f-mono);font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin:0 0 8px}
+.ent{display:flex;flex-wrap:wrap;gap:8px}
+.ent span{background:var(--field);border-radius:8px;padding:5px 10px;font-size:13.5px;font-weight:600}
+.ent small{font-weight:400;color:var(--mute)}
+.api{display:flex;flex-direction:column;gap:6px;font-family:var(--f-mono);font-size:12.5px}
+.api div{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.api b{flex:none;width:44px;color:var(--gest);font-weight:500}.api i{color:var(--mute);font-style:normal;font-family:var(--f-body);font-size:13px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Protótipo navegável · dados de exemplo</div>
+  <h1>Adesão à Rede Mineira de Dados e Saúde</h1>
+  <p>O gestor municipal responde o que sabe. Quando não sabe, passa a pergunta para quem sabe com um toque, sem login e sem explicação. Clique no mapa ou no celular para percorrer o fluxo.</p>
+</header>
+
+<section class="ideas" aria-label="Princípios">
+  <div class="idea"><b>Uma pergunta por tela</b><span>Linguagem do dia a dia, resposta em um toque. Nada de formulário longo.</span></div>
+  <div class="idea"><b>“Não sei” sempre tem saída</b><span>O app sugere quem costuma saber e monta a mensagem pronta.</span></div>
+  <div class="idea"><b>Quem ajuda não precisa de senha</b><span>Recebe um link, responde só as perguntas dele e o gestor é avisado.</span></div>
+</section>
+
+<section class="stage">
+  <div class="card">
+    <h2>Mapa do fluxo</h2>
+    <p class="sub">A tela atual fica marcada e só os caminhos que saem dela ficam em destaque. Clique numa tela para abri-la no celular.</p>
+    <div class="legend">
+      <span><i style="border-color:var(--gest)"></i>Gestor municipal</span>
+      <span><i style="border-color:var(--deleg)"></i>Outra pessoa da prefeitura (por link)</span>
+      <span><i style="border-color:var(--ink)"></i>Resultado final</span>
+      <span>Linha tracejada: acontece fora do app do gestor</span>
+    </div>
+    <div class="mapscroll"><svg class="map" id="map" viewBox="0 0 880 420" role="group" aria-label="Mapa de telas"></svg></div>
+    <div class="next" id="next"></div>
+  </div>
+
+  <div class="phonecol">
+    <div class="phone"><div class="screen" id="screen"></div></div>
+    <div class="tools"><span>Município exemplo · gestora Maria</span><button id="reset">Recomeçar</button></div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>O que a fábrica de software precisa construir</h2>
+  <p class="sub">Proposta inicial, tirada direto das telas. Serve de ponto de partida para a conversa técnica.</p>
+  <div class="fab">
+    <div><h3>Entidades</h3><div class="ent">
+      <span>Município</span><span>Usuário <small>gestor</small></span><span>Área <small>7 eixos</small></span>
+      <span>Pergunta</span><span>Resposta <small>quem, quando</small></span><span>Delegação <small>link, prazo, status</small></span><span>Aviso</span></div></div>
+    <div><h3>Chamadas de API</h3><div class="api">
+      <div><b>GET</b>/municipios/:id/areas <i>painel com status de cada área</i></div>
+      <div><b>POST</b>/respostas <i>gestor responde</i></div>
+      <div><b>POST</b>/delegacoes <i>gera o link e a mensagem</i></div>
+      <div><b>GET</b>/delegacoes/:token <i>abre sem login</i></div>
+      <div><b>POST</b>/delegacoes/:token/respostas</div>
+      <div><b>POST</b>/delegacoes/:token/repassar <i>“também não sei”</i></div>
+      <div><b>POST</b>/municipios/:id/perfil <i>publica o perfil</i></div>
+    </div></div>
+  </div>
+</section>
+</div>
+
+<script>
+const W=130,H=58;
+const NODES={
+ welcome:{x:10,y:40,k:'g',t:'Boas-vindas',s:'Primeiro login do gestor'},
+ hub:{x:250,y:40,k:'g',t:'Painel das áreas',s:'Status de cada área'},
+ question:{x:490,y:40,k:'g',t:'Pergunta',s:'Uma por tela'},
+ who:{x:730,y:40,k:'g',t:'Quem sabe?',s:'Escolhe a pessoa'},
+ review:{x:10,y:170,k:'g',t:'Conferir',s:'Mostra o que falta'},
+ sent:{x:490,y:170,k:'g',t:'Pedido pronto',s:'Mensagem para WhatsApp'},
+ done:{x:10,y:320,k:'e',t:'Perfil disponível',s:'Rede vê o município'},
+ delegateDone:{x:250,y:320,k:'d',t:'Obrigado',s:'Gestor é avisado'},
+ delegate:{x:490,y:320,k:'d',t:'Link da pessoa',s:'Sem senha'}
+};
+const EDGES=[
+ {f:'welcome',t:'hub',l:'Começar'},
+ {f:'hub',t:'question',l:'Escolhe uma área',b:30},
+ {f:'question',t:'hub',l:'Sei responder',b:30},
+ {f:'question',t:'who',l:'Não sei'},
+ {f:'who',t:'sent',l:'Enviar pedido'},
+ {f:'sent',t:'hub',l:'Voltar ao painel'},
+ {f:'sent',t:'delegate',l:'Pessoa abre o link',d:1},
+ {f:'delegate',t:'delegateDone',l:'Responde'},
+ {f:'delegate',t:'who',l:'Não sei: passar adiante',d:1,so:[50,0]},
+ {f:'delegateDone',t:'hub',l:'Gestor é avisado',d:1},
+ {f:'hub',t:'review',l:'Conferir',b:30},
+ {f:'review',t:'hub',l:'Falta uma área',b:30},
+ {f:'review',t:'done',l:'Enviar perfil'}
+];
+const AREAS=[
+ {id:1,n:'Gestão e Governança em Saúde Digital',q:'O município tem um comitê ou política de saúde digital?',quem:'Secretário(a) de Saúde',p:'Juliana Reis',r:'Secretaria de Saúde',total:4},
+ {id:2,n:'Formação e Desenvolvimento Profissional',q:'Os profissionais das unidades já fizeram algum curso de saúde digital?',quem:'Educação permanente / RH',p:'Juliana Reis',r:'Secretaria de Saúde',total:3},
+ {id:3,n:'Sistemas e Plataformas de Interoperabilidade',q:'As unidades usam algum sistema de prontuário eletrônico?',quem:'Responsável de TI',p:'Carlos Lima',r:'TI',total:5},
+ {id:4,n:'Telessaúde',q:'O município oferece teleconsulta ou telediagnóstico?',quem:'Coordenação da Atenção Primária',p:'Ana Souza',r:'Atenção Primária',total:3},
+ {id:5,n:'Infraestrutura',q:'Todas as unidades de saúde têm internet e computador?',quem:'Responsável de TI',p:'Carlos Lima',r:'TI',total:4},
+ {id:6,n:'Monitoramento, Avaliação e Disseminação',q:'Alguém acompanha os indicadores de saúde do município todo mês?',quem:'Vigilância ou Planejamento',p:'Ana Souza',r:'Atenção Primária',total:3},
+ {id:7,n:'Infraestrutura e Segurança',q:'O município tem regras para proteger os dados dos pacientes (LGPD)?',quem:'Encarregado de dados ou TI',p:'Carlos Lima',r:'TI',total:4}
+];
+const PEOPLE=[{n:'Carlos Lima',r:'TI'},{n:'Ana Souza',r:'Atenção Primária'},{n:'Juliana Reis',r:'Secretaria de Saúde'}];
+const SCREEN_LABEL={welcome:'Boas-vindas',hub:'Painel das áreas',question:'Pergunta',who:'Quem sabe?',sent:'Pedido pronto',delegate:'Link da pessoa',delegateDone:'Obrigado',review:'Conferir',done:'Perfil disponível'};
+
+let S;
+function fresh(){S={screen:'welcome',area:3,person:null,passing:false,toast:'',st:{
+ 1:{s:'done',v:'Sim',by:'Maria'},2:{s:'done',v:'Em parte',by:'Maria'},3:{s:'wait',by:'Carlos Lima'},
+ 4:{s:'pend'},5:{s:'pend'},6:{s:'pend'},7:{s:'pend'}}};}
+fresh();
+const $=s=>document.querySelector(s);
+const area=()=>AREAS.find(a=>a.id===S.area);
+const doneN=()=>AREAS.filter(a=>S.st[a.id].s==='done').length;
+const firstOpen=()=>(AREAS.find(a=>S.st[a.id].s==='pend')||AREAS.find(a=>S.st[a.id].s==='wait')||AREAS[0]).id;
+const first=n=>n.split(' ')[0];
+
+/* ---------- mapa ---------- */
+function geom(e){
+ const a=NODES[e.f],b=NODES[e.t];
+ const dx=b.x-a.x,dy=b.y-a.y;let s,t;
+ if(Math.abs(dx)>Math.abs(dy)){s=[dx>0?a.x+W:a.x,a.y+H/2];t=[dx>0?b.x:b.x+W,b.y+H/2];}
+ else{s=[a.x+W/2,dy>0?a.y+H:a.y];t=[b.x+W/2,dy>0?b.y:b.y+H];}
+ if(e.so){s=[s[0]+e.so[0],s[1]+e.so[1]];}
+ const m=[(s[0]+t[0])/2,(s[1]+t[1])/2],vx=t[0]-s[0],vy=t[1]-s[1],len=Math.hypot(vx,vy)||1,bd=e.b||0;
+ const c=[m[0]-vy/len*bd,m[1]+vx/len*bd];
+ return {p:`M${s[0]},${s[1]} Q${c[0]},${c[1]} ${t[0]},${t[1]}`,lx:.25*s[0]+.5*c[0]+.25*t[0],ly:.25*s[1]+.5*c[1]+.25*t[1]};
+}
+function drawMap(){
+ let h=`<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="context-stroke"/></marker></defs>`;
+ EDGES.forEach((e,i)=>{const g=geom(e),on=e.f===S.screen,w=e.l.length*5.6+12;
+  h+=`<g class="edge ${on?'on':'dim'} ${e.d?'dash':''}" data-i="${i}"><path d="${g.p}" marker-end="url(#ar)"/><rect x="${g.lx-w/2}" y="${g.ly-9}" width="${w}" height="17" rx="4"/><text x="${g.lx}" y="${g.ly+3}" text-anchor="middle">${e.l}</text></g>`;});
+ Object.entries(NODES).forEach(([id,n])=>{const sel=id===S.screen;
+  h+=`<g class="node ${n.k} ${sel?'sel':''} ${sel||EDGES.some(e=>e.f===S.screen&&e.t===id)?'':'dim'}" data-id="${id}" tabindex="0" role="button" aria-label="${n.t}"><rect x="${n.x}" y="${n.y}" width="${W}" height="${H}" rx="10"/><text class="t" x="${n.x+10}" y="${n.y+25}">${n.t}</text><text class="s" x="${n.x+10}" y="${n.y+42}">${n.s}</text></g>`;});
+ $('#map').innerHTML=h;
+ const outs=EDGES.filter(e=>e.f===S.screen);
+ $('#next').innerHTML=`<h3>A partir de “${SCREEN_LABEL[S.screen]}” dá para ir para</h3>`+outs.map(e=>`<button data-go="${e.t}"><em>${e.l}</em> → ${SCREEN_LABEL[e.t]}</button>`).join('');
+}
+function jump(id){
+ if(['question','who','sent','delegate'].includes(id)&&S.st[S.area].s==='done')S.area=firstOpen();
+ if(id==='sent'||id==='delegate'){S.person=S.person||area().p;}
+ if(id==='who')S.passing=id==='who'&&S.screen==='delegate';
+ if(id==='done'&&doneN()<7){S.screen='review';}
+ S.screen=id;if(id==='done'&&doneN()<7)S.screen='review';
+ render();
+}
+
+/* ---------- celular ---------- */
+const sb=`<div class="sb"><span>9:41</span><span>Rede Mineira</span></div>`;
+const chip=a=>{const s=S.st[a.id];return s.s==='done'?`<span class="chip done">Respondida</span>`:s.s==='wait'?`<span class="chip wait">Com ${first(s.by)}</span>`:`<span class="chip pend">Falta responder</span>`;};
+const answers=(act)=>['Sim','Em parte','Não'].map(v=>`<button class="btn ans" data-a="${act}" data-v="${v}">${v}</button>`).join('');
+const VIEWS={
+ welcome:()=>`${sb}<div class="body"><div class="brand">Rede Mineira de Dados e Saúde</div><h2>Olá, Maria.</h2>
+  <p>Vamos montar o perfil de saúde digital do seu município. São <b>7 áreas</b>, com perguntas simples.</p>
+  <div class="hint">Você responde o que sabe. O que não souber, passa para quem sabe com um toque.</div>
+  <p>Leva cerca de 10 minutos. Pode parar e voltar quando quiser.</p></div>
+  <div class="foot"><button class="btn" data-a="go" data-v="hub">Começar</button></div>`,
+ hub:()=>{const n=doneN();return `${sb}<div class="body"><div class="brand">Perfil do município</div><h2>${n===7?'Tudo respondido':n+' de 7 áreas prontas'}</h2>
+  <div class="bar" role="progressbar" aria-valuenow="${n}" aria-valuemax="7"><i style="width:${n/7*100}%"></i></div>
+  ${AREAS.map(a=>{const s=S.st[a.id];return `<button class="row" data-a="area" data-v="${a.id}"><b>${a.n}</b>${chip(a)}</button>`+
+   (s.s==='wait'?`<div class="mini"><button data-a="remind" data-v="${a.id}">Lembrar ${first(s.by)}</button><button data-a="simulate" data-v="${a.id}">Simular resposta dele(a)</button></div>`:'');}).join('')}
+  </div><div class="foot"><button class="btn" data-a="go" data-v="review">Conferir e enviar</button></div>`;},
+ question:()=>{const a=area();return `${sb}<div class="body"><button class="back" data-a="go" data-v="hub">← Painel</button>
+  <div class="brand">${a.n} · 1 de ${a.total}</div><div class="q">${a.q}</div></div>
+  <div class="foot">${answers('ans')}<button class="btn alt" data-a="go" data-v="who">Não sei. Quem sabe?</button></div>`;},
+ who:()=>{const a=area();const from=S.passing;return `${sb}<div class="body"><button class="back" data-a="go" data-v="${from?'delegate':'question'}">← Voltar</button>
+  <h2>${from?'Passar para quem?':'Quem sabe disso?'}</h2><p>${a.n}</p>
+  <div class="hint">Costuma ser: <b>${a.quem}</b></div>
+  ${PEOPLE.map(p=>`<button class="person" data-a="person" data-v="${p.n}" aria-pressed="${S.person===p.n}"><span class="av">${p.n[0]}</span><span><b>${p.n}</b><small>${p.r}</small></span></button>`).join('')}
+  <p style="margin-top:4px">Outra pessoa?</p><input class="f" id="pn" placeholder="Nome"><input class="f" id="pw" placeholder="WhatsApp com DDD" inputmode="tel"></div>
+  <div class="foot"><button class="btn" data-a="send" aria-disabled="${!S.person}">Enviar pedido pelo WhatsApp</button></div>`;},
+ sent:()=>{const a=area(),p=S.person||a.p;return `${sb}<div class="body"><div class="big">✓</div><h2>Pedido pronto para ${first(p)}</h2>
+  <div class="bubble">Oi, ${first(p)}! A Maria precisa da sua ajuda com 1 pergunta sobre <b>${a.n}</b> para a Rede Mineira de Dados e Saúde. Leva 1 minuto e não precisa de senha: <u>rede.mg.gov.br/r/k3x9</u></div>
+  <p>Quando ${first(p)} responder, você recebe um aviso e o painel é atualizado.</p></div>
+  <div class="foot"><button class="btn" data-a="go" data-v="hub">Voltar ao painel</button><button class="btn alt" data-a="go" data-v="delegate">Ver como ${first(p)} (simulação)</button></div>`;},
+ delegate:()=>{const a=area(),p=S.person||a.p;return `<div class="banner">Você não precisa de senha nem de cadastro</div><div class="body" style="padding-top:14px">
+  <div class="brand">Maria pediu sua ajuda</div><p>Município exemplo · 1 pergunta sobre ${a.n}</p><div class="q">${a.q}</div></div>
+  <div class="foot">${answers('dans')}<button class="btn alt" data-a="go" data-v="who">Também não sei. Passar adiante</button></div>`;},
+ delegateDone:()=>{const p=S.person||area().p;return `<div class="banner">Você não precisa de senha nem de cadastro</div><div class="body" style="align-items:flex-start;padding-top:24px"><div class="big">✓</div>
+  <h2>Obrigado, ${first(p)}!</h2><p>A Maria já foi avisada. Pode fechar esta página.</p></div>
+  <div class="foot"><button class="btn alt" data-a="go" data-v="hub">Ver painel da Maria (simulação)</button></div>`;},
+ review:()=>{const miss=AREAS.filter(a=>S.st[a.id].s!=='done');const ok=!miss.length;
+  return `${sb}<div class="body"><button class="back" data-a="go" data-v="hub">← Painel</button><h2>${ok?'Tudo pronto para enviar':'Ainda faltam '+miss.length+(miss.length>1?' áreas':' área')}</h2>
+  <p>${ok?'Confira o resumo. Depois de enviar, a equipe da rede consegue ver o perfil.':'Responda ou cobre quem ficou de ajudar. Você pode enviar quando todas estiverem prontas.'}</p>
+  ${(ok?AREAS:miss).map(a=>`<div class="row" style="cursor:default"><b>${a.n}</b>${ok?`<span class="chip done">${S.st[a.id].v}</span>`:chip(a)}</div>`).join('')}</div>
+  <div class="foot"><button class="btn" data-a="publish" aria-disabled="${!ok}">Enviar perfil</button><button class="btn alt" data-a="go" data-v="hub">Voltar ao painel</button></div>`;},
+ done:()=>`${sb}<div class="body" style="align-items:flex-start;padding-top:40px"><div class="big">✓</div><h2>Perfil municipal disponibilizado</h2>
+  <p>A equipe da Rede Mineira já consegue ver o perfil de Município exemplo. Você será avisada sobre os próximos passos.</p></div>
+  <div class="foot"><button class="btn alt" data-a="reset">Recomeçar o protótipo</button></div>`
+};
+function render(){
+ $('#screen').innerHTML=VIEWS[S.screen]()+`<div class="toast" id="toast"></div>`;
+ if(S.toast){const t=$('#toast');t.textContent=S.toast;requestAnimationFrame(()=>t.classList.add('show'));setTimeout(()=>t.classList.remove('show'),1800);S.toast='';}
+ drawMap();
+}
+const ACT={
+ go:v=>{if(v==='who'&&S.screen==='question')S.passing=false;jump(v);},
+ area:v=>{S.area=+v;S.screen='question';render();},
+ ans:v=>{S.st[S.area]={s:'done',v,by:'Maria'};S.toast='Resposta salva';S.screen='hub';render();},
+ person:v=>{S.person=v;render();},
+ send:()=>{if(!S.person)return;S.st[S.area]={s:'wait',by:S.person};S.passing=false;S.screen='sent';render();},
+ dans:v=>{S.st[S.area]={s:'done',v,by:S.person||area().p};S.screen='delegateDone';render();},
+ remind:v=>{S.toast='Lembrete pronto para enviar';render();},
+ simulate:v=>{S.area=+v;S.person=S.st[S.area].by;S.screen='delegate';render();},
+ publish:()=>{S.screen='done';render();},
+ reset:()=>{fresh();render();}
+};
+$('#screen').addEventListener('click',e=>{const b=e.target.closest('[data-a]');if(!b||b.getAttribute('aria-disabled')==='true')return;ACT[b.dataset.a](b.dataset.v);});
+$('#map').addEventListener('click',e=>{const n=e.target.closest('.node');if(n)jump(n.dataset.id);});
+$('#map').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){const n=e.target.closest('.node');if(n){e.preventDefault();jump(n.dataset.id);}}});
+$('#next').addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b)jump(b.dataset.go);});
+$('#reset').addEventListener('click',()=>ACT.reset());
+render();
+</script>
+
+</body></html>

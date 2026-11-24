@@ -1,0 +1,645 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Trike FreeWheels One-Pager</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: caderno de laboratório da NeuroDynamics. Barra fixa de abas no topo; cada aba é uma folha (one-pager) com a mesma ordem de blocos, para a equipe achar tudo sempre no mesmo lugar. Verde-lima da marca como acento. */
+:root{
+  --bg:#f5f6f1; --surface:#ffffff; --sunk:#eceee5; --ink:#15171a; --muted:#565c52; --line:#d9ddcf;
+  --accent:#5c7700; --accent-strong:#a8c30f; --on-accent:#14180a; --accent-soft:#eef4d2;
+  --ok:#2f7a3a; --ok-soft:#e2f1e2; --warn:#9a5b00; --warn-soft:#fbefd9; --crit:#b3261e; --crit-soft:#fbe3e1; --info:#245d9c; --info-soft:#e1ecf8;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e0f12; --surface:#16181c; --sunk:#1c1f24; --ink:#eef0e8; --muted:#a4aa9d; --line:#2b2f35;
+  --accent:#b9d42a; --accent-strong:#a8c30f; --on-accent:#14180a; --accent-soft:#232a10;
+  --ok:#7ccf86; --ok-soft:#16281a; --warn:#f0b35a; --warn-soft:#2c2213; --crit:#f2867e; --crit-soft:#2e1816; --info:#8dbcf0; --info-soft:#152335;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e0f12; --surface:#16181c; --sunk:#1c1f24; --ink:#eef0e8; --muted:#a4aa9d; --line:#2b2f35;
+  --accent:#b9d42a; --accent-strong:#a8c30f; --on-accent:#14180a; --accent-soft:#232a10;
+  --ok:#7ccf86; --ok-soft:#16281a; --warn:#f0b35a; --warn-soft:#2c2213; --crit:#f2867e; --crit-soft:#2e1816; --info:#8dbcf0; --info-soft:#152335;
+  color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(28px,4.6vw,44px);font-weight:800;letter-spacing:-.01em}
+h2{font-size:clamp(20px,2.6vw,26px);font-weight:700}
+h3{font-size:17px;font-weight:700}
+p{margin:0}
+a{color:var(--accent)}
+.label{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.muted{color:var(--muted)}
+.small{font-size:14px}
+
+/* topo */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--surface);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px;padding-block:10px}
+.brand img{width:30px;height:30px;border-radius:7px}
+.brand b{font-family:var(--display);font-weight:800;font-size:17px}
+.brand span{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+nav.tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:thin;padding-bottom:8px}
+nav.tabs a{flex:0 0 auto;text-decoration:none;color:var(--muted);font-weight:600;font-size:14.5px;padding:6px 11px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
+nav.tabs a:hover{color:var(--ink);border-color:var(--line)}
+nav.tabs a[aria-current="page"]{background:var(--ink);color:var(--bg)}
+nav.tabs a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+nav.tabs .sep{flex:0 0 1px;background:var(--line);margin:4px 4px}
+
+main{padding-block:28px 64px}
+section.page{display:grid;gap:22px}
+
+/* folha */
+.hero{display:grid;gap:14px;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);align-items:start}
+.hero .lead{font-size:19px;line-height:1.5;max-width:60ch}
+.thesis{font-family:var(--display);font-weight:700;font-size:clamp(18px,2.2vw,22px);color:var(--accent)}
+.meta{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--sunk);color:var(--ink);border:1px solid var(--line)}
+.chip.ok{background:var(--ok-soft);color:var(--ok);border-color:transparent}
+.chip.warn{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+.chip.crit{background:var(--crit-soft);color:var(--crit);border-color:transparent}
+.chip.info{background:var(--info-soft);color:var(--info);border-color:transparent}
+.chip.acc{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+.media{background:#0b0c0e;border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+.media video{display:block;width:100%;height:auto;aspect-ratio:16/9;max-width:100%}
+.media figcaption{font-family:var(--mono);font-size:11px;color:#b9beb3;padding:7px 10px;letter-spacing:.04em}
+
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;display:grid;gap:10px;align-content:start;min-width:0}
+.card.sunk{background:var(--sunk);border-color:transparent}
+.card.callout{background:var(--accent-soft);border-color:transparent}
+ul.clean{margin:0;padding-left:18px;display:grid;gap:6px}
+ul.clean li::marker{color:var(--accent)}
+
+/* números */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.stat{border-top:3px solid var(--accent-strong);padding-top:8px;display:grid;gap:2px}
+.stat b{font-family:var(--display);font-size:32px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{font-size:14px;color:var(--muted)}
+
+/* ciclo */
+.loop{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;counter-reset:s}
+.step{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 14px 14px;display:grid;gap:6px;align-content:start}
+.step .n{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--on-accent);background:var(--accent-strong);width:24px;height:24px;border-radius:50%;display:grid;place-items:center}
+.step h3{font-size:15.5px}
+.step p{font-size:14.5px;color:var(--muted)}
+.step:not(:last-child)::after{content:"→";position:absolute;right:-12px;top:16px;font-weight:700;color:var(--accent);background:var(--bg);width:14px;text-align:center}
+.loopback{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:2px}
+
+/* TRL */
+.trl{display:grid;grid-template-columns:repeat(9,1fr);gap:3px}
+.trl i{height:10px;border-radius:2px;background:var(--line)}
+.trl i.on{background:var(--accent-strong)}
+.trl-lab{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+
+/* editais */
+.fit{display:grid;gap:8px}
+.fitrow{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;align-items:start;padding:10px 0;border-top:1px solid var(--line)}
+.fitrow:first-child{border-top:0;padding-top:0}
+.fitrow .why{font-size:14.5px;color:var(--muted)}
+.dl{font-family:var(--mono);font-size:12px;white-space:nowrap;font-variant-numeric:tabular-nums}
+
+.pitch{font-size:18px;line-height:1.55;font-style:italic;max-width:68ch}
+.copy{justify-self:start;font:600 13px var(--body);background:var(--ink);color:var(--bg);border:0;border-radius:999px;padding:6px 14px;cursor:pointer}
+.sources{font-size:13.5px;color:var(--muted)}
+
+/* visão geral */
+.projgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.pcard{text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:grid;gap:8px;align-content:start;transition:border-color .15s}
+.pcard:hover{border-color:var(--accent)}
+.pcard .tag{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.pcard h3{font-size:21px}
+.pcard p{font-size:14.5px;color:var(--muted)}
+.timeline{display:grid;gap:0;border-left:2px solid var(--line);margin-left:6px}
+.tl{display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px;padding:8px 0 8px 16px;position:relative}
+.tl::before{content:"";position:absolute;left:-7px;top:14px;width:12px;height:12px;border-radius:50%;background:var(--accent-strong);border:2px solid var(--bg)}
+.tl .when{font-family:var(--mono);font-size:12.5px;color:var(--muted);padding-top:2px}
+
+/* tabela editais */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:860px;font-size:14.5px}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--sunk)}
+tr:last-child td{border-bottom:0}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.urgent{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.dlcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;display:grid;gap:4px}
+.dlcard .days{font-family:var(--display);font-weight:800;font-size:28px;line-height:1;font-variant-numeric:tabular-nums}
+.dlcard.hot .days{color:var(--crit)}
+.dlcard.soon .days{color:var(--warn)}
+
+/* passo a passo */
+ol.steps{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:st}
+ol.steps>li{counter-increment:st;display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+ol.steps>li::before{content:counter(st);font-family:var(--display);font-weight:800;font-size:22px;color:var(--accent);line-height:1.1}
+ol.steps li .body{display:grid;gap:6px;min-width:0}
+.check{display:grid;gap:8px}
+.check label{display:grid;grid-template-columns:22px minmax(0,1fr);gap:8px;align-items:start;cursor:pointer}
+.check input{width:18px;height:18px;margin-top:3px;accent-color:var(--accent)}
+.verdict{font-weight:700}
+dl.gloss{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r)}
+dl.gloss dt,dl.gloss dd{margin:0;padding:10px 14px;border-top:1px solid var(--line)}
+dl.gloss dt{font-weight:700}
+dl.gloss dt:first-of-type,dl.gloss dd:first-of-type{border-top:0}
+.note{font-size:13.5px;color:var(--muted);border-left:3px solid var(--line);padding-left:10px}
+
+@media (max-width:820px){
+  .hero,.grid2,.grid3{grid-template-columns:minmax(0,1fr)}
+  .loop{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .step:nth-child(2)::after{display:none}
+}
+@media (max-width:480px){
+  .loop{grid-template-columns:minmax(0,1fr)}
+  .step::after{display:none}
+  .fitrow{grid-template-columns:minmax(0,1fr)}
+  dl.gloss{grid-template-columns:minmax(0,1fr)}
+  dl.gloss dd{border-top:0;padding-top:0}
+  .tl{grid-template-columns:minmax(0,1fr);gap:2px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><img src="media/icon.png" alt=""><b>NeuroDynamics</b><span id="sub">One-pagers dos projetos · out/2026</span></div>
+    <nav class="tabs" id="tabs" aria-label="Seções"></nav>
+  </div>
+</header>
+
+<main class="wrap" id="app"></main>
+
+<script>
+const TODAY = new Date();
+const SOLO = "trike";
+const PROJ = [
+{
+  id:"calima", nome:"Calima", frente:"Reabilitação", supervisor:"Pedro Caversan",
+  alias:"Nas reuniões de 2025 aparece como ErgoFES Connect.",
+  titulo:"Sistema Modular de Eletroestimulação Funcional Sincronizada com Sensoriamento Inercial para Reabilitação Neuromotora por Cycling",
+  tese:"Não tem motor: quem pedala são os músculos.",
+  lead:"Um sensor sem fio no pedal avisa o eletroestimulador a hora exata de contrair cada músculo da perna. Com isso, uma bicicleta ergométrica comum vira equipamento de reabilitação.",
+  estagio:["Testes e validação","ok"], trl:[4,"Validado em laboratório e com prova de conceito em voluntário"],
+  video:null,
+  problema:"Quem fica muito tempo sem mexer as pernas (após AVC, lesão medular ou internação) perde músculo, circulação e condicionamento. A pedalada com estimulação elétrica (FES-cycling) ajuda de verdade, mas os sistemas atuais dependem de triciclos adaptados com encoder e correia ou de cicloergômetros motorizados caros.",
+  quem:"Pessoas pós-AVC, com lesão medular e outras disfunções neuromotoras, em clínica ou em casa.",
+  como:[
+    ["Sensor","Um sensor inercial (IMU) com Bluetooth, preso ao pedivela, lê o ângulo do pedal em tempo real."],
+    ["Decisão","O algoritmo identifica a fase da pedalada e escolhe quais canais de estímulo ligar naquele instante."],
+    ["Estímulo","O eletroestimulador Connect® (Visuri), de 8 canais, envia pulsos leves por eletrodos na pele."],
+    ["Pedalada","Os grupos musculares da perna contraem na ordem certa e o pedal gira."]
+  ],
+  diferencial:["Funciona em bicicletas ergométricas comuns, sem adaptação mecânica.","Portátil e controlado por aplicativo no celular.","Busca contração forte o bastante para ter efeito fisiológico, e não só mover a perna."],
+  stats:[["92,2%","menos erro de temporização na versão sem fio"],["5 min","de pedalada contínua na prova de conceito com voluntário com lesão medular"],["Top 10","do CBEB 2026, com menção honrosa"]],
+  marcos:["Testes finais concluídos e artigo aceito.","Out/2026: artigo “Toward Accessible FES Cycling” recebe menção honrosa no Congresso Brasileiro de Engenharia Biomédica e é selecionado para os Proceedings do IEEE (próximos passos até 08/11/2026)."],
+  proximo:["Correções finais nas funcionalidades atuais (definido).","Em avaliação: controle de cadência, compensação dinâmica de latência, testes com voluntários com lesão medular ou AVC e validação clínica."],
+  bloqueio:"Falta de investimento: bolsas para acelerar o trabalho, desenvolvedores experientes para supervisionar, mais unidades do Connect, sensores e materiais melhores para a montagem.",
+  parceiros:[["Visuri","fornece as plataformas e os recursos de desenvolvimento"],["Hospital Paulo de Tarso","estrutura e acompanhamento dos testes clínicos; vai receber a tecnologia pelo SUS"]],
+  equipe:"Pedro Caversan (supervisor), Sarah Fernanda, Matheus Marcondes, com hardware, firmware, software e mecânica. Coordenação: Prof. Henrique Martins.",
+  pitch:"A gente transforma qualquer bicicleta ergométrica em equipamento de reabilitação. Um sensor sem fio no pedal comanda estímulos elétricos que fazem os próprios músculos da pessoa pedalarem, sem motor. Na prova de conceito, um voluntário com lesão medular pedalou 5 minutos seguidos, e o trabalho foi premiado no Congresso Brasileiro de Engenharia Biomédica de 2026. Agora queremos levar isso para a clínica, começando pelo Hospital Paulo de Tarso, pelo SUS.",
+  editais:[["embrapii","forte","Dispositivo médico com empresa parceira pronta (Visuri) como proponente."],["anr","forte","Parceria com INRIA e Montpellier desde 2016; o eixo de IA (ajuste do estímulo à fadiga) encaixa."],["fme","média","Inovação em saúde com coordenador doutor; disputa vaga com Órion e Opalina."],["hz-dis","condicional","Reabilitação e tecnologia assistiva; só entra via consórcio europeu."]],
+  fontes:"Planilha NRO-MKT-002; Artigo versão final (CBEB 2026); NeuroDynamics conversa com a Duane (out/2026); Reunião geral 03/10/2026; Forms dos projetos (out/2025)."
+},
+{
+  id:"orion", nome:"Órion", frente:"UTI", supervisor:"Pedro Caversan",
+  titulo:"Sistema Automatizado de FES-Cycling com Eletroestimulação Neuromuscular e Controle Inercial para Reabilitação de Pacientes Críticos em UTI",
+  tese:"Como alguém sedado pode pedalar?",
+  lead:"Estímulos elétricos sincronizados com um cicloergômetro fazem os músculos de pacientes sedados na UTI trabalharem de verdade, sem nenhum comando voluntário.",
+  estagio:["Em fase de pesquisa","info"], trl:[3,"Conceito comprovado; estudo clínico de viabilidade com protocolo escrito"],
+  video:["media/orion.mp4","Simulação ilustrativa do Órion. Em fase de pesquisa."],
+  problema:"Na UTI, o paciente sedado e em ventilação mecânica perde músculo muito rápido. Isso vira fraqueza adquirida na UTI (FAUTI), mais tempo de ventilação, internação mais longa, mais infecção, mais reinternação e custo maior por leito-dia. Mobilização manual e cicloergômetro motorizado só movem a perna; não fazem o músculo trabalhar.",
+  quem:"Pacientes críticos, sedados e não colaborativos em UTI, e a gestão hospitalar que paga a conta do imobilismo.",
+  como:[
+    ["Acompanhar","O sensor inercial lê a progressão da pedalada no cicloergômetro hospitalar."],
+    ["Coordenar","O controle sincroniza os canais de estímulo do ReCARE® com a fase do movimento."],
+    ["Contrair","Os músculos da perna trabalham no ciclo, sem comando voluntário do paciente."],
+    ["Manter","O cicloergômetro motorizado sustenta o movimento da pessoa deitada."]
+  ],
+  diferencial:["Única intervenção capaz de gerar resposta comparável a exercício ativo em paciente sedado.","Projetado para a rotina da UTI e para ser operado pela equipe multiprofissional.","Usa um eletroestimulador clínico já existente (ReCARE®, Visuri)."],
+  stats:[["17,7%","da massa muscular pode ser perdida em 7 dias de UTI (Puthucheary, JAMA 2013)"],["48%","dos pacientes graves desenvolvem fraqueza adquirida na UTI (Fazzini, Critical Care 2023)"],["2%","do músculo perdido por dia, em média, na primeira semana"]],
+  marcos:["Mai/2021: CNN Brasil mostra a eletroestimulação em pacientes sedados com Covid-19.","2025: modo Cycling do ReCARE finalizado; protocolo do estudo “FES-Assisted Cycling em pacientes sedados em leitos de UTI” escrito.","Abr/2026: tecnologias de eletroestimulação para o SUS aparecem no Jornal Nacional."],
+  proximo:["Executar o estudo de viabilidade na UTI com os parceiros clínicos.","Com a Federassantas (300 hospitais filantrópicos de MG): estudar um modelo de UTI mais eficiente. Visita do Hospital São Francisco e da CORE Saúde na semana de 19/10."],
+  bloqueio:"O material não registra um bloqueio formal. Inferência nossa: financiamento do estudo clínico e acordos com hospitais.",
+  parceiros:[["Visuri","plataformas e recursos de desenvolvimento"],["IMREA – HC FMUSP","estrutura e execução dos testes clínicos"],["Hospital São Luiz Jabaquara","estrutura e execução dos testes clínicos"]],
+  equipe:"Pedro Caversan (supervisor). Pesquisadores do protocolo de UTI: Rodrigo Daminello Raimundo, Henrique Resende Martins, Nádia Arantes Betancourt Rosa.",
+  pitch:"Em uma semana de UTI, um paciente pode perder quase 18% da massa muscular, e isso aumenta ventilação, internação e custo. O Órion faz o paciente sedado pedalar com os próprios músculos: um sensor acompanha o cicloergômetro e o eletroestimulador dispara cada músculo na hora certa. É reabilitação precoce que hoje não existe para quem não consegue colaborar, e já temos IMREA e São Luiz como parceiros clínicos.",
+  editais:[["fme","forte","Inovação em saúde com impacto direto no hospital; prazo 30/10."],["embrapii","forte","Dispositivo médico com a Visuri como empresa."],["hubmg","condicional","Só se houver um desafio publicado de saúde ou UTI e um órgão que se manifeste."],["profix","média","Fixar um doutor para conduzir o estudo clínico."]],
+  fontes:"Planilha NRO-MKT-002; Folder @neurodynamics.ufmg; Projeto de pesquisa FES-Assisted Cycling V6 (restrito, não divulgar trechos); NeuroDynamics conversa com a Duane; Reunião geral 03/10/2026."
+},
+{
+  id:"opalina", nome:"Opalina", frente:"Respiração", supervisor:"Sarah Fernanda",
+  titulo:"Sistema de Eletroestimulação Diafragmática Sincronizada para Preservação da Função Respiratória e Assistência à Desassociação de Suporte Ventilatório em Pacientes Críticos",
+  tese:"Respirar também é músculo.",
+  lead:"Um sensor de fluxo no circuito do ventilador avisa quando o ar está entrando, e o eletroestimulador contrai o diafragma junto. O paciente continua treinando a respiração mesmo sedado.",
+  estagio:["Validado em bancada","ok"], trl:[4,"Validado em bancada no InCor com simulador de pulmão; ainda não é dispositivo de uso clínico"],
+  video:["media/opalina.mp4","Simulação ilustrativa da Opalina. Em fase de pesquisa."],
+  problema:"Quando a pessoa passa muito tempo no ventilador, o diafragma enfraquece. A hora de voltar a respirar sozinha (o desmame) fica longa, difícil e desconfortável.",
+  quem:"Pacientes críticos em ventilação mecânica, sedados e não colaborativos.",
+  como:[
+    ["Sensor de fluxo","Fica no circuito entre o ventilador e o paciente e percebe quando o ar está entrando."],
+    ["ReCARE®","Recebe a leitura por Bluetooth e só libera o estímulo enquanto o ar entra (fluxo positivo)."],
+    ["Eletrodos","Colados no pescoço, sobre o nervo frênico, que comanda o diafragma."],
+    ["Diafragma","Contrai junto com o ar do ventilador, em vez de ficar parado."]
+  ],
+  diferencial:["Não substitui o ventilador: acompanha o ritmo dele.","Travas de segurança impedem estímulo na expiração.","A equipe clínica operou o sistema sozinha no teste."],
+  stats:[["~15","situações clínicas simuladas no InCor (12/08/2026)"],["0","estímulos disparados durante a expiração"],["~8 h","de autonomia da unidade de sensoriamento"]],
+  marcos:["12/08/2026: ensaio de bancada no InCor (FMUSP) com o simulador de pulmão ASL 5000 e a equipe da Profª Patrícia Nery (relatório NRO-RET-001).","26/08/2026: Design History File da unidade de sensoriamento (NRO-DHF-001).","05/10/2026: reunião com a stakeholder Patrícia para alinhar requisitos."],
+  proximo:["Trocar o sensor por versão autoclavável (SFM3300-AW), com ajustes de firmware e hardware.","Separar a eletrônica do paciente (só o sensor na linha) tratando a interferência no cabo.","Novos adaptadores e teste de estanqueidade prolongado; PCB SMD e caixa menor seguindo a RDC 15/2012 da ANVISA.","Ensaio dirigido à hipótese de antecipar o ciclo do ventilador."],
+  bloqueio:"As pendências são de montagem e arquitetura física, não de lógica de controle.",
+  parceiros:[["Visuri","plataformas e recursos de desenvolvimento"],["InCor – HC FMUSP","estrutura e execução dos testes; Profª Patrícia Nery"]],
+  equipe:"Sarah Fernanda (supervisora), Matheus Marcondes, Pedro Caversan. Software e firmware do modo respiratório no ReCARE: Ana Melado, Thalissa Lima, Isadora.",
+  pitch:"No ventilador, o diafragma do paciente para de trabalhar e enfraquece, e isso torna o desmame longo e sofrido. A Opalina lê o fluxo de ar do ventilador e contrai o diafragma no mesmo ritmo, por estímulo no nervo frênico. No InCor testamos 15 situações clínicas simuladas e nenhum estímulo saiu fora de hora. O próximo passo é deixar o hardware pronto para o ambiente de UTI.",
+  editais:[["fme","forte","Resultado de bancada recente com o InCor dá força à proposta."],["embrapii","forte","Dispositivo médico com a Visuri; precisa de 2 unidades Embrapii."],["hubmg","condicional","Só se houver desafio de saúde publicado."]],
+  fontes:"Planilha NRO-MKT-002; relatório NRO-RET-001; NRO-DHF-001; Reunião geral 03/10/2026; NeuroDynamics conversa com a Duane."
+},
+{
+  id:"nebula", nome:"Nebula", frente:"Cérebro e máquina", supervisor:"Melyssa (Mel) Neres",
+  alias:"Nas reuniões aparece como FES-BCI; nos e-mails de março/2026, como Crepúsculo.",
+  titulo:"Integração de interface cérebro-computador (EEG) com estimulação elétrica funcional",
+  tese:"A intenção de mover, lida no EEG, comandando o estímulo.",
+  lead:"O paciente se concentra ou imagina o movimento; a leitura do EEG detecta essa intenção e dispara a estimulação elétrica. O movimento passa a ser voluntário outra vez.",
+  estagio:["Protótipo / MVP","warn"], trl:[3,"Conceito validado experimentalmente com testes de foco"],
+  video:null,
+  problema:"Na reabilitação de lesões neurológicas graves, a estimulação elétrica costuma ser disparada por fora, sem a participação mental do paciente. Isso reduz o engajamento e limita a recuperação.",
+  quem:"Pessoas com lesões neurológicas motoras graves, como pós-AVC (foco da neuroplasticidade).",
+  como:[
+    ["Ler","Um capacete de EEG (kit OpenBCI) capta as ondas beta, ligadas à atenção."],
+    ["Detectar","O detector reconhece quando o paciente está concentrado na tarefa."],
+    ["Estimular","Detectada a intenção, o sistema aciona a FES."],
+    ["Fechar o ciclo","O paciente vê e sente o movimento que ele mesmo comandou."]
+  ],
+  diferencial:["Cria um ciclo de feedback entre mente e corpo.","Torna a reabilitação mais interativa e personalizada.","Hardware e software já disponíveis no laboratório."],
+  stats:[["2025","controle de movimento por concentração validado experimentalmente"],["Destaque","acadêmico na Semana do Conhecimento UFMG 2025 (trabalho em BCI)"]],
+  marcos:["Revisão bibliográfica sobre BCI, FES e EEG.","Aquisição do kit OpenBCI e testes de EEG em repouso e concentração.","2025: testes de foco e experimentos comparativos."],
+  proximo:["Coletar dados de teste com voluntários.","Preencher as informações públicas do projeto na planilha NRO-MKT-002 (hoje só o supervisor está registrado)."],
+  bloqueio:"Organização e acompanhamento das tarefas, segundo a própria equipe (out/2025). Hardware e software estão prontos.",
+  parceiros:[["Hospital (não nomeado)","onde os pacientes estão internados"],["Parceiro ideal","academia, para pesquisa e validação"]],
+  equipe:"Mel Neres (supervisora), Gustavo Augusto, Ana Amantea, Gustavo Ferreira; clínica: Samuel e Heitor.",
+  pitch:"E se o paciente pudesse comandar o próprio estímulo só pensando no movimento? O Nebula lê a atenção no EEG e, quando detecta a intenção, dispara a estimulação elétrica. Já mostramos em laboratório que dá para controlar o movimento pela concentração. Agora queremos coletar dados com pacientes para medir o ganho na reabilitação pós-AVC.",
+  editais:[["anr","média","Eixo de IA e processamento de sinais; precisa de parceiro francês com aderência real."],["hz-dis","condicional","Tecnologia assistiva; só via consórcio."],["profix","média","Um doutor em neuroengenharia daria tração ao projeto."]],
+  fontes:"Forms dos projetos (out/2025); 2ª e 3ª reuniões gerais (2025); NeuroDynamics Insight (dez/2025); Folder @neurodynamics.ufmg; NeuroDynamics conversa com a Duane."
+},
+{
+  id:"trike", nome:"Trike · FreeWheels", frente:"Esporte e origem", supervisor:"Hardware: Matheus Almeida · Clínica: Ana Clara · Mecânica: Matheus Zocrato",
+  titulo:"Triciclo com estimulação elétrica funcional da equipe FreeWheels (CYBATHLON)",
+  tese:"Ele não move as pernas desde os 25 anos. Na Suíça, pedalou com a força dos próprios músculos.",
+  lead:"A Trike é o triciclo com que a equipe FreeWheels levou o piloto Jônatas Moreira ao 9º lugar mundial no CYBATHLON 2024. Foi restaurada e agora vira plataforma de uso clínico.",
+  estagio:["Pronto para aplicação","ok"], trl:[6,"Demonstrado em ambiente real de competição; uso clínico ainda por começar"],
+  video:["media/calima.mp4","Simulação ilustrativa: triciclo com estimulação e leitura de EEG."],
+  problema:"Depois do CYBATHLON, a Trike ficou parada e sem documentação. Um dos maiores marcos tecnológicos do grupo estava fora de uso.",
+  quem:"Pacientes em reabilitação motora e os pesquisadores da NeuroDynamics, que ganham uma plataforma real para estudos clínicos.",
+  como:[
+    ["Sensores","Sensores de posição no pedivela leem o ângulo da pedalada."],
+    ["Controle","O sistema decide qual músculo deve contrair em cada fase."],
+    ["Estímulo","Eletrodos adesivos levam pulsos leves aos músculos paralisados."],
+    ["Pedalada","Os músculos contraem na ordem certa e o triciclo anda."]
+  ],
+  diferencial:["Já provado em competição internacional.","Integra engenharia e clínica numa plataforma segura para pacientes.","História forte para comunicação e patrocínio."],
+  stats:[["9º","lugar no CYBATHLON 2024, entre 67 equipes de 24 países"],["11","voltas seguidas na pista em mar/2024, só com estímulo elétrico"],["10","anos de pesquisa, desde 2016"]],
+  marcos:["2016: nasce a FreeWheels (UFMG, UnB e Universidade de Montpellier).","25/10/2024: 9º lugar no CYBATHLON, em Kloten, Suíça.","Nov/2025: artigo conjunto com Viena, INRIA e Politécnico de Milão submetido ao Journal of NeuroEngineering and Rehabilitation.","2025: reparo completo de todas as falhas; hardware concluído."],
+  proximo:["Trocar os suportes dos sensores.","Começar o uso clínico; o acordo com o hospital é o que trava."],
+  bloqueio:"Acordos com a instituição clínica (Hospital Paulo de Tarso). A equipe pede ajuda de Relações Institucionais nessa negociação.",
+  parceiros:[["UnB e Universidade de Montpellier","parceiras desde 2016"],["INRIA (França)","pesquisa em estimulação elétrica funcional"],["ETH Zürich / CYBATHLON","competição"],["Centro de Treinamento Esportivo UFMG","local de treino"]],
+  equipe:"Piloto: Jônatas Moreira. Matheus Almeida, Davi Braga, Ana Alice, Ana Clara, Emilly Corrêa, Arthur Paiva, Luiz Fernando, Matheus Zocrato. Apoio de professores da EEFFTO.",
+  pitch:"O Jônatas tem lesão medular completa desde os 25 anos. Com a Trike da UFMG, os músculos paralisados das pernas dele voltaram a pedalar, e ele chegou ao 9º lugar no mundo no CYBATHLON 2024, entre 67 equipes. Restauramos o triciclo e agora queremos colocá-lo a serviço de pacientes em reabilitação. Apoiar o projeto é associar sua marca a ciência, inclusão e uma história real.",
+  editais:[["patrocinio","forte","Cotas Bronze, Prata e Ouro já desenhadas no guia de patrocínio."],["hz-dis","condicional","Rede de equipes do CYBATHLON é a base natural de um consórcio."],["anr","média","Parceria histórica com Montpellier e INRIA."]],
+  fontes:"Apresentação institucional FreeWheels; Guia de patrocínio; Jônatas Moreira e a NeuroDynamics (out/2026); Forms dos projetos (out/2025); NeuroDynamics Insight."
+}];
+
+const OUTRAS = [
+  ["Deriva","Movimento em números","Sensores vestíveis que medem a evolução da reabilitação.","Nova frente; sem ficha pública ainda."],
+  ["Arabella","IA em diagnóstico","Diagnóstico por imagem com inteligência artificial. Primeira meta: medir automaticamente a perda de músculo na UTI.","Em desenvolvimento. Casa com Embrapii (diagnóstico e tecnologias digitais)."],
+  ["Gaia","Supervisora: Ana Clara Silva","Ficha pública ainda não preenchida na planilha NRO-MKT-002.","Aula de anatomia com a Profª Pollyana em 24/10/2026."],
+  ["Équio","Estimulação transcraniana (tDCS)","Módulo de tDCS; documento introdutório de 34 páginas e conceito de produto apresentado à Visuri.","Próximo: implementar o código e apresentar a tDCS na Visuri."],
+  ["Bioprot","Prótese de membro superior","Prótese com controle avançado e feedback tátil, em parceria com o LABBIO.","2025: teste funcional de um dos dedos concluído."],
+  ["ReCARE","Plataforma de estimulação","Eletroestimulador clínico da Visuri (SAMNA). A equipe desenvolveu nele os modos Cycling (Órion) e Respiratório (Opalina).","Equipamento de terceiro; nossa parte é firmware, app e protocolos."],
+  ["Polilaminina + FES","Nova frente em negociação","Protocolo médico combinando polilaminina com eletroestimulação, com a Dra. Tatiana Sampaio (UFRJ).","Em negociação desde mar/2026."]
+];
+
+const ED = {
+  fme:{nome:"FME Transforma",valor:"Até R$ 1 milhão por projeto",prazo:"2026-10-30",quem:"Inovação em saúde, coordenador doutor e apoio institucional.",passo:"Confirmar com o Prof. Henrique quem coordena, escolher um único projeto (Órion ou Opalina) e pedir a carta de apoio institucional.",tipo:"Projeto"},
+  profix:{nome:"FAPEMIG · CNPq · CAPES Profix-CB",valor:"Até R$ 886 mil em bolsas e auxílios",prazo:"2026-11-03",quem:"Doutor elegível sem vínculo de trabalho, com credenciamento em PPG. Bolsa principal de R$ 13 mil/mês.",passo:"Achar um doutor recém-formado sem vínculo que queira se fixar no LABBIO e um PPG que o credencie.",tipo:"Pessoas",obs:"É a soma máxima de bolsas e auxílios, não verba livre."},
+  hubmg:{nome:"FAPEMIG HUBMG GOV",valor:"Até R$ 1 milhão ou R$ 2 milhões",prazo:"2026-11-27",prazo2:"Final 09/12/2026",quem:"Projeto novo aderente a um desafio publicado, com manifestação do órgão demandante.",passo:"Ler os desafios publicados e ver se algum é de saúde ou UTI. Se houver, buscar a manifestação do órgão.",tipo:"Projeto"},
+  embrapii:{nome:"Embrapii Alto Impacto em Saúde",valor:"A partir de R$ 5 milhões por projeto em rede",prazo:null,prazoTxt:"Fluxo contínuo, sujeito a saldo",quem:"Empresa e ao menos 2 unidades Embrapii; temas de diagnóstico e tecnologias digitais.",passo:"Conversar com a Visuri sobre ela liderar como empresa e mapear unidades Embrapii de dispositivos médicos.",tipo:"Projeto em rede"},
+  anr:{nome:"CNPq · ANR Brasil e França",valor:"Até R$ 1,5 milhão para a equipe brasileira",prazo:"2027-03-31",quem:"Pesquisa conjunta nos eixos do edital, incluindo modelagem, simulação e IA. Exige aderência real.",passo:"Propor ao INRIA e a Montpellier um tema conjunto, por exemplo ajuste do estímulo à fadiga com IA.",tipo:"Cooperação"},
+  "hz-dis":{nome:"Horizon Europe Health · Deficiência e inclusão",valor:"€ 6 a 8 milhões por consórcio",prazo:"2027-02-17",prazo2:"Abre 29/10/2026",quem:"Reabilitação, autonomia e tecnologias assistivas em projeto amplo. A parte brasileira precisa de fonte própria de financiamento.",passo:"Sondar Viena, Politécnico de Milão, INRIA e Rotterdam sobre entrar num consórcio.",tipo:"Consórcio"},
+  "hz-cron":{nome:"Horizon Europe Health · Doenças crônicas",valor:"€ 7 a 8 milhões por consórcio",prazo:"2027-02-17",prazo2:"2ª etapa 16/09/2027",quem:"Intervenção clínica para doença não transmissível, conforme escopo.",passo:"Só vale se um consórcio já estiver montado. Prioridade baixa.",tipo:"Consórcio"},
+  "hz-twin":{nome:"Horizon Europe Health · Gêmeos humanos virtuais",valor:"€ 10 a 12 milhões por consórcio",prazo:"2027-09-16",prazo2:"Abre 03/06/2027",quem:"Modelos computacionais integrados à decisão clínica. Exige ampliar competências.",passo:"Acompanhar. Exige competências que o grupo ainda não tem.",tipo:"Consórcio"},
+  paep:{nome:"CAPES PAEP",valor:"R$ 70 mil a R$ 160 mil por evento",prazo:"2026-10-20",quem:"Apoio a eventos; exige 3 PPGs.",passo:"Só vale se já houver 3 PPGs apoiando o Fórum. Se não, mirar a FAPEMIG OET de janeiro.",tipo:"Evento"},
+  oet:{nome:"FAPEMIG OET",valor:"Até R$ 202 mil (evento novo: até 75% da tabela)",prazo:"2026-10-27",prazo2:"Próxima entrada até 26/01/2027",quem:"Organização de eventos.",passo:"Para o Fórum de Engenharia Aplicada à Saúde, a janela realista é janeiro.",tipo:"Evento"},
+  arc:{nome:"CNPq ARC",valor:"Até R$ 150 mil",prazo:"2026-12-04",quem:"Evento não tradicional de grande porte, nacional ou internacional.",passo:"Alternativa ao PAEP para o Fórum.",tipo:"Evento"},
+  patrocinio:{nome:"Patrocínio FreeWheels",valor:"Bronze R$ 10 mil · Prata R$ 20 mil · Ouro R$ 30 mil",prazo:null,prazoTxt:"Sem prazo (captação direta)",quem:"Empresas que queiram associar a marca a inclusão e ciência: logo no uniforme, na trike e na bandeira, posts da UFMG e mídia espontânea.",passo:"Atualizar o guia de patrocínio com os resultados de 2024 a 2026 e ativar a lista de contatos.",tipo:"Patrocínio"}
+};
+const FIT = {forte:["Combina forte","ok"],"média":["Combina","acc"],condicional:["Condicional","warn"]};
+
+function days(iso){ if(!iso) return null; const d=new Date(iso+"T23:59:00-03:00"); return Math.ceil((d-TODAY)/86400000); }
+function br(iso){ if(!iso) return ""; const [y,m,d]=iso.split("-"); return `${d}/${m}/${y}`; }
+function dlChip(e){
+  const n=days(e.prazo);
+  if(n===null) return `<span class="chip">${e.prazoTxt}</span>`;
+  if(n<0) return `<span class="chip">Encerrado em ${br(e.prazo)}</span>`;
+  const cls = n<=14?"crit":n<=45?"warn":"info";
+  return `<span class="chip ${cls} dl">${br(e.prazo)} · ${n===0?"hoje":n+" dias"}</span>`;
+}
+const esc = s => s;
+
+function tabsHTML(cur){
+  if(SOLO){const p=PROJ.find(x=>x.id===SOLO);return [[SOLO,"One-pager"],["editais","Editais que combinam"],["submeter","Como submeter"]].map(([id,t])=>`<a href="#${id}" ${id===cur?'aria-current="page"':''}>${t}</a>`).join("");}
+  const items=[["visao","Visão geral"],...PROJ.map(p=>[p.id,p.nome.split(" ·")[0]]),["outras","Outras frentes"],["sep"],["editais","Editais"],["submeter","Como submeter"]];
+  return items.map(([id,t])=> id==="sep"?`<span class="sep" aria-hidden="true"></span>`:`<a href="#${id}" ${id===cur?'aria-current="page"':''}>${t}</a>`).join("");
+}
+
+function trlBar(t){
+  const n=t[0];
+  return `<div class="trl" aria-label="Maturidade estimada TRL ${n} de 9">${Array.from({length:9},(_,i)=>`<i class="${i<n?"on":""}"></i>`).join("")}</div>
+  <div class="trl-lab"><span>TRL 1 · ideia</span><span>TRL 9 · no mercado</span></div>
+  <p class="small"><b>TRL ${n}</b> (estimativa nossa): ${t[1]}.</p>`;
+}
+
+function projectPage(p){
+  const vid = p.video ? `<figure class="media" style="margin:0"><video src="${p.video[0]}" autoplay muted loop playsinline controls preload="metadata"></video><figcaption>${p.video[1]}</figcaption></figure>`
+    : `<div class="card sunk"><span class="label">O número para lembrar</span><div class="stat"><b style="font-size:56px">${p.stats[0][0]}</b><span>${p.stats[0][1]}</span></div><p class="small"><b>Quem ganha:</b> ${p.quem}</p></div>`;
+  return `
+  <div class="hero">
+    <div style="display:grid;gap:12px">
+      <span class="label">Projeto · ${p.frente}</span>
+      <h1>${p.nome}</h1>
+      <p class="thesis">${p.tese}</p>
+      <p class="lead">${p.lead}</p>
+      <div class="meta"><span class="chip ${p.estagio[1]}">${p.estagio[0]}</span><span class="chip">Supervisão: ${p.supervisor}</span></div>
+      ${p.alias?`<p class="small muted">${p.alias}</p>`:""}
+    </div>
+    ${vid}
+  </div>
+
+  <div class="grid2">
+    <div class="card"><span class="label">O problema</span><p>${p.problema}</p><p class="small"><b>Quem ganha:</b> ${p.quem}</p></div>
+    <div class="card"><span class="label">Por que é diferente</span><ul class="clean">${p.diferencial.map(d=>`<li>${d}</li>`).join("")}</ul></div>
+  </div>
+
+  <div style="display:grid;gap:10px">
+    <span class="label">Como funciona, passo a passo</span>
+    <div class="loop">${p.como.map((s,i)=>`<div class="step"><span class="n">${i+1}</span><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join("")}</div>
+    <p class="loopback">↺ O ciclo se repete a cada volta: o resultado do passo 4 volta como leitura no passo 1.</p>
+  </div>
+
+  <div class="stats">${p.stats.map(s=>`<div class="stat"><b>${s[0]}</b><span>${s[1]}</span></div>`).join("")}</div>
+
+  <div class="grid3">
+    <div class="card"><span class="label">Onde estamos</span>${trlBar(p.trl)}<ul class="clean small">${p.marcos.map(m=>`<li>${m}</li>`).join("")}</ul></div>
+    <div class="card"><span class="label">Próximo passo</span><ul class="clean small">${p.proximo.map(m=>`<li>${m}</li>`).join("")}</ul></div>
+    <div class="card sunk"><span class="label">O que trava</span><p class="small">${p.bloqueio}</p></div>
+  </div>
+
+  <div class="grid2">
+    <div class="card"><span class="label">Parceiros</span><ul class="clean small">${p.parceiros.map(x=>`<li><b>${x[0]}</b>: ${x[1]}</li>`).join("")}</ul></div>
+    <div class="card"><span class="label">Equipe</span><p class="small">${p.equipe}</p><p class="small muted"><b>Título técnico:</b> ${p.titulo}</p></div>
+  </div>
+
+  <div class="card callout">
+    <span class="label">Pitch de 30 segundos</span>
+    <p class="pitch" id="pitch-${p.id}">“${p.pitch}”</p>
+    <button class="copy" type="button" data-copy="pitch-${p.id}">Copiar pitch</button>
+  </div>
+
+  <div class="card">
+    <span class="label">Editais e oportunidades que combinam</span>
+    <div class="fit">${p.editais.map(([id,lvl,why])=>{const e=ED[id];return `<div class="fitrow"><span class="chip ${FIT[lvl][1]}">${FIT[lvl][0]}</span><div><b>${e.nome}</b> <span class="muted small">· ${e.valor}</span><div class="why">${why}</div></div>${dlChip(e)}</div>`}).join("")}</div>
+    <a href="#editais" class="small">Ver todos os editais e o que cada um exige →</a>
+  </div>
+
+  <p class="sources"><b>Fontes:</b> ${p.fontes}</p>`;
+}
+
+function overview(){
+  const tl=[["2016","Nasce a FreeWheels: UFMG, UnB e Universidade de Montpellier."],["mai/2021","CNN Brasil mostra a eletroestimulação em pacientes sedados com Covid-19."],["out/2024","9º lugar no CYBATHLON, na Suíça, entre 67 equipes de 24 países."],["jun/2025","Nasce a NeuroDynamics, que leva a pesquisa para várias frentes em saúde."],["abr/2026","A pesquisa aparece no Jornal Nacional (27/04)."],["ago/2026","Opalina testada em bancada no InCor (USP)."],["out/2026","Calima com menção honrosa no CBEB 2026 e seleção para os Proceedings do IEEE."]];
+  return `
+  <div style="display:grid;gap:12px;max-width:760px">
+    <span class="label">Iniciativa de PD&I da Escola de Engenharia da UFMG · LABBIO</span>
+    <h1>Da pista à UTI: neuroengenharia feita na UFMG.</h1>
+    <p class="lead" style="font-size:19px">A NeuroDynamics desenvolve tecnologias de eletroestimulação, interface cérebro-computador e IA para devolver movimento e função a quem perdeu. Cada projeto começa com uma pergunta da clínica e termina como tecnologia que alguém consegue usar.</p>
+    <p class="small muted">Esta página tem uma folha por projeto, sempre com os mesmos blocos: problema, como funciona, números, onde estamos, o que trava, parceiros, pitch e editais que combinam. Use a barra de cima para navegar.</p>
+  </div>
+
+  <div class="projgrid">${PROJ.map(p=>`<a class="pcard" href="#${p.id}"><span class="tag">${p.frente}</span><h3>${p.nome}</h3><p>${p.lead}</p><div class="meta"><span class="chip ${p.estagio[1]}">${p.estagio[0]}</span></div></a>`).join("")}
+    <a class="pcard" href="#outras"><span class="tag">Em formação</span><h3>Outras frentes</h3><p>Deriva, Arabella, Gaia, Équio, Bioprot, ReCARE e a nova frente com polilaminina.</p><div class="meta"><span class="chip">${OUTRAS.length} frentes</span></div></a>
+  </div>
+
+  <div class="grid2">
+    <div class="card"><span class="label">Trajetória</span><div class="timeline">${tl.map(t=>`<div class="tl"><span class="when">${t[0]}</span><span>${t[1]}</span></div>`).join("")}</div></div>
+    <div style="display:grid;gap:16px;align-content:start">
+      <div class="card"><span class="label">Quem coordena</span>
+        <ul class="clean small">
+          <li><b>Prof. Henrique Martins</b>: coordenador; diretor da Escola de Engenharia da UFMG.</li>
+          <li><b>Matheus Marcondes</b>: diretor executivo.</li>
+          <li><b>Ana Alice</b>: projetos · <b>Mirelle Celiane</b>: pessoal · <b>Gustavo Augusto</b>: administrativo.</li>
+          <li><b>Clévio Clênio</b>: relações institucionais · <b>Marcus Vinicius</b>: marketing.</li>
+        </ul></div>
+      <div class="card"><span class="label">Rede de parceiros</span>
+        <p class="small"><b>Saúde:</b> InCor e IMREA (HC-FMUSP), Hospital Paulo de Tarso, Hospital São Luiz Jabaquara. <b>Indústria:</b> Visuri. <b>Academia:</b> UnB, UFU, INRIA, Universidade de Montpellier (LIRMM), Universidade Médica de Viena, Politécnico de Milão, Rotterdam University of Applied Sciences (em construção). <b>Inovação UFMG:</b> CTIT (PI e transferência), ELO e FCO (assessoria em editais e gestão financeira).</p></div>
+    </div>
+  </div>
+
+  <div class="card callout">
+    <span class="label">Os 3 números que abrem qualquer conversa</span>
+    <div class="stats">
+      <div class="stat"><b>17,7%</b><span>da massa muscular perdida em 7 dias de UTI</span></div>
+      <div class="stat"><b>9º</b><span>lugar no mundo no CYBATHLON 2024</span></div>
+      <div class="stat"><b>10 anos</b><span>de pesquisa em eletroestimulação na UFMG</span></div>
+    </div>
+  </div>`;
+}
+
+function outras(){
+  return `<div style="display:grid;gap:10px;max-width:760px"><span class="label">Frentes em formação</span><h1>Outras frentes</h1><p class="lead" style="font-size:18px">Projetos ainda sem ficha completa. Quando um deles tiver resumo público e objetivos na planilha NRO-MKT-002, ganha uma folha própria aqui.</p></div>
+  <div class="projgrid">${OUTRAS.map(o=>`<div class="pcard" style="cursor:default"><span class="tag">${o[1]}</span><h3>${o[0]}</h3><p>${o[2]}</p><p class="small" style="color:var(--ink)">${o[3]}</p></div>`).join("")}</div>`;
+}
+
+function editais(){
+  const SP=SOLO?PROJ.find(x=>x.id===SOLO):null; const keep=SP?new Set(SP.editais.map(x=>x[0])):null;
+  const all=Object.entries(ED).filter(([k])=>k!=="patrocinio"&&(!keep||keep.has(k)));
+  const open=all.filter(([,e])=>e.prazo&&days(e.prazo)>=0).sort((a,b)=>days(a[1].prazo)-days(b[1].prazo));
+  const projOf=id=>PROJ.filter(p=>p.editais.some(x=>x[0]===id)).map(p=>p.nome.split(" ·")[0]);
+  const extra={profix:["Institucional"],paep:["Fórum (evento)"],oet:["Fórum (evento)"],arc:["Fórum (evento)"],embrapii:["Arabella"],"hz-twin":["Arabella"]};
+  const rows=Object.entries(ED).filter(([k])=>!keep||keep.has(k)).map(([id,e])=>{const ps=[...projOf(id),...(extra[id]||[])];return `<tr><td><b>${e.nome}</b><div class="small muted">${e.tipo}</div></td><td class="num">${e.valor}</td><td>${dlChip(e)}${e.prazo2?`<div class="small muted" style="margin-top:4px">${e.prazo2}</div>`:""}</td><td class="small">${e.quem}${e.obs?` <i>${e.obs}</i>`:""}</td><td class="small">${ps.join(", ")||"—"}</td><td class="small">${e.passo}</td></tr>`}).join("");
+  return `
+  <div style="display:grid;gap:10px;max-width:780px">
+    <span class="label">Captação de recursos</span>
+    <h1>${SP?"Editais que combinam com "+SP.nome.split(" ·")[0]:"Editais em aberto"}</h1>
+    <p class="lead" style="font-size:18px">Valores e prazos levantados em 15/10/2026 no documento “Oportunidades de Financiamento e Parcerias”. Os dias restantes são calculados a partir de hoje. Antes de começar qualquer proposta, confira o edital no site oficial: prazos mudam.</p>
+  </div>
+
+  <div class="urgent">${open.slice(0,6).map(([id,e])=>{const n=days(e.prazo);return `<div class="dlcard ${n<=14?"hot":n<=45?"soon":""}"><span class="label">${e.tipo}</span><span class="days">${n===0?"hoje":n+" dias"}</span><b>${e.nome}</b><span class="small muted">até ${br(e.prazo)}</span></div>`}).join("")}</div>
+
+  ${SP?`<div class="card callout"><span class="label">Por que cada um combina com ${SP.nome.split(" ·")[0]}</span><ul class="clean">${SP.editais.map(([id,l,why])=>`<li><b>${ED[id].nome}</b> (${FIT[l][0].toLowerCase()}): ${why} <span class="muted">Primeiro passo: ${ED[id].passo}</span></li>`).join("")}</ul></div>`:""}
+  <div class="card callout" ${SP?"hidden":""}>
+    <span class="label">Recomendação para os próximos 30 dias</span>
+    <ul class="clean">
+      <li><b>FME Transforma (30/10):</b> é a aposta mais imediata. Escolher <b>um</b> projeto, Órion ou Opalina, com o Prof. Henrique como coordenador.</li>
+      <li><b>Profix-CB (03/11):</b> só se houver um doutor sem vínculo pronto para entrar. Se não houver, deixar passar.</li>
+      <li><b>HUBMG GOV (prévia 27/11):</b> ler os desafios publicados esta semana. Se nenhum for de saúde, descartar.</li>
+      <li><b>Eventos:</b> CAPES PAEP (20/10) e FAPEMIG OET (27/10) estão muito próximos. Para o Fórum, mirar CNPq ARC (04/12) ou a OET de 26/01/2027.</li>
+      <li><b>Sem prazo, mas de maior valor:</b> abrir conversa com a Visuri sobre Embrapii, e com INRIA/Montpellier sobre CNPq–ANR (31/03/2027).</li>
+    </ul>
+  </div>
+
+  <div class="tablewrap"><table>
+    <thead><tr><th>Edital</th><th>Valor</th><th>Prazo</th><th>Quem pode / exige</th><th>Combina com</th><th>Primeiro passo</th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table></div>
+
+  <div class="card sunk">
+    <span class="label">Já encerrados, mas servem de referência</span>
+    <ul class="clean small">
+      <li><b>Finep Mais Inovação Brasil · Saúde, linha de dispositivos médicos:</b> R$ 5 a 15 milhões por projeto, R$ 300 milhões no total. Encerrado em 18/09/2026.</li>
+      <li><b>Finep Mais Inovação Brasil · Tecnologias Digitais:</b> R$ 5 a 25 milhões (em rede, até R$ 40 milhões). Encerrado em 14/10/2026.</li>
+    </ul>
+    <p class="small">Quando reabrirem, a NeuroDynamics entra como ICT ao lado de uma empresa. O orçamento é dividido por atividade; não há cota automática para o grupo.</p>
+  </div>
+  <p class="note">A lista combina opções de maior aderência com oportunidades que dependem de montar projetos e alianças. Nenhuma garante aprovação: a seleção depende do mérito e das regras de cada chamada. No Horizon, a parte brasileira precisa de uma fonte de financiamento própria e elegível.</p>`;
+}
+
+const GO = [
+  "Somos elegíveis? (tipo de instituição, titulação do coordenador, vínculo, PPG, empresa parceira)",
+  "Quem é o proponente formal? (UFMG, fundação de apoio, empresa?) E ele topa?",
+  "O tema do edital bate com um projeto nosso sem forçar a barra?",
+  "Temos as parcerias exigidas por escrito, ou dá para conseguir antes do prazo? (carta do hospital, da empresa, do órgão)",
+  "O valor e o que pode ser pago (bolsa, material, equipamento, serviço) resolvem o nosso bloqueio real?",
+  "Há tempo: pelo menos 3 semanas para um edital simples, 2 a 3 meses para consórcio ou Embrapii?",
+  "Existe alguém com nome e prazo para escrever, orçar e juntar documentos?"
+];
+
+function submeter(){
+  return `
+  <div style="display:grid;gap:10px;max-width:780px">
+    <span class="label">Guia prático para a equipe</span>
+    <h1>Como ler um edital e submeter</h1>
+    <p class="lead" style="font-size:18px">Um edital (ou chamada) é um contrato de regras: diz quem pode pedir, quanto, para quê, até quando e como vai avaliar. Quem segue as regras à risca e escreve pensando no avaliador já sai na frente.</p>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <span class="label">Triagem: vale a pena entrar?</span>
+      <p class="small muted">Marque o que já está garantido. Com 6 ou 7, siga em frente. Com menos de 5, prefira o próximo edital.</p>
+      <div class="check" id="gocheck">${GO.map((g,i)=>`<label for="go${i}"><input type="checkbox" id="go${i}"><span>${g}</span></label>`).join("")}</div>
+      <p class="verdict" id="verdict" aria-live="polite"></p>
+    </div>
+    <div class="card">
+      <span class="label">O que caçar no texto do edital</span>
+      <ul class="clean small">
+        <li><b>Objeto:</b> o que o financiador quer comprar. Copie as palavras dele na proposta.</li>
+        <li><b>Elegibilidade:</b> quem pode ser coordenador, instituição, parceiros obrigatórios.</li>
+        <li><b>Itens financiáveis:</b> bolsa, custeio (material, serviço, viagem) e capital (equipamento). O que não está na lista não pode ser pedido.</li>
+        <li><b>Contrapartida:</b> se a instituição ou empresa precisa entrar com recurso ou horas.</li>
+        <li><b>Critérios de avaliação e pesos:</b> monte a proposta na ordem deles.</li>
+        <li><b>Documentos:</b> Lattes, cartas, aprovação de ética, declarações.</li>
+        <li><b>Sistema de envio:</b> crie o login com antecedência (FAPEMIG Everest, Plataforma Carlos Chagas do CNPq, Funding &amp; Tenders da União Europeia).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="display:grid;gap:10px">
+    <span class="label">Passo a passo da submissão</span>
+    <ol class="steps">
+      <li><div class="body"><h3>Leia o edital inteiro e faça a ficha</h3><p class="small">Uma página com: objeto, valor, prazo (dia e hora), elegibilidade, itens financiáveis, critérios e documentos. Coloque a ficha na pasta do edital no Drive.</p></div></li>
+      <li><div class="body"><h3>Escolha um projeto e um coordenador</h3><p class="small">Um edital, um projeto. Quase sempre o coordenador precisa ser doutor com vínculo; na NeuroDynamics, em geral, o Prof. Henrique. Combine com ele antes de escrever.</p></div></li>
+      <li><div class="body"><h3>Acione a FCO e a CTIT cedo</h3><p class="small">A FCO assessora submissão, orçamento e gestão financeira. A CTIT cuida de propriedade intelectual e acordos com empresas. Procure as duas na primeira semana, não na última.</p></div></li>
+      <li><div class="body"><h3>Peça as cartas e documentos dos parceiros</h3><p class="small">Carta de anuência do hospital, carta de parceria da Visuri, manifestação do órgão público (HUBMG). Envie um modelo pronto para o parceiro só assinar. Para estudo com pacientes, cite o protocolo e a situação no Comitê de Ética (CEP).</p></div></li>
+      <li><div class="body"><h3>Escreva usando a folha do projeto</h3><p class="small">Estrutura que funciona na maioria dos editais: problema com número, solução, o que já foi feito (TRL e marcos), objetivos geral e específicos, metodologia, cronograma em metas, equipe, orçamento, impacto e riscos. Os blocos desta página já são o rascunho de cada parte.</p></div></li>
+      <li><div class="body"><h3>Monte o orçamento ligado às entregas</h3><p class="small">Cada item responde “para qual meta isso serve?”. Separe bolsa, custeio e capital. Use cotações reais. Despesas seguem a aprovação do coordenador e as regras da UFMG e do financiador.</p></div></li>
+      <li><div class="body"><h3>Faça uma avaliação simulada</h3><p class="small">Alguém de fora do projeto dá nota usando os critérios do edital. Corrija o que ficou fraco. Confira limites de caracteres e formatos.</p></div></li>
+      <li><div class="body"><h3>Submeta 48 horas antes</h3><p class="small">Sistemas caem no último dia. Salve o comprovante e o PDF enviado na pasta do edital.</p></div></li>
+      <li><div class="body"><h3>Registre e acompanhe</h3><p class="small">Anote resultado, nota e parecer. Mesmo uma recusa vira material para a próxima chamada.</p></div></li>
+    </ol>
+  </div>
+
+  <div class="grid2">
+    <div class="card callout">
+      <span class="label">Modelo de e-mail para pedir carta de parceria</span>
+      <p class="small" id="mailtpl" style="white-space:pre-line">Assunto: Carta de parceria – [nome do edital] – NeuroDynamics/UFMG
+
+Olá, [nome],
+Vamos submeter o projeto [Órion/Opalina/Calima] ao [edital], com prazo em [data]. A proposta prevê [papel do parceiro, ex.: execução dos testes clínicos no InCor].
+Para a submissão, precisamos de uma carta de parceria assinada. Segue um modelo pronto em anexo; basta ajustar o que quiser e assinar.
+Conseguimos receber até [data, 1 semana antes do prazo]?
+Obrigado,
+[nome] – Relações Institucionais, NeuroDynamics (Escola de Engenharia da UFMG)</p>
+      <button class="copy" type="button" data-copy="mailtpl">Copiar modelo</button>
+    </div>
+    <div class="card">
+      <span class="label">Erros que eliminam propostas</span>
+      <ul class="clean small">
+        <li>Coordenador que não cumpre a elegibilidade.</li>
+        <li>Pedir item que o edital não financia.</li>
+        <li>Faltar uma carta ou documento obrigatório.</li>
+        <li>Proposta genérica, que serviria para qualquer edital.</li>
+        <li>Orçamento sem ligação com as metas.</li>
+        <li>Deixar para enviar na última hora.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="display:grid;gap:10px">
+    <span class="label">Glossário rápido</span>
+    <dl class="gloss">
+      <dt>Edital / chamada</dt><dd>Documento que define as regras de uma seleção de projetos.</dd>
+      <dt>Proponente</dt><dd>Quem assina e responde pela proposta (pessoa ou instituição).</dd>
+      <dt>ICT</dt><dd>Instituição de Ciência e Tecnologia, como a UFMG.</dd>
+      <dt>Fundação de apoio</dt><dd>Entidade que gerencia o dinheiro do projeto para a universidade (ex.: FCO).</dd>
+      <dt>Contrapartida</dt><dd>O que a instituição ou empresa entra de recurso próprio, em dinheiro ou horas.</dd>
+      <dt>Bolsa · custeio · capital</dt><dd>Pagamento a pessoas · material, serviço e viagem · equipamento que fica de patrimônio.</dd>
+      <dt>TRL</dt><dd>Nível de maturidade tecnológica, de 1 (ideia) a 9 (produto no mercado). Muitos editais pedem.</dd>
+      <dt>Fluxo contínuo</dt><dd>Sem prazo fixo; recebe propostas enquanto houver orçamento.</dd>
+      <dt>Carta de anuência</dt><dd>Documento em que um parceiro confirma que participa e o que vai fazer.</dd>
+      <dt>CEP / CONEP</dt><dd>Comitês de ética que aprovam pesquisa com seres humanos.</dd>
+      <dt>PPG</dt><dd>Programa de pós-graduação (mestrado e doutorado).</dd>
+      <dt>Consórcio</dt><dd>Grupo de instituições de vários países que submete um projeto único (Horizon Europe).</dd>
+    </dl>
+  </div>`;
+}
+
+const ROUTES = {visao:overview, outras, editais, submeter};
+PROJ.forEach(p=>ROUTES[p.id]=()=>projectPage(p));
+
+if(SOLO){const p=PROJ.find(x=>x.id===SOLO);document.getElementById("sub").textContent="One-pager · "+p.nome+" · out/2026";}
+function render(){
+  let id=(location.hash||"").replace("#","");
+  if(SOLO && !["editais","submeter",SOLO].includes(id)) id=SOLO;
+  if(!ROUTES[id]) id=SOLO||"visao";
+  document.getElementById("tabs").innerHTML=tabsHTML(id);
+  document.getElementById("app").innerHTML=`<section class="page" id="pg-${id}">${ROUTES[id]()}</section>`;
+  const cur=document.querySelector('nav.tabs a[aria-current]'); if(cur) cur.scrollIntoView({block:"nearest",inline:"center"});
+  if(id==="submeter") initCheck();
+}
+function initCheck(){
+  let saved=[]; try{saved=JSON.parse(localStorage.getItem("go")||"[]")}catch(e){}
+  const boxes=[...document.querySelectorAll("#gocheck input")];
+  boxes.forEach((b,i)=>{b.checked=!!saved[i]; b.addEventListener("change",upd)});
+  function upd(){
+    const st=boxes.map(b=>b.checked); try{localStorage.setItem("go",JSON.stringify(st))}catch(e){}
+    const n=st.filter(Boolean).length, v=document.getElementById("verdict");
+    v.textContent = n>=6?`${n} de 7: siga em frente.`: n>=5?`${n} de 7: dá para entrar se resolver o que falta nesta semana.`:`${n} de 7: melhor mirar o próximo edital.`;
+    v.style.color = n>=6?"var(--ok)":n>=5?"var(--warn)":"var(--crit)";
+  }
+  upd();
+}
+document.addEventListener("click",e=>{
+  const b=e.target.closest("[data-copy]"); if(!b) return;
+  const el=document.getElementById(b.dataset.copy); const txt=el.innerText.trim();
+  const ok=()=>{b.textContent="Copiado"; setTimeout(()=>b.textContent=b.dataset.copy.startsWith("pitch")?"Copiar pitch":"Copiar modelo",1600)};
+  const fallback=()=>{const r=document.createRange(); r.selectNodeContents(el); const s=getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent="Texto selecionado"};
+  try{ navigator.clipboard.writeText(txt).then(ok,fallback) }catch(err){ fallback() }
+});
+addEventListener("hashchange",()=>{render(); scrollTo(0,0)});
+render();
+</script>
+
+</body></html>

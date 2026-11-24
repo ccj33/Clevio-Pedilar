@@ -1,0 +1,1256 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Mapa de telas RMDS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: barra de ferramentas no topo, canvas cinza-claro com raias (quem usa) x etapas, inspetor à direita. As telas do app usam identidade própria (azul-marinho, destaque amarelo, Atkinson Hyperlegible). Claro fixo a pedido. */
+:root{
+  --bg:#F1F2F4; --surface:#FFFFFF; --ink:#15181D; --mute:#5F6873; --faint:#949CA7; --line:#E3E6EB; --line2:#D2D6DD; --soft:#F3F4F6;
+  --sel:#2F6BFF; --sel-s:#E8EFFF; --ok:#1E8A5A; --warn:#B26A00; --err:#C23B3B;
+  --c-g:#D9731A; --c-p:#7A5AD0; --c-i:#1E8A5A; --c-n:#2F5FD0; --c-d:#C23B3B; --c-x1:#0E8AA0; --c-x2:#B5467A; --c-x3:#7C8A1F; --c-x4:#555F6E;
+  --p-ink:#10223F; --p-bg:#FFFFFF; --p-soft:#F3F5F9; --p-line:#E3E8F0; --p-mute:#56637A; --p-acc:#F2B01E; --p-acc-s:#FFF4D2;
+  --p-ok:#1A7048; --p-wait:#2B55C4; --p-pend:#935A00; --p-err:#B3261E;
+  --f-ui:'Geist',system-ui,sans-serif; --f-mono:'Geist Mono',ui-monospace,monospace; --f-app:'Atkinson Hyperlegible',system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:14px;overflow:auto}
+button,input,select,textarea{font-family:inherit;color:inherit}
+svg.ic{flex:none;display:block}
+#app{height:100%;min-height:560px;display:flex;flex-direction:column}
+.top{flex:none;display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:9px 16px;background:var(--surface);border-bottom:1px solid var(--line);z-index:5}
+.brand{display:flex;align-items:center;gap:10px;margin-right:6px}
+.mark{width:28px;height:28px;border-radius:9px;background:var(--ink);display:grid;place-items:center;color:#fff}
+.brand b{display:block;font-size:15px;font-weight:600;line-height:1.15}.brand small{display:block;font-size:12px;color:var(--mute)}
+.sw2{display:flex;background:var(--soft);border-radius:10px;padding:3px;gap:2px}
+.sw2 button{all:unset;cursor:pointer;padding:6px 12px;border-radius:8px;font-size:13px;font-weight:500;color:var(--mute);display:flex;align-items:center;gap:6px}
+.sw2 button[aria-pressed="true"]{background:#fff;color:var(--ink);font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.12)}
+.sw2 button:focus-visible,.tb:focus-visible,.b:focus-visible,.tab:focus-visible,.toggle input:focus-visible+span{outline:2px solid var(--sel);outline-offset:1px}
+.tb{all:unset;cursor:pointer;height:34px;padding:0 13px;border:1px solid var(--line2);border-radius:9px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:6px;background:#fff}
+.tb:hover{background:var(--soft)}.tb.pri{background:var(--ink);border-color:var(--ink);color:#fff}.tb.pri:hover{background:#2a2f37}
+.sp{flex:1}
+#sum,#save{font-size:12.5px;color:var(--mute)}#sum b{color:var(--ink)}
+#save.err{color:var(--err)}
+.toggle{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;cursor:pointer;user-select:none}
+.toggle input{position:absolute;opacity:0;pointer-events:none}
+.toggle span{width:36px;height:20px;border-radius:99px;background:#C9CED6;position:relative;transition:.15s}
+.toggle span::after{content:'';position:absolute;left:2px;top:2px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.3);transition:.15s}
+.toggle input:checked+span{background:var(--sel)}.toggle input:checked+span::after{left:18px}
+.toggle input:disabled+span{opacity:.45}
+.dep{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--mute)}
+.dep button{all:unset;cursor:pointer;width:26px;height:26px;display:grid;place-items:center;border:1px solid var(--line2);border-radius:8px;background:#fff;font-weight:700}
+.dep b{color:var(--ink);min-width:14px;text-align:center}
+.work{flex:1;min-height:0;display:flex;position:relative}
+#vp{flex:1;min-width:0;position:relative;overflow:hidden;cursor:grab;touch-action:none;background-color:var(--bg);background-image:radial-gradient(#D3D7DE 1.1px,transparent 1.3px);background-size:24px 24px}
+#vp.drag{cursor:grabbing}#vp.connect{cursor:crosshair}
+#world{position:absolute;left:0;top:0;transform-origin:0 0}
+.zoom{position:absolute;left:14px;bottom:14px;display:flex;align-items:center;background:#fff;border:1px solid var(--line2);border-radius:11px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.zoom button{all:unset;cursor:pointer;height:34px;min-width:34px;display:grid;place-items:center;font-size:15px;font-weight:600;padding:0 4px}
+.zoom button:hover{background:var(--soft)}.zoom button:first-child{border-radius:10px 0 0 10px}.zoom button:last-child{border-radius:0 10px 10px 0;padding:0 12px;font-size:13px;border-left:1px solid var(--line)}
+.zoom span{font-size:12.5px;font-weight:600;min-width:46px;text-align:center;color:var(--mute)}
+.hint{position:absolute;right:14px;bottom:14px;max-width:420px;background:#fff;border:1px solid var(--line2);border-radius:11px;padding:8px 12px;font-size:12.5px;color:var(--mute);box-shadow:0 2px 8px rgba(0,0,0,.06);pointer-events:none}
+#tbar{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);display:flex;align-items:center;gap:2px;background:var(--ink);color:#fff;padding:5px;border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.28);z-index:4}
+#tbar button{all:unset;cursor:pointer;display:flex;align-items:center;gap:7px;padding:8px 12px;border-radius:9px;font-size:13px;font-weight:600}
+#tbar button:hover{background:rgba(255,255,255,.14)}#tbar button[aria-pressed="true"]{background:#fff;color:var(--ink)}
+#tbar button[disabled]{opacity:.35;cursor:default}#tbar i{width:1px;height:22px;background:rgba(255,255,255,.22);margin:0 4px}
+/* mundo */
+.band{position:absolute;left:30px;border-radius:34px;background:rgba(255,255,255,.66);border:1.5px solid #E1E4EA}
+.lane{position:absolute;left:40px;top:44px;width:200px}
+.lane b{display:flex;align-items:center;gap:12px;font-size:32px;font-weight:600;line-height:1.15}
+.lane b i{flex:none;width:18px;height:18px;border-radius:6px;background:var(--c)}
+.lane span{display:block;margin:8px 0 0 30px;font-size:22px;line-height:1.3;color:var(--faint)}
+.colh{position:absolute;top:70px;text-align:center;font-size:28px;font-weight:500;color:var(--faint);letter-spacing:.01em}
+#edges{position:absolute;left:0;top:0;pointer-events:none;overflow:visible}
+.edge path.ln{fill:none;stroke:#8E97A4;stroke-width:1.6px;vector-effect:non-scaling-stroke;opacity:.7}
+.edge.dash path.ln{stroke-dasharray:6 5}
+.edge .lab{display:none}.edge .lab rect{fill:#fff;stroke:var(--c);stroke-width:2px}.edge .lab text{font-size:22px;font-weight:600;fill:var(--ink);font-family:var(--f-ui)}
+.edge.on path.ln{stroke:var(--c);stroke-width:3.4px;opacity:1}.edge.in path.ln{stroke:var(--sel);stroke-width:2.4px;opacity:1}
+.edge.on .lab,.edge.in .lab{display:block}.edge.off{opacity:.1}
+.cardw{position:absolute;cursor:pointer;transition:opacity .2s}
+.cardw.dim{opacity:.16}
+.editing .cardw{cursor:grab}
+.cardw.lift{z-index:20;opacity:.95;cursor:grabbing}
+.cardw.lift .frame{box-shadow:0 0 0 7px var(--sel),0 50px 90px rgba(0,0,0,.3)}
+#drop{position:absolute;border:4px dashed var(--sel);border-radius:34px;background:rgba(47,107,255,.07);pointer-events:none}
+.ctitle{height:54px;display:flex;align-items:center;gap:12px;font-size:26px;font-weight:600;white-space:nowrap}
+.ctitle i{flex:none;width:16px;height:16px;border-radius:5px;background:var(--c)}
+.ctitle span{overflow:hidden;text-overflow:ellipsis}
+.badge{margin-left:auto;font-style:normal;font-size:18px;font-weight:600;padding:2px 11px;border-radius:99px;flex:none}
+.badge.ok{background:#E2F4EA;color:var(--ok)}.badge.ajuste{background:#FCEBCB;color:var(--warn)}
+.cardw.sel .frame{box-shadow:0 0 0 7px var(--sel),0 30px 60px -10px rgba(16,34,63,.3)}
+.cardw.nxt .frame{box-shadow:0 0 0 4px var(--c),0 20px 40px -10px rgba(16,34,63,.25)}
+/* ===== telas do app ===== */
+.frame{background:var(--p-bg);color:var(--p-ink);font-family:var(--f-app);position:relative;overflow:hidden;display:flex;flex-direction:column;text-align:left;line-height:1.35;box-shadow:0 0 0 1px rgba(16,34,63,.09),0 2px 6px rgba(16,34,63,.06),0 26px 50px -14px rgba(16,34,63,.25)}
+.frame.phone{width:360px;height:780px;border-radius:48px}
+.frame.desk{width:760px;height:680px;border-radius:14px}
+.sbar{flex:none;height:46px;display:flex;justify-content:space-between;align-items:flex-end;padding:0 30px 7px;font-size:14px;font-weight:700}
+.sic{display:flex;align-items:flex-end;gap:3px}.sic i{display:block;width:3.5px;background:var(--p-ink);border-radius:1px}
+.sic i:nth-child(1){height:5px}.sic i:nth-child(2){height:8px}.sic i:nth-child(3){height:11px}
+.sic b{display:block;width:24px;height:11px;margin-left:6px;border:1.6px solid var(--p-ink);border-radius:4px;position:relative}
+.sic b::after{content:'';position:absolute;inset:1.5px;width:70%;background:var(--p-ink);border-radius:1px}
+.home{flex:none;height:24px;display:grid;place-items:center}.home i{display:block;width:124px;height:5px;border-radius:3px;background:var(--p-ink);opacity:.9}
+.dbar{flex:none;height:42px;display:flex;align-items:center;gap:14px;padding:0 16px;background:#F1F3F7;border-bottom:1px solid var(--p-line)}
+.dots{display:flex;gap:6px}.dots i{width:11px;height:11px;border-radius:50%;background:#D0D6E1}
+.url{flex:1;max-width:340px;height:26px;border-radius:8px;background:#fff;border:1px solid var(--p-line);display:flex;align-items:center;padding:0 12px;font-size:13px;color:var(--p-mute)}
+.dnav{flex:none;height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;border-bottom:1px solid var(--p-line)}
+.dnav b{font-size:20px;letter-spacing:.02em}.who{display:flex;align-items:center;gap:10px;font-size:15px;color:var(--p-mute)}.who em{font-style:normal;width:30px;height:30px;border-radius:50%;background:var(--p-ink);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px}
+.fbody{flex:1;min-height:0;overflow:hidden;padding:10px 22px 8px;display:flex;flex-direction:column;gap:12px}
+.ffoot{flex:none;padding:12px 22px 10px;display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--p-line);background:var(--p-bg)}
+.desk .fbody{padding:26px 48px 10px;gap:16px}
+.desk .ffoot{flex-direction:row;justify-content:flex-end;padding:16px 48px;gap:12px}
+.u-brand{font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--p-mute)}
+.u-h{font-size:26px;line-height:1.12;font-weight:700;letter-spacing:-.015em}.desk .u-h{font-size:32px}
+.u-p{font-size:16.5px;color:var(--p-mute);line-height:1.4}.desk .u-p{font-size:17px}
+.u-q{font-size:23px;line-height:1.25;font-weight:700;letter-spacing:-.01em}.desk .u-q{font-size:26px;max-width:640px}
+.u-note{background:var(--p-soft);border-radius:14px;padding:12px 14px;font-size:14.5px;color:var(--p-mute)}
+.u-bubble{align-self:flex-start;max-width:92%;background:#E7FFDB;border-radius:14px 14px 14px 4px;padding:10px 12px 24px;font-size:15.5px;position:relative;box-shadow:0 1px 1px rgba(0,0,0,.1)}
+.u-bubble::after{content:'09:41  ✓✓';position:absolute;right:10px;bottom:5px;font-size:11px;color:#6E8077}
+.u-banner{display:flex;gap:10px;align-items:flex-start;border-radius:14px;padding:12px 14px;font-size:15px;font-weight:700;background:#EAF0FF;color:#1E3FA8}
+.u-banner .bi{flex:none;width:22px;height:22px;border-radius:50%;background:#1E3FA8;color:#fff;display:grid;place-items:center;font-size:13px}
+.u-banner.err{background:#FDECEA;color:#9B241B}.u-banner.err .bi{background:#B3261E}
+.u-banner.ok{background:#E5F5EC;color:#14613C}.u-banner.ok .bi{background:#1A7048}
+.u-field label{display:block;font-size:14px;font-weight:700;color:var(--p-mute);margin-bottom:6px}
+.u-in{min-height:54px;display:flex;align-items:center;border:1.5px solid #C9D1DF;border-radius:14px;padding:0 16px;font-size:17px;background:#fff}
+.u-field.bad .u-in{border-color:var(--p-err);border-width:2px}.u-field small{display:block;margin-top:6px;color:var(--p-err);font-size:14px;font-weight:700}
+.u-prog{flex:none;height:10px;border-radius:99px;background:#E8ECF3;overflow:hidden}.u-prog i{display:block;height:100%;background:var(--p-acc);border-radius:99px}
+.u-list{display:flex;flex-direction:column;flex:none}
+.u-list.alts,.u-list.persons{gap:10px}
+.desk .u-list.rows{display:grid;grid-template-columns:1fr 1fr;column-gap:40px}
+.desk .u-list.alts,.desk .u-list.persons{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.u-row{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--p-line)}
+.u-list.rows .u-row:last-child{border-bottom:0}
+.u-rt{flex:1;min-width:0}.u-rt b{display:block;font-size:16.5px;line-height:1.22}.u-rt small{display:block;color:var(--p-mute);font-size:13.5px;margin-top:1px}
+.u-rr{display:flex;align-items:center;gap:8px;flex:none}.chev{font-size:26px;color:#9AA6B8;line-height:1}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;white-space:nowrap;color:var(--p-mute)}
+.chip i{width:9px;height:9px;border-radius:50%;background:currentColor}
+.chip.ok{color:var(--p-ok)}.chip.wait{color:var(--p-wait)}.chip.pend{color:var(--p-pend)}.chip.err{color:var(--p-err)}
+.u-alt,.u-person{display:flex;gap:12px;align-items:center;padding:11px 14px;border:1.5px solid var(--p-line);border-radius:16px;background:#fff}
+.u-alt .lt{flex:none;min-width:32px;height:32px;border-radius:99px;background:var(--p-soft);display:grid;place-items:center;font-weight:700;font-size:14px;padding:0 6px}
+.u-alt b,.u-person b{display:block;font-size:16.5px;line-height:1.25}.u-alt small,.u-person small{display:block;color:var(--p-mute);font-size:14px}
+.u-alt.sel,.u-person.sel{border:2px solid var(--p-ink);background:var(--p-acc-s);padding:10.5px 13.5px}
+.u-alt.sel .lt{background:var(--p-ink);color:#fff}
+.u-person .av{flex:none;width:40px;height:40px;border-radius:50%;background:var(--p-soft);display:grid;place-items:center;font-weight:700;font-size:16px}
+.u-person>span:nth-child(2){flex:1}.rad{flex:none;width:22px;height:22px;border-radius:50%;border:2px solid #B3BED0}
+.u-person.sel .rad{border-color:var(--p-ink);background:radial-gradient(var(--p-ink) 46%,transparent 52%)}
+.u-seg{display:flex;background:var(--p-soft);border-radius:14px;padding:4px;flex:none}
+.u-seg span{flex:1;text-align:center;padding:10px 6px;border-radius:11px;font-size:15px;font-weight:700;color:var(--p-mute)}
+.u-seg span.on{background:#fff;color:var(--p-ink);box-shadow:0 1px 3px rgba(16,34,63,.18)}
+.u-check{display:flex;gap:12px;align-items:center;font-size:16.5px}
+.u-check i{flex:none;width:26px;height:26px;border-radius:8px;border:2px solid #B3BED0;display:grid;place-items:center;font-style:normal;font-weight:700;font-size:15px;color:#fff}
+.u-check.done i{background:var(--p-ink);border-color:var(--p-ink)}
+.u-stats{display:flex;flex:none;border:1px solid var(--p-line);border-radius:16px;overflow:hidden}
+.u-stats>div{flex:1;padding:12px 14px;border-left:1px solid var(--p-line);min-width:0}.u-stats>div:first-child{border-left:0}
+.u-stats b{display:block;font-size:26px;line-height:1.1}.u-stats small{display:block;font-size:13px;color:var(--p-mute);margin-top:2px}
+.u-table{width:100%;border-collapse:collapse;font-size:15px;flex:none}
+.u-table th{font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--p-mute);text-align:left;padding:8px 10px;border-bottom:1.5px solid var(--p-line)}
+.u-table td{padding:12px 10px;border-bottom:1px solid var(--p-line)}
+.u-tlist{flex:none;display:flex;flex-direction:column}
+.u-tlist>div{padding:12px 0;border-bottom:1px solid var(--p-line)}.u-tlist b{display:block;font-size:17px}.u-tlist small{display:block;font-size:14px;color:var(--p-mute);margin-top:2px}
+.phone .u-table{display:none}.desk .u-tlist{display:none}
+.u-btn{display:flex;align-items:center;justify-content:center;min-height:56px;padding:0 18px;border-radius:16px;background:var(--p-ink);color:#fff;font-size:17px;font-weight:700;text-align:center;line-height:1.2}
+.u-btn.alt{background:var(--p-soft);color:var(--p-ink)}.u-btn.dis{opacity:.4}
+.desk .u-btn{min-height:46px;border-radius:12px;font-size:15.5px;min-width:200px}
+.u-big{flex:none;width:76px;height:76px;border-radius:50%;background:var(--p-acc-s);display:grid;place-items:center;font-size:38px;font-weight:700}
+.ix [data-to]{cursor:pointer}.ix [data-to]:hover,.ix [data-to]:focus-visible{outline:3px solid var(--sel);outline-offset:2px}
+/* inspetor */
+#drawer{flex:none;width:410px;background:var(--surface);border-left:1px solid var(--line);display:flex;flex-direction:column;min-height:0;z-index:6}
+.ih{display:flex;justify-content:space-between;align-items:center;padding:14px 16px 0}
+.ik{font-size:12.5px;font-weight:600;color:var(--mute);display:flex;align-items:center;gap:8px}.ik i{width:10px;height:10px;border-radius:3px;background:var(--c)}
+.x{all:unset;cursor:pointer;width:30px;height:30px;display:grid;place-items:center;border-radius:8px;color:var(--mute)}.x:hover{background:var(--soft)}
+.it{margin:6px 16px 10px;font-size:21px;font-weight:600;line-height:1.2;letter-spacing:-.01em}
+.tabs{display:flex;gap:4px;padding:0 10px;border-bottom:1px solid var(--line);overflow-x:auto}
+.tab{all:unset;cursor:pointer;padding:10px 9px;font-size:13px;font-weight:600;color:var(--mute);border-bottom:2px solid transparent;white-space:nowrap}
+.tab[aria-selected="true"]{color:var(--ink);border-color:var(--ink)}
+.ibody{flex:1;overflow-y:auto;padding:16px 16px 60px}
+.isub{margin:0 0 14px;color:var(--mute);font-size:14px;line-height:1.45}
+.kv{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:13.5px}.kv span{color:var(--mute)}.kv b{font-weight:600;text-align:right}
+.sec{margin-top:18px}.sec h4{margin:0 0 8px;font-size:12px;font-weight:600;color:var(--mute);letter-spacing:.02em}
+.fld{margin-bottom:13px}.fld>label{display:block;font-size:12px;font-weight:600;color:var(--mute);margin-bottom:5px}
+.inp{width:100%;height:36px;border:1px solid var(--line2);border-radius:9px;padding:0 10px;font-size:13.5px;background:#fff}
+textarea.inp{height:auto;min-height:66px;padding:8px 10px;resize:vertical;line-height:1.4}
+.inp:focus{outline:2px solid var(--sel);outline-offset:-1px;border-color:transparent}
+.chk{display:flex;align-items:center;gap:8px;font-size:13px}.chk input{width:16px;height:16px}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 4px}
+.b{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:7px;padding:0 12px;height:34px;border:1px solid var(--line2);border-radius:9px;font-size:13px;font-weight:600;background:#fff}
+.b:hover{background:var(--soft)}.b.pri{background:var(--ink);border-color:var(--ink);color:#fff}.b.danger{color:var(--err)}.b.sm{height:28px;padding:0 8px;font-size:12px}
+.b.ok{background:#E2F4EA;border-color:#9FD5B8;color:var(--ok)}.b.ajuste{background:#FCEBCB;border-color:#E8C77F;color:var(--warn)}
+.b[aria-disabled="true"],.b:disabled{opacity:.45;cursor:not-allowed}
+.ib{all:unset;cursor:pointer;width:26px;height:26px;display:grid;place-items:center;border-radius:7px;color:var(--mute)}.ib:hover{background:var(--soft);color:var(--ink)}
+.states{display:flex;gap:16px;flex-wrap:wrap}.states figure{margin:0}.states figcaption{font-size:12.5px;font-weight:600;color:var(--mute);margin-top:8px}
+.th{position:relative}
+.pl{display:flex;flex-direction:column;gap:5px}
+.pl .lbl{font-size:12px;font-weight:600;color:var(--mute);margin:10px 0 2px}
+.pl button{all:unset;cursor:pointer;display:flex;gap:8px;align-items:baseline;padding:8px 10px;background:var(--soft);border-radius:8px;font-size:13px}
+.pl button:hover{outline:2px solid var(--sel)}.pl button em{font-style:normal;font-weight:600}.pl button small{color:var(--mute);margin-left:auto}
+.edge-row{display:flex;gap:6px;align-items:center;margin-bottom:8px;flex-wrap:wrap}.edge-row .inp{flex:1}
+.edge-row .to{font-size:12px;color:var(--mute);width:100%;padding:0 2px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}.tags span{background:var(--soft);border-radius:7px;padding:4px 9px;font-size:13px;font-weight:500}
+.api{font-family:var(--f-mono);font-size:12px;display:flex;flex-direction:column;gap:5px;margin-top:10px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.chips button{all:unset;cursor:pointer;padding:5px 11px;border:1px solid var(--line2);border-radius:99px;font-size:12.5px;font-weight:600}
+.chips button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.bk{border:1px solid var(--line);border-radius:10px;margin-bottom:8px;background:#fff}
+.bkh{display:flex;align-items:center;gap:8px;padding:6px 6px 6px 10px;cursor:pointer}
+.bkt{flex:none;width:96px;font-size:11.5px;font-weight:600;color:var(--mute)}.bks{flex:1;min-width:0;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bka{display:flex;flex:none}.bkf{padding:10px 12px 4px;border-top:1px solid var(--line)}
+.bk.open{border-color:var(--line2);box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.addmenu{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:8px 0 14px}
+.addmenu button{all:unset;cursor:pointer;padding:8px 10px;border:1px solid var(--line);border-radius:9px;font-size:12.5px;font-weight:500}.addmenu button:hover{background:var(--soft);border-color:var(--line2)}
+.prev{display:flex;justify-content:center;padding:14px;background:var(--bg);border-radius:12px;margin-bottom:14px}
+.rs{display:flex;gap:8px;flex-wrap:wrap}.rinfo{margin-top:8px;font-size:12.5px;color:var(--mute)}
+.cm{margin-top:10px;padding:9px 11px;background:var(--soft);border-radius:9px}.cm b{font-size:12.5px}.cm time{color:var(--mute);font-size:11.5px;margin-left:6px}.cm p{margin:3px 0 0;white-space:pre-wrap;font-size:13.5px}
+#rmsg{color:var(--err);font-size:12.5px;margin-top:6px}.mut{color:var(--mute)}
+.qc{display:flex;flex-direction:column;gap:6px;margin-top:8px}.qc label{display:flex;gap:8px;align-items:flex-start;font-size:13px;line-height:1.35}.qc input{margin-top:2px;width:16px;height:16px;flex:none}
+/* mapa mental */
+#mind{position:absolute;inset:0;overflow:auto;padding:18px 22px 80px;background:var(--bg)}
+#mind h2{font-size:18px;font-weight:600;margin:0 0 4px}.mctl{color:var(--mute);font-size:13px;margin:0 0 16px}
+#mind svg{display:block}#mind .me{fill:none;stroke:#9AA3AF;stroke-width:1.6}#mind .ml{font-size:11.5px;fill:var(--mute);font-family:var(--f-ui)}
+#mind .mn{cursor:pointer}#mind .mn rect{fill:#fff;stroke:var(--line2);stroke-width:1.5}#mind .mn .dot{fill:var(--c);stroke:none}
+#mind .mn.ref rect{stroke-dasharray:5 4;fill:var(--soft)}#mind .mn.root rect{stroke:var(--sel);stroke-width:2.5}
+#mind .mn text{fill:var(--ink);font-family:var(--f-ui)}#mind .mn .t{font-size:13px;font-weight:600}#mind .mn .s{font-size:11px;fill:var(--mute)}
+/* camadas */
+.ov{position:fixed;inset:0;z-index:50;background:var(--bg);overflow:auto}
+.ovin{max-width:1100px;margin:0 auto;padding:22px 20px 70px}
+.ovh{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:18px}.ovh h2{font-size:22px;font-weight:600;margin:0}
+.simgrid{display:flex;gap:36px;align-items:flex-start;flex-wrap:wrap;justify-content:center}
+.stagebox{flex:none}.side{flex:1;min-width:280px;max-width:430px}
+.side h3{font-size:22px;font-weight:600;margin:6px 0 4px}.crumbs{font-size:12.5px;color:var(--mute);margin-top:14px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:16px}
+.card h3{font-size:16px;font-weight:600;margin:0 0 10px}.card ul{margin:0;padding-left:20px;color:var(--mute)}.card li{margin:5px 0}
+.ft{width:100%;border-collapse:collapse;font-size:13px}.ft th{text-align:left;font-size:11.5px;font-weight:600;color:var(--mute);padding:6px 8px;border-bottom:1px solid var(--line)}
+.ft td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}.ft code{font-family:var(--f-mono);font-size:12.5px}
+.modal{position:fixed;inset:0;z-index:70;background:rgba(21,24,29,.45);display:grid;place-items:center;padding:16px}
+.mbox{background:#fff;border-radius:16px;width:min(580px,100%);max-height:92vh;overflow:auto;padding:22px;box-shadow:0 30px 80px rgba(0,0,0,.3)}
+.mbox h3{margin:0 0 4px;font-size:20px;font-weight:600}.mbox .sub{color:var(--mute);margin:0 0 16px;font-size:13.5px}
+.tpls{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.tpls button{all:unset;cursor:pointer;padding:10px 12px;border:1.5px solid var(--line);border-radius:11px;font-size:13px}.tpls b{display:block;font-weight:600}.tpls small{color:var(--mute)}
+.tpls button[aria-pressed="true"]{border-color:var(--sel);background:var(--sel-s)}
+.mact{display:flex;justify-content:flex-end;gap:8px;margin-top:16px}
+.srow{display:flex;gap:6px;align-items:center;margin-bottom:8px}.srow .inp{flex:1}
+#toast{position:fixed;left:50%;bottom:84px;transform:translate(-50%,10px);background:var(--ink);color:#fff;border-radius:10px;padding:10px 16px;font-weight:600;font-size:13.5px;opacity:0;pointer-events:none;transition:.25s;z-index:90}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+@media (max-width:960px){
+  #drawer{position:fixed;left:0;right:0;bottom:0;width:auto;height:64vh;z-index:40;border-left:0;border-top:1px solid var(--line);box-shadow:0 -12px 30px rgba(0,0,0,.18)}
+  .hint{display:none}.brand small{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div id="app">
+  <header class="top">
+    <div class="brand"><span class="mark"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="3.5" cy="4" r="1.6"/><circle cx="12.5" cy="4" r="1.6"/><circle cx="8" cy="12.5" r="1.6"/><path d="M5 4h6M4.2 5.4L7 11M11.8 5.4L9 11"/></svg></span><div><b>Mapa de telas</b><small>Rede Mineira de Dados e Saúde</small></div></div>
+    <div class="sw2" id="vsw" role="group" aria-label="Visualização">
+      <button data-view="over" aria-pressed="true">Visão geral</button><button data-view="paths" aria-pressed="false">Caminhos possíveis</button><button data-view="mind" aria-pressed="false">Mapa mental</button>
+    </div>
+    <div class="sw2" id="dsw" role="group" aria-label="Aparelho">
+      <button data-dev="phone" aria-pressed="true"><svg class="ic" viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="1.5" width="7" height="13" rx="1.8"/><path d="M7 12.5h2"/></svg>Celular</button>
+      <button data-dev="desk" aria-pressed="false"><svg class="ic" viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5"/><path d="M5.5 14h5M8 11v3"/></svg>Computador</button>
+    </div>
+    <span class="dep" id="dep" hidden><span>Passos à frente</span><button id="dm" aria-label="Menos passos">−</button><b id="dn">3</b><button id="dpp" aria-label="Mais passos">+</button></span>
+    <span class="sp"></span>
+    <span id="sum"></span><span id="save"></span>
+    <label class="toggle"><input type="checkbox" id="editSw"><span></span>Editar</label>
+    <button class="tb" id="bFab">Para a fábrica</button>
+    <button class="tb pri" id="bSim">Simular</button>
+  </header>
+  <div class="work">
+    <div id="vp">
+      <div id="world"></div>
+      <div id="mind" hidden></div>
+      <div class="zoom" id="zoomc"><button id="zo" aria-label="Menos zoom">−</button><span id="zp">100%</span><button id="zi" aria-label="Mais zoom">+</button><button id="zf">Ver tudo</button></div>
+      <div class="hint" id="hint"></div>
+      <div id="tbar" hidden>
+        <button data-tool="select" aria-pressed="true"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3.5 2.5l8.5 4.3-3.9 1.2-1.3 3.9z"/></svg>Selecionar</button>
+        <button id="tNew"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M8 3v10M3 8h10"/></svg>Nova tela</button>
+        <button data-tool="connect" aria-pressed="false"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8h9M8.5 4.5L12 8l-3.5 3.5"/></svg>Conectar</button>
+        <i></i>
+        <button id="tUndo" aria-label="Desfazer"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4L3 7l3 3M3 7h6a3.5 3.5 0 010 7H7"/></svg></button>
+        <button id="tRedo" aria-label="Refazer"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4l3 3-3 3M13 7H7a3.5 3.5 0 000 7h2"/></svg></button>
+        <i></i>
+        <button id="tStruct"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M2.5 2.5h4v4h-4zM9.5 2.5h4v4h-4zM2.5 9.5h4v4h-4zM9.5 9.5h4v4h-4z"/></svg>Raias e etapas</button>
+      </div>
+    </div>
+    <aside id="drawer" hidden aria-label="Detalhe da tela"></aside>
+  </div>
+</div>
+<div class="ov" id="sim" hidden></div>
+<div class="ov" id="fab" hidden></div>
+<div class="modal" id="modal" hidden></div>
+<div id="toast" role="status"></div>
+
+<script id="data">
+/* ===== Dados-base do mapa (puro, sem DOM) ===== */
+const LANES0=[
+ {id:'g',t:'Gestor municipal',s:'Responde o diagnóstico',c:'g'},
+ {id:'dg',t:'Diagnósticos complementares',s:'Questionários extras do município',c:'g'},
+ {id:'p',t:'Pessoa indicada',s:'Recebe um link, sem senha',c:'p'},
+ {id:'i',t:'ISIS',s:'Convida, acompanha e valida',c:'i'},
+ {id:'n',t:'NSDIGI · Eixo 2',s:'Analisa e planeja a formação',c:'n'},
+ {id:'d',t:'NIGD · Eixo 3',s:'Prioriza e integra sistemas',c:'d'}
+];
+const COLS0=['Convite','Acesso','Áreas','Equipe','Painel','Responder','Pedir ajuda','Indicado','Conferir','Validação','Retorno','Perfil','Análise','Planejamento','Execução','Entrega'].map((t,i)=>({id:'c'+i,t}));
+const COLORS=['g','p','i','n','d','x1','x2','x3','x4'];
+const DOM=[
+ ['Gestão e Governança','Q01–Q05',5],['Formação e Desenvolvimento','Q06–Q09',4],['Sistemas e Interoperabilidade','Q10–Q14',5],
+ ['Telessaúde e Serviços Digitais','Q15–Q23',9],['Infoestrutura','Q24–Q31',8],['Monitoramento e Avaliação','Q32–Q37',6],['Infraestrutura e Segurança','Q38–Q42',5]
+];
+const QUEM=['Secretário(a) de Saúde','Educação permanente ou RH','Responsável de TI','Coordenação da Atenção Primária','Responsável de TI ou Comunicação','Vigilância ou Planejamento','Responsável de TI'];
+const CHECKS=['Uma pergunta ou decisão por tela','Dá para entender em 5 segundos','Uma ação principal óbvia, com verbo claro','Linguagem do dia a dia, sem sigla solta','Quem não sabe tem saída na própria tela','Erros explicam o que houve e como corrigir','Estados vazio, carregando, erro e sucesso desenhados','Botões grandes, texto legível, bom contraste','Progresso visível e dá para parar e voltar','Funciona só com o polegar e com internet ruim'];
+const ASSUME=[
+ 'As 7 áreas e as 42 perguntas vêm do INMSD revisado e validado. As telas mostram só algumas perguntas como exemplo.',
+ 'A regra do INMSD foi mantida: “Não sei responder” fica fora do cálculo e gera um indicador próprio. “Não se aplica” só existe nas perguntas que permitem.',
+ 'Convite por link pessoal com prazo de validade (prazo a definir).',
+ 'Avisos e pedidos de ajuda por WhatsApp (canal a confirmar).',
+ 'Quem costuma saber cada área (TI, Atenção Primária etc.) é sugestão a validar com a ISIS.',
+ 'Os diagnósticos complementares (servidores da ponta e prontidão RMDS) estão no fluxograma. Aqui aparecem como questionários por link, formato a definir.',
+ 'Os painéis da ISIS, do NSDIGI e do NIGD são sugestões de tela a partir do fluxograma de atuação das áreas.',
+ 'Toda tela tem versão para celular e para computador com o mesmo conteúdo. A versão computador reorganiza listas em duas colunas.',
+ 'Nomes, números, datas e municípios são exemplos.'
+];
+const rowsDom=fn=>DOM.map((d,i)=>fn(d,i));
+const PAINEL=st=>rowsDom((d,i)=>['row',d[0],st[i][0],st[i][1],st[i][2],'g_pergunta']);
+const ALT=sel=>[['A','Não há responsável definido'],['B','Responsabilidade isolada'],['C','Responsabilidade estruturada'],['D','Governança estruturada']].map((a,i)=>['alt',a[0],a[1],sel===i,'g_painel']);
+const QG='O município possui uma pessoa, equipe, setor ou instância responsável pela gestão e governança da Saúde Digital?';
+const Q12='Os estabelecimentos de saúde do município estão conectados à Rede Nacional de Dados em Saúde (RNDS) e enviam dados por meio dela?';
+const ALT12=[['A','Sem conexão e sem infraestrutura'],['B','Infraestrutura disponível'],['C','Conexão parcial'],['D','Conexão ampla']];
+
+const S_RAW=[
+{id:'i_cadastro',lane:'i',col:0,t:'Disponibilizar cadastro',sub:'A ISIS convida o município para entrar na rede.',
+ blocks:[['brand','ISIS · Convites'],['h','Convidar município'],['field','Município','Município exemplo (MG)'],['field','Gestor','Maria Aparecida Souza'],['field','WhatsApp ou e-mail','(31) 9 9999-0000'],['note','O convite chega como link pessoal e tem prazo de validade.']],
+ foot:[['btn','Enviar convite','g_convite']],
+ variants:[{n:'Envio em lote',blocks:[['brand','ISIS · Convites'],['h','Convidar vários municípios'],['p','Suba uma planilha com município, gestor e contato.'],['field','Arquivo','municipios-rmds.xlsx'],['stats',[['Linhas lidas','142'],['Com erro','3']]],['note','3 linhas sem contato. Corrija antes de enviar.']],foot:[['btn','Enviar 139 convites','g_convite']]}],
+ dados:['Convite','Município','Usuário gestor'],api:['POST /convites','POST /convites/lote']},
+{id:'g_convite',lane:'g',col:0,t:'Convite recebido',sub:'O gestor recebe o convite da ISIS e abre o link.',
+ blocks:[['brand','Mensagem recebida'],['bubble','Olá, Maria! O município de Município exemplo foi convidado a entrar na Rede Mineira de Dados e Saúde. Responda o diagnóstico em partes, no seu ritmo: rmds.exemplo/c/ab12'],['p','Convite enviado pela equipe da ISIS.']],
+ foot:[['btn','Abrir o convite','g_acesso']],
+ variants:[{n:'Convite vencido',blocks:[['brand','Mensagem recebida'],['banner','Este convite venceu. Peça um novo à ISIS.','err'],['p','Seu município continua na lista de convidados.']],foot:[['btn','Pedir novo convite',null,{alt:1}]]}],
+ dados:['Convite'],api:['GET /convites/:token']},
+{id:'g_acesso',lane:'g',col:1,t:'Primeiro acesso',sub:'O gestor confirma os próprios dados. Sem senha para decorar.',
+ blocks:[['brand','Primeiro acesso'],['h','Confirme seus dados'],['field','Nome','Maria Aparecida Souza'],['field','Cargo','Gestora municipal de saúde'],['field','WhatsApp','(31) 9 9999-0000'],['note','Usamos o WhatsApp só para avisos do diagnóstico.']],
+ foot:[['btn','Entrar','g_eixos']],
+ variants:[{n:'Telefone inválido',blocks:[['brand','Primeiro acesso'],['h','Confirme seus dados'],['field','Nome','Maria Aparecida Souza'],['field','Cargo','Gestora municipal de saúde'],['field','WhatsApp','(31) 9 99','Faltam números. Exemplo: (31) 9 9999-0000']],foot:[['btn','Entrar',null,{dis:1}]]}],
+ dados:['Usuário','Município'],api:['POST /acessos','GET /municipios/:id']},
+{id:'g_eixos',lane:'g',col:2,t:'Áreas do diagnóstico',sub:'O gestor vê as 7 áreas e entende o tamanho do trabalho.',
+ blocks:[['brand','Antes de começar'],['h','São 42 perguntas em 7 áreas'],['p','Você responde o que sabe. Para o resto, indica quem sabe.'],...rowsDom(d=>['row',d[0],d[1]+' · '+d[2]+' perguntas'])],
+ foot:[['btn','Montar minha equipe','g_equipe']],
+ dados:['Área','Pergunta'],api:['GET /areas']},
+{id:'g_equipe',lane:'g',col:3,t:'Equipe por competência',sub:'O gestor escolhe quem cuida de cada área. O app sugere o perfil certo.',
+ blocks:[['brand','Sua equipe'],['h','Quem cuida de cada área?'],
+  ['row',DOM[0][0],'Juliana Reis · Secretaria','Trocar','wait'],['row',DOM[1][0],'Juliana Reis · Secretaria','Trocar','wait'],['row',DOM[2][0],'Carlos Lima · TI','Trocar','wait'],['row',DOM[3][0],'Ana Souza · Atenção Primária','Trocar','wait'],['row',DOM[4][0],'Carlos Lima · TI','Trocar','wait'],['row',DOM[5][0],'Ana Souza · Atenção Primária','Trocar','wait'],['row',DOM[6][0],'Carlos Lima · TI','Trocar','wait']],
+ foot:[['btn','Salvar equipe','g_painel']],
+ variants:[{n:'Equipe vazia',blocks:[['h','Quem cuida de cada área?'],...rowsDom((d,i)=>['row',d[0],'Sugestão: '+QUEM[i],'Escolher','pend'])],foot:[['btn','Salvar equipe',null,{dis:1}]]}],
+ dados:['Designação','Pessoa'],api:['GET /municipios/:id/equipe','PUT /municipios/:id/equipe']},
+{id:'g_painel',lane:'g',col:4,t:'Painel das áreas',sub:'Ponto de partida do gestor: o que está pronto, com quem está e o que falta.',
+ blocks:[['brand','Perfil do município'],['h','2 de 7 áreas prontas'],['prog',29],...PAINEL([['5 de 5 perguntas','Completa','ok'],['4 de 4 perguntas','Completa','ok'],['2 de 5 · com Carlos','Com Carlos','wait'],['0 de 9 perguntas','Falta responder','pend'],['0 de 8 perguntas','Falta responder','pend'],['0 de 6 perguntas','Falta responder','pend'],['0 de 5 perguntas','Falta responder','pend']])],
+ foot:[['btn','Conferir e enviar','g_conferir']],
+ variants:[
+  {n:'Início',blocks:[['brand','Perfil do município'],['h','0 de 7 áreas prontas'],['prog',0],...PAINEL(DOM.map(d=>[`0 de ${d[2]} perguntas`,'Falta responder','pend']))]},
+  {n:'Tudo pronto',blocks:[['brand','Perfil do município'],['h','Tudo respondido'],['prog',100],...PAINEL(DOM.map(d=>[`${d[2]} de ${d[2]} perguntas`,'Completa','ok']))]}],
+ dados:['Área','Resposta','Delegação'],api:['GET /municipios/:id/areas']},
+{id:'g_pergunta',lane:'g',col:5,t:'Pergunta',sub:'Uma pergunta por tela, com alternativas de A a D. Quem não sabe tem saída na própria tela.',
+ blocks:[['brand','Gestão e Governança · 1 de 5'],['q',QG],['note','O que considerar: quem conduz, organiza, coordena e define diretrizes de Saúde Digital no município.'],...ALT(null)],
+ foot:[['btn','Não sei responder. Quem sabe?','g_quem',{alt:1}]],
+ variants:[
+  {n:'Já respondida',blocks:[['brand','Gestão e Governança · 1 de 5'],['q',QG],['note','O que considerar: quem conduz, organiza, coordena e define diretrizes de Saúde Digital no município.'],...ALT(2)]},
+  {n:'Com “Não se aplica”',blocks:[['brand','Telessaúde · Q16 · 2 de 9'],['q','O município acompanha e avalia a qualidade dos serviços de Telessaúde que utiliza ou oferta?'],['alt','A','Sem acompanhamento',false,'g_painel'],['alt','B','Acompanhamento eventual',false,'g_painel'],['alt','C','Acompanhamento regular parcial',false,'g_painel'],['alt','D','Acompanhamento e melhoria',false,'g_painel'],['alt','N/A','Não se aplica',false,'g_painel','O município não usa nem oferece Telessaúde']]},
+  {n:'Erro ao salvar',blocks:[['brand','Gestão e Governança · 1 de 5'],['banner','Não conseguimos salvar. Sua resposta continua na tela. Tente de novo.','err'],['q',QG],...ALT(2)]}],
+ nota:'Depois de responder, o app abre a próxima pergunta da área. Ao terminar a área, volta ao painel.',
+ dados:['Pergunta','Alternativa','Resposta'],api:['GET /areas/:id/perguntas','POST /respostas']},
+{id:'dg_situacional',lane:'dg',col:5,t:'Diagnóstico situacional',sub:'Servidores das unidades respondem um questionário curto sobre formação.',
+ blocks:[['brand','Formação e Desenvolvimento'],['h','Diagnóstico situacional'],['p','Para os servidores da ponta. Eles respondem pelo celular, por link.'],['stats',[['Convidados','18'],['Responderam','11']]],['prog',61],['row','UBS Centro','8 de 10 responderam','Em dia','ok'],['row','UBS Vila Nova','3 de 8 responderam','Faltam 5','pend']],
+ foot:[['btn','Reenviar lembrete',null,{alt:1}],['btn','Concluir','g_painel']],
+ dados:['Questionário','Envio','Resposta de servidor'],api:['POST /diagnosticos/situacional/envios','GET /diagnosticos/situacional/:id']},
+{id:'dg_prontidao',lane:'dg',col:6,t:'Prontidão RMDS',sub:'Lista curta para saber se o município está pronto para integrar sistemas.',
+ blocks:[['brand','Sistemas e Interoperabilidade'],['h','Prontidão para a RMDS'],['p','Marque o que o município já tem.'],['check','Usa prontuário eletrônico',true],['check','Internet estável nas unidades',true],['check','Fornecedor do sistema contatado',false],['check','Responsável técnico indicado',false],['prog',50]],
+ foot:[['btn','Concluir','g_painel']],
+ dados:['Checklist de prontidão'],api:['GET /municipios/:id/prontidao','PUT /municipios/:id/prontidao']},
+{id:'g_quem',lane:'g',col:6,t:'Quem sabe responder?',sub:'O “Não sei” vira um pedido de ajuda. Se ninguém sabe, registra “Não sei responder”.',
+ blocks:[['brand','Sistemas e Interoperabilidade · Q12'],['p',Q12],['note','Costuma ser: '+QUEM[2]],['seg',['Só esta pergunta','As 5 da área'],0],['person','Carlos Lima','TI',true],['person','Ana Souza','Atenção Primária',false],['person','Juliana Reis','Secretaria de Saúde',false]],
+ foot:[['btn','Enviar pedido pelo WhatsApp','g_pedido'],['btn','Ninguém sabe: registrar “Não sei responder”','g_painel',{alt:1}]],
+ variants:[{n:'Ninguém escolhido',blocks:[['brand','Sistemas e Interoperabilidade · Q12'],['p',Q12],['note','Costuma ser: '+QUEM[2]],['seg',['Só esta pergunta','As 5 da área'],0],['person','Carlos Lima','TI',false],['person','Ana Souza','Atenção Primária',false],['person','Juliana Reis','Secretaria de Saúde',false]],foot:[['btn','Enviar pedido pelo WhatsApp',null,{dis:1}],['btn','Ninguém sabe: registrar “Não sei responder”','g_painel',{alt:1}]]}],
+ nota:'Regra do INMSD: “Não sei responder” fica fora do cálculo da pergunta e gera um indicador específico.',
+ dados:['Pessoa','Delegação'],api:['GET /municipios/:id/equipe','POST /delegacoes']},
+{id:'g_pedido',lane:'g',col:7,t:'Pedido pronto',sub:'A mensagem já está escrita. O gestor só confirma e volta ao painel.',
+ blocks:[['big','✓'],['h','Pedido pronto para Carlos'],['bubble','Oi, Carlos! A Maria precisa da sua ajuda com 1 pergunta sobre Sistemas e Interoperabilidade para a Rede Mineira de Dados e Saúde. Leva 1 minuto e não precisa de senha: rmds.exemplo/r/k3x9'],['p','Você recebe um aviso quando Carlos responder.']],
+ foot:[['btn','Voltar ao painel','g_painel'],['btn','Ver como Carlos (simulação)','p_pergunta',{alt:1}]],
+ dados:['Aviso','Delegação'],api:['POST /avisos/whatsapp']},
+{id:'p_pergunta',lane:'p',col:7,t:'Pergunta por link',sub:'A pessoa indicada abre o link e responde só o que foi pedido. Sem login.',
+ blocks:[['banner','Você não precisa de senha nem de cadastro'],['brand','Maria pediu sua ajuda'],['p','Município exemplo · Sistemas e Interoperabilidade'],['q',Q12],...ALT12.map(a=>['alt',a[0],a[1],false,'p_obrigado'])],
+ foot:[['btn','Também não sei. Passar adiante','p_repassa',{alt:1}]],
+ variants:[{n:'Link vencido',blocks:[['banner','Este link venceu','err'],['h','Peça para a Maria enviar de novo'],['p','Por segurança, cada link vale por um tempo.']],foot:[]}],
+ dados:['Delegação','Resposta'],api:['GET /delegacoes/:token','POST /delegacoes/:token/respostas']},
+{id:'p_repassa',lane:'p',col:6,t:'Passar adiante',sub:'Quem não sabe indica outra pessoa. O gestor continua sendo avisado.',
+ blocks:[['banner','Você não precisa de senha nem de cadastro'],['h','Passar para quem?'],['p','Escolha alguém ou digite um WhatsApp. A Maria continua sendo avisada.'],['person','Ana Souza','Atenção Primária',true],['person','Juliana Reis','Secretaria de Saúde',false],['field','Outra pessoa','Nome e WhatsApp']],
+ foot:[['btn','Enviar pedido','p_pergunta']],
+ dados:['Delegação'],api:['POST /delegacoes/:token/repassar']},
+{id:'p_obrigado',lane:'p',col:8,t:'Obrigado',sub:'Fim do caminho da pessoa indicada. O gestor é avisado.',
+ blocks:[['banner','Você não precisa de senha nem de cadastro'],['big','✓'],['h','Obrigado, Carlos!'],['p','A Maria já foi avisada. Pode fechar esta página.']],
+ dados:['Aviso'],api:[]},
+{id:'g_conferir',lane:'g',col:8,t:'Conferir e enviar',sub:'O gestor vê o resumo antes de enviar. Se faltar área, o app mostra qual.',
+ blocks:[['brand','Conferir'],['h','Tudo pronto para enviar'],['p','42 perguntas: 37 respondidas, 3 com “Não sei responder” e 2 “Não se aplica”.'],...rowsDom(d=>['row',d[0],'','Completa','ok'])],
+ foot:[['btn','Enviar perfil','i_validar'],['btn','Voltar ao painel','g_painel',{alt:1}]],
+ variants:[{n:'Faltam áreas',blocks:[['brand','Conferir'],['h','Ainda faltam 2 áreas'],['p','Responda ou cobre quem ficou de ajudar.'],['row',DOM[3][0],'0 de 9 perguntas','Falta responder','pend'],['row',DOM[6][0],'2 de 5 · com Carlos','Com Carlos','wait']],foot:[['btn','Enviar perfil',null,{dis:1}],['btn','Voltar ao painel','g_painel',{alt:1}]]}],
+ dados:['Área','Resposta'],api:['GET /municipios/:id/resumo','POST /municipios/:id/envio']},
+{id:'i_acomp',lane:'i',col:4,t:'Acompanhar municípios',sub:'A ISIS vê o andamento de cada município convidado.',
+ blocks:[['brand','ISIS · Acompanhamento'],['h','Municípios convidados'],['stats',[['Convidados','142'],['Em andamento','57'],['Enviados','31'],['Perfil pronto','12']]],['table',['Município','Progresso','Situação'],[['Município exemplo','7 de 7 áreas',['Enviado','wait']],['Cidade Modelo','3 de 7 áreas',['Em andamento','pend']],['Vila Exemplo','0 de 7 áreas',['Convite aberto','pend']]]]],
+ foot:[['btn','Convidar município','i_cadastro',{alt:1}],['btn','Abrir município','i_validar']],
+ variants:[{n:'Sem convites',blocks:[['brand','ISIS · Acompanhamento'],['h','Municípios convidados'],['p','Nenhum município convidado ainda. Comece enviando um convite.']],foot:[['btn','Convidar município','i_cadastro']]}],
+ dados:['Município','Andamento'],api:['GET /municipios?situacao=']},
+{id:'i_validar',lane:'i',col:9,t:'Validar informações',sub:'A ISIS confere o que o município enviou e decide: consolidar ou pedir complemento.',
+ blocks:[['brand','ISIS · Validação'],['h','Município exemplo'],['stats',[['Respondidas','37'],['Não sei responder','3'],['Não se aplica','2']]],['table',['Área','Respondida por','Situação'],[['Gestão e Governança','Maria',['Completa','ok']],['Sistemas e Interoperabilidade','Carlos Lima',['Completa','ok']],['Telessaúde e Serviços','Ana Souza',['Completa','ok']],['Infraestrutura e Segurança','Carlos Lima',['Completa','ok']]]]],
+ foot:[['btn','Pedir complemento','g_ajuste',{alt:1}],['btn','Tudo certo: consolidar','i_consolida']],
+ variants:[{n:'Com pendência',blocks:[['brand','ISIS · Validação'],['h','Município exemplo'],['stats',[['Respondidas','33'],['Pendentes','6'],['Não se aplica','2']]],['table',['Área','Respondida por','Situação'],[['Gestão e Governança','Maria',['Completa','ok']],['Infoestrutura','Ana Souza',['Incompleta','err']],['Infraestrutura e Segurança','Carlos Lima',['Incompleta','err']]]]],foot:[['btn','Pedir complemento','g_ajuste']]}],
+ dados:['Validação','Pendência','Resposta'],api:['GET /validacoes/:municipioId','POST /validacoes/:municipioId']},
+{id:'g_ajuste',lane:'g',col:10,t:'Complemento pedido',sub:'A ISIS avisa o gestor quais áreas faltam. O gestor volta ao painel para completar.',
+ blocks:[['banner','A ISIS pediu um complemento'],['h','Faltam 2 áreas'],['p','Você pode responder ou pedir ajuda a alguém.'],['row',DOM[4][0],'Resposta incompleta na Q26','Revisar','pend','g_painel'],['row',DOM[6][0],'Resposta incompleta na Q39','Revisar','pend','g_painel']],
+ foot:[['btn','Responder o que falta','g_painel']],
+ dados:['Pendência'],api:['GET /municipios/:id/pendencias']},
+{id:'i_consolida',lane:'i',col:10,t:'Consolidar informações',sub:'A ISIS junta as respostas num perfil único do município.',
+ blocks:[['brand','ISIS · Consolidação'],['h','Consolidar as informações'],['p','Junta as respostas num perfil único do município.'],['check','Respostas conferidas',true],['check','Nível por área calculado (A a D)',true],['check','“Não sei responder” fora do cálculo',true],['check','Perfil pronto para publicar',false],['note','Perguntas “Não sei responder” geram um indicador próprio e não entram na nota.']],
+ foot:[['btn','Disponibilizar perfil municipal','i_equipes']],
+ dados:['Perfil municipal','Nível por área'],api:['POST /municipios/:id/perfil']},
+{id:'g_perfil',lane:'g',col:11,t:'Perfil disponibilizado',sub:'O gestor é avisado de que o perfil do município está pronto.',
+ blocks:[['big','✓'],['h','Perfil municipal disponibilizado'],['p','As equipes da rede já conseguem ver o perfil de Município exemplo.'],['row',DOM[0][0],'','Nível C','ok'],['row',DOM[2][0],'','Nível B','pend'],['row',DOM[3][0],'','Nível B','pend'],['row',DOM[6][0],'','Nível D','ok'],['note','Níveis de exemplo.']],
+ foot:[['btn','Ver perfil completo',null,{alt:1}]],
+ dados:['Perfil municipal'],api:['GET /municipios/:id/perfil']},
+{id:'i_equipes',lane:'i',col:11,t:'Perfil para as equipes',sub:'A ISIS libera o perfil para as equipes do Eixo 2 e do Eixo 3.',
+ blocks:[['brand','ISIS · Equipes'],['h','Perfil disponível para as equipes'],['stats',[['Perfis disponíveis','12'],['Municípios sem perfil','130']]],['table',['Equipe','Eixo','Situação'],[['NSDIGI','Eixo 2',['Avisada','ok']],['NIGD','Eixo 3',['Avisada','ok']]]]],
+ foot:[['btn','Abrir análise do Eixo 2','e2_analise',{alt:1}],['btn','Abrir análise do Eixo 3','e3_prior']],
+ dados:['Perfil municipal','Aviso'],api:['POST /perfis/:id/disponibilizar']},
+{id:'e2_analise',lane:'n',col:12,t:'Analisar resultados',sub:'O NSDIGI analisa os perfis para planejar a formação.',
+ blocks:[['brand','NSDIGI · Eixo 2'],['h','Analisar resultados'],['stats',[['Municípios com perfil','12'],['Microrregiões','4'],['Sem perfil','130']]],['table',['Município','Prontidão','Microrregião'],[['Município exemplo','Média','Norte'],['Cidade Modelo','Baixa','Norte'],['Vila Exemplo','Alta','Sul']]]],
+ foot:[['btn','Agrupar por microrregião','e2_micros']],
+ dados:['Perfil municipal','Microrregião'],api:['GET /perfis?eixo=2']},
+{id:'e2_micros',lane:'n',col:13,t:'Microrregiões',sub:'Agrupa municípios por microrregião e repassa aos núcleos regionais.',
+ blocks:[['brand','NSDIGI · Eixo 2'],['h','Microrregiões e núcleos regionais'],['table',['Microrregião','Municípios','Pactuada'],[['Norte','3',['Sim','ok']],['Sul','4',['Não','pend']],['Leste','2',['Sim','ok']]]],['check','Avaliar microrregiões pactuadas',true]],
+ foot:[['btn','Repassar aos núcleos regionais','e2_trilhas']],
+ dados:['Microrregião','Núcleo regional'],api:['GET /microrregioes','POST /microrregioes/:id/repasse']},
+{id:'e2_trilhas',lane:'n',col:14,t:'Trilhas de formação',sub:'Define grupos prioritários, temáticas e cursos de parceiros.',
+ blocks:[['brand','NSDIGI · Eixo 2'],['h','Trilhas de formação'],['row','Grupos prioritários','3 definidos','Pronto','ok'],['row','Temáticas das trilhas','5 definidas','Pronto','ok'],['row','Cursos de parceiros','2 captados','Faltam 3','pend']],
+ foot:[['btn','Montar plano de capacitação','e2_plano']],
+ dados:['Trilha','Grupo prioritário','Curso de parceiro'],api:['POST /trilhas','POST /trilhas/:id/cursos']},
+{id:'e2_plano',lane:'n',col:15,t:'Plano de capacitação',sub:'Apresenta o plano e disponibiliza as trilhas de formação.',
+ blocks:[['brand','NSDIGI · Eixo 2'],['h','Plano de capacitação'],['table',['Trilha','Público','Início'],[['Governança de dados','Gestores','Mar/27'],['Prontuário eletrônico','Unidades','Abr/27']]],['banner','Trilhas de formação disponibilizadas','ok']],
+ foot:[['btn','Apresentar plano',null,{alt:1}]],
+ dados:['Plano de capacitação'],api:['POST /planos-capacitacao']},
+{id:'e3_prior',lane:'d',col:12,t:'Priorizar integração',sub:'O NIGD define a ordem dos sistemas e quais municípios entram primeiro.',
+ blocks:[['brand','NIGD · Eixo 3'],['h','Priorizar a integração'],['row','Ordem dos sistemas','Definida','Pronto','ok'],['row','Prontidão tecnológica dos municípios','12 avaliados','Em andamento','wait'],['row','Municípios prioritários','5 identificados','Pronto','ok']],
+ foot:[['btn','Elaborar cronograma','e3_crono']],
+ dados:['Sistema','Prioridade','Município prioritário'],api:['GET /prioridades','PUT /prioridades']},
+{id:'e3_crono',lane:'d',col:13,t:'Cronograma de chamamentos',sub:'Monta o cronograma e publica os chamamentos por ordem de prioridade.',
+ blocks:[['brand','NIGD · Eixo 3'],['h','Cronograma de chamamentos'],['table',['Chamamento','Município','Data'],[['1','Município exemplo','Mar/27'],['2','Cidade Modelo','Abr/27'],['3','Vila Exemplo','Mai/27']]]],
+ foot:[['btn','Publicar chamamentos em ordem','e3_oficina']],
+ dados:['Chamamento'],api:['POST /chamamentos']},
+{id:'e3_oficina',lane:'d',col:14,t:'Oficina de integração',sub:'Disponibiliza a oficina para os municípios chamados.',
+ blocks:[['brand','NIGD · Eixo 3'],['h','Oficina de integração'],['p','Disponível para os municípios chamados.'],['row','Material da oficina','Publicado','Pronto','ok'],['row','Turma 1','5 municípios','Inscrições','wait']],
+ foot:[['btn','Validar municípios integrados','e3_valid']],
+ dados:['Oficina','Turma'],api:['POST /oficinas','POST /oficinas/:id/turmas']},
+{id:'e3_valid',lane:'d',col:15,t:'Municípios integrados',sub:'Confere quais municípios concluíram a integração.',
+ blocks:[['brand','NIGD · Eixo 3'],['h','Municípios integrados'],['table',['Município','Sistema','Situação'],[['Município exemplo','Prontuário A',['Integrado','ok']],['Cidade Modelo','Prontuário B',['Chamamento ativo','wait']]]],['banner','Municípios integrados','ok']],
+ dados:['Integração'],api:['PUT /integracoes/:id']}
+];
+const EDGES_RAW=[
+ ['i_cadastro','g_convite','Envia o convite',{d:1}],['g_convite','g_acesso','Abrir o convite'],['g_acesso','g_eixos','Entrar'],['g_eixos','g_equipe','Montar equipe'],['g_equipe','g_painel','Salvar equipe'],
+ ['g_painel','g_pergunta','Abrir uma área'],['g_pergunta','g_painel','Responder'],['g_pergunta','g_quem','Não sei responder'],
+ ['g_painel','dg_situacional','Formação: diagnóstico situacional'],['g_painel','dg_prontidao','Sistemas: prontidão RMDS'],['dg_situacional','g_painel','Concluir'],['dg_prontidao','g_painel','Concluir'],
+ ['g_quem','g_pedido','Enviar pedido'],['g_quem','g_painel','Ninguém sabe'],['g_pedido','p_pergunta','Pessoa abre o link',{d:1}],['g_pedido','g_painel','Voltar ao painel'],
+ ['p_pergunta','p_obrigado','Responder'],['p_pergunta','p_repassa','Também não sei'],['p_repassa','p_pergunta','Nova pessoa abre o link',{d:1}],['p_obrigado','g_painel','Gestor é avisado',{d:1}],
+ ['g_painel','g_conferir','Conferir e enviar'],['g_conferir','g_painel','Falta uma área'],['g_conferir','i_validar','Enviar perfil'],
+ ['g_painel','i_acomp','ISIS acompanha',{d:1}],['i_acomp','i_validar','Abrir município'],['i_acomp','i_cadastro','Convidar município'],
+ ['i_validar','g_ajuste','Informações incompletas'],['i_validar','i_consolida','Tudo preenchido'],['g_ajuste','g_painel','Responder o que falta'],
+ ['i_consolida','g_perfil','Avisa o gestor',{d:1}],['i_consolida','i_equipes','Disponibilizar perfil'],['i_equipes','e2_analise','Eixo 2'],['i_equipes','e3_prior','Eixo 3'],
+ ['e2_analise','e2_micros','Agrupar por microrregião'],['e2_micros','e2_trilhas','Repassar aos núcleos'],['e2_trilhas','e2_plano','Montar plano'],
+ ['e3_prior','e3_crono','Elaborar cronograma'],['e3_crono','e3_oficina','Publicar chamamentos'],['e3_oficina','e3_valid','Validar integrados']
+];
+function normScreen(r,ord){
+ const states=[{n:'Padrão',blocks:r.blocks,foot:r.foot||[]}].concat((r.variants||[]).map(v=>({n:v.n,blocks:v.blocks||r.blocks,foot:v.foot||r.foot||[]})));
+ return JSON.parse(JSON.stringify({id:r.id,t:r.t,sub:r.sub,lane:r.lane,col:'c'+r.col,ord,states,dados:r.dados||[],api:r.api||[],nota:r.nota||''}));
+}
+const BASE={lanes:LANES0,cols:COLS0,screens:{},edges:{}};
+S_RAW.forEach((r,i)=>{BASE.screens[r.id]=normScreen(r,i);});
+(function(){const cnt={};EDGES_RAW.forEach(e=>{const k=e[0]+'_'+e[1];cnt[k]=(cnt[k]||0)+1;BASE.edges['b_'+k+'_'+cnt[k]]=Object.assign({f:e[0],t:e[1],l:e[2]},e[3]||{});});})();
+</script>
+
+<script>
+/* ===== Lógica ===== */
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const uid=p=>p+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+const clone=o=>JSON.parse(JSON.stringify(o));
+const sj=o=>JSON.stringify(o,(k,v)=>v&&typeof v==='object'&&!Array.isArray(v)?Object.keys(v).sort().reduce((a,x)=>{a[x]=v[x];return a;},{}):v);
+const IC={x:'M4 4l8 8M12 4l-8 8',up:'M4 10l4-4 4 4',down:'M4 6l4 4 4-4',trash:'M3 4.5h10M6.5 4.5V3h3v1.5M4.5 4.5l.6 8.5h5.8l.6-8.5',copy:'M5.5 5.5h7v7h-7zM3.5 10.5v-7h7',plus:'M8 3v10M3 8h10'};
+const ic=n=>`<svg class="ic" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="${IC[n]}"/></svg>`;
+const DEV={phone:{w:360,h:780,colw:640},desk:{w:760,h:680,colw:960}};
+const TITLE=54,GAPY=90,PADT=60,PADB=70,LEFT=290,TOP=170;
+
+/* ---------- modelo: base + alterações ---------- */
+let OV={screens:{},edges:{},meta:{}},SAVED={screens:{},edges:{},meta:{}};
+let LANES=[],COLS=[],S=[],SM={},EDGES=[],OUT={},IN={},WORLD_W=0,WORLD_H=0;
+const ST={view:'over',device:'phone',sel:null,x:0,y:0,k:.2,depth:3,edit:false,tool:'select',tab:'tela',ed:{state:0,open:new Set(),menu:false},confirm:null};
+const plain=s=>({id:s.id,t:s.t,sub:s.sub,lane:s.lane,col:s.col,ord:s.ord,states:s.states,dados:s.dados,api:s.api,nota:s.nota});
+const laneOf=s=>LANES.find(l=>l.id===s.lane)||LANES[0];
+const colOf=s=>COLS.find(c=>c.id===s.col)||COLS[0];
+function rebuildModel(){
+ LANES=clone(OV.meta.lanes||BASE.lanes);COLS=clone(OV.meta.cols||BASE.cols);
+ const li=new Set(LANES.map(l=>l.id)),ci=new Set(COLS.map(c=>c.id)),all={};
+ Object.keys(BASE.screens).forEach(id=>{all[id]=BASE.screens[id];});Object.keys(OV.screens).forEach(id=>{all[id]=OV.screens[id];});
+ S=Object.keys(all).filter(id=>!all[id].deleted).map(id=>Object.assign({},all[id]));
+ S.forEach(s=>{if(!li.has(s.lane))s.lane=LANES[0].id;if(!ci.has(s.col))s.col=COLS[0].id;});
+ S.sort((a,b)=>(a.ord-b.ord)||(a.id<b.id?-1:1));
+ SM={};S.forEach(s=>{SM[s.id]=s;});
+ const ed={};Object.keys(BASE.edges).forEach(id=>{ed[id]=BASE.edges[id];});Object.keys(OV.edges).forEach(id=>{ed[id]=OV.edges[id];});
+ EDGES=Object.keys(ed).filter(id=>!ed[id].deleted).map(id=>Object.assign({id},ed[id])).filter(e=>SM[e.f]&&SM[e.t]);
+ OUT={};IN={};S.forEach(s=>{OUT[s.id]=[];IN[s.id]=[];});EDGES.forEach((e,i)=>{e.i=i;OUT[e.f].push(e);IN[e.t].push(e);});
+ layout();
+}
+function layout(){
+ const D=DEV[ST.device],colIdx={},cell={};
+ COLS.forEach((c,i)=>{colIdx[c.id]=i;});
+ S.forEach(s=>{const k=s.lane+'|'+s.col;(cell[k]=cell[k]||[]).push(s);});
+ Object.keys(cell).forEach(k=>cell[k].sort((a,b)=>(a.ord-b.ord)||(a.id<b.id?-1:1)));
+ let y=TOP;
+ LANES.forEach(l=>{
+  let maxN=1;COLS.forEach(c=>{const n=(cell[l.id+'|'+c.id]||[]).length;if(n>maxN)maxN=n;});
+  l.y=y;l.h=PADT+maxN*(D.h+TITLE)+(maxN-1)*GAPY+PADB;
+  COLS.forEach(c=>{(cell[l.id+'|'+c.id]||[]).forEach((s,idx)=>{s.w=D.w;s.h=D.h;s.actor=l.c;s.x=LEFT+colIdx[c.id]*D.colw+D.colw/2-D.w/2;s.y=y+PADT+TITLE+idx*(D.h+TITLE+GAPY);});});
+  y+=l.h+26;
+ });
+ WORLD_W=LEFT+COLS.length*D.colw+80;WORLD_H=y+40;
+}
+
+/* ---------- blocos das telas ---------- */
+function chip(t,tone){return `<span class="chip ${tone||''}"><i></i>${esc(t)}</span>`;}
+function blk(b,I){
+ const k=b[0],to=t=>I&&t&&SM[t]?` data-to="${t}" tabindex="0" role="button"`:'';
+ switch(k){
+  case 'brand':return `<div class="u-brand">${esc(b[1])}</div>`;
+  case 'h':return `<div class="u-h">${esc(b[1])}</div>`;
+  case 'p':return `<div class="u-p">${esc(b[1])}</div>`;
+  case 'q':return `<div class="u-q">${esc(b[1])}</div>`;
+  case 'note':return `<div class="u-note">${esc(b[1])}</div>`;
+  case 'bubble':return `<div class="u-bubble">${esc(b[1])}</div>`;
+  case 'banner':return `<div class="u-banner ${b[2]||''}"><span class="bi">${b[2]==='err'?'!':b[2]==='ok'?'✓':'i'}</span><span>${esc(b[1])}</span></div>`;
+  case 'field':return `<div class="u-field${b[3]?' bad':''}"><label>${esc(b[1])}</label><div class="u-in">${esc(b[2])}</div>${b[3]?`<small>${esc(b[3])}</small>`:''}</div>`;
+  case 'prog':return `<div class="u-prog"><i style="width:${clamp(+b[1]||0,0,100)}%"></i></div>`;
+  case 'row':return `<div class="u-row"${to(b[5])}><div class="u-rt"><b>${esc(b[1])}</b>${b[2]?`<small>${esc(b[2])}</small>`:''}</div><div class="u-rr">${b[3]?chip(b[3],b[4]):''}${b[5]?'<span class="chev">›</span>':''}</div></div>`;
+  case 'person':return `<div class="u-person${b[3]?' sel':''}"><span class="av">${esc((b[1]||'?')[0])}</span><span><b>${esc(b[1])}</b><small>${esc(b[2])}</small></span><span class="rad"></span></div>`;
+  case 'alt':return `<div class="u-alt${b[3]?' sel':''}"${to(b[4])}><span class="lt">${esc(b[1])}</span><span><b>${esc(b[2])}</b>${b[5]?`<small>${esc(b[5])}</small>`:''}</span></div>`;
+  case 'seg':return `<div class="u-seg">${(b[1]||[]).map((t,i)=>`<span class="${i===b[2]?'on':''}">${esc(t)}</span>`).join('')}</div>`;
+  case 'check':return `<div class="u-check${b[2]?' done':''}"><i>${b[2]?'✓':''}</i>${esc(b[1])}</div>`;
+  case 'stats':return `<div class="u-stats">${(b[1]||[]).map(x=>`<div><b>${esc(x[1])}</b><small>${esc(x[0])}</small></div>`).join('')}</div>`;
+  case 'table':{
+   const head=b[1]||[],rows=b[2]||[],cell=c=>Array.isArray(c)?chip(c[0],c[1]):esc(c);
+   return `<table class="u-table"><thead><tr>${head.map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${cell(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>`+
+    `<div class="u-tlist">${rows.map(r=>`<div><b>${Array.isArray(r[0])?esc(r[0][0]):esc(r[0])}</b>${r.slice(1).map((c,i)=>`<small>${esc(head[i+1]||'')}: ${cell(c)}</small>`).join('')}</div>`).join('')}</div>`;}
+  case 'btn':{const o=b[3]||{};return `<div class="u-btn${o.alt?' alt':''}${o.dis?' dis':''}"${o.dis?'':to(b[2])}>${esc(b[1])}</div>`;}
+  case 'big':return `<div class="u-big">${esc(b[1])}</div>`;
+ }
+ return '';
+}
+function renderBlocks(bl,I){
+ let out='',i=0;
+ while(i<bl.length){
+  const k=bl[i][0];
+  if(k==='row'||k==='alt'||k==='person'){let j=i,h='';while(j<bl.length&&bl[j][0]===k){h+=blk(bl[j],I);j++;}out+=`<div class="u-list ${k}s">${h}</div>`;i=j;}
+  else{out+=blk(bl[i],I);i++;}
+ }
+ return out;
+}
+function frame(s,vi,I,dev){
+ dev=dev||ST.device;const v=s.states[vi]||s.states[0],body=renderBlocks(v.blocks,I),foot=renderBlocks(v.foot,I);
+ if(dev==='phone')return `<div class="frame phone${I?' ix':''}"><div class="sbar"><span>9:41</span><span class="sic"><i></i><i></i><i></i><b></b></span></div><div class="fbody">${body}</div>${foot?`<div class="ffoot">${foot}</div>`:''}<div class="home"><i></i></div></div>`;
+ const ln=laneOf(s);
+ return `<div class="frame desk${I?' ix':''}"><div class="dbar"><span class="dots"><i></i><i></i><i></i></span><span class="url">painel.rmds (exemplo)</span></div><div class="dnav"><b>RMDS</b><span class="who"><em>${esc((ln.t||'?')[0])}</em>${esc(ln.t)}</span></div><div class="fbody">${body}</div>${foot?`<div class="ffoot">${foot}</div>`:''}</div>`;
+}
+function thumb(s,i,dev){
+ dev=dev||ST.device;const k=dev==='phone'?.6:.42,D=DEV[dev];
+ return `<div class="th" style="width:${D.w*k}px;height:${D.h*k}px"><div style="transform:scale(${k});transform-origin:0 0;width:${D.w}px;height:${D.h}px">${frame(s,i,false,dev)}</div></div>`;
+}
+
+/* ---------- mundo ---------- */
+const vp=$('#vp'),world=$('#world');
+function edgeGeom(e){
+ const a=SM[e.f],b=SM[e.t];let s,t,c1,c2;const ac=a.x+a.w/2,bc=b.x+b.w/2;
+ if(b.x>a.x+a.w-1){s=[a.x+a.w,a.y+a.h/2];t=[b.x,b.y+b.h/2];const dx=Math.max(90,(t[0]-s[0])*.5);c1=[s[0]+dx,s[1]];c2=[t[0]-dx,t[1]];}
+ else if(Math.abs(ac-bc)<40){const down=b.y>a.y;s=[ac,down?a.y+a.h:a.y];t=[bc,down?b.y:b.y+b.h];const dy=Math.max(70,Math.abs(t[1]-s[1])*.4)*(down?1:-1);c1=[s[0],s[1]+dy];c2=[t[0],t[1]-dy];}
+ else{s=[ac,a.y+a.h];t=[bc,b.y+b.h];const drop=Math.max(a.y+a.h,b.y+b.h)+60;c1=[s[0],drop];c2=[t[0],drop];}
+ const mx=.125*s[0]+.375*c1[0]+.375*c2[0]+.125*t[0],my=.125*s[1]+.375*c1[1]+.375*c2[1]+.125*t[1];
+ return {d:`M${s[0]},${s[1]} C${c1[0]},${c1[1]} ${c2[0]},${c2[1]} ${t[0]},${t[1]}`,mx,my};
+}
+function buildWorld(){
+ const D=DEV[ST.device];let h='';
+ LANES.forEach(l=>{h+=`<div class="band" style="top:${l.y}px;height:${l.h}px;width:${WORLD_W-60}px"><div class="lane" style="--c:var(--c-${l.c})"><b><i></i>${esc(l.t)}</b><span>${esc(l.s||'')}</span></div></div>`;});
+ COLS.forEach((c,i)=>{h+=`<div class="colh" style="left:${LEFT+i*D.colw}px;width:${D.colw}px">${esc(c.t)}</div>`;});
+ let sv=`<svg id="edges" width="${WORLD_W}" height="${WORLD_H}" viewBox="0 0 ${WORLD_W} ${WORLD_H}"><defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="24" markerHeight="24" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/></marker></defs>`;
+ EDGES.forEach(e=>{const g=edgeGeom(e),w=e.l.length*12+30;
+  sv+=`<g class="edge${e.d?' dash':''}" data-i="${e.i}" style="--c:var(--c-${SM[e.f].actor})"><path class="ln" d="${g.d}" marker-end="url(#ar)"/><g class="lab"><rect x="${g.mx-w/2}" y="${g.my-20}" width="${w}" height="40" rx="11"/><text x="${g.mx}" y="${g.my+8}" text-anchor="middle">${esc(e.l)}</text></g></g>`;});
+ h+=sv+'</svg><div id="drop" hidden></div>';
+ S.forEach(s=>{h+=`<div class="cardw" data-id="${s.id}" style="left:${s.x}px;top:${s.y-TITLE}px;width:${s.w}px;--c:var(--c-${s.actor})"><div class="ctitle"><i></i><span>${esc(s.t)}</span><em class="badge"></em></div>${frame(s,0,false)}</div>`;});
+ world.innerHTML=h;world.style.width=WORLD_W+'px';world.style.height=WORLD_H+'px';
+}
+function apply(anim){
+ world.style.transition=anim&&!matchMedia('(prefers-reduced-motion:reduce)').matches?'transform .35s ease':'none';
+ world.style.transform=`translate(${ST.x}px,${ST.y}px) scale(${ST.k})`;
+ $('#zp').textContent=Math.round(ST.k*100)+'%';
+}
+function fitBox(b,maxK){
+ const vw=vp.clientWidth,vh=vp.clientHeight,pad=70;if(vw<100||vh<100)return;
+ const k=clamp(Math.min(maxK||1,(vw-pad*2)/b.w,(vh-pad*2)/b.h),.05,1.6);
+ ST.k=k;ST.x=(vw-b.w*k)/2-b.x*k;ST.y=(vh-b.h*k)/2-b.y*k;apply(true);
+}
+function bboxOf(ids){
+ let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;
+ ids.filter(id=>SM[id]).forEach(id=>{const s=SM[id];x0=Math.min(x0,s.x);y0=Math.min(y0,s.y-TITLE);x1=Math.max(x1,s.x+s.w);y1=Math.max(y1,s.y+s.h);});
+ return x0>1e8?{x:0,y:0,w:WORLD_W,h:WORLD_H}:{x:x0,y:y0,w:x1-x0,h:y1-y0};
+}
+const fitAll=()=>fitBox({x:0,y:0,w:WORLD_W,h:WORLD_H},1);
+function closure(id,depth){const dist={[id]:0},q=[id];while(q.length){const n=q.shift();if(dist[n]>=depth)continue;(OUT[n]||[]).forEach(e=>{if(dist[e.t]===undefined){dist[e.t]=dist[n]+1;q.push(e.t);}});}return {set:new Set(Object.keys(dist)),dist};}
+function focusSel(){
+ const id=ST.sel;if(!id||!SM[id])return;
+ const paths=ST.view==='paths',ids=paths?[...closure(id,ST.depth).set]:[id,...OUT[id].map(e=>e.t),...IN[id].map(e=>e.f)];
+ const bb=bboxOf(ids),vw=vp.clientWidth,vh=vp.clientHeight,kfit=Math.min((vw-140)/bb.w,(vh-140)/bb.h);
+ if(kfit<(paths?.14:.3))fitBox(bboxOf([id]),.85);else fitBox(bb,paths?.9:.8);
+}
+function paint(){
+ const sel=ST.sel&&SM[ST.sel]?ST.sel:null;let reach=null;
+ if(sel&&ST.view==='paths')reach=closure(sel,ST.depth);
+ $$('.cardw').forEach(c=>{
+  const id=c.dataset.id;let cls='cardw'+(c.classList.contains('lift')?' lift':'');
+  if(sel){
+   const isSel=id===sel,isNext=OUT[sel].some(e=>e.t===id),isPrev=IN[sel].some(e=>e.f===id);
+   const near=ST.view==='paths'?(reach.set.has(id)||isPrev):(isSel||isNext||isPrev);
+   if(isSel)cls+=' sel';else if(isNext||(reach&&reach.set.has(id)))cls+=' nxt';
+   if(!near)cls+=' dim';
+  }
+  c.className=cls;
+ });
+ $$('#edges .edge').forEach(g=>{
+  const e=EDGES[+g.dataset.i];let st='';
+  if(sel){
+   if(ST.view==='paths')st=(reach.dist[e.f]!==undefined&&reach.dist[e.f]<ST.depth&&reach.set.has(e.t))?'on':(e.t===sel?'in':'off');
+   else st=e.f===sel?'on':(e.t===sel?'in':'off');
+  }
+  g.setAttribute('class','edge'+(e.d?' dash':'')+(st?' '+st:''));
+ });
+}
+function select(id,opt){
+ opt=opt||{};if(id&&!SM[id])id=null;
+ if(id!==ST.sel){ST.ed={state:0,open:new Set(),menu:false};ST.confirm=null;}
+ ST.sel=id;renderInspector();paint();
+ if(ST.view==='mind')drawMind();else if(id&&opt.focus!==false)focusSel();
+ setHint();
+}
+function setView(v){
+ ST.view=v;$$('#vsw button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===v)));
+ $('#mind').hidden=v!=='mind';world.style.visibility=v==='mind'?'hidden':'visible';
+ $('#zoomc').hidden=v==='mind';$('#dep').hidden=v==='over';
+ if(v==='mind')drawMind();else{paint();if(ST.sel)focusSel();else startFrame();}
+ setHint();
+}
+function setDevice(d){
+ ST.device=d;$$('#dsw button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.dev===d)));
+ rebuildModel();buildWorld();paint();onReviewData();renderInspector();
+ if(ST.view!=='mind'){if(ST.sel)focusSel();else startFrame();}
+ if(!$('#sim').hidden)renderSim();
+}
+function startFrame(){const b=bboxOf(['g_convite','g_acesso','g_eixos'].filter(id=>SM[id]));if(b.x>30){b.w+=b.x-30;b.x=30;}fitBox(b,.95);}
+function refreshAll(){buildWorld();paint();onReviewData();renderInspector();setHint();}
+function refreshCard(id){
+ const c=$('.cardw[data-id="'+id+'"]'),s=SM[id];if(!c||!s)return;
+ $('.ctitle span',c).textContent=s.t;const f=$('.frame',c);f.outerHTML=frame(s,0,false);
+}
+function setHint(){
+ let t='Clique numa tela para ver os caminhos. Arraste para mover e use a roda do mouse para dar zoom.';
+ if(ST.edit)t=ST.tool==='connect'?(ST.sel?'Clique na tela de destino para criar a ligação.':'Clique na tela de origem.'):'Arraste uma tela para outra etapa ou raia. Clique numa tela para editar.';
+ if(ST.view==='mind')t='Clique num passo para recentralizar o mapa nele.';
+ $('#hint').textContent=t;
+}
+
+/* ---------- pan, zoom, arrastar telas ---------- */
+let drag=null;
+function worldPt(e){const r=vp.getBoundingClientRect();return {x:(e.clientX-r.left-ST.x)/ST.k,y:(e.clientY-r.top-ST.y)/ST.k};}
+vp.addEventListener('pointerdown',e=>{
+ if(e.button!==0||e.target.closest('#zoomc,#tbar')||ST.view==='mind')return;
+ const card=e.target.closest('.cardw');
+ drag={x:e.clientX,y:e.clientY,ox:ST.x,oy:ST.y,moved:false,card:(ST.edit&&ST.tool==='select'&&card)?card:null,t:e.target};
+ try{vp.setPointerCapture(e.pointerId);}catch(_){}
+});
+vp.addEventListener('pointermove',e=>{
+ if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+ if(!drag.moved&&Math.hypot(dx,dy)>6){drag.moved=true;if(drag.card)drag.card.classList.add('lift');else vp.classList.add('drag');}
+ if(!drag.moved)return;
+ if(drag.card){drag.card.style.transform=`translate(${dx/ST.k}px,${dy/ST.k}px)`;showDrop(e,drag.card.dataset.id);}
+ else{ST.x=drag.ox+dx;ST.y=drag.oy+dy;apply(false);}
+});
+vp.addEventListener('pointerup',e=>{
+ if(!drag)return;const d=drag;drag=null;vp.classList.remove('drag');
+ if(d.card&&d.moved){const id=d.card.dataset.id;d.card.classList.remove('lift');d.card.style.transform='';const tg=dropTarget(e,id);$('#drop').hidden=true;if(tg)moveScreen(id,tg);return;}
+ if(!d.moved)clickAt(d.t);
+});
+function clickAt(t){
+ const c=t.closest?t.closest('.cardw'):null;
+ if(ST.edit&&ST.tool==='connect'){
+  if(!c)return;
+  if(!ST.sel||ST.sel===c.dataset.id){select(c.dataset.id,{focus:false});return;}
+  connectTo(ST.sel,c.dataset.id);return;
+ }
+ if(c)select(c.dataset.id);else if(!t.closest('#zoomc'))select(null);
+}
+vp.addEventListener('wheel',e=>{
+ if(ST.view==='mind')return;e.preventDefault();
+ const r=vp.getBoundingClientRect();zoomAt(e.clientX-r.left,e.clientY-r.top,Math.exp(-e.deltaY*(e.ctrlKey?.01:.0016)));
+},{passive:false});
+function zoomAt(px,py,f){const k=clamp(ST.k*f,.05,1.8),r=k/ST.k;ST.x=px-(px-ST.x)*r;ST.y=py-(py-ST.y)*r;ST.k=k;apply(false);}
+$('#zi').onclick=()=>zoomAt(vp.clientWidth/2,vp.clientHeight/2,1.25);
+$('#zo').onclick=()=>zoomAt(vp.clientWidth/2,vp.clientHeight/2,.8);
+$('#zf').onclick=()=>{ST.sel=null;renderInspector();paint();fitAll();setHint();};
+function dropTarget(e,id){
+ const p=worldPt(e),D=DEV[ST.device];if(!LANES.length)return null;
+ let lane=LANES.find(l=>p.y>=l.y&&p.y<l.y+l.h);
+ if(!lane)lane=p.y<LANES[0].y?LANES[0]:LANES[LANES.length-1];
+ const ci=clamp(Math.floor((p.x-LEFT)/D.colw),0,COLS.length-1),col=COLS[ci];
+ const others=S.filter(s=>s.id!==id&&s.lane===lane.id&&s.col===col.id).sort((a,b)=>(a.ord-b.ord)||(a.id<b.id?-1:1));
+ let idx=0;others.forEach(s=>{if(s.y+s.h/2<p.y)idx++;});
+ return {lane:lane.id,col:col.id,idx,ci,l:lane};
+}
+function showDrop(e,id){
+ const tg=dropTarget(e,id),d=$('#drop'),D=DEV[ST.device];if(!tg){d.hidden=true;return;}
+ d.hidden=false;d.style.left=(LEFT+tg.ci*D.colw+10)+'px';d.style.top=(tg.l.y+10)+'px';d.style.width=(D.colw-20)+'px';d.style.height=(tg.l.h-20)+'px';
+}
+
+/* ---------- edição: histórico e persistência ---------- */
+let UNDO=[],REDO=[],EDITB=null,ctT=0,pT=0,persisting=false,again=false;
+function commitEdit(){
+ clearTimeout(ctT);if(!EDITB)return;
+ if(sj(EDITB)!==sj(OV)){UNDO.push(EDITB);if(UNDO.length>80)UNDO.shift();REDO=[];}
+ EDITB=null;updateUndo();
+}
+function act(fn){
+ commitEdit();const before=clone(OV);fn();
+ if(sj(before)!==sj(OV)){UNDO.push(before);if(UNDO.length>80)UNDO.shift();REDO=[];}
+ rebuildModel();refreshAll();schedulePersist();updateUndo();
+}
+function live(id,fn){
+ if(!EDITB)EDITB=clone(OV);
+ const s=editable(id);fn(s);OV.screens[id]=s;rebuildModel();refreshCard(id);schedulePersist();
+ clearTimeout(ctT);ctT=setTimeout(commitEdit,1200);
+}
+function editable(id){return clone(plain(SM[id]));}
+function undo(){commitEdit();if(!UNDO.length)return;REDO.push(clone(OV));OV=UNDO.pop();rebuildModel();refreshAll();schedulePersist();updateUndo();}
+function redo(){commitEdit();if(!REDO.length)return;UNDO.push(clone(OV));OV=REDO.pop();rebuildModel();refreshAll();schedulePersist();updateUndo();}
+function updateUndo(){const u=$('#tUndo'),r=$('#tRedo');if(u)u.disabled=!UNDO.length&&!EDITB;if(r)r.disabled=!REDO.length;}
+function setSave(st,msg){
+ const el=$('#save');if(!el)return;el.className=st==='error'?'err':'';
+ el.textContent={pending:'Salvando…',saved:'Salvo',nodb:'Só nesta aba',readonly:'Somente leitura',error:msg||'Não foi possível salvar',idle:''}[st]||'';
+}
+function schedulePersist(){clearTimeout(pT);setSave(DB?'pending':'nodb');pT=setTimeout(persist,600);}
+const encScreen=s=>s.deleted?{deleted:true,by:ME,at:Date.now()}:{t:s.t,sub:s.sub||'',lane:s.lane,col:s.col,ord:s.ord,body:JSON.stringify({states:s.states,dados:s.dados,api:s.api,nota:s.nota}),by:ME,at:Date.now()};
+function decScreen(id,d){
+ if(d.deleted)return {id,deleted:true};let b={};try{b=JSON.parse(d.body||'{}');}catch(_){}
+ return {id,t:d.t||'Tela',sub:d.sub||'',lane:d.lane,col:d.col,ord:d.ord||0,states:(b.states&&b.states.length?b.states:[{n:'Padrão',blocks:[],foot:[]}]),dados:b.dados||[],api:b.api||[],nota:b.nota||''};
+}
+function diffOps(a,b){
+ const ops=[];
+ ['screens','edges'].forEach(kind=>{
+  const ids=new Set([...Object.keys(a[kind]),...Object.keys(b[kind])]);
+  ids.forEach(id=>{
+   if(sj(a[kind][id])===sj(b[kind][id]))return;
+   const ref=DB.doc(kind+'/'+id);
+   if(b[kind][id]===undefined)ops.push(()=>ref.delete());
+   else{const v=b[kind][id];ops.push(()=>ref.set(kind==='screens'?encScreen(v):Object.assign({},v,{by:ME,at:Date.now()})));}
+  });
+ });
+ if(sj(a.meta)!==sj(b.meta)){
+  const ref=DB.doc('meta/structure');
+  if(!b.meta.lanes&&!b.meta.cols)ops.push(()=>ref.delete());else ops.push(()=>ref.set({json:JSON.stringify(b.meta),by:ME,at:Date.now()}));
+ }
+ return ops;
+}
+async function persist(){
+ if(!DB){setSave('nodb');return;}
+ if(CANWRITE===false){setSave('readonly');return;}
+ if(persisting){again=true;return;}
+ persisting=true;
+ try{
+  const target=clone(OV),ops=diffOps(SAVED,target);
+  for(const op of ops)await op();
+  SAVED=target;setSave('saved');
+ }catch(e){setSave('error',e&&e.code==='invalid_argument'?'Sem permissão para editar':'Não foi possível salvar');}
+ persisting=false;
+ if(again){again=false;persist();}
+}
+
+/* ---------- operações de edição ---------- */
+function ensureEdge(f,t,l){
+ if(!SM[f]||!SM[t])return;
+ if(EDGES.some(e=>e.f===f&&e.t===t))return;
+ OV.edges[uid('e_')]={f,t,l:l||'Continuar'};
+}
+function clearTo(b,t){
+ const k=b[0];if(k==='btn'&&b[2]===t){b[2]=null;return true;}
+ if(k==='row'&&b[5]===t){b[5]=null;return true;}if(k==='alt'&&b[4]===t){b[4]=null;return true;}return false;
+}
+function removeEdge(id){
+ const e=EDGES.find(x=>x.id===id);if(!e)return;
+ if(BASE.edges[id])OV.edges[id]={deleted:true};else delete OV.edges[id];
+ const left=EDGES.some(x=>x.id!==id&&x.f===e.f&&x.t===e.t);
+ if(!left&&SM[e.f]){const s=editable(e.f);let ch=false;s.states.forEach(st=>{[st.blocks,st.foot].forEach(arr=>arr.forEach(b=>{if(clearTo(b,e.t))ch=true;}));});if(ch)OV.screens[e.f]=s;}
+}
+function normalizeCell(laneId,colId){
+ S.filter(s=>s.lane===laneId&&s.col===colId).sort((a,b)=>(a.ord-b.ord)||(a.id<b.id?-1:1)).forEach((s,i)=>{
+  if(s.ord!==i){const c=OV.screens[s.id]?clone(OV.screens[s.id]):editable(s.id);c.ord=i;OV.screens[s.id]=c;}
+ });
+}
+function moveScreen(id,tg){
+ act(()=>{
+  const s=editable(id);s.lane=tg.lane;s.col=tg.col;
+  const others=S.filter(x=>x.id!==id&&x.lane===tg.lane&&x.col===tg.col).sort((a,b)=>(a.ord-b.ord)||(a.id<b.id?-1:1));
+  const list=others.map(x=>x.id);list.splice(clamp(tg.idx,0,list.length),0,id);
+  OV.screens[id]=s;
+  list.forEach((sid,i)=>{const c=sid===id?OV.screens[id]:(OV.screens[sid]?clone(OV.screens[sid]):editable(sid));c.ord=i;OV.screens[sid]=c;});
+ });
+ toast('Tela movida');
+}
+function deleteScreen(id){
+ act(()=>{
+  EDGES.filter(e=>e.f===id||e.t===id).forEach(e=>{if(BASE.edges[e.id])OV.edges[e.id]={deleted:true};else delete OV.edges[e.id];});
+  S.forEach(s=>{if(s.id===id)return;let ch=false;const c=editable(s.id);c.states.forEach(st=>{[st.blocks,st.foot].forEach(arr=>arr.forEach(b=>{if(clearTo(b,id))ch=true;}));});if(ch)OV.screens[s.id]=c;});
+  if(BASE.screens[id])OV.screens[id]={id,deleted:true};else delete OV.screens[id];
+ });
+ ST.sel=null;ST.confirm=null;renderInspector();paint();toast('Tela excluída. Use Desfazer para voltar.');
+}
+function duplicateScreen(id){
+ const nid=uid('s_');
+ act(()=>{const s=editable(id);s.id=nid;s.t=s.t+' (cópia)';s.ord=s.ord+.5;OV.screens[nid]=s;rebuildModel();normalizeCell(s.lane,s.col);});
+ select(nid);toast('Tela duplicada');
+}
+function restoreScreen(id){act(()=>{delete OV.screens[id];});toast('Tela restaurada ao original');}
+function connectTo(f,t){
+ act(()=>{if(!EDGES.some(e=>e.f===f&&e.t===t))OV.edges[uid('e_')]={f,t,l:'Continuar'};});
+ ST.tool='select';syncTools();ST.tab='fluxo';select(f,{focus:false});toast('Ligação criada. Dê um nome a ela na aba Fluxo.');
+}
+const TPL={
+ pergunta:{n:'Pergunta com alternativas',d:'4 alternativas de A a D e “não sei”',mk:()=>({blocks:[['brand','Área · 1 de 5'],['q','Escreva a pergunta aqui?'],['note','O que considerar: explique em uma frase.'],['alt','A','Alternativa A',false,null],['alt','B','Alternativa B',false,null],['alt','C','Alternativa C',false,null],['alt','D','Alternativa D',false,null]],foot:[['btn','Não sei responder. Quem sabe?',null,{alt:1}]]})},
+ simnao:{n:'Pergunta de sim ou não',d:'Duas opções grandes',mk:()=>({blocks:[['brand','Área'],['q','Escreva a pergunta aqui?'],['alt','S','Sim',false,null],['alt','N','Não',false,null]],foot:[['btn','Não sei. Quem sabe?',null,{alt:1}]]})},
+ form:{n:'Formulário',d:'Campos para preencher',mk:()=>({blocks:[['brand','Etapa'],['h','Título do formulário'],['field','Campo 1','Valor de exemplo'],['field','Campo 2','Valor de exemplo'],['field','Campo 3','']],foot:[['btn','Continuar',null]]})},
+ lista:{n:'Lista de itens',d:'Itens com status e toque',mk:()=>({blocks:[['brand','Lista'],['h','Título da lista'],['row','Item 1','Descrição','Pronto','ok'],['row','Item 2','Descrição','Falta','pend'],['row','Item 3','Descrição','Com alguém','wait']],foot:[['btn','Continuar',null]]})},
+ msg:{n:'Confirmação',d:'Ícone, título e próximo passo',mk:()=>({blocks:[['big','✓'],['h','Tudo certo'],['p','Explique em uma frase o que acontece agora.']],foot:[['btn','Continuar',null]]})},
+ erro:{n:'Erro ou aviso',d:'Explica o problema e como resolver',mk:()=>({blocks:[['banner','Algo não saiu como esperado','err'],['h','O que aconteceu'],['p','Diga como a pessoa pode resolver, sem culpá-la.']],foot:[['btn','Tentar de novo',null]]})},
+ painel:{n:'Painel com tabela',d:'Números e tabela para equipes',mk:()=>({blocks:[['brand','Painel'],['h','Título do painel'],['stats',[['Total','0'],['Em andamento','0']]],['table',['Nome','Situação'],[['Exemplo',['Pronto','ok']]]]],foot:[['btn','Continuar',null]]})},
+ branco:{n:'Em branco',d:'Só um título',mk:()=>({blocks:[['h','Nova tela']],foot:[]})}
+};
+function createScreen(o){
+ const nid=uid('s_'),tp=TPL[o.tpl]||TPL.branco,c=tp.mk();
+ act(()=>{
+  OV.screens[nid]={id:nid,t:o.title||'Nova tela',sub:'',lane:o.lane,col:o.col,ord:9999,states:[{n:'Padrão',blocks:c.blocks,foot:c.foot}],dados:[],api:[],nota:''};
+  rebuildModel();normalizeCell(o.lane,o.col);
+  if(o.from&&SM[o.from])OV.edges[uid('e_')]={f:o.from,t:nid,l:'Continuar'};
+ });
+ ST.tab='conteudo';select(nid);
+ toast('Tela criada. Edite o conteúdo na aba Conteúdo.');
+}
+
+/* ---------- editor de blocos ---------- */
+const TONES=[['','Neutro'],['ok','Verde'],['wait','Azul'],['pend','Amarelo'],['err','Vermelho']];
+const T_=(i,l,k)=>({l,k:k||'text',g:b=>b[i]==null?'':b[i],s:(b,v)=>{b[i]=v;}});
+const C_=(i,l)=>({l,k:'chk',g:b=>!!b[i],s:(b,v)=>{b[i]=!!v;}});
+const SEL_=(i,l,o)=>({l,k:'sel',o,g:b=>b[i]==null?'':b[i],s:(b,v)=>{b[i]=v;}});
+const TO_=(i,l)=>({l:l||'Leva para a tela',k:'to',g:b=>b[i]||'',s:(b,v)=>{b[i]=v||null;}});
+const OPT_=(key,l)=>({l,k:'chk',g:b=>!!(b[3]&&b[3][key]),s:(b,v)=>{const o=Object.assign({},b[3]||{});if(v)o[key]=1;else delete o[key];b[3]=o;}});
+const BT={
+ h:{n:'Título',d:['h','Novo título'],sum:b=>b[1],f:[T_(1,'Texto')]},
+ p:{n:'Texto',d:['p','Novo texto'],sum:b=>b[1],f:[T_(1,'Texto','area')]},
+ q:{n:'Pergunta',d:['q','Escreva a pergunta aqui?'],sum:b=>b[1],f:[T_(1,'Pergunta','area')]},
+ brand:{n:'Etiqueta',d:['brand','Etiqueta'],sum:b=>b[1],f:[T_(1,'Texto')]},
+ note:{n:'Observação',d:['note','Observação para o usuário'],sum:b=>b[1],f:[T_(1,'Texto','area')]},
+ alt:{n:'Alternativa',d:['alt','A','Alternativa',false,null],sum:b=>b[1]+' · '+b[2],f:[T_(1,'Letra'),T_(2,'Texto'),T_(5,'Descrição (opcional)'),C_(3,'Marcada'),TO_(4)]},
+ person:{n:'Pessoa',d:['person','Nome','Cargo',false],sum:b=>b[1],f:[T_(1,'Nome'),T_(2,'Cargo'),C_(3,'Escolhida')]},
+ seg:{n:'Seletor',d:['seg',['Opção 1','Opção 2'],0],sum:b=>(b[1]||[]).join(' | '),f:[{l:'Opções separadas por |',k:'text',g:b=>(b[1]||[]).join(' | '),s:(b,v)=>{b[1]=v.split('|').map(x=>x.trim()).filter(Boolean);}},{l:'Opção marcada (0 = primeira)',k:'num',g:b=>b[2]||0,s:(b,v)=>{b[2]=Math.max(0,parseInt(v)||0);}}]},
+ check:{n:'Item marcável',d:['check','Item',false],sum:b=>b[1],f:[T_(1,'Texto'),C_(2,'Marcado')]},
+ field:{n:'Campo',d:['field','Rótulo','Valor de exemplo',''],sum:b=>b[1],f:[T_(1,'Rótulo'),T_(2,'Valor de exemplo'),T_(3,'Mensagem de erro (opcional)')]},
+ row:{n:'Item da lista',d:['row','Item','Descrição','Status','pend',null],sum:b=>b[1],f:[T_(1,'Título'),T_(2,'Descrição'),T_(3,'Status'),SEL_(4,'Cor do status',TONES),TO_(5)]},
+ stats:{n:'Números',d:['stats',[['Rótulo','0'],['Rótulo','0']]],sum:b=>(b[1]||[]).map(x=>x[1]).join(' · '),f:[{l:'Um por linha: rótulo | valor',k:'area',g:b=>(b[1]||[]).map(x=>x[0]+' | '+x[1]).join('\n'),s:(b,v)=>{b[1]=v.split('\n').map(l=>l.split('|').map(x=>x.trim())).filter(a=>a[0]).map(a=>[a[0],a[1]||'']);}}]},
+ table:{n:'Tabela',d:['table',['Nome','Situação'],[['Exemplo',['Pronto','ok']]]],sum:b=>(b[1]||[]).join(' | '),f:[{l:'Primeira linha: colunas. Depois, uma linha por registro. Para virar status, termine a célula com [ok], [wait], [pend] ou [err].',k:'area',g:b=>[(b[1]||[]).join(' | ')].concat((b[2]||[]).map(r=>r.map(c=>Array.isArray(c)?c[0]+' ['+c[1]+']':c).join(' | '))).join('\n'),s:(b,v)=>{const ls=v.split('\n').filter(x=>x.trim());b[1]=(ls[0]||'').split('|').map(x=>x.trim());b[2]=ls.slice(1).map(l=>l.split('|').map(x=>{x=x.trim();const m=x.match(/^(.*)\s*\[(ok|wait|pend|err)\]$/);return m?[m[1].trim(),m[2]]:x;}));}}]},
+ banner:{n:'Aviso',d:['banner','Mensagem do aviso',''],sum:b=>b[1],f:[T_(1,'Texto','area'),SEL_(2,'Tipo',[['','Informação'],['err','Erro'],['ok','Sucesso']])]},
+ bubble:{n:'Mensagem de WhatsApp',d:['bubble','Texto da mensagem'],sum:b=>b[1],f:[T_(1,'Texto','area')]},
+ big:{n:'Ícone grande',d:['big','✓'],sum:b=>b[1],f:[T_(1,'Símbolo')]},
+ prog:{n:'Barra de progresso',d:['prog',50],sum:b=>b[1]+'%',f:[{l:'Porcentagem (0 a 100)',k:'num',g:b=>b[1]||0,s:(b,v)=>{b[1]=clamp(parseInt(v)||0,0,100);}}]},
+ btn:{n:'Botão',d:['btn','Continuar',null],sum:b=>b[1],f:[T_(1,'Texto do botão'),TO_(2),OPT_('alt','Botão secundário (mais discreto)'),OPT_('dis','Desativado')]}
+};
+const ADD_GROUPS=[['Texto',['h','p','q','brand','note']],['Escolhas',['alt','person','seg','check']],['Dados',['field','row','stats','table']],['Destaque',['banner','bubble','big','prog']],['Ação',['btn']]];
+function toOptions(cur){return `<option value="">Nenhuma</option>`+S.map(s=>`<option value="${s.id}"${s.id===cur?' selected':''}>${esc(s.t)}</option>`).join('');}
+function fieldHTML(f,fi,b){
+ const v=f.g(b);let inp;
+ if(f.k==='area')inp=`<textarea class="inp" data-fi="${fi}">${esc(v)}</textarea>`;
+ else if(f.k==='chk')return `<div class="fld"><label class="chk"><input type="checkbox" data-fi="${fi}"${v?' checked':''}>${esc(f.l)}</label></div>`;
+ else if(f.k==='sel')inp=`<select class="inp" data-fi="${fi}">${f.o.map(o=>`<option value="${o[0]}"${o[0]===v?' selected':''}>${o[1]}</option>`).join('')}</select>`;
+ else if(f.k==='to')inp=`<select class="inp" data-fi="${fi}">${toOptions(v)}</select>`;
+ else if(f.k==='num')inp=`<input class="inp" type="number" data-fi="${fi}" value="${esc(v)}">`;
+ else inp=`<input class="inp" data-fi="${fi}" value="${esc(v)}">`;
+ return `<div class="fld"><label>${esc(f.l)}</label>${inp}</div>`;
+}
+function bkHTML(list,i,b){
+ const T=BT[b[0]];if(!T)return '';const key=list+':'+i,open=ST.ed.open.has(key);
+ return `<div class="bk${open?' open':''}" data-list="${list}" data-bi="${i}"><div class="bkh" data-a="bk-toggle"><span class="bkt">${esc(T.n)}</span><span class="bks">${esc(T.sum(b))}</span><span class="bka"><button class="ib" data-a="bk-up" aria-label="Subir">${ic('up')}</button><button class="ib" data-a="bk-dn" aria-label="Descer">${ic('down')}</button><button class="ib" data-a="bk-dup" aria-label="Duplicar">${ic('copy')}</button><button class="ib" data-a="bk-del" aria-label="Excluir">${ic('trash')}</button></span></div>${open?`<div class="bkf">${T.f.map((f,fi)=>fieldHTML(f,fi,b)).join('')}</div>`:''}</div>`;
+}
+function editorHTML(s){
+ const si=clamp(ST.ed.state,0,s.states.length-1),st=s.states[si];
+ const addMenu=list=>ST.ed.menu===list?`<div class="addmenu">${(list==='foot'?[['Ação',['btn']]]:ADD_GROUPS).map(g=>g[1].map(k=>`<button data-a="bk-add" data-list="${list}" data-type="${k}">${esc(BT[k].n)}</button>`).join('')).join('')}</div>`:'';
+ return `<div class="chips">${s.states.map((x,i)=>`<button data-a="selstate" data-v="${i}" aria-pressed="${i===si}">${esc(x.n)}</button>`).join('')}<button data-a="addstate">+ Novo estado</button></div>
+ <div class="prev" id="prev">${thumb(s,si)}</div>
+ <div class="fld"><label>Nome deste estado</label><input class="inp" data-sn value="${esc(st.n)}"${si===0?' disabled':''}></div>
+ <div class="btns" style="margin-top:0"><button class="b sm" data-a="dupstate">${ic('copy')}Duplicar estado</button>${si>0?`<button class="b sm danger" data-a="delstate">${ic('trash')}Excluir estado</button>`:''}</div>
+ <div class="sec"><h4>Conteúdo da tela</h4>${st.blocks.map((b,i)=>bkHTML('blocks',i,b)).join('')||'<p class="mut">Sem blocos ainda.</p>'}<button class="b sm" data-a="menu" data-list="blocks">${ic('plus')}Adicionar bloco</button>${addMenu('blocks')}</div>
+ <div class="sec"><h4>Botões fixos no rodapé</h4>${st.foot.map((b,i)=>bkHTML('foot',i,b)).join('')||'<p class="mut">Sem botões fixos.</p>'}<button class="b sm" data-a="menu" data-list="foot">${ic('plus')}Adicionar botão</button>${addMenu('foot')}</div>`;
+}
+function statesView(s){return `<div class="states">${s.states.map((x,i)=>`<figure>${thumb(s,i)}<figcaption>${esc(x.n)}</figcaption></figure>`).join('')}</div>`;}
+
+/* ---------- inspetor ---------- */
+function renderInspector(){
+ const d=$('#drawer'),s=ST.sel&&SM[ST.sel];
+ if(!s){d.hidden=true;return;}
+ d.hidden=false;const ln=laneOf(s),cl=colOf(s),old=$('#ibody'),sc=old?old.scrollTop:0;
+ if(!ST.edit&&ST.tab==='conteudo')ST.tab='conteudo';
+ const tabs=[['tela','Tela'],['conteudo',ST.edit?'Conteúdo':'Estados'],['fluxo','Fluxo'],['fabrica','Fábrica'],['revisao','Revisão']];
+ d.innerHTML=`<div class="ih"><div class="ik" style="--c:var(--c-${ln.c})"><i></i>${esc(ln.t)} · ${esc(cl.t)}</div><button class="x" data-a="close" aria-label="Fechar">${ic('x')}</button></div><h3 class="it">${esc(s.t)}</h3><div class="tabs" role="tablist">${tabs.map(t=>`<button class="tab" role="tab" aria-selected="${ST.tab===t[0]}" data-a="tab" data-v="${t[0]}">${t[1]}</button>`).join('')}</div><div class="ibody" id="ibody">${tabHTML(s)}</div>`;
+ $('#ibody').scrollTop=sc;if(ST.tab==='revisao')renderReview();
+}
+function selOpts(list,cur){return list.map(x=>`<option value="${x.id}"${x.id===cur?' selected':''}>${esc(x.t)}</option>`).join('');}
+function tabHTML(s){
+ const ed=ST.edit;
+ if(ST.tab==='tela'){
+  if(!ed)return `<p class="isub">${esc(s.sub||'Sem descrição.')}</p><div class="kv"><span>Quem usa</span><b>${esc(laneOf(s).t)}</b></div><div class="kv"><span>Etapa</span><b>${esc(colOf(s).t)}</b></div><div class="kv"><span>Estados</span><b>${s.states.length}</b></div>${s.nota?`<div class="kv"><span>Regra</span><b>${esc(s.nota)}</b></div>`:''}<div class="btns"><button class="b pri" data-a="sim">Simular daqui</button><button class="b" data-a="view" data-v="mind">Mapa mental</button><button class="b" data-a="view" data-v="paths">Caminhos</button></div>`;
+  const over=!!OV.screens[s.id]&&!!BASE.screens[s.id];
+  return `<div class="fld"><label>Nome da tela</label><input class="inp" data-sf="t" value="${esc(s.t)}"></div><div class="fld"><label>O que acontece aqui</label><textarea class="inp" data-sf="sub">${esc(s.sub||'')}</textarea></div><div class="fld"><label>Quem usa</label><select class="inp" data-sel="lane">${selOpts(LANES,s.lane)}</select></div><div class="fld"><label>Etapa</label><select class="inp" data-sel="col">${selOpts(COLS,s.col)}</select></div><div class="fld"><label>Regra de negócio (opcional)</label><textarea class="inp" data-sf="nota">${esc(s.nota||'')}</textarea></div>
+  <div class="btns"><button class="b pri" data-a="sim">Simular daqui</button><button class="b" data-a="dup">${ic('copy')}Duplicar</button>${over?`<button class="b" data-a="restore">Restaurar original</button>`:''}<button class="b danger" data-a="del">${ic('trash')}${ST.confirm==='del'?'Confirmar exclusão':'Excluir'}</button></div>`;
+ }
+ if(ST.tab==='conteudo')return ed?editorHTML(s):statesView(s);
+ if(ST.tab==='fluxo'){
+  const row=(e,dir)=>{const o=SM[dir==='out'?e.t:e.f];if(!ed)return `<button data-a="goto" data-v="${o.id}"><em>${esc(e.l)}</em>${dir==='out'?'→':'←'} ${esc(o.t)}${e.d?'<small>fora do app</small>':''}</button>`;
+   return `<div class="edge-row"><input class="inp" data-ef="l" data-eid="${e.id}" value="${esc(e.l)}" aria-label="Nome da ligação"><label class="chk" title="Acontece fora do app"><input type="checkbox" data-ef="d" data-eid="${e.id}"${e.d?' checked':''}>fora</label><button class="ib" data-a="edge-del" data-v="${e.id}" aria-label="Excluir ligação">${ic('trash')}</button><span class="to">${dir==='out'?'Vai para':'Vem de'} ${esc(o.t)}</span></div>`;};
+  return `<div class="pl"><div class="lbl">Vai para</div>${OUT[s.id].map(e=>row(e,'out')).join('')||'<span class="mut">Fim do caminho.</span>'}<div class="lbl">Vem de</div>${IN[s.id].map(e=>row(e,'in')).join('')||'<span class="mut">Início do caminho.</span>'}</div>${ed?`<div class="sec"><h4>Nova ligação</h4><div class="fld"><label>Para a tela</label><select class="inp" id="neTo">${toOptions('')}</select></div><div class="fld"><label>Nome da ligação</label><input class="inp" id="neL" placeholder="Ex.: Enviar pedido"></div><button class="b pri" data-a="edge-add">Criar ligação</button></div>`:''}`;
+ }
+ if(ST.tab==='fabrica'){
+  if(!ed)return `<div class="sec" style="margin-top:0"><h4>Dados</h4><div class="tags">${s.dados.map(x=>`<span>${esc(x)}</span>`).join('')||'<span class="mut">Nenhum</span>'}</div></div><div class="sec"><h4>Chamadas de API</h4>${s.api.length?`<div class="api">${s.api.map(a=>`<div>${esc(a)}</div>`).join('')}</div>`:'<p class="mut">Sem chamada própria.</p>'}</div>`;
+  return `<div class="fld"><label>Dados que esta tela usa (um por linha)</label><textarea class="inp" data-dl="dados">${esc(s.dados.join('\n'))}</textarea></div><div class="fld"><label>Chamadas de API (uma por linha)</label><textarea class="inp" data-dl="api" style="font-family:var(--f-mono);font-size:12px">${esc(s.api.join('\n'))}</textarea></div>`;
+ }
+ return `<div id="rs"></div><div class="sec"><h4>Checklist de qualidade</h4><div class="qc" id="qc"></div></div><div class="sec"><h4>Comentários</h4><div id="cl"></div><textarea class="inp" id="cmt" placeholder="Comentário sobre esta tela" aria-label="Comentário" style="margin-top:10px"></textarea><div class="btns"><button class="b" data-a="comment">Comentar</button></div><div id="rmsg"></div></div>`;
+}
+function updatePrev(){const s=SM[ST.sel],p=$('#prev');if(s&&p)p.innerHTML=thumb(s,clamp(ST.ed.state,0,s.states.length-1));}
+function blockInput(t,discrete){
+ const bk=t.closest('.bk');if(!bk)return;const list=bk.dataset.list,i=+bk.dataset.bi,fi=+t.dataset.fi,v=t.type==='checkbox'?t.checked:t.value;
+ const fn=s=>{const b=s.states[ST.ed.state][list][i],f=BT[b[0]].f[fi];f.s(b,v);
+  if(f.k==='to'&&v){const lab=b[0]==='alt'?b[2]:b[1];ensureEdge(s.id,v,lab);}};
+ if(discrete){act(()=>{const s=editable(ST.sel);fn(s);OV.screens[ST.sel]=s;});return;}
+ live(ST.sel,fn);updatePrev();
+ const s=SM[ST.sel],b=s.states[ST.ed.state][list][i],sm=bk.querySelector('.bks');if(sm)sm.textContent=BT[b[0]].sum(b);
+}
+function bkAction(a,bk,t){
+ const list=bk?bk.dataset.list:t.dataset.list,i=bk?+bk.dataset.bi:0;
+ if(a==='bk-toggle'){const k=list+':'+i;if(ST.ed.open.has(k))ST.ed.open.delete(k);else ST.ed.open.add(k);renderInspector();return;}
+ if(a==='menu'){ST.ed.menu=ST.ed.menu===list?false:list;renderInspector();return;}
+ act(()=>{
+  const s=editable(ST.sel),st=s.states[ST.ed.state],arr=st[list];
+  if(a==='bk-up'&&i>0){[arr[i-1],arr[i]]=[arr[i],arr[i-1]];ST.ed.open=new Set([list+':'+(i-1)]);}
+  else if(a==='bk-dn'&&i<arr.length-1){[arr[i+1],arr[i]]=[arr[i],arr[i+1]];ST.ed.open=new Set([list+':'+(i+1)]);}
+  else if(a==='bk-dup'){arr.splice(i+1,0,clone(arr[i]));ST.ed.open=new Set([list+':'+(i+1)]);}
+  else if(a==='bk-del'){arr.splice(i,1);ST.ed.open=new Set();}
+  else if(a==='bk-add'){arr.push(clone(BT[t.dataset.type].d));ST.ed.open=new Set([list+':'+(arr.length-1)]);ST.ed.menu=false;}
+  OV.screens[ST.sel]=s;
+ });
+}
+$('#drawer').addEventListener('click',e=>{
+ const t=e.target.closest('[data-a]');if(!t||t.getAttribute('aria-disabled')==='true')return;
+ const a=t.dataset.a;
+ if(a==='close')select(null);
+ else if(a==='tab'){ST.tab=t.dataset.v;renderInspector();}
+ else if(a==='goto')select(t.dataset.v);
+ else if(a==='sim')openSim(ST.sel);
+ else if(a==='view')setView(t.dataset.v);
+ else if(a==='dup')duplicateScreen(ST.sel);
+ else if(a==='restore')restoreScreen(ST.sel);
+ else if(a==='del'){if(ST.confirm==='del')deleteScreen(ST.sel);else{ST.confirm='del';renderInspector();}}
+ else if(a==='selstate'){ST.ed.state=+t.dataset.v;ST.ed.open=new Set();renderInspector();}
+ else if(a==='addstate'){act(()=>{const c=editable(ST.sel);c.states.push({n:'Novo estado',blocks:clone(c.states[0].blocks),foot:clone(c.states[0].foot)});OV.screens[ST.sel]=c;ST.ed.state=c.states.length-1;});}
+ else if(a==='dupstate'){act(()=>{const c=editable(ST.sel),x=clone(c.states[ST.ed.state]);x.n=x.n+' (cópia)';c.states.push(x);OV.screens[ST.sel]=c;ST.ed.state=c.states.length-1;});}
+ else if(a==='delstate'){act(()=>{const c=editable(ST.sel);c.states.splice(ST.ed.state,1);OV.screens[ST.sel]=c;ST.ed.state=0;});}
+ else if(a.startsWith('bk-')||a==='menu')bkAction(a,t.closest('.bk'),t);
+ else if(a==='edge-del'){act(()=>removeEdge(t.dataset.v));}
+ else if(a==='edge-add'){const to=$('#neTo').value,l=$('#neL').value.trim();if(!to)return;act(()=>{if(!EDGES.some(x=>x.f===ST.sel&&x.t===to))OV.edges[uid('e_')]={f:ST.sel,t:to,l:l||'Continuar'};});}
+ else if(a==='status')setStatus(ST.sel,t.dataset.v);
+ else if(a==='comment')addComment();
+});
+$('#drawer').addEventListener('input',e=>{
+ const t=e.target;
+ if(t.dataset.sf){live(ST.sel,s=>{s[t.dataset.sf]=t.value;});if(t.dataset.sf==='t'){const h=$('.it');if(h)h.textContent=t.value;}}
+ else if(t.dataset.sn!==undefined){live(ST.sel,s=>{s.states[ST.ed.state].n=t.value;});}
+ else if(t.dataset.dl){live(ST.sel,s=>{s[t.dataset.dl]=t.value.split('\n').map(x=>x.trim()).filter(Boolean);});}
+ else if(t.dataset.ef==='l'){liveEdge(t.dataset.eid,o=>{o.l=t.value;});}
+ else if(t.dataset.fi!==undefined&&t.tagName!=='SELECT'&&t.type!=='checkbox')blockInput(t,false);
+});
+function liveEdge(id,fn){
+ if(!EDITB)EDITB=clone(OV);
+ const e=EDGES.find(x=>x.id===id);if(!e)return;const o={f:e.f,t:e.t,l:e.l};if(e.d)o.d=1;fn(o);OV.edges[id]=o;rebuildModel();
+ const g=$('#edges .edge[data-i="'+e.i+'"] .lab text');if(g)g.textContent=o.l;
+ schedulePersist();clearTimeout(ctT);ctT=setTimeout(commitEdit,1200);
+}
+$('#drawer').addEventListener('change',e=>{
+ const t=e.target;
+ if(t.dataset.sel){act(()=>{const s=editable(ST.sel);s[t.dataset.sel]=t.value;s.ord=9999;OV.screens[ST.sel]=s;rebuildModel();normalizeCell(s.lane,s.col);});}
+ else if(t.dataset.ef==='d'){act(()=>{const e2=EDGES.find(x=>x.id===t.dataset.eid);if(!e2)return;const o={f:e2.f,t:e2.t,l:e2.l};if(t.checked)o.d=1;OV.edges[t.dataset.eid]=o;});}
+ else if(t.dataset.fi!==undefined&&(t.tagName==='SELECT'||t.type==='checkbox'))blockInput(t,true);
+ else if(t.dataset.qc!==undefined)setCheck(+t.dataset.qc,t.checked);
+});
+$('#drawer').addEventListener('focusout',()=>{setTimeout(()=>{const a=document.activeElement;if(!a||!$('#drawer').contains(a))commitEdit();},0);});
+
+/* ---------- revisão (banco) ---------- */
+let DB=null,USER=null,DL=null,ME=null,CANWRITE=null,REVIEWS={},COMMENTS=[];
+const fmt=t=>new Date(t).toLocaleString('pt-BR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
+function renderReview(){
+ const rs=$('#rs'),cl=$('#cl');if(!rs||!ST.sel)return;
+ const id=ST.sel,r=REVIEWS[id];
+ if(!DB){rs.innerHTML='<p class="mut">A revisão fica disponível para quem abre o link com login.</p>';const qc=$('#qc');if(qc)qc.innerHTML='';if(cl)cl.innerHTML='';return;}
+ const dis=CANWRITE===false?' aria-disabled="true"':'';
+ const cur=r&&r.status?(r.status==='ok'?'Aprovada':'Pede ajuste'):'Sem decisão ainda';
+ rs.innerHTML=`<div class="rs"><button class="b ok" data-a="status" data-v="ok"${dis}>Aprovar</button><button class="b ajuste" data-a="status" data-v="ajuste"${dis}>Pedir ajuste</button>${r&&r.status?`<button class="b" data-a="status" data-v="limpar"${dis}>Limpar</button>`:''}</div><div class="rinfo">${esc(cur)}${r&&r.at?` · <span data-uid="${esc(r.by||'')}">Alguém</span> · ${fmt(r.at)}`:''}${CANWRITE===false?'<br>Você está como leitor. Peça acesso de Contribuidor para revisar.':''}</div>`;
+ const ck=(r&&r.checks)||[];
+ $('#qc').innerHTML=CHECKS.map((c,i)=>`<label><input type="checkbox" data-qc="${i}"${ck[i]?' checked':''}${CANWRITE===false?' disabled':''}>${esc(c)}</label>`).join('');
+ cl.innerHTML=COMMENTS.filter(c=>c.screen===id).map(c=>`<div class="cm"><b data-uid="${esc(c.by||'')}">Alguém</b><time>${fmt(c.at)}</time><p>${esc(c.text)}</p></div>`).join('');
+ fillNames(rs);fillNames(cl);
+}
+async function fillNames(root){
+ const els=$$('[data-uid]',root);if(!els.length)return;
+ els.forEach(e=>{if(ME&&e.dataset.uid===ME)e.textContent='Você';});
+ if(!USER)return;const ids=[...new Set(els.map(e=>e.dataset.uid).filter(Boolean))];if(!ids.length)return;
+ try{const ps=await USER.profiles(ids);els.forEach(e=>{const p=ps[e.dataset.uid];if(p&&p.name)e.textContent=p.name;});}catch(_){}
+}
+function dbMsg(e){const m=$('#rmsg');if(m)m.textContent=e&&e.code==='invalid_argument'?'Você só pode ler. Peça acesso de Contribuidor a quem compartilhou a página.':'Não foi possível salvar agora. Tente de novo.';}
+async function setStatus(id,st){
+ if(!DB||CANWRITE===false)return;const m=$('#rmsg');if(m)m.textContent='';
+ const prev=REVIEWS[id]||{};
+ try{
+  if(st==='limpar'){const c=prev.checks;if(c&&c.some(Boolean))await DB.doc('reviews/'+id).set({checks:c,by:ME,at:Date.now()});else await DB.doc('reviews/'+id).delete();}
+  else await DB.doc('reviews/'+id).set({status:st,checks:prev.checks||[],by:ME,at:Date.now()});
+ }catch(e){dbMsg(e);}
+}
+async function setCheck(i,v){
+ if(!DB||CANWRITE===false)return;const prev=REVIEWS[ST.sel]||{},ck=(prev.checks||[]).slice();while(ck.length<CHECKS.length)ck.push(false);ck[i]=!!v;
+ const d={checks:ck,by:ME,at:Date.now()};if(prev.status)d.status=prev.status;
+ try{await DB.doc('reviews/'+ST.sel).set(d);}catch(e){dbMsg(e);}
+}
+async function addComment(){
+ const ta=$('#cmt');if(!DB||!ta||CANWRITE===false)return;const text=ta.value.trim();if(!text)return;
+ try{await DB.collection('comments').add({screen:ST.sel,text:text.slice(0,1500),by:ME,at:Date.now()});ta.value='';}catch(e){dbMsg(e);}
+}
+function onReviewData(){
+ $$('.cardw').forEach(c=>{const r=REVIEWS[c.dataset.id],b=$('.badge',c);if(!b)return;const st=r&&r.status;b.className='badge'+(st?' '+st:'');b.textContent=st?(st==='ok'?'✓ Aprovada':'! Ajuste'):'';});
+ const ok=S.filter(s=>REVIEWS[s.id]&&REVIEWS[s.id].status==='ok').length,aj=S.filter(s=>REVIEWS[s.id]&&REVIEWS[s.id].status==='ajuste').length;
+ $('#sum').innerHTML=DB?`<b>${ok}</b> de ${S.length} telas aprovadas${aj?` · <b>${aj}</b> pedem ajuste`:''}`:`${S.length} telas`;
+ if(ST.tab==='revisao')renderReview();
+}
+function mergeRemote(kind,inc){
+ const ids=new Set([...Object.keys(SAVED[kind]),...Object.keys(inc),...Object.keys(OV[kind])]);let ch=false;
+ ids.forEach(id=>{
+  const r=inc[id],sv=SAVED[kind][id],l=OV[kind][id];
+  if(sj(r)===sj(sv))return;
+  const dirty=sj(l)!==sj(sv);
+  if(r===undefined)delete SAVED[kind][id];else SAVED[kind][id]=clone(r);
+  if(!dirty){if(r===undefined){if(l!==undefined){delete OV[kind][id];ch=true;}}else if(sj(l)!==sj(r)){OV[kind][id]=clone(r);ch=true;}}
+ });
+ return ch;
+}
+function remoteApplied(ch){
+ if(!ch)return;rebuildModel();
+ if(ST.sel&&!SM[ST.sel])ST.sel=null;
+ buildWorld();paint();onReviewData();
+ const a=document.activeElement;if(!(a&&$('#drawer').contains(a)&&/INPUT|TEXTAREA|SELECT/.test(a.tagName)))renderInspector();
+}
+async function initCaps(){
+ if(!(window.claude&&window.claude.use))return;
+ try{USER=await claude.use('user');}catch(_){}
+ try{DB=await claude.use('db');}catch(_){}
+ try{DL=await claude.use('downloads');}catch(_){}
+ if(USER){try{ME=await USER.id();}catch(_){}try{CANWRITE=await USER.can('data.write');}catch(_){}}
+ if(DB){
+  try{
+   DB.collection('reviews').onSnapshot(snap=>{REVIEWS={};snap.docs.forEach(d=>{REVIEWS[d.id]=d.data();});onReviewData();},()=>{});
+   DB.collection('comments').orderBy('at','asc').onSnapshot(snap=>{COMMENTS=snap.docs.map(d=>Object.assign({id:d.id},d.data()));onReviewData();},()=>{});
+   DB.collection('screens').onSnapshot(snap=>{const inc={};snap.docs.forEach(d=>{inc[d.id]=decScreen(d.id,d.data());});remoteApplied(mergeRemote('screens',inc));},()=>{});
+   DB.collection('edges').onSnapshot(snap=>{const inc={};snap.docs.forEach(d=>{const x=d.data();inc[d.id]=x.deleted?{deleted:true}:Object.assign({f:x.f,t:x.t,l:x.l},x.d?{d:1}:{});});remoteApplied(mergeRemote('edges',inc));},()=>{});
+   DB.doc('meta/structure').onSnapshot(snap=>{let m={};if(snap.exists){try{m=JSON.parse(snap.data().json||'{}');}catch(_){}}const dirty=sj(OV.meta)!==sj(SAVED.meta),changed=sj(m)!==sj(SAVED.meta);SAVED.meta=clone(m);if(!dirty&&changed){OV.meta=clone(m);remoteApplied(true);}},()=>{});
+  }catch(_){DB=null;}
+ }
+ if(CANWRITE===false){$('#editSw').disabled=true;$('#editSw').parentElement.title='Você está como leitor';}
+ onReviewData();setSave('idle');
+}
+
+/* ---------- modo editar, barra e modais ---------- */
+function syncTools(){
+ $$('#tbar [data-tool]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.tool===ST.tool)));
+ vp.classList.toggle('connect',ST.edit&&ST.tool==='connect');setHint();
+}
+function setEdit(on){
+ ST.edit=on;ST.tool='select';document.body.classList.toggle('editing',on);$('#tbar').hidden=!on;$('#editSw').checked=on;
+ if(ST.tab==='conteudo'&&!on)ST.tab='tela';syncTools();renderInspector();updateUndo();
+ if(on&&!DB)toast('Sem banco de dados neste modo: as alterações ficam só nesta aba.');
+}
+$('#editSw').addEventListener('change',e=>setEdit(e.target.checked));
+$$('#tbar [data-tool]').forEach(b=>b.onclick=()=>{ST.tool=b.dataset.tool;syncTools();});
+$('#tUndo').onclick=undo;$('#tRedo').onclick=redo;
+function openModal(html){const m=$('#modal');m.innerHTML=`<div class="mbox" role="dialog" aria-modal="true">${html}</div>`;m.hidden=false;}
+function closeModal(){$('#modal').hidden=true;$('#modal').innerHTML='';}
+$('#modal').addEventListener('mousedown',e=>{if(e.target.id==='modal')closeModal();});
+$('#tNew').onclick=()=>{
+ const sel=ST.sel&&SM[ST.sel],ln=sel?sel.lane:LANES[0].id,ci=sel?COLS.findIndex(c=>c.id===sel.col):-1,col=COLS[Math.min(ci+1,COLS.length-1)]||COLS[0];
+ openModal(`<h3>Nova tela</h3><p class="sub">Escolha um modelo. Dá para mudar tudo depois.</p>
+ <div class="tpls" id="tpls">${Object.keys(TPL).map((k,i)=>`<button data-k="${k}" aria-pressed="${i===0}"><b>${esc(TPL[k].n)}</b><small>${esc(TPL[k].d)}</small></button>`).join('')}</div>
+ <div class="fld"><label>Nome da tela</label><input class="inp" id="nsT" placeholder="Ex.: Confirmar equipe"></div>
+ <div class="fld"><label>Quem usa</label><select class="inp" id="nsL">${selOpts(LANES,ln)}</select></div>
+ <div class="fld"><label>Etapa</label><select class="inp" id="nsC">${selOpts(COLS,col.id)}</select></div>
+ <div class="fld"><label>Ligar a partir de</label><select class="inp" id="nsF">${toOptions(sel?sel.id:'')}</select></div>
+ <div class="mact"><button class="b" id="nsX">Cancelar</button><button class="b pri" id="nsOk">Criar tela</button></div>`);
+ let tpl='pergunta';
+ $('#tpls').onclick=e=>{const b=e.target.closest('button');if(!b)return;tpl=b.dataset.k;$$('#tpls button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));};
+ $('#nsX').onclick=closeModal;
+ $('#nsOk').onclick=()=>{const o={tpl,title:$('#nsT').value.trim()||TPL[tpl].n,lane:$('#nsL').value,col:$('#nsC').value,from:$('#nsF').value};closeModal();createScreen(o);};
+ setTimeout(()=>{const i=$('#nsT');if(i)i.focus();},30);
+};
+$('#tStruct').onclick=()=>{
+ let L=clone(LANES).map(l=>({id:l.id,t:l.t,s:l.s||'',c:l.c})),C=clone(COLS);
+ const used=(k,id)=>S.some(s=>s[k]===id);
+ const draw=()=>{
+  $('#mstruct').innerHTML=`<div class="sec" style="margin-top:0"><h4>Quem usa (raias)</h4>${L.map((l,i)=>`<div class="srow"><input class="inp" data-li="${i}" data-f="t" value="${esc(l.t)}" aria-label="Nome da raia"><select class="inp" data-li="${i}" data-f="c" style="max-width:96px">${COLORS.map(c=>`<option value="${c}"${c===l.c?' selected':''}>Cor ${COLORS.indexOf(c)+1}</option>`).join('')}</select><button class="ib" data-m="lup" data-i="${i}">${ic('up')}</button><button class="ib" data-m="ldn" data-i="${i}">${ic('down')}</button><button class="ib" data-m="ldel" data-i="${i}"${used('lane',l.id)||L.length<2?' disabled style="opacity:.3"':''} title="${used('lane',l.id)?'Mova as telas antes de excluir':'Excluir'}">${ic('trash')}</button></div>`).join('')}<button class="b sm" data-m="ladd">${ic('plus')}Nova raia</button></div>
+  <div class="sec"><h4>Etapas (colunas)</h4>${C.map((c,i)=>`<div class="srow"><input class="inp" data-ci="${i}" value="${esc(c.t)}" aria-label="Nome da etapa"><button class="ib" data-m="cup" data-i="${i}">${ic('up')}</button><button class="ib" data-m="cdn" data-i="${i}">${ic('down')}</button><button class="ib" data-m="cdel" data-i="${i}"${used('col',c.id)||C.length<2?' disabled style="opacity:.3"':''} title="${used('col',c.id)?'Mova as telas antes de excluir':'Excluir'}">${ic('trash')}</button></div>`).join('')}<button class="b sm" data-m="cadd">${ic('plus')}Nova etapa</button></div>`;
+ };
+ openModal(`<h3>Raias e etapas</h3><p class="sub">Raias dizem quem usa a tela. Etapas são os momentos da jornada, da esquerda para a direita.</p><div id="mstruct"></div><div class="mact"><button class="b" id="msX">Cancelar</button><button class="b pri" id="msOk">Salvar</button></div>`);
+ draw();
+ const mv=(a,i,d)=>{const j=i+d;if(j<0||j>=a.length)return;[a[i],a[j]]=[a[j],a[i]];};
+ $('#mstruct').addEventListener('input',e=>{const t=e.target;if(t.dataset.li!==undefined&&t.dataset.f==='t')L[+t.dataset.li].t=t.value;else if(t.dataset.ci!==undefined)C[+t.dataset.ci].t=t.value;});
+ $('#mstruct').addEventListener('change',e=>{const t=e.target;if(t.dataset.li!==undefined&&t.dataset.f==='c')L[+t.dataset.li].c=t.value;});
+ $('#mstruct').addEventListener('click',e=>{
+  const b=e.target.closest('[data-m]');if(!b||b.disabled)return;const m=b.dataset.m,i=+b.dataset.i;
+  if(m==='lup')mv(L,i,-1);else if(m==='ldn')mv(L,i,1);else if(m==='ldel')L.splice(i,1);else if(m==='ladd')L.push({id:uid('l_'),t:'Nova raia',s:'',c:COLORS[L.length%COLORS.length]});
+  else if(m==='cup')mv(C,i,-1);else if(m==='cdn')mv(C,i,1);else if(m==='cdel')C.splice(i,1);else if(m==='cadd')C.push({id:uid('c_'),t:'Nova etapa'});
+  draw();
+ });
+ $('#msX').onclick=closeModal;
+ $('#msOk').onclick=()=>{closeModal();act(()=>{OV.meta={lanes:L.map(l=>({id:l.id,t:l.t.trim()||'Raia',s:l.s,c:l.c})),cols:C.map(c=>({id:c.id,t:c.t.trim()||'Etapa'}))};});toast('Estrutura atualizada');};
+};
+
+/* ---------- mapa mental ---------- */
+function mindTree(root,maxD){
+ const seen=new Set([root]),node={id:root,ch:[],d:0},q=[node];
+ while(q.length){const n=q.shift();if(n.d>=maxD)continue;
+  OUT[n.id].forEach(e=>{if(seen.has(e.t)){n.ch.push({id:e.t,label:e.l,d:n.d+1,ref:true,ch:[]});return;}seen.add(e.t);const c={id:e.t,label:e.l,d:n.d+1,ch:[]};n.ch.push(c);q.push(c);});}
+ return node;
+}
+function drawMind(){
+ const root=ST.sel&&SM[ST.sel]?ST.sel:(SM.g_convite?'g_convite':S[0].id),tree=mindTree(root,ST.depth),all=[];let leaf=0;
+ (function lay(n){all.push(n);if(!n.ch.length){n.row=leaf++;}else{n.ch.forEach(lay);n.row=(n.ch[0].row+n.ch[n.ch.length-1].row)/2;}})(tree);
+ const NW=230,NH=62,GX=400,GY=86,PAD=30,maxd=Math.max.apply(null,all.map(n=>n.d));
+ const W=PAD*2+maxd*GX+NW,H=PAD*2+Math.max(0,leaf-1)*GY+NH;let ed='',lab='',nodes='';
+ all.forEach(n=>{
+  const x=PAD+n.d*GX,y=PAD+n.row*GY;
+  n.ch.forEach(c=>{const x2=PAD+c.d*GX,y2=PAD+c.row*GY,mx=(x+NW+x2)/2;ed+=`<path class="me" d="M${x+NW},${y+NH/2} C${mx},${y+NH/2} ${mx},${y2+NH/2} ${x2},${y2+NH/2}"/>`;lab+=`<text class="ml" x="${mx}" y="${(y+y2)/2+NH/2-7}" text-anchor="middle">${esc(c.label)}</text>`;});
+  const s=SM[n.id];
+  nodes+=`<g class="mn${n.ref?' ref':''}${n.d===0?' root':''}" data-id="${n.id}" tabindex="0" role="button" style="--c:var(--c-${s.actor})"><rect x="${x}" y="${y}" width="${NW}" height="${NH}" rx="12"/><rect class="dot" x="${x+14}" y="${y+16}" width="9" height="9" rx="3"/><text class="t" x="${x+32}" y="${y+25}">${n.ref?'↺ ':''}${esc(s.t)}</text><text class="s" x="${x+32}" y="${y+45}">${esc(laneOf(s).t)} · ${esc(colOf(s).t)}</text></g>`;
+ });
+ $('#mind').innerHTML=`<h2>Próximos passos a partir de “${esc(SM[root].t)}”</h2><p class="mctl">Use “Passos à frente” na barra para abrir ou fechar níveis. Tracejado: a tela já aparece em outro ponto do caminho.</p><svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">${ed}${lab}${nodes}</svg>`;
+}
+$('#mind').addEventListener('click',e=>{const n=e.target.closest('.mn');if(n)select(n.dataset.id);});
+$('#mind').addEventListener('keydown',e=>{if(e.key==='Enter'){const n=e.target.closest('.mn');if(n)select(n.dataset.id);}});
+function setDepth(n){ST.depth=clamp(n,1,8);$('#dn').textContent=ST.depth;if(ST.view==='mind')drawMind();else{paint();if(ST.sel)focusSel();}}
+$('#dm').onclick=()=>setDepth(ST.depth-1);$('#dpp').onclick=()=>setDepth(ST.depth+1);
+
+/* ---------- simulação ---------- */
+let SIM=null;
+function openSim(id){SIM={id:SM[id]?id:(SM.g_convite?'g_convite':S[0].id),vi:0,hist:[]};$('#sim').hidden=false;renderSim();}
+function simGo(to){if(!SM[to])return;SIM.hist.push(SIM.id);SIM.id=to;SIM.vi=0;renderSim();}
+function renderSim(){
+ const s=SM[SIM.id];if(!s){$('#sim').hidden=true;return;}
+ const outs=OUT[s.id],n=s.states.length,dev=ST.device,D=DEV[dev];
+ const k=dev==='phone'?Math.min(1.2,Math.max(.55,(innerHeight-160)/D.h)):Math.min(1.25,Math.max(.5,(Math.min(innerWidth,1100)-(innerWidth>900?470:40))/D.w));
+ $('#sim').innerHTML=`<div class="ovin"><div class="ovh"><h2>Simulação do app</h2><div class="sw2" id="sdev"><button data-sdev="phone" aria-pressed="${dev==='phone'}">Celular</button><button data-sdev="desk" aria-pressed="${dev==='desk'}">Computador</button></div><span class="sp" style="flex:1"></span><button class="tb" id="sBack"${SIM.hist.length?'':' disabled style="opacity:.4"'}>Voltar uma tela</button><button class="tb" id="sRestart">Recomeçar</button><button class="tb pri" id="sClose">Fechar</button></div>
+ <div class="simgrid"><div class="stagebox" style="width:${D.w*k}px;height:${D.h*k}px"><div style="transform:scale(${k});transform-origin:0 0;width:${D.w}px;height:${D.h}px">${frame(s,SIM.vi,true)}</div></div>
+ <div class="side"><div class="ik" style="--c:var(--c-${laneOf(s).c})"><i></i>${esc(laneOf(s).t)} · ${esc(colOf(s).t)}</div><h3>${esc(s.t)}</h3><p class="mut" style="margin:0">${esc(s.sub||'')}</p>
+ ${n>1?`<div class="pl"><div class="lbl">Estado para testar</div></div><div class="chips">${s.states.map((x,i)=>`<button data-vi="${i}" aria-pressed="${i===SIM.vi}">${esc(x.n)}</button>`).join('')}</div>`:''}
+ <div class="pl"><div class="lbl">Nesta tela você pode ir para</div>${outs.length?outs.map(e=>`<button data-sgo="${e.t}"><em>${esc(e.l)}</em>→ ${esc(SM[e.t].t)}${e.d?'<small>fora do app</small>':''}</button>`).join(''):'<span class="mut">Fim do caminho.</span>'}</div>
+ <div class="crumbs">${SIM.hist.length?'Você passou por: '+SIM.hist.concat([SIM.id]).map(i=>esc(SM[i]?SM[i].t:'?')).join(' → '):'Toque nos botões da tela ou use a lista acima.'}</div></div></div></div>`;
+ $('#sim').scrollTop=0;
+}
+$('#sim').addEventListener('click',e=>{
+ const t=e.target;
+ const to=t.closest('[data-to]');if(to){simGo(to.dataset.to);return;}
+ const g=t.closest('[data-sgo]');if(g){simGo(g.dataset.sgo);return;}
+ const v=t.closest('[data-vi]');if(v){SIM.vi=+v.dataset.vi;renderSim();return;}
+ const dv=t.closest('[data-sdev]');if(dv){setDevice(dv.dataset.sdev);return;}
+ if(t.id==='sBack'&&SIM.hist.length){SIM.id=SIM.hist.pop();SIM.vi=0;renderSim();}
+ if(t.id==='sRestart'){SIM.id=SM.g_convite?'g_convite':S[0].id;SIM.vi=0;SIM.hist=[];renderSim();}
+ if(t.id==='sClose'){$('#sim').hidden=true;const id=SIM.id;if(ST.view==='mind')setView('over');select(id);}
+});
+$('#sim').addEventListener('keydown',e=>{if(e.key==='Enter'){const to=e.target.closest&&e.target.closest('[data-to]');if(to)simGo(to.dataset.to);}});
+
+/* ---------- fábrica ---------- */
+const reviewLabel=id=>{const r=REVIEWS[id];return r&&r.status?(r.status==='ok'?'Aprovada':'Pede ajuste'):'Sem decisão';};
+function specMD(){
+ const L=['# RMDS · Especificação das telas','','Gerado pelo Mapa de telas RMDS. Nomes, números e municípios são exemplos.','','## Suposições a confirmar',...ASSUME.map(a=>'- '+a),'','## Áreas do INMSD',...DOM.map(d=>`- ${d[0]} (${d[1]}, ${d[2]} perguntas)`),''];
+ S.forEach(s=>{
+  L.push('## '+s.t,'',`- Quem usa: ${laneOf(s).t} · Etapa: ${colOf(s).t}`,`- O que acontece: ${s.sub||''}`,`- Versões: celular e computador (mesmo conteúdo)`,`- Estados: ${s.states.map(x=>x.n).join(', ')}`);
+  if(s.nota)L.push('- Regra: '+s.nota);
+  L.push('- Vai para:');OUT[s.id].forEach(e=>L.push(`  - ${e.l} → ${SM[e.t].t}${e.d?' (fora do app)':''}`));if(!OUT[s.id].length)L.push('  - Fim do caminho');
+  L.push(`- Dados: ${s.dados.join(', ')||'nenhum'}`,'- Chamadas de API:');s.api.forEach(a=>L.push('  - `'+a+'`'));if(!s.api.length)L.push('  - nenhuma');
+  const r=REVIEWS[s.id];L.push(`- Revisão: ${reviewLabel(s.id)}${r&&r.checks?` · checklist ${r.checks.filter(Boolean).length}/${CHECKS.length}`:''}`);
+  COMMENTS.filter(c=>c.screen===s.id).forEach(c=>L.push(`  - Comentário (${fmt(c.at)}): ${c.text.replace(/\n/g,' ')}`));
+  L.push('');
+ });
+ return L.join('\n');
+}
+function specJSON(){
+ return {titulo:'RMDS · Especificação das telas',suposicoes:ASSUME,areas:DOM.map(d=>({nome:d[0],perguntas:d[1],total:d[2]})),
+  telas:S.map(s=>({id:s.id,titulo:s.t,quemUsa:laneOf(s).t,etapa:colOf(s).t,descricao:s.sub||'',regra:s.nota||null,estados:s.states.map(x=>({nome:x.n,blocos:x.blocks,rodape:x.foot})),
+   vaiPara:OUT[s.id].map(e=>({tela:e.t,quando:e.l,foraDoApp:!!e.d})),dados:s.dados,api:s.api,revisao:reviewLabel(s.id),checklist:(REVIEWS[s.id]&&REVIEWS[s.id].checks)||[],comentarios:COMMENTS.filter(c=>c.screen===s.id).map(c=>c.text)}))};
+}
+function openFab(){
+ const ents={},apis={};S.forEach(s=>{s.dados.forEach(d=>{(ents[d]=ents[d]||[]).push(s.t);});s.api.forEach(a=>{(apis[a]=apis[a]||[]).push(s.t);});});
+ const rows=Object.keys(apis).sort((a,b)=>a.split(' ').slice(1).join(' ').localeCompare(b.split(' ').slice(1).join(' '))).map(a=>{const p=a.split(' ');return `<tr><td><code>${esc(p[0])}</code></td><td><code>${esc(p.slice(1).join(' '))}</code></td><td>${apis[a].map(esc).join(', ')}</td></tr>`;}).join('');
+ $('#fab').innerHTML=`<div class="ovin"><div class="ovh"><h2>Para a fábrica de software</h2><span style="flex:1"></span>${DL?'<button class="tb" data-dl="md">Baixar especificação (.md)</button><button class="tb" data-dl="json">Baixar (.json)</button>':''}<button class="tb pri" id="fClose">Fechar</button></div>
+ <div class="card"><h3>Suposições a confirmar</h3><ul>${ASSUME.map(a=>`<li>${esc(a)}</li>`).join('')}</ul></div>
+ <div class="card"><h3>Entidades (${Object.keys(ents).length})</h3><div class="tags">${Object.keys(ents).sort().map(e=>`<span title="${esc(ents[e].join(', '))}">${esc(e)}</span>`).join('')}</div></div>
+ <div class="card"><h3>Chamadas de API (${Object.keys(apis).length})</h3><div style="overflow-x:auto"><table class="ft"><thead><tr><th>Método</th><th>Caminho</th><th>Telas que usam</th></tr></thead><tbody>${rows}</tbody></table></div></div>
+ <div class="card"><h3>Áreas do INMSD</h3><table class="ft"><thead><tr><th>Área</th><th>Perguntas</th><th>Total</th></tr></thead><tbody>${DOM.map(d=>`<tr><td>${esc(d[0])}</td><td>${esc(d[1])}</td><td>${d[2]}</td></tr>`).join('')}</tbody></table></div></div>`;
+ $('#fab').hidden=false;$('#fab').scrollTop=0;
+}
+$('#fab').addEventListener('click',async e=>{
+ const t=e.target;if(t.id==='fClose')$('#fab').hidden=true;
+ const k=t.dataset&&t.dataset.dl;
+ if(k&&DL){try{await DL.save({filename:k==='md'?'rmds-especificacao-telas.md':'rmds-especificacao-telas.json',data:k==='md'?specMD():JSON.stringify(specJSON(),null,2)});toast('Arquivo salvo');}catch(err){if(!err||err.code!=='declined')toast('Não foi possível salvar por aqui');}}
+});
+let toastT=0;
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('show'),2600);}
+
+/* ---------- barra superior e teclado ---------- */
+$$('#vsw button').forEach(b=>b.onclick=()=>setView(b.dataset.view));
+$$('#dsw button').forEach(b=>b.onclick=()=>setDevice(b.dataset.dev));
+$('#bSim').onclick=()=>openSim(ST.sel||'g_convite');
+$('#bFab').onclick=openFab;
+document.addEventListener('keydown',e=>{
+ const mod=e.ctrlKey||e.metaKey,inField=/INPUT|TEXTAREA|SELECT/.test((document.activeElement||{}).tagName||'');
+ if(mod&&e.key.toLowerCase()==='z'&&ST.edit&&!inField){e.preventDefault();if(e.shiftKey)redo();else undo();return;}
+ if(e.key!=='Escape')return;
+ if(!$('#modal').hidden)closeModal();else if(!$('#sim').hidden)$('#sim').hidden=true;else if(!$('#fab').hidden)$('#fab').hidden=true;
+ else if(ST.tool==='connect'){ST.tool='select';syncTools();}else if(ST.sel)select(null);
+});
+let started=false;
+function startView(){if(started||vp.clientWidth<100||vp.clientHeight<100)return;started=true;if(ST.sel)focusSel();else startFrame();}
+if(window.ResizeObserver)new ResizeObserver(startView).observe(vp);
+
+rebuildModel();buildWorld();apply(false);
+$('#sum').textContent=S.length+' telas';setHint();startView();
+(function(){const h=location.hash.replace('#','');if(h&&SM[h])select(h);})();
+initCaps();
+</script>
+
+</body></html>

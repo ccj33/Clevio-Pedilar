@@ -1,0 +1,6480 @@
+{
+  "gerado_em": "2026-11-24T11:47:34",
+  "evento": "MIT Hacking Medicine Brasil 2026 (eretz.bio / Einstein Hospital Israelita)",
+  "total_fotos": 75,
+  "motor_ocr": "Windows.Media.Ocr (pt-BR) + revisão visual nos casos de baixo contraste/inclinação",
+  "pasta_fotos": "fotos/",
+  "fotos": [
+    {
+      "id": "FOTO_001",
+      "numero": 1,
+      "arquivo": "FOTO_001_2026-10-31_07h09.png",
+      "caminho_relativo": "fotos/FOTO_001_2026-10-31_07h09.png",
+      "original": "IMG_20261031_070939235_HDR_PCT.jpg",
+      "quando": "2026-10-31T07:09:39",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1125x1500",
+      "mb": 2.13,
+      "categoria": "Credencial",
+      "titulo": "Credencial de Participante — Clévio Ferreira (NeuroDynamics | UFMG)",
+      "resumo_visual": "Crachá oficial do MIT Hacking Medicine (31/10 e 01/11/2026) segurado à mão no jardim do Einstein.",
+      "palavras_chave": [
+        "credencial",
+        "cracha",
+        "clevio ferreira",
+        "neurodynamics",
+        "ufmg",
+        "mit hacking medicine",
+        "eretz.bio",
+        "einstein",
+        "grupoboticario"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072) + revisão visual",
+      "texto_ocr": "MIT\nHACKING\nMEDICINE\nBreak it down. Build it up. Make it bettev.\nOrganized by.\nOeretz.bio EINSTEIN\nHospital Israelita\nMIT HACKINO MEDICINE\nde outubro e 01 de novembro de 2026\nClévio Ferreira\nNeuroDynamics I UFMO\nGrupoBoticário",
+      "linhas_ocr": [
+        "MIT",
+        "HACKING",
+        "MEDICINE",
+        "Break it down. Build it up. Make it bettev.",
+        "Organized by.",
+        "Oeretz.bio EINSTEIN",
+        "Hospital Israelita",
+        "MIT HACKINO MEDICINE",
+        "de outubro e 01 de novembro de 2026",
+        "Clévio Ferreira",
+        "NeuroDynamics I UFMO",
+        "GrupoBoticário"
+      ],
+      "texto_transcrito": "MIT HACKING MEDICINE — Medicine. Break it down. Build it up. Make it better. | Organized by: eretz.bio, EINSTEIN Hospital Israelita | 31 de outubro e 01 de novembro de 2026 | Clévio Ferreira | NeuroDynamics | UFMG | Sponsor: GrupoBoticário"
+    },
+    {
+      "id": "FOTO_002",
+      "numero": 2,
+      "arquivo": "FOTO_002_2026-10-31_09h04.png",
+      "caminho_relativo": "fotos/FOTO_002_2026-10-31_09h04.png",
+      "original": "IMG_20261031_090448593_HDR_PCT.jpg",
+      "quando": "2026-10-31T09:04:48",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 2.39,
+      "categoria": "Auditório / Equipe",
+      "titulo": "Selfie da equipe no auditório antes da abertura (002)",
+      "resumo_visual": "Cinco participantes de camiseta azul sentados no auditório do evento aguardando a abertura.",
+      "palavras_chave": [
+        "auditorio",
+        "equipe",
+        "selfie",
+        "participantes",
+        "abertura",
+        "dia 1"
+      ],
+      "tem_texto": false,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "",
+      "linhas_ocr": [],
+      "texto_transcrito": ""
+    },
+    {
+      "id": "FOTO_003",
+      "numero": 3,
+      "arquivo": "FOTO_003_2026-10-31_09h04.png",
+      "caminho_relativo": "fotos/FOTO_003_2026-10-31_09h04.png",
+      "original": "IMG_20261031_090449362_HDR_PCT.jpg",
+      "quando": "2026-10-31T09:04:49",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 2.41,
+      "categoria": "Auditório / Equipe",
+      "titulo": "Selfie da equipe no auditório antes da abertura (003)",
+      "resumo_visual": "Cinco participantes de camiseta azul sentados no auditório do evento aguardando a abertura.",
+      "palavras_chave": [
+        "auditorio",
+        "equipe",
+        "selfie",
+        "participantes",
+        "abertura",
+        "dia 1"
+      ],
+      "tem_texto": false,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "",
+      "linhas_ocr": [],
+      "texto_transcrito": ""
+    },
+    {
+      "id": "FOTO_004",
+      "numero": 4,
+      "arquivo": "FOTO_004_2026-10-31_09h04.png",
+      "caminho_relativo": "fotos/FOTO_004_2026-10-31_09h04.png",
+      "original": "IMG_20261031_090450707_PCT.jpg",
+      "quando": "2026-10-31T09:04:50",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 2.68,
+      "categoria": "Auditório / Equipe",
+      "titulo": "Selfie da equipe no auditório antes da abertura (004)",
+      "resumo_visual": "Cinco participantes de camiseta azul sentados no auditório do evento aguardando a abertura.",
+      "palavras_chave": [
+        "auditorio",
+        "equipe",
+        "selfie",
+        "participantes",
+        "abertura",
+        "dia 1"
+      ],
+      "tem_texto": false,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "",
+      "linhas_ocr": [],
+      "texto_transcrito": ""
+    },
+    {
+      "id": "FOTO_005",
+      "numero": 5,
+      "arquivo": "FOTO_005_2026-10-31_09h04.png",
+      "caminho_relativo": "fotos/FOTO_005_2026-10-31_09h04.png",
+      "original": "IMG_20261031_090451807_HDR_PCT.jpg",
+      "quando": "2026-10-31T09:04:51",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 2.3,
+      "categoria": "Auditório / Equipe",
+      "titulo": "Selfie da equipe no auditório antes da abertura (005)",
+      "resumo_visual": "Cinco participantes de camiseta azul sentados no auditório do evento aguardando a abertura.",
+      "palavras_chave": [
+        "auditorio",
+        "equipe",
+        "selfie",
+        "participantes",
+        "abertura",
+        "dia 1"
+      ],
+      "tem_texto": false,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "",
+      "linhas_ocr": [],
+      "texto_transcrito": ""
+    },
+    {
+      "id": "FOTO_006",
+      "numero": 6,
+      "arquivo": "FOTO_006_2026-10-31_09h05.png",
+      "caminho_relativo": "fotos/FOTO_006_2026-10-31_09h05.png",
+      "original": "IMG_20261031_090500916_HDR_PCT.jpg",
+      "quando": "2026-10-31T09:05:00",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 2.18,
+      "categoria": "Auditório / Equipe",
+      "titulo": "Selfie da equipe no auditório antes da abertura (006)",
+      "resumo_visual": "Cinco participantes de camiseta azul sentados no auditório do evento aguardando a abertura.",
+      "palavras_chave": [
+        "auditorio",
+        "equipe",
+        "selfie",
+        "participantes",
+        "abertura",
+        "dia 1"
+      ],
+      "tem_texto": false,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "",
+      "linhas_ocr": [],
+      "texto_transcrito": ""
+    },
+    {
+      "id": "FOTO_007",
+      "numero": 7,
+      "arquivo": "FOTO_007_2026-10-31_09h05.png",
+      "caminho_relativo": "fotos/FOTO_007_2026-10-31_09h05.png",
+      "original": "IMG_20261031_090501847_HDR_PCT.jpg",
+      "quando": "2026-10-31T09:05:01",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 2.25,
+      "categoria": "Auditório / Equipe",
+      "titulo": "Selfie da equipe no auditório antes da abertura (007)",
+      "resumo_visual": "Cinco participantes de camiseta azul sentados no auditório do evento aguardando a abertura.",
+      "palavras_chave": [
+        "auditorio",
+        "equipe",
+        "selfie",
+        "participantes",
+        "abertura",
+        "dia 1"
+      ],
+      "tem_texto": false,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "",
+      "linhas_ocr": [],
+      "texto_transcrito": ""
+    },
+    {
+      "id": "FOTO_008",
+      "numero": 8,
+      "arquivo": "FOTO_008_2026-10-31_09h05.png",
+      "caminho_relativo": "fotos/FOTO_008_2026-10-31_09h05.png",
+      "original": "IMG_20261031_090503016_PCT.jpg",
+      "quando": "2026-10-31T09:05:03",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 2.45,
+      "categoria": "Auditório / Equipe",
+      "titulo": "Selfie da equipe no auditório antes da abertura (008)",
+      "resumo_visual": "Cinco participantes de camiseta azul sentados no auditório do evento aguardando a abertura.",
+      "palavras_chave": [
+        "auditorio",
+        "equipe",
+        "selfie",
+        "participantes",
+        "abertura",
+        "dia 1"
+      ],
+      "tem_texto": false,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "",
+      "linhas_ocr": [],
+      "texto_transcrito": ""
+    },
+    {
+      "id": "FOTO_009",
+      "numero": 9,
+      "arquivo": "FOTO_009_2026-10-31_09h05.png",
+      "caminho_relativo": "fotos/FOTO_009_2026-10-31_09h05.png",
+      "original": "IMG_20261031_090554504_PCT.jpg",
+      "quando": "2026-10-31T09:05:54",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1125x1500",
+      "mb": 1.35,
+      "categoria": "Abertura",
+      "titulo": "Telão de abertura — MIT Hacking Medicine",
+      "resumo_visual": "Auditório com dois telões exibindo o logotipo oficial do MIT Hacking Medicine e patrocinadores.",
+      "palavras_chave": [
+        "abertura",
+        "auditorio",
+        "telao",
+        "mit hacking medicine",
+        "eretz.bio",
+        "einstein",
+        "grupoboticario",
+        "bid"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "Organized by.\nOeretz.bio\nEINSTEIN\nHospital Israelita\nGrupoBoticário Ã)\nMEDICINE\nMedicine. Break it down. Build it up. Make it better\nu9BlD",
+      "linhas_ocr": [
+        "Organized by.",
+        "Oeretz.bio",
+        "EINSTEIN",
+        "Hospital Israelita",
+        "GrupoBoticário Ã)",
+        "MEDICINE",
+        "Medicine. Break it down. Build it up. Make it better",
+        "u9BlD"
+      ]
+    },
+    {
+      "id": "FOTO_010",
+      "numero": 10,
+      "arquivo": "FOTO_010_2026-10-31_09h05.png",
+      "caminho_relativo": "fotos/FOTO_010_2026-10-31_09h05.png",
+      "original": "IMG_20261031_090556973_HDR_PCT.jpg",
+      "quando": "2026-10-31T09:05:56",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1125x1500",
+      "mb": 1.38,
+      "categoria": "Abertura",
+      "titulo": "Telão de abertura — MIT Hacking Medicine (enquadramento aproximado)",
+      "resumo_visual": "Foto mais próxima do telão de abertura com organizadores e patrocinadores.",
+      "palavras_chave": [
+        "abertura",
+        "auditorio",
+        "telao",
+        "mit hacking medicine",
+        "eretz.bio",
+        "einstein",
+        "grupoboticario",
+        "bid"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "NotebookLM PNG (1500px)",
+      "texto_ocr": "'d\nicário\nOrganized\nCeretz.bio ; EINSTEIN\nHospital Israelita\nMIT\nHACKING\nMEDICINE\nMedicine. Break it down. Build it up. Make it better.\n$BID",
+      "linhas_ocr": [
+        "'d",
+        "icário",
+        "Organized",
+        "Ceretz.bio ; EINSTEIN",
+        "Hospital Israelita",
+        "MIT",
+        "HACKING",
+        "MEDICINE",
+        "Medicine. Break it down. Build it up. Make it better.",
+        "$BID"
+      ]
+    },
+    {
+      "id": "FOTO_011",
+      "numero": 11,
+      "arquivo": "FOTO_011_2026-10-31_09h33.png",
+      "caminho_relativo": "fotos/FOTO_011_2026-10-31_09h33.png",
+      "original": "IMG_20261031_093310574_HDR_PCT.jpg",
+      "quando": "2026-10-31T09:33:10",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.5,
+      "categoria": "Abertura / Metodologia",
+      "titulo": "Slide: Democratizing Healthcare Innovation (Community, Diversity, Viability, Design Methodology)",
+      "resumo_visual": "Slide de boas-vindas explicando os pilares do MIT Hacking Medicine.",
+      "palavras_chave": [
+        "democratizing healthcare",
+        "community",
+        "diversity",
+        "viability",
+        "design methodology",
+        "problem-solution fit"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "MOCRATIZING Healthcare Innovation\nMIT\nHACKING\nMEDICINE\nà eretz.bio\nCOMMUNITY\nEINSTEIN\nHosp•tal Israelitd\nDIVERSITY\nopen, free application\norocess draws an\n?rdisciplinary crowd\nfresh perspectives &\nvaried skills\n8\nGrupoBoticário\nVIABILITY\nWe care about the feasibility\n& sustainability of solutions.\nWinning pitches offer the\nwhole package.\nDESIGN\nMETHODOLOGY\nThe support of our org team,\njudges, and mentors creates\na unique space to move\nquickly through the design\nprocess and get through to a\ngood problem-solution fit.\nMeet others from diferent\ndisciplines ready to and\ncollaborate to solve real\nproblems in healthcare\nwith ínnovation.\n$BID",
+      "linhas_ocr": [
+        "MOCRATIZING Healthcare Innovation",
+        "MIT",
+        "HACKING",
+        "MEDICINE",
+        "à eretz.bio",
+        "COMMUNITY",
+        "EINSTEIN",
+        "Hosp•tal Israelitd",
+        "DIVERSITY",
+        "open, free application",
+        "orocess draws an",
+        "?rdisciplinary crowd",
+        "fresh perspectives &",
+        "varied skills",
+        "8",
+        "GrupoBoticário",
+        "VIABILITY",
+        "We care about the feasibility",
+        "& sustainability of solutions.",
+        "Winning pitches offer the",
+        "whole package.",
+        "DESIGN",
+        "METHODOLOGY",
+        "The support of our org team,",
+        "judges, and mentors creates",
+        "a unique space to move",
+        "quickly through the design",
+        "process and get through to a",
+        "good problem-solution fit.",
+        "Meet others from diferent",
+        "disciplines ready to and",
+        "collaborate to solve real",
+        "problems in healthcare",
+        "with ínnovation.",
+        "$BID"
+      ]
+    },
+    {
+      "id": "FOTO_012",
+      "numero": 12,
+      "arquivo": "FOTO_012_2026-10-31_09h33.png",
+      "caminho_relativo": "fotos/FOTO_012_2026-10-31_09h33.png",
+      "original": "IMG_20261031_093318036_HDR_PCT.jpg",
+      "quando": "2026-10-31T09:33:18",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.21,
+      "categoria": "Abertura / Metodologia",
+      "titulo": "Slide: Democratizing Healthcare Innovation (enquadramento completo)",
+      "resumo_visual": "Mesmo slide com melhor nitidez e enquadramento completo dos 4 pilares.",
+      "palavras_chave": [
+        "democratizing healthcare",
+        "community",
+        "diversity",
+        "viability",
+        "design methodology",
+        "problem-solution fit"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "DEMOCRATIZING Healthcare Innovation\nMIT\nHACKING\nMEDICINE\nO eretz.bio\nCOMMUNITY\nEINSTEIN\nHospital Israelita\nDIVERSITY\nOur open, free application\nprocess draws an\ninterdisciplinary crowd\nwith fresh perspectives &\nVIABILITY\nWe care about the feasibility\n& sustainability of solutions.\nWinning pitches offer the\nwhole package.\nDESIGN\nMETHODOLOCY\nThe support of our org team,\njudges, and mentors creates\na unique space to move\nquickly through the design\nprocess and get through to a\ngood problem-solution fit\nMeet others from diferent\ndisciplines ready to and\ncollaborate to solve real\nproblems in healthcare\nwith innovation.\nORS\nvaried skills\nGrupoBoticário\n$BID",
+      "linhas_ocr": [
+        "DEMOCRATIZING Healthcare Innovation",
+        "MIT",
+        "HACKING",
+        "MEDICINE",
+        "O eretz.bio",
+        "COMMUNITY",
+        "EINSTEIN",
+        "Hospital Israelita",
+        "DIVERSITY",
+        "Our open, free application",
+        "process draws an",
+        "interdisciplinary crowd",
+        "with fresh perspectives &",
+        "VIABILITY",
+        "We care about the feasibility",
+        "& sustainability of solutions.",
+        "Winning pitches offer the",
+        "whole package.",
+        "DESIGN",
+        "METHODOLOCY",
+        "The support of our org team,",
+        "judges, and mentors creates",
+        "a unique space to move",
+        "quickly through the design",
+        "process and get through to a",
+        "good problem-solution fit",
+        "Meet others from diferent",
+        "disciplines ready to and",
+        "collaborate to solve real",
+        "problems in healthcare",
+        "with innovation.",
+        "ORS",
+        "varied skills",
+        "GrupoBoticário",
+        "$BID"
+      ]
+    },
+    {
+      "id": "FOTO_013",
+      "numero": 13,
+      "arquivo": "FOTO_013_2026-10-31_09h41.png",
+      "caminho_relativo": "fotos/FOTO_013_2026-10-31_09h41.png",
+      "original": "IMG_20261031_094124867_PCT.jpg",
+      "quando": "2026-10-31T09:41:24",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.33,
+      "categoria": "Palestra / Dados Oncológicos",
+      "titulo": "Slide: Câncer no mundo — dados da OMS (GLOBOCAN 2024 e projeção 2050)",
+      "resumo_visual": "Dados epidemiológicos globais de mortalidade e incidência de câncer (OMS/IARC).",
+      "palavras_chave": [
+        "cancer no mundo",
+        "oms",
+        "globocan 2024",
+        "iarc",
+        "epidemiologia",
+        "pulmao",
+        "colorretal",
+        "figado",
+        "mama",
+        "estomago",
+        "projecao 2050"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "Câncer no mundo — dados da OMS\nEstimativas GLOBOCAN 2024 (IARC/OMS), divulgadas em julho de 2026\nCânceres que mais matam (milhões de óbitos, 2024)\nprincipal causa de morte no\nmundo\natrás apenas das doenças\ncardovascutares\n9,8 mi\nmortes por câncer em 2024\nmars de 26 mcl pot dia\nZI em 6\nmortes no mundo é causada\npelo câncer\n20,6 mi\nnovos casos em 2024\n-1 em cada 5 pessoas tera câncer ao\nlongo da vida\nPulmào\nColorretal\nF igado\nMama\nEstômago\nPROJEÇÃO\n2050\n0,92\n0,69\n34 mi\ncasos/ano (+67%)\n17,5 mi\nmortes/ano (+80%)",
+      "linhas_ocr": [
+        "Câncer no mundo — dados da OMS",
+        "Estimativas GLOBOCAN 2024 (IARC/OMS), divulgadas em julho de 2026",
+        "Cânceres que mais matam (milhões de óbitos, 2024)",
+        "principal causa de morte no",
+        "mundo",
+        "atrás apenas das doenças",
+        "cardovascutares",
+        "9,8 mi",
+        "mortes por câncer em 2024",
+        "mars de 26 mcl pot dia",
+        "ZI em 6",
+        "mortes no mundo é causada",
+        "pelo câncer",
+        "20,6 mi",
+        "novos casos em 2024",
+        "-1 em cada 5 pessoas tera câncer ao",
+        "longo da vida",
+        "Pulmào",
+        "Colorretal",
+        "F igado",
+        "Mama",
+        "Estômago",
+        "PROJEÇÃO",
+        "2050",
+        "0,92",
+        "0,69",
+        "34 mi",
+        "casos/ano (+67%)",
+        "17,5 mi",
+        "mortes/ano (+80%)"
+      ]
+    },
+    {
+      "id": "FOTO_014",
+      "numero": 14,
+      "arquivo": "FOTO_014_2026-10-31_09h42.png",
+      "caminho_relativo": "fotos/FOTO_014_2026-10-31_09h42.png",
+      "original": "IMG_20261031_094228988_PCT.jpg",
+      "quando": "2026-10-31T09:42:28",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.47,
+      "categoria": "Palestra / Einstein",
+      "titulo": "Slide: Atuação Einstein nos setores privado e público (números 2025)",
+      "resumo_visual": "Números de atendimentos, cirurgias, SUS, TMO e lista de hospitais privados e públicos do Einstein.",
+      "palavras_chave": [
+        "einstein",
+        "sus",
+        "privado",
+        "publico",
+        "morumbi",
+        "perdizes",
+        "goiania",
+        "heliopolis",
+        "ipiranga",
+        "darcy vargas",
+        "tmo"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "Atuação nos\nsetores privado e\npúblico com corpo\nclínico integrado\nNúmeros Einstein\nnos 2 setores em 2025:\nconsultas médicas\n+7.9mil\nprocedimentos cirúrgicos\nSUS)\n76\nTransplantes de medula\nóssea\no NM/CT 670\nCuidado Privado\nUnidade Morumbi (SP)\nUnidade Perdizes (SP)\nEinstein Goiânia (GO)\nCuidado Público\nHospital Municipal\nGilson de Cássia\nMarques de Carvalho (SP)\nHospital Estadual\nHeliópolis (SP)\nHospital Estadual\nIpiranga (SP)\nHospital Estadual\nInfantil Darcy Vargas\nHospital Central de Alta\nComplexidade (MT)",
+      "linhas_ocr": [
+        "Atuação nos",
+        "setores privado e",
+        "público com corpo",
+        "clínico integrado",
+        "Números Einstein",
+        "nos 2 setores em 2025:",
+        "consultas médicas",
+        "+7.9mil",
+        "procedimentos cirúrgicos",
+        "SUS)",
+        "76",
+        "Transplantes de medula",
+        "óssea",
+        "o NM/CT 670",
+        "Cuidado Privado",
+        "Unidade Morumbi (SP)",
+        "Unidade Perdizes (SP)",
+        "Einstein Goiânia (GO)",
+        "Cuidado Público",
+        "Hospital Municipal",
+        "Gilson de Cássia",
+        "Marques de Carvalho (SP)",
+        "Hospital Estadual",
+        "Heliópolis (SP)",
+        "Hospital Estadual",
+        "Ipiranga (SP)",
+        "Hospital Estadual",
+        "Infantil Darcy Vargas",
+        "Hospital Central de Alta",
+        "Complexidade (MT)"
+      ]
+    },
+    {
+      "id": "FOTO_015",
+      "numero": 15,
+      "arquivo": "FOTO_015_2026-10-31_09h45.png",
+      "caminho_relativo": "fotos/FOTO_015_2026-10-31_09h45.png",
+      "original": "IMG_20261031_094517799_PCT.jpg",
+      "quando": "2026-10-31T09:45:17",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.63,
+      "categoria": "Palestra / Einstein",
+      "titulo": "Slide: Oncologia — Atendimento Privado, Infraestrutura e Evolução de Volumes (1/2)",
+      "resumo_visual": "Ranking Newsweek (20ª melhor do mundo), aceleradores de radioterapia, quimioterapia, TMO e evolução 2022–2025.",
+      "palavras_chave": [
+        "oncologia",
+        "atendimento privado",
+        "newsweek",
+        "statista",
+        "radioterapia",
+        "quimioterapia",
+        "hematologia",
+        "tmo",
+        "equipe de apoio",
+        "sustentabilidade 2025"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "Oncologia —\nINFRAESTRUTURA\nRadioterapia\nAtendimento Privado\nEVOLUÇÃO DE VOLUMES •\nMorumbi e Perdizes\né r*coràhecicicà como a 20 a\nmelhor do mundo segundo\no ranking\n2025\n2022\n3 aceleradores Varian (TrueBeam, 23EX,\n6EX) + 1 Elekta (Versa) + 1 braquiterapia\n(Bravos)\nQuimioterapia\nLeitos de infusão: 31 no Morumbi + 9 em\nperdizes\nHematologia I TMO\n28 leitos para Hematologia, TMO e Terapias\nCelulares Avançadas\nTumores sólidos\n27 leitos\nConsultas e\npacientes\n42 mil consultas\n1 6 mil pacientes\n+45% vs 2022\nCirurgias\noncológicas\nmil\n+25% vs 2022\nSessões de\nquimioterapia\n14,3\n+40% vs 2022\n22 23 24 25\nPacientes\ntratados com\nquimioterapia\nmil\n+32% vs 2022\n22 23 24 25\nWORLD'S BEST\nSPECIALIZED\nHOSPITALS\n2026\nstatjsta\nPacientes\ntratados com\nradioterapia\nmil\n+2% vs 2022\n22 23 24 25\n5\n16 enfermeiros navegadores 13 dentistas 11 fisioterapeutas • 6 terapeutas integrativos 5 psicólogos\nEQUIPE DE APOIO\nnutricionistas 3 médicos paliativistas 3 oncogeneticistas\nFonte: Dados internos • Re/atorio de Sustentabilidade 2025.",
+      "linhas_ocr": [
+        "Oncologia —",
+        "INFRAESTRUTURA",
+        "Radioterapia",
+        "Atendimento Privado",
+        "EVOLUÇÃO DE VOLUMES •",
+        "Morumbi e Perdizes",
+        "é r*coràhecicicà como a 20 a",
+        "melhor do mundo segundo",
+        "o ranking",
+        "2025",
+        "2022",
+        "3 aceleradores Varian (TrueBeam, 23EX,",
+        "6EX) + 1 Elekta (Versa) + 1 braquiterapia",
+        "(Bravos)",
+        "Quimioterapia",
+        "Leitos de infusão: 31 no Morumbi + 9 em",
+        "perdizes",
+        "Hematologia I TMO",
+        "28 leitos para Hematologia, TMO e Terapias",
+        "Celulares Avançadas",
+        "Tumores sólidos",
+        "27 leitos",
+        "Consultas e",
+        "pacientes",
+        "42 mil consultas",
+        "1 6 mil pacientes",
+        "+45% vs 2022",
+        "Cirurgias",
+        "oncológicas",
+        "mil",
+        "+25% vs 2022",
+        "Sessões de",
+        "quimioterapia",
+        "14,3",
+        "+40% vs 2022",
+        "22 23 24 25",
+        "Pacientes",
+        "tratados com",
+        "quimioterapia",
+        "mil",
+        "+32% vs 2022",
+        "22 23 24 25",
+        "WORLD'S BEST",
+        "SPECIALIZED",
+        "HOSPITALS",
+        "2026",
+        "statjsta",
+        "Pacientes",
+        "tratados com",
+        "radioterapia",
+        "mil",
+        "+2% vs 2022",
+        "22 23 24 25",
+        "5",
+        "16 enfermeiros navegadores 13 dentistas 11 fisioterapeutas • 6 terapeutas integrativos 5 psicólogos",
+        "EQUIPE DE APOIO",
+        "nutricionistas 3 médicos paliativistas 3 oncogeneticistas",
+        "Fonte: Dados internos • Re/atorio de Sustentabilidade 2025."
+      ]
+    },
+    {
+      "id": "FOTO_016",
+      "numero": 16,
+      "arquivo": "FOTO_016_2026-10-31_09h45.png",
+      "caminho_relativo": "fotos/FOTO_016_2026-10-31_09h45.png",
+      "original": "IMG_20261031_094519092_HDR_PCT.jpg",
+      "quando": "2026-10-31T09:45:19",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.64,
+      "categoria": "Palestra / Einstein",
+      "titulo": "Slide: Oncologia — Atendimento Privado, Infraestrutura e Evolução de Volumes (2/2)",
+      "resumo_visual": "Mesmo slide com leitura mais nítida dos gráficos e números de 2022 a 2025.",
+      "palavras_chave": [
+        "oncologia",
+        "atendimento privado",
+        "newsweek",
+        "statista",
+        "radioterapia",
+        "quimioterapia",
+        "hematologia",
+        "tmo",
+        "equipe de apoio",
+        "sustentabilidade 2025"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "Oncologia — Atendimento Privado\nEVOLUÇÃO DE VOLUMES\nA oncologia do Einstein\né reconhecida como a 20a\nmelhor do mundo segundo\no ranking de especialidades\nmédicas da revista Newsweek\n2022\nINFRAESTRUTURA\nRadioterapia\n3 aceleradores Varian (TrueBeam, 23EX,\n6EX) + 1 Elekta (Versa) + 1 braquiterapia\n(Bravos)\nQuimioterapia\nLeitos de infusão: 31 no Morumbi + 9 em\nPerdizes\nHematologia / TMO\n28 leitos para Hematologia, TMO e Terapias\nCelulares Avançadas\nTumores sólidos\n27 leitos\nMorumbi e Perdizes\nConsultas e\npacientes\n42 mil consultas\n1 6 mil pacientes\n+45% vs 2022\n22 23 24 25\nCirurgias\noncológicas\n+25% vs 2022\n22 23 24 25\nSessões de\nquimioterapia\n14,3\n+400/0 VS 2022\n22 23 24 25\n2025\nPacientes\ntratados com\nquimioterapia\n+32% vs 2022\n22 23 24 25\nWORLD'S BEST\nSPECIALIZED\nHOSPITALS\n2026\nstatista\nPacientes\ntratados com\nradioterapia\n+2% vs 2022\n22 23 24 25\n5\n16 enfermeiros navegadores 13 dentistas 11 fisioterapeutas •\nEQUIPE DE APOIO\nnutricionistas 3 médicos paliativistas • 3 oncogeneticistas\nFonte: Dados Internos • Re/atono de Sustentabilidade 2025.\n6 terapeutas integrativos • 5 psicólogos -",
+      "linhas_ocr": [
+        "Oncologia — Atendimento Privado",
+        "EVOLUÇÃO DE VOLUMES",
+        "A oncologia do Einstein",
+        "é reconhecida como a 20a",
+        "melhor do mundo segundo",
+        "o ranking de especialidades",
+        "médicas da revista Newsweek",
+        "2022",
+        "INFRAESTRUTURA",
+        "Radioterapia",
+        "3 aceleradores Varian (TrueBeam, 23EX,",
+        "6EX) + 1 Elekta (Versa) + 1 braquiterapia",
+        "(Bravos)",
+        "Quimioterapia",
+        "Leitos de infusão: 31 no Morumbi + 9 em",
+        "Perdizes",
+        "Hematologia / TMO",
+        "28 leitos para Hematologia, TMO e Terapias",
+        "Celulares Avançadas",
+        "Tumores sólidos",
+        "27 leitos",
+        "Morumbi e Perdizes",
+        "Consultas e",
+        "pacientes",
+        "42 mil consultas",
+        "1 6 mil pacientes",
+        "+45% vs 2022",
+        "22 23 24 25",
+        "Cirurgias",
+        "oncológicas",
+        "+25% vs 2022",
+        "22 23 24 25",
+        "Sessões de",
+        "quimioterapia",
+        "14,3",
+        "+400/0 VS 2022",
+        "22 23 24 25",
+        "2025",
+        "Pacientes",
+        "tratados com",
+        "quimioterapia",
+        "+32% vs 2022",
+        "22 23 24 25",
+        "WORLD'S BEST",
+        "SPECIALIZED",
+        "HOSPITALS",
+        "2026",
+        "statista",
+        "Pacientes",
+        "tratados com",
+        "radioterapia",
+        "+2% vs 2022",
+        "22 23 24 25",
+        "5",
+        "16 enfermeiros navegadores 13 dentistas 11 fisioterapeutas •",
+        "EQUIPE DE APOIO",
+        "nutricionistas 3 médicos paliativistas • 3 oncogeneticistas",
+        "Fonte: Dados Internos • Re/atono de Sustentabilidade 2025.",
+        "6 terapeutas integrativos • 5 psicólogos -"
+      ]
+    },
+    {
+      "id": "FOTO_017",
+      "numero": 17,
+      "arquivo": "FOTO_017_2026-10-31_09h45.png",
+      "caminho_relativo": "fotos/FOTO_017_2026-10-31_09h45.png",
+      "original": "IMG_20261031_094549763_PCT.jpg",
+      "quando": "2026-10-31T09:45:49",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.4,
+      "categoria": "Palestra / Einstein",
+      "titulo": "Slide: Rede Einstein de Oncologia e Hematologia (unidades e alianças)",
+      "resumo_visual": "Mapa das unidades públicas, privadas e 9 alianças assistenciais no Brasil, Colômbia e Equador.",
+      "palavras_chave": [
+        "rede einstein",
+        "aliancas assistenciais",
+        "unidades publicas",
+        "unidades privadas",
+        "colombia",
+        "equador",
+        "mapa"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "Rede Einstein de Oncologia e Hematologia\nsaluo\nColômbia\nEquador\nMetropolitano\nUnidades Públicas\nSão Paulo (SP)\nHMVSC\nHeliópolis\nIpiranga\nDarcy Vargas\nUnidades Privadas\nSão Paulo (SP)\nMorumbi\nPerdizes\nGoiânia (GO)\nMarista\nAlianças assistenciais\nChicor bp\nHONC\nCLINICA\nLAS CONOCS\nRecife (PE)\n@ Goiânia (GO)\nCONFIAR\nCuritiba (PR) 00 IOP\nChapecó (SC)\nUnimed\n-JIL\nG) Porto Alegre (RS)\nREDE EINSTEIN\n9 alianças na\nRede de Oncologia e Hematologia",
+      "linhas_ocr": [
+        "Rede Einstein de Oncologia e Hematologia",
+        "saluo",
+        "Colômbia",
+        "Equador",
+        "Metropolitano",
+        "Unidades Públicas",
+        "São Paulo (SP)",
+        "HMVSC",
+        "Heliópolis",
+        "Ipiranga",
+        "Darcy Vargas",
+        "Unidades Privadas",
+        "São Paulo (SP)",
+        "Morumbi",
+        "Perdizes",
+        "Goiânia (GO)",
+        "Marista",
+        "Alianças assistenciais",
+        "Chicor bp",
+        "HONC",
+        "CLINICA",
+        "LAS CONOCS",
+        "Recife (PE)",
+        "@ Goiânia (GO)",
+        "CONFIAR",
+        "Curitiba (PR) 00 IOP",
+        "Chapecó (SC)",
+        "Unimed",
+        "-JIL",
+        "G) Porto Alegre (RS)",
+        "REDE EINSTEIN",
+        "9 alianças na",
+        "Rede de Oncologia e Hematologia"
+      ]
+    },
+    {
+      "id": "FOTO_018",
+      "numero": 18,
+      "arquivo": "FOTO_018_2026-10-31_09h46.png",
+      "caminho_relativo": "fotos/FOTO_018_2026-10-31_09h46.png",
+      "original": "IMG_20261031_094627536_PCT.jpg",
+      "quando": "2026-10-31T09:46:27",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.58,
+      "categoria": "Palestra / Pesquisa Clínica",
+      "titulo": "Slide: Pesquisa Clínica — Áreas Terapêuticas e Centros de Excelência (70 estudos ativos)",
+      "resumo_visual": "Distribuição dos 70 estudos clínicos ativos entre Hematologia (29) e Tumores Sólidos.",
+      "palavras_chave": [
+        "pesquisa clinica",
+        "estudos ativos",
+        "hematologia",
+        "tumores solids",
+        "linfomas",
+        "leucemias",
+        "mieloma",
+        "pulmao",
+        "prostata",
+        "mama"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "Pesquisa Clínica — Áreas Terapêuticas e Centros de Excelência\nEstudos por Área Terapêutica\nHematologia\n29\nOncologia\n70 estudos ativos no total\nAgregação por Centros de Excelência\nNEOPLASIAS HEMATOLÓGICAS\nLinfomas, LLC e Doenças\nHistiocíticas\nLinfomas (16) Linfomas 'Ceucemias (3)\nNeoplasias Mieloides e LLA\nLeucemias (8) • Mielofibrose (3) SMD (1)\nMieloma e outras\nParaproteinemias\nMieloma (9)\nTransplante de Medula Ossea\npôs-TMO (l)\nTUMORES SÓLIDOS\n, , Oncologia Torácica\nCâncer de pulmão (13)\nCânceres Gastrointestinais\nColorretal (3) Gástrico (2) • Fígado (1)\nVias biliares (1)\nUro-oncologia\nCâncer de prostata (4) Câncer de bexiga\nCâncer de Mama\nCâncer de rnama (3)\nSarcoma\nSarcoma (1)",
+      "linhas_ocr": [
+        "Pesquisa Clínica — Áreas Terapêuticas e Centros de Excelência",
+        "Estudos por Área Terapêutica",
+        "Hematologia",
+        "29",
+        "Oncologia",
+        "70 estudos ativos no total",
+        "Agregação por Centros de Excelência",
+        "NEOPLASIAS HEMATOLÓGICAS",
+        "Linfomas, LLC e Doenças",
+        "Histiocíticas",
+        "Linfomas (16) Linfomas 'Ceucemias (3)",
+        "Neoplasias Mieloides e LLA",
+        "Leucemias (8) • Mielofibrose (3) SMD (1)",
+        "Mieloma e outras",
+        "Paraproteinemias",
+        "Mieloma (9)",
+        "Transplante de Medula Ossea",
+        "pôs-TMO (l)",
+        "TUMORES SÓLIDOS",
+        ", , Oncologia Torácica",
+        "Câncer de pulmão (13)",
+        "Cânceres Gastrointestinais",
+        "Colorretal (3) Gástrico (2) • Fígado (1)",
+        "Vias biliares (1)",
+        "Uro-oncologia",
+        "Câncer de prostata (4) Câncer de bexiga",
+        "Câncer de Mama",
+        "Câncer de rnama (3)",
+        "Sarcoma",
+        "Sarcoma (1)"
+      ]
+    },
+    {
+      "id": "FOTO_019",
+      "numero": 19,
+      "arquivo": "FOTO_019_2026-10-31_09h48.png",
+      "caminho_relativo": "fotos/FOTO_019_2026-10-31_09h48.png",
+      "original": "IMG_20261031_094815840_HDR_PCT.jpg",
+      "quando": "2026-10-31T09:48:15",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 2.12,
+      "categoria": "Palestra / Novo Cancer Center",
+      "titulo": "Slide: Centro de Cuidados e Terapias Avançadas em Oncologia e Hematologia (1/2)",
+      "resumo_visual": "Apresentação do novo hospital oncológico do Einstein no Parque Global (inauguração prevista em 2027).",
+      "palavras_chave": [
+        "centro de cuidados",
+        "terapias avancadas",
+        "parque global",
+        "marginal pinheiros",
+        "2027",
+        "cancer center"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "NotebookLM PNG (1500px)",
+      "texto_ocr": "Centro de Cuidados e\nTerapias Avançadas em\nOncologia e Hematologia\nEinstein\nCom o crescimento exponencial\ndas doenças onco-hematológicas,\no Einstein segue cumprindo\no seu compromisso e sua jornada\nde inovação:\nUm hospital especializado,\ndedicado ao cuidado integral\ndo paciente oncológico e\nhematológico, composto por\ncentros de excelência\norganizados para cada tipo\nde câncer.\nLocalização:\nParque Global\n- Margina! Pinheiros, 14.500\nPrevisão de inauguração:\n2027",
+      "linhas_ocr": [
+        "Centro de Cuidados e",
+        "Terapias Avançadas em",
+        "Oncologia e Hematologia",
+        "Einstein",
+        "Com o crescimento exponencial",
+        "das doenças onco-hematológicas,",
+        "o Einstein segue cumprindo",
+        "o seu compromisso e sua jornada",
+        "de inovação:",
+        "Um hospital especializado,",
+        "dedicado ao cuidado integral",
+        "do paciente oncológico e",
+        "hematológico, composto por",
+        "centros de excelência",
+        "organizados para cada tipo",
+        "de câncer.",
+        "Localização:",
+        "Parque Global",
+        "- Margina! Pinheiros, 14.500",
+        "Previsão de inauguração:",
+        "2027"
+      ]
+    },
+    {
+      "id": "FOTO_020",
+      "numero": 20,
+      "arquivo": "FOTO_020_2026-10-31_09h48.png",
+      "caminho_relativo": "fotos/FOTO_020_2026-10-31_09h48.png",
+      "original": "IMG_20261031_094823789_HDR_PCT.jpg",
+      "quando": "2026-10-31T09:48:23",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 2.04,
+      "categoria": "Palestra / Novo Cancer Center",
+      "titulo": "Slide: Centro de Cuidados e Terapias Avançadas em Oncologia e Hematologia (2/2)",
+      "resumo_visual": "Mesmo slide de apresentação do novo hospital do Parque Global.",
+      "palavras_chave": [
+        "centro de cuidados",
+        "terapias avancadas",
+        "parque global",
+        "marginal pinheiros",
+        "2027",
+        "cancer center"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "Centro de Cuidados e\nTerapias Avançadas em\nOncologia e Hematologia\nEinstein\nCom o crescimento exponencial\ndas doenças onco-hematológicas,\no Einstein segue cumprindo\no seu compromisso e sua jornada\nde inovação:\nUm hospital especializado,\ndedicado ao cuidado integral\ndo paciente oncológico e\nhematológico, composto por\ncentros de excelência\norganizados para cada tipo\nde câncer.\nLocalização:\nParque Global\n- Marginal Pinheiros, 14.500\nPrevisão de inauguração:\n2027",
+      "linhas_ocr": [
+        "Centro de Cuidados e",
+        "Terapias Avançadas em",
+        "Oncologia e Hematologia",
+        "Einstein",
+        "Com o crescimento exponencial",
+        "das doenças onco-hematológicas,",
+        "o Einstein segue cumprindo",
+        "o seu compromisso e sua jornada",
+        "de inovação:",
+        "Um hospital especializado,",
+        "dedicado ao cuidado integral",
+        "do paciente oncológico e",
+        "hematológico, composto por",
+        "centros de excelência",
+        "organizados para cada tipo",
+        "de câncer.",
+        "Localização:",
+        "Parque Global",
+        "- Marginal Pinheiros, 14.500",
+        "Previsão de inauguração:",
+        "2027"
+      ]
+    },
+    {
+      "id": "FOTO_021",
+      "numero": 21,
+      "arquivo": "FOTO_021_2026-10-31_09h48.png",
+      "caminho_relativo": "fotos/FOTO_021_2026-10-31_09h48.png",
+      "original": "IMG_20261031_094855502_HDR_PCT.jpg",
+      "quando": "2026-10-31T09:48:55",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.68,
+      "categoria": "Palestra / Novo Cancer Center",
+      "titulo": "Slide: Estrutura física do novo hospital oncológico (191 leitos, consultórios, salas)",
+      "resumo_visual": "Capacidade instalada: 191 leitos, 63 consultórios, 42 salas de quimioterapia, 10 salas de cirurgia (1 híbrida, 2 robótica).",
+      "palavras_chave": [
+        "infraestrutura",
+        "191 leitos",
+        "63 consultorios",
+        "42 salas quimioterapia",
+        "cirurgia robotica",
+        "centros de excelencia"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "um hospital que\nreúne o que existe\nde mais moderno\nem processos\ne terapias para\no tratamento\ndo câncer\nreca:\nmil m2\n191\nleitos\n63\nconsultorios\n42\nsalas de\nquimioterapia:\n10\nsalas de cirurgia\n1 híbrida\n2 cirurgia robótica\nCentros de\nExcelência",
+      "linhas_ocr": [
+        "um hospital que",
+        "reúne o que existe",
+        "de mais moderno",
+        "em processos",
+        "e terapias para",
+        "o tratamento",
+        "do câncer",
+        "reca:",
+        "mil m2",
+        "191",
+        "leitos",
+        "63",
+        "consultorios",
+        "42",
+        "salas de",
+        "quimioterapia:",
+        "10",
+        "salas de cirurgia",
+        "1 híbrida",
+        "2 cirurgia robótica",
+        "Centros de",
+        "Excelência"
+      ]
+    },
+    {
+      "id": "FOTO_022",
+      "numero": 22,
+      "arquivo": "FOTO_022_2026-10-31_09h49.png",
+      "caminho_relativo": "fotos/FOTO_022_2026-10-31_09h49.png",
+      "original": "IMG_20261031_094917565_PCT.jpg",
+      "quando": "2026-10-31T09:49:17",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.6,
+      "categoria": "Palestra / Medicina de Precisão",
+      "titulo": "Slide: O que é medicina de precisão?",
+      "resumo_visual": "Definição considerando Genes, Ambiente e Estilo de vida para o tratamento certo no momento certo.",
+      "palavras_chave": [
+        "medicina de precisao",
+        "genomica",
+        "genes",
+        "ambiente",
+        "estilo de vida",
+        "tratamento individualizado"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "O que é medicina de precisão?\nEINSTEIN\nHospital\nUma abordagem inovadora que adapta a prevenção e o\ntratamento considerando:\nUma medicina\ndirecionada a cada\npaciente, com base nas\nsuas características\ngenéticas.\nGenômica como ponto de partida para\ndecisões individualizadas\nO\nGenes\nO objetivo\no tratamento\nCERTO\nO\nAmbiente\npara o paciente\nCERTO\nO\nEstilo de vida\nno momento\nCERTO",
+      "linhas_ocr": [
+        "O que é medicina de precisão?",
+        "EINSTEIN",
+        "Hospital",
+        "Uma abordagem inovadora que adapta a prevenção e o",
+        "tratamento considerando:",
+        "Uma medicina",
+        "direcionada a cada",
+        "paciente, com base nas",
+        "suas características",
+        "genéticas.",
+        "Genômica como ponto de partida para",
+        "decisões individualizadas",
+        "O",
+        "Genes",
+        "O objetivo",
+        "o tratamento",
+        "CERTO",
+        "O",
+        "Ambiente",
+        "para o paciente",
+        "CERTO",
+        "O",
+        "Estilo de vida",
+        "no momento",
+        "CERTO"
+      ]
+    },
+    {
+      "id": "FOTO_023",
+      "numero": 23,
+      "arquivo": "FOTO_023_2026-10-31_09h50.png",
+      "caminho_relativo": "fotos/FOTO_023_2026-10-31_09h50.png",
+      "original": "IMG_20261031_095012537_PCT.jpg",
+      "quando": "2026-10-31T09:50:12",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.54,
+      "categoria": "Palestra / Jornada do Paciente",
+      "titulo": "Slide: A Jornada do Paciente Impulsionada por Inovação e Pesquisa (7 etapas)",
+      "resumo_visual": "Fluxo completo: Prevenção, Rastreamento/Predição (biópsia líquida, MCED), Diagnóstico (NGS, IA), Tratamento Personalizado, Reabilitação, Paliativos e Sobrevivência.",
+      "palavras_chave": [
+        "jornada do paciente",
+        "prevencao",
+        "rastreamento",
+        "biopsia liquida",
+        "ngs",
+        "tumor board",
+        "pros",
+        "ctdna",
+        "sobrevivencia",
+        "pesquisa translacional"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "NotebookLM PNG (1500px)",
+      "texto_ocr": "A Jornada do Paciente\nImpulsionada por Inovação e Pesquisa\nPrevenção e\npromoção da Saúde\n• Programas de\nvacinação\n• Redução de risco e\nestilo de vida\n• Aconselhamento de\nrisco hereditário\nRastreamento\nPredição\n• Biopsia liquida\n• Detecção precoce\nde múltiplos\ncânceres (MCED)\n• Imagem assistida\npor IA\n3\nDiagnóstico\n• Testes genéticos e\ngenômicos (NGS)\n• Diagnóstico apoiado\npor IA\n• Patologia digital\n4\nTratamento\nPersonalizado\n• Terapia celular\n• Teranôstica\n• Cirurgia robótica\n• Novos fármacos e\nestudos\n• Radioterapia\nadaptativa\n• Tumor board\nmolecular\n5\nReabilitação\n• Pré-reabilitaçáo\n• Monitoramento\nremoto\n• Wearables e\ntelessaúde\nINOVAÇÃO E PESQUISA\nO motor transversal da jomada\nEstudos clínicos\n(Fases '—IV)\nMedicina de precisão\ne multiómica\nCuidados Paliativos\ne Medicina\nInte rativa\n• Cuidados paliativos\nintegrados precoces\n• Monitoramento de\nsintomas baseado\nem PROs\nDados de mundo\nreal\ne modelos de IA\n7\nSobrevivência\n• Vigilância de novos\ntumores e recidivas\n• Monitoramento de\nctDNA/ DRM\n• Planos de cuidado\nao sobrevivente\nPesquisa\ntranslacional",
+      "linhas_ocr": [
+        "A Jornada do Paciente",
+        "Impulsionada por Inovação e Pesquisa",
+        "Prevenção e",
+        "promoção da Saúde",
+        "• Programas de",
+        "vacinação",
+        "• Redução de risco e",
+        "estilo de vida",
+        "• Aconselhamento de",
+        "risco hereditário",
+        "Rastreamento",
+        "Predição",
+        "• Biopsia liquida",
+        "• Detecção precoce",
+        "de múltiplos",
+        "cânceres (MCED)",
+        "• Imagem assistida",
+        "por IA",
+        "3",
+        "Diagnóstico",
+        "• Testes genéticos e",
+        "genômicos (NGS)",
+        "• Diagnóstico apoiado",
+        "por IA",
+        "• Patologia digital",
+        "4",
+        "Tratamento",
+        "Personalizado",
+        "• Terapia celular",
+        "• Teranôstica",
+        "• Cirurgia robótica",
+        "• Novos fármacos e",
+        "estudos",
+        "• Radioterapia",
+        "adaptativa",
+        "• Tumor board",
+        "molecular",
+        "5",
+        "Reabilitação",
+        "• Pré-reabilitaçáo",
+        "• Monitoramento",
+        "remoto",
+        "• Wearables e",
+        "telessaúde",
+        "INOVAÇÃO E PESQUISA",
+        "O motor transversal da jomada",
+        "Estudos clínicos",
+        "(Fases '—IV)",
+        "Medicina de precisão",
+        "e multiómica",
+        "Cuidados Paliativos",
+        "e Medicina",
+        "Inte rativa",
+        "• Cuidados paliativos",
+        "integrados precoces",
+        "• Monitoramento de",
+        "sintomas baseado",
+        "em PROs",
+        "Dados de mundo",
+        "real",
+        "e modelos de IA",
+        "7",
+        "Sobrevivência",
+        "• Vigilância de novos",
+        "tumores e recidivas",
+        "• Monitoramento de",
+        "ctDNA/ DRM",
+        "• Planos de cuidado",
+        "ao sobrevivente",
+        "Pesquisa",
+        "translacional"
+      ]
+    },
+    {
+      "id": "FOTO_024",
+      "numero": 24,
+      "arquivo": "FOTO_024_2026-10-31_09h51.png",
+      "caminho_relativo": "fotos/FOTO_024_2026-10-31_09h51.png",
+      "original": "IMG_20261031_095100015_PCT.jpg",
+      "quando": "2026-10-31T09:51:00",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.25,
+      "categoria": "Palestra / Jornada do Paciente",
+      "titulo": "Slide: Acima de tudo, o paciente (visão integral do cuidado)",
+      "resumo_visual": "Diagrama circular colocando o paciente no centro das etapas assistenciais, pesquisa e ensino.",
+      "palavras_chave": [
+        "paciente no centro",
+        "cuidado humanizado",
+        "survivorship",
+        "medicina integrativa",
+        "ensino"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "Acima de tudo, o paciente\nCentro amplia\no cuidado\nde excelência\ne humanizado\ndo Einstein\nSurvivor '-,hllp\nMedicina\nensino",
+      "linhas_ocr": [
+        "Acima de tudo, o paciente",
+        "Centro amplia",
+        "o cuidado",
+        "de excelência",
+        "e humanizado",
+        "do Einstein",
+        "Survivor '-,hllp",
+        "Medicina",
+        "ensino"
+      ]
+    },
+    {
+      "id": "FOTO_025",
+      "numero": 25,
+      "arquivo": "FOTO_025_2026-10-31_09h51.png",
+      "caminho_relativo": "fotos/FOTO_025_2026-10-31_09h51.png",
+      "original": "IMG_20261031_095111285_PCT.jpg",
+      "quando": "2026-10-31T09:51:11",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.38,
+      "categoria": "Palestra / Jornada do Paciente",
+      "titulo": "Slide: Acima de tudo, o paciente (enquadramento com todos os rótulos)",
+      "resumo_visual": "Mesmo diagrama radial com rótulos de prevenção, diagnóstico, tratamentos, paliativos e survivorship.",
+      "palavras_chave": [
+        "paciente no centro",
+        "cuidado humanizado",
+        "survivorship",
+        "cuidados paliativos",
+        "medicina integrativa",
+        "diagnostico"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "NotebookLM PNG (1500px)",
+      "texto_ocr": "Acima de tudo, o paciente:\nCentro amplia\no cuidado\nde excelência\ne humanizado\ndo Einstein\nSurwvorship\nensino\nCuidados\npaliativos\nO\no\nMedicina\nintegrativa\nprevenção\ne promoçao\nde saúde\nDiagnóstico\nTratamentcs",
+      "linhas_ocr": [
+        "Acima de tudo, o paciente:",
+        "Centro amplia",
+        "o cuidado",
+        "de excelência",
+        "e humanizado",
+        "do Einstein",
+        "Surwvorship",
+        "ensino",
+        "Cuidados",
+        "paliativos",
+        "O",
+        "o",
+        "Medicina",
+        "integrativa",
+        "prevenção",
+        "e promoçao",
+        "de saúde",
+        "Diagnóstico",
+        "Tratamentcs"
+      ]
+    },
+    {
+      "id": "FOTO_026",
+      "numero": 26,
+      "arquivo": "FOTO_026_2026-10-31_09h51.png",
+      "caminho_relativo": "fotos/FOTO_026_2026-10-31_09h51.png",
+      "original": "IMG_20261031_095128196_PCT.jpg",
+      "quando": "2026-10-31T09:51:28",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.82,
+      "categoria": "Palestra / Centros de Excelência",
+      "titulo": "Slide: Centros de Excelência — Modelo One Stop Shop",
+      "resumo_visual": "Explicação do modelo assistencial multidisciplinar One Stop Shop integrado em torno do paciente.",
+      "palavras_chave": [
+        "centros de excelencia",
+        "one stop shop",
+        "equipe multidisciplinar",
+        "cuidado integrado",
+        "jornada do paciente"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "Centros\nde Excelência:\nCentralizam o tratamento\noncológico e hematológico,\npesquisa; inovação e ensino em\ntorno deum tipo específico cle\ncâncer e reúnem uma equipe\nmultidisciplinar para fornecer o\ncuidado integrado eo paciente\nUm modelo assistencial One\nStop Shop que integra todas as\netapas da jornada do paciente,\npromovendo um cuidado\ncoordenado, ágil e centrado na\npessoa, evitando desgastes.",
+      "linhas_ocr": [
+        "Centros",
+        "de Excelência:",
+        "Centralizam o tratamento",
+        "oncológico e hematológico,",
+        "pesquisa; inovação e ensino em",
+        "torno deum tipo específico cle",
+        "câncer e reúnem uma equipe",
+        "multidisciplinar para fornecer o",
+        "cuidado integrado eo paciente",
+        "Um modelo assistencial One",
+        "Stop Shop que integra todas as",
+        "etapas da jornada do paciente,",
+        "promovendo um cuidado",
+        "coordenado, ágil e centrado na",
+        "pessoa, evitando desgastes."
+      ]
+    },
+    {
+      "id": "FOTO_027",
+      "numero": 27,
+      "arquivo": "FOTO_027_2026-10-31_09h53.png",
+      "caminho_relativo": "fotos/FOTO_027_2026-10-31_09h53.png",
+      "original": "IMG_20261031_095300263_PCT.jpg",
+      "quando": "2026-10-31T09:53:00",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.51,
+      "categoria": "Palestra / Centros de Excelência",
+      "titulo": "Slide: Lista completa dos Einstein Centros de Excelência",
+      "resumo_visual": "Divisão em Neoplasias Hematológicas, Tumores Sólidos e Especialidades relacionadas (oncogeriatria, oncogenética, cardio-oncologia, etc.).",
+      "palavras_chave": [
+        "centros de excelencia",
+        "neoplasias hematologicas",
+        "tumores solids",
+        "oncogeriatria",
+        "oncogenetica",
+        "cardio-oncologia",
+        "neuro-oncologia",
+        "pediatrica"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "Einstein Centros de Excelência\nNEOPLASIAS E DOENÇAS HEMATOLÓGICAS\nLinfomas, LLC e\nDoenças Histiocíticas\nMieloma e outras\nParaproteinemias\nTerapia Celular\nTumores Hematológicos Sólidos\nDoenças Hematológicas\nNão Malignas\nNeoplasias Mieloides e LLA\nHemostasia e Trombose\nTransplante de Medula Óssea\nTUMORES SÓLIDOS\nCâncer de Pele\nOncologia Torácica\nOncologia Ginecológica\nÚtero • Ovário\nNeuro-Oncologia\nOncologia e Hematologia Pediátrica\nCentro transversai que abrange neoplasias hematológjcas o\ntumores sólidos\nOncologia de Cabeça\ne Pescoço\nCâncer de Mama\nUro-oncologia\nPróstata • Outros\nTumores Geniturinários\nTumores Gastrointestinais\nTGI Alto • TGI Baixo\nSarcomas\nESPECIALIDADES RELACIONADAS À ONCOLOGIA\nOncogeriatria\nNutrição Clínica\nOncogenética\nCuidados\nPaliativos e\nControle da Dor\nOncofertilidade e\nCardio-oncologia\nSaúde Sexual\nOncodermatologia\nMedicina\nIntegrativa e\nReabilitação",
+      "linhas_ocr": [
+        "Einstein Centros de Excelência",
+        "NEOPLASIAS E DOENÇAS HEMATOLÓGICAS",
+        "Linfomas, LLC e",
+        "Doenças Histiocíticas",
+        "Mieloma e outras",
+        "Paraproteinemias",
+        "Terapia Celular",
+        "Tumores Hematológicos Sólidos",
+        "Doenças Hematológicas",
+        "Não Malignas",
+        "Neoplasias Mieloides e LLA",
+        "Hemostasia e Trombose",
+        "Transplante de Medula Óssea",
+        "TUMORES SÓLIDOS",
+        "Câncer de Pele",
+        "Oncologia Torácica",
+        "Oncologia Ginecológica",
+        "Útero • Ovário",
+        "Neuro-Oncologia",
+        "Oncologia e Hematologia Pediátrica",
+        "Centro transversai que abrange neoplasias hematológjcas o",
+        "tumores sólidos",
+        "Oncologia de Cabeça",
+        "e Pescoço",
+        "Câncer de Mama",
+        "Uro-oncologia",
+        "Próstata • Outros",
+        "Tumores Geniturinários",
+        "Tumores Gastrointestinais",
+        "TGI Alto • TGI Baixo",
+        "Sarcomas",
+        "ESPECIALIDADES RELACIONADAS À ONCOLOGIA",
+        "Oncogeriatria",
+        "Nutrição Clínica",
+        "Oncogenética",
+        "Cuidados",
+        "Paliativos e",
+        "Controle da Dor",
+        "Oncofertilidade e",
+        "Cardio-oncologia",
+        "Saúde Sexual",
+        "Oncodermatologia",
+        "Medicina",
+        "Integrativa e",
+        "Reabilitação"
+      ]
+    },
+    {
+      "id": "FOTO_028",
+      "numero": 28,
+      "arquivo": "FOTO_028_2026-10-31_09h53.png",
+      "caminho_relativo": "fotos/FOTO_028_2026-10-31_09h53.png",
+      "original": "IMG_20261031_095320119_PCT.jpg",
+      "quando": "2026-10-31T09:53:20",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.75,
+      "categoria": "Desafio Oncológico",
+      "titulo": "Slide: Conectando a jornada oncológica (abertura do desafio Einstein Cancer Center)",
+      "resumo_visual": "Capa do desafio do Einstein Cancer Center (Parque Global, inauguração prevista julho de 2027).",
+      "palavras_chave": [
+        "conectando a jornada",
+        "einstein cancer center",
+        "desafio",
+        "parque global",
+        "julho 2027",
+        "survivorship"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "EINSTEIN\njHospital Israelita\nHACKINC MEDICINE\nConectando a jornada\noncológica\nO desafio do Einstein Cancer Center:\numa jornada integrada, da prevenção ao survivorship•\nNovo Cancer Center • Parque Clobal, SP\nInauguraçào prevista: julho de 2027",
+      "linhas_ocr": [
+        "EINSTEIN",
+        "jHospital Israelita",
+        "HACKINC MEDICINE",
+        "Conectando a jornada",
+        "oncológica",
+        "O desafio do Einstein Cancer Center:",
+        "uma jornada integrada, da prevenção ao survivorship•",
+        "Novo Cancer Center • Parque Clobal, SP",
+        "Inauguraçào prevista: julho de 2027"
+      ]
+    },
+    {
+      "id": "FOTO_029",
+      "numero": 29,
+      "arquivo": "FOTO_029_2026-10-31_09h53.png",
+      "caminho_relativo": "fotos/FOTO_029_2026-10-31_09h53.png",
+      "original": "IMG_20261031_095342838_HDR_PCT.jpg",
+      "quando": "2026-10-31T09:53:42",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.62,
+      "categoria": "Desafio Oncológico",
+      "titulo": "Slide: A jornada oncológica ainda é fragmentada — Onde a jornada se perde?",
+      "resumo_visual": "Pontos de quebra na jornada: portas de entrada múltiplas, coordenação difusa, dados dispersos e continuidade fragmentada.",
+      "palavras_chave": [
+        "jornada fragmentada",
+        "portas de entrada",
+        "coordenacao",
+        "dados dispersos",
+        "continuidade",
+        "follow-up",
+        "gargalos"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "A JORNADA ONCOLÓGICA AINDA É FRAGMENTADA\nO paciente percorre múltiplos serviços, mas as conexões entre eles nem sempre acompanham essa complexidade.\nPREVENÇÃO E\nRASTREAMENTO\nONDE A JORNADA SE PERDE?\nPORTAS DE ENTRADA\nMúltiplos pontos de acesso, através\nde diferentes especialistas ou\nserviços\nDIAGNÓSTICO E\nESTADIAMENTO\nCOORDENAÇÃO\nDECISÃO\nMULTIDISCIPLINAR\nINFORMAÇÃO\nTRATAMENTO E\nTERAPIAS\nRELACIONADAS\nResponsabilidades divididas entre\nmédicos, navegação e áreas\nadministrativas com papéis e fluxos\npouco claros\nDados e pendências disgersos, em\ndiferentes sistemas desconectados\nSUPORTE +\nLONGO PRAZO\nreabilitação • paliativos • survivorship\nCONTINUIDADE\nSuporte nem sempre integrado,\nfollow-up pós fim do tratamento\nfragmentado",
+      "linhas_ocr": [
+        "A JORNADA ONCOLÓGICA AINDA É FRAGMENTADA",
+        "O paciente percorre múltiplos serviços, mas as conexões entre eles nem sempre acompanham essa complexidade.",
+        "PREVENÇÃO E",
+        "RASTREAMENTO",
+        "ONDE A JORNADA SE PERDE?",
+        "PORTAS DE ENTRADA",
+        "Múltiplos pontos de acesso, através",
+        "de diferentes especialistas ou",
+        "serviços",
+        "DIAGNÓSTICO E",
+        "ESTADIAMENTO",
+        "COORDENAÇÃO",
+        "DECISÃO",
+        "MULTIDISCIPLINAR",
+        "INFORMAÇÃO",
+        "TRATAMENTO E",
+        "TERAPIAS",
+        "RELACIONADAS",
+        "Responsabilidades divididas entre",
+        "médicos, navegação e áreas",
+        "administrativas com papéis e fluxos",
+        "pouco claros",
+        "Dados e pendências disgersos, em",
+        "diferentes sistemas desconectados",
+        "SUPORTE +",
+        "LONGO PRAZO",
+        "reabilitação • paliativos • survivorship",
+        "CONTINUIDADE",
+        "Suporte nem sempre integrado,",
+        "follow-up pós fim do tratamento",
+        "fragmentado"
+      ]
+    },
+    {
+      "id": "FOTO_030",
+      "numero": 30,
+      "arquivo": "FOTO_030_2026-10-31_09h56.png",
+      "caminho_relativo": "fotos/FOTO_030_2026-10-31_09h56.png",
+      "original": "IMG_20261031_095620339_PCT.jpg",
+      "quando": "2026-10-31T09:56:20",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.75,
+      "categoria": "Desafio Oncológico",
+      "titulo": "Slide: Conectar as interfaces. Transformar a experiência. (Próstata e Mama) (1/3)",
+      "resumo_visual": "Exemplos de jornadas (Próstata e Mama) e os 5 eixos: Pessoas, Dados, Serviços, Decisões (Tumor board) e Resultados (PROs).",
+      "palavras_chave": [
+        "conectar interfaces",
+        "prostata",
+        "mama",
+        "pessoas",
+        "dados",
+        "servicos",
+        "decisoes",
+        "resultados",
+        "tumor board",
+        "pros"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "CONECTAR AS INTERFACES. TRANSFORMAR A EXPERIÊNCIA.\nDois exemplos de jornadas que precisam funcionar de forma integrada e coordenada.\nPRÓSTATA\nO QUE\nPRECISAMOS\nCONECTAR?\nUrologia • oncologia radioterapia medicina nuclear\nreabilitação • saúde sexual • acompanhamento PROs\nMAMA\nRastrearnento imagem • biópsia cirurgia • oncologia\nreconstrução reabilitação • cuidado de suporte\nPESSOAS\nPaciente, família,\nespecia!jstas e\nnavegaç±ojuntos\nProntuários, exames e\npendências em urna\nwsáo Uruca\nSERVIÇOS\nAgendas, exames e\nterapias de suporte\nsincronizados\nDECISÕES\nTurnor Ooard e\ncaminhos clínicos\ncorr. partilhacoc.\nRESULTADOS\nDesfechos, PPOs e\nexperiência Tecidos\nlongo tempo",
+      "linhas_ocr": [
+        "CONECTAR AS INTERFACES. TRANSFORMAR A EXPERIÊNCIA.",
+        "Dois exemplos de jornadas que precisam funcionar de forma integrada e coordenada.",
+        "PRÓSTATA",
+        "O QUE",
+        "PRECISAMOS",
+        "CONECTAR?",
+        "Urologia • oncologia radioterapia medicina nuclear",
+        "reabilitação • saúde sexual • acompanhamento PROs",
+        "MAMA",
+        "Rastrearnento imagem • biópsia cirurgia • oncologia",
+        "reconstrução reabilitação • cuidado de suporte",
+        "PESSOAS",
+        "Paciente, família,",
+        "especia!jstas e",
+        "navegaç±ojuntos",
+        "Prontuários, exames e",
+        "pendências em urna",
+        "wsáo Uruca",
+        "SERVIÇOS",
+        "Agendas, exames e",
+        "terapias de suporte",
+        "sincronizados",
+        "DECISÕES",
+        "Turnor Ooard e",
+        "caminhos clínicos",
+        "corr. partilhacoc.",
+        "RESULTADOS",
+        "Desfechos, PPOs e",
+        "experiência Tecidos",
+        "longo tempo"
+      ]
+    },
+    {
+      "id": "FOTO_031",
+      "numero": 31,
+      "arquivo": "FOTO_031_2026-10-31_09h56.png",
+      "caminho_relativo": "fotos/FOTO_031_2026-10-31_09h56.png",
+      "original": "IMG_20261031_095653602_PORTRAIT.jpg",
+      "quando": "2026-10-31T09:56:53",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 0.87,
+      "categoria": "Desafio Oncológico",
+      "titulo": "Slide: Conectar as interfaces. Transformar a experiência. (foto escura clareada) (2/3)",
+      "resumo_visual": "Versão de baixo contraste (clareada com gamma) do slide de Próstata, Mama e os 5 eixos de integração.",
+      "palavras_chave": [
+        "conectar interfaces",
+        "prostata",
+        "mama",
+        "pessoas",
+        "dados",
+        "servicos",
+        "decisoes",
+        "resultados",
+        "tumor board",
+        "pros",
+        "foto clareada"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "NotebookLM PNG (1500px) + revisão visual",
+      "texto_ocr": "CTAR AS INTERFACES. TRANSFORMAR A EXPERI\nMAMA\nNCIA.\nSERVIÇOS\ncuidado do\nOECISOES",
+      "linhas_ocr": [
+        "CTAR AS INTERFACES. TRANSFORMAR A EXPERI",
+        "MAMA",
+        "NCIA.",
+        "SERVIÇOS",
+        "cuidado do",
+        "OECISOES"
+      ],
+      "texto_transcrito": "CONECTAR AS INTERFACES. TRANSFORMAR A EXPERIÊNCIA. Dois exemplos de jornadas que precisam funcionar de forma integrada e coordenada. | PRÓSTATA: Urologia • oncologia • radioterapia • medicina nuclear • reabilitação • saúde sexual • acompanhamento PROs | MAMA: Rastreamento • imagem • biópsia • cirurgia • oncologia • reconstrução • reabilitação • cuidado de suporte | O QUE PRECISAMOS CONECTAR? PESSOAS (Paciente, família, especialistas e navegação juntos) | DADOS (Prontuários, exames e pendências em uma visão única) | SERVIÇOS (Agendas, exames e terapias de suporte sincronizados) | DECISÕES (Tumor board e caminhos clínicos compartilhados) | RESULTADOS (Desfechos, PROs e experiência medidos ao longo do tempo)"
+    },
+    {
+      "id": "FOTO_032",
+      "numero": 32,
+      "arquivo": "FOTO_032_2026-10-31_09h57.png",
+      "caminho_relativo": "fotos/FOTO_032_2026-10-31_09h57.png",
+      "original": "IMG_20261031_095704710_PCT.jpg",
+      "quando": "2026-10-31T09:57:04",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.79,
+      "categoria": "Desafio Oncológico",
+      "titulo": "Slide: Conectar as interfaces. Transformar a experiência. (enquadramento nítido) (3/3)",
+      "resumo_visual": "Versão nítida do slide de Próstata, Mama e os 5 pilares de integração.",
+      "palavras_chave": [
+        "conectar interfaces",
+        "prostata",
+        "mama",
+        "pessoas",
+        "dados",
+        "servicos",
+        "decisoes",
+        "resultados",
+        "tumor board",
+        "pros"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "CONECTAR AS INTERFACES. TRANSFORMAR A EXPERIÊNCIA.\nDois exemplos de jornadas que precisam funcionar de forma integrada e coordenada.\nPRÓSTATA\nO QUE\nPRECISAMOS\nCONECTAR?\nUrologia • oncologia • radioterapia • medicina nuclear\nreabilitação • saúde sexual acompanhamento PROs\nMAMA\nRastreamento • imagem • biópsia • cirurgia • oncologia\nreconstrução • reabilitação • cuidado de suporte\nPESSOAS\nPaciente, família,\nespecialistas e\nnavegação juntos\nDADOS\nProntuários, exames e\npendências em uma\nvisão única\nSERVIÇOS\nAgendas, exames e\nterapias de suporte\nsincronizados\nDECISÕES\nTumor board e\ncarninhos clínicos\ncompartilhados\nRESULTADOS\nDesfechos, PROs e\nexperiência medidos ao\nlongo do tempo",
+      "linhas_ocr": [
+        "CONECTAR AS INTERFACES. TRANSFORMAR A EXPERIÊNCIA.",
+        "Dois exemplos de jornadas que precisam funcionar de forma integrada e coordenada.",
+        "PRÓSTATA",
+        "O QUE",
+        "PRECISAMOS",
+        "CONECTAR?",
+        "Urologia • oncologia • radioterapia • medicina nuclear",
+        "reabilitação • saúde sexual acompanhamento PROs",
+        "MAMA",
+        "Rastreamento • imagem • biópsia • cirurgia • oncologia",
+        "reconstrução • reabilitação • cuidado de suporte",
+        "PESSOAS",
+        "Paciente, família,",
+        "especialistas e",
+        "navegação juntos",
+        "DADOS",
+        "Prontuários, exames e",
+        "pendências em uma",
+        "visão única",
+        "SERVIÇOS",
+        "Agendas, exames e",
+        "terapias de suporte",
+        "sincronizados",
+        "DECISÕES",
+        "Tumor board e",
+        "carninhos clínicos",
+        "compartilhados",
+        "RESULTADOS",
+        "Desfechos, PROs e",
+        "experiência medidos ao",
+        "longo do tempo"
+      ]
+    },
+    {
+      "id": "FOTO_033",
+      "numero": 33,
+      "arquivo": "FOTO_033_2026-10-31_09h58.png",
+      "caminho_relativo": "fotos/FOTO_033_2026-10-31_09h58.png",
+      "original": "IMG_20261031_095804168_PCT.jpg",
+      "quando": "2026-10-31T09:58:04",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.73,
+      "categoria": "Desafio Oncológico",
+      "titulo": "Slide: O Desafio e o que considerar — Pergunta norteadora (1/5)",
+      "resumo_visual": "Pergunta norteadora completa do hackathon, escopo de ponta a ponta e critérios (navegação, acesso, dados, PROs, viabilidade).",
+      "palavras_chave": [
+        "o desafio",
+        "pergunta norteadora",
+        "navegacao",
+        "acesso e agendamento",
+        "dados e visibilidade",
+        "desfechos e pros",
+        "centrada no paciente",
+        "mensuravel",
+        "viavel"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "O DESAFIO E O QUE CONSIDERAR\nUma jornada contínua, coordenada e mensurável, para qualquer tipo de câncer.\nMIT HACKING MEDICINE I PERGUNTA NORTEADORA\nComo podemos redesenhar a jornada oncológica para que o paciente não precise coordenar o próprio cuidado?\nExemplos ilustrativos. O desafio está aberto a qualquer tipo de câncer.\nDESAFIO\nComo tornar a jornada\noncológica contínua,\ncoordenada e mensurável —\nda prevenção ao\nsurvivorship?\nESCOPO: TODA A JORNADA\nPrevenção e rastreamento\nDiagnóstico e estadiamento\nDecisão multidisciplinar\nTratamento e terapias relacionadas\nO QUE CONSIDERAR\nNavegação e coordenação\nQuem é o dono da jornada em cada etapa?\nComo garantir que o paciente sempre saia\ncom o próximo passo definido?\n- Acesso e agendamento\nComo simplificar as múltiplas portas de\nentrada?\nComo sincronizar consultas e exames\nmultidisciplinares?\nAplicável a todos os tipos\nde câncer\n/ÑF Dados e visibilidade\nComo enxergar pendências, gargalos eo\ntempo entre etapas?\nComo integrar informações hoje dispersas em\nsistemas diferentes?\nDesfechos e PROs\nComo acompanhar qualidade de vida e efeitos\ntardios ao longo dos anos?\nComo transformar esses dados em decisões\nO Suporte e longo prazo\nUMA BOA SOLUÇÃO É...\nCentrada no paciente\nmelhores?\nMeÁsurável\nViável na operação real",
+      "linhas_ocr": [
+        "O DESAFIO E O QUE CONSIDERAR",
+        "Uma jornada contínua, coordenada e mensurável, para qualquer tipo de câncer.",
+        "MIT HACKING MEDICINE I PERGUNTA NORTEADORA",
+        "Como podemos redesenhar a jornada oncológica para que o paciente não precise coordenar o próprio cuidado?",
+        "Exemplos ilustrativos. O desafio está aberto a qualquer tipo de câncer.",
+        "DESAFIO",
+        "Como tornar a jornada",
+        "oncológica contínua,",
+        "coordenada e mensurável —",
+        "da prevenção ao",
+        "survivorship?",
+        "ESCOPO: TODA A JORNADA",
+        "Prevenção e rastreamento",
+        "Diagnóstico e estadiamento",
+        "Decisão multidisciplinar",
+        "Tratamento e terapias relacionadas",
+        "O QUE CONSIDERAR",
+        "Navegação e coordenação",
+        "Quem é o dono da jornada em cada etapa?",
+        "Como garantir que o paciente sempre saia",
+        "com o próximo passo definido?",
+        "- Acesso e agendamento",
+        "Como simplificar as múltiplas portas de",
+        "entrada?",
+        "Como sincronizar consultas e exames",
+        "multidisciplinares?",
+        "Aplicável a todos os tipos",
+        "de câncer",
+        "/ÑF Dados e visibilidade",
+        "Como enxergar pendências, gargalos eo",
+        "tempo entre etapas?",
+        "Como integrar informações hoje dispersas em",
+        "sistemas diferentes?",
+        "Desfechos e PROs",
+        "Como acompanhar qualidade de vida e efeitos",
+        "tardios ao longo dos anos?",
+        "Como transformar esses dados em decisões",
+        "O Suporte e longo prazo",
+        "UMA BOA SOLUÇÃO É...",
+        "Centrada no paciente",
+        "melhores?",
+        "MeÁsurável",
+        "Viável na operação real"
+      ]
+    },
+    {
+      "id": "FOTO_034",
+      "numero": 34,
+      "arquivo": "FOTO_034_2026-10-31_09h58.png",
+      "caminho_relativo": "fotos/FOTO_034_2026-10-31_09h58.png",
+      "original": "IMG_20261031_095807065_PCT.jpg",
+      "quando": "2026-10-31T09:58:07",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.44,
+      "categoria": "Desafio Oncológico",
+      "titulo": "Slide: O Desafio e o que considerar — Pergunta norteadora (2/5)",
+      "resumo_visual": "Pergunta norteadora completa do hackathon, escopo de ponta a ponta e critérios (navegação, acesso, dados, PROs, viabilidade).",
+      "palavras_chave": [
+        "o desafio",
+        "pergunta norteadora",
+        "navegacao",
+        "acesso e agendamento",
+        "dados e visibilidade",
+        "desfechos e pros",
+        "centrada no paciente",
+        "mensuravel",
+        "viavel"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "O DESAFIO E O QUE CONSIDERAR\nUma jornada contínua, coordenada e mensurável, para qualquer tipo de câncer.\nComo podemos redesenhar a jornada oncológica para que o paciente não precise coordenar o próprio cuidado?\nExemplos ilustrativos. O desafio está aberto a qualquer tipo de câncer.\nO QUE CONSIDERAR\nDESAFIO\nComo tornar a jornada\noncológica contínua,\ncoordenada e mensurável —\nda prevenção ao\nsurvivorship?\nESCOPO; TODA A 'ORNADA\nPrevençao e rastreamento\nDiagnóstico e estadiamento\nDecisão multidisciplinar\nO Tratamento e terap;as relac;onadas\nO Suoorte e Jorgo orazo\nUMA BOA SOLUÇÃO Q ) Centrada no paciente\n•\nNavegação e coordenação\nQuem é o dono da jornada em cada etapa?\nComo garantir que o paciente sempre saia\ncom o próximo passo definido?\nAcesso e agendamento\nComo simplificar as múltiplas portas de\nentrada?\nComo sincronizar consultas e exames\nmultidisciplinares?\nDados e visibilidade\nComo enxergar pendências, gargalos e o\ntempo entre etapas?\n• Como integrar informações hoje dispersas em\nsistemas diferentes'\nDesfechos e PROs\n• Como acompanhar qualidade de vida e efeitos\ntardios ao longo dos anos?\n• Como transformar esses dados em decisões\nmelhores'\nI\nAplicável a todos os tipos\nde câncer\nMensurável\n) Viável na operação real",
+      "linhas_ocr": [
+        "O DESAFIO E O QUE CONSIDERAR",
+        "Uma jornada contínua, coordenada e mensurável, para qualquer tipo de câncer.",
+        "Como podemos redesenhar a jornada oncológica para que o paciente não precise coordenar o próprio cuidado?",
+        "Exemplos ilustrativos. O desafio está aberto a qualquer tipo de câncer.",
+        "O QUE CONSIDERAR",
+        "DESAFIO",
+        "Como tornar a jornada",
+        "oncológica contínua,",
+        "coordenada e mensurável —",
+        "da prevenção ao",
+        "survivorship?",
+        "ESCOPO; TODA A 'ORNADA",
+        "Prevençao e rastreamento",
+        "Diagnóstico e estadiamento",
+        "Decisão multidisciplinar",
+        "O Tratamento e terap;as relac;onadas",
+        "O Suoorte e Jorgo orazo",
+        "UMA BOA SOLUÇÃO Q ) Centrada no paciente",
+        "•",
+        "Navegação e coordenação",
+        "Quem é o dono da jornada em cada etapa?",
+        "Como garantir que o paciente sempre saia",
+        "com o próximo passo definido?",
+        "Acesso e agendamento",
+        "Como simplificar as múltiplas portas de",
+        "entrada?",
+        "Como sincronizar consultas e exames",
+        "multidisciplinares?",
+        "Dados e visibilidade",
+        "Como enxergar pendências, gargalos e o",
+        "tempo entre etapas?",
+        "• Como integrar informações hoje dispersas em",
+        "sistemas diferentes'",
+        "Desfechos e PROs",
+        "• Como acompanhar qualidade de vida e efeitos",
+        "tardios ao longo dos anos?",
+        "• Como transformar esses dados em decisões",
+        "melhores'",
+        "I",
+        "Aplicável a todos os tipos",
+        "de câncer",
+        "Mensurável",
+        ") Viável na operação real"
+      ]
+    },
+    {
+      "id": "FOTO_035",
+      "numero": 35,
+      "arquivo": "FOTO_035_2026-10-31_09h58.png",
+      "caminho_relativo": "fotos/FOTO_035_2026-10-31_09h58.png",
+      "original": "IMG_20261031_095808261_PCT.jpg",
+      "quando": "2026-10-31T09:58:08",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.28,
+      "categoria": "Desafio Oncológico",
+      "titulo": "Slide: O Desafio e o que considerar — Pergunta norteadora (3/5)",
+      "resumo_visual": "Pergunta norteadora completa do hackathon, escopo de ponta a ponta e critérios (navegação, acesso, dados, PROs, viabilidade).",
+      "palavras_chave": [
+        "o desafio",
+        "pergunta norteadora",
+        "navegacao",
+        "acesso e agendamento",
+        "dados e visibilidade",
+        "desfechos e pros",
+        "centrada no paciente",
+        "mensuravel",
+        "viavel"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "O DESAFIO E O QUE CONSIDERAR\nUma jornada contínua, coordenada e mensurável, para qualquer tipo de câncer.\nComo podemos redesenhar a jornada oncológica para que o paciente não precise coordenar o próprio cuidado?\nExemplos ilustrativos. O desafio está aberto a qualquer tipo de câncer.\nDESAFIO\nComo tornar a jornada\noncológica contínua,\ncoordenada e mensurável —\nda prevenção ao\nsurvivorship?\nESCOPO: TODA A JORNADA\nPrevenção e rastreamento\nDiagnóstico e estadiamento\nO Decisão rnul:idisciplinar\nO Tratamento e terapias relacionadas\nO Suoortc e iorgo prazo\nO QUE CONSIDERAR\nNavegação e coordenação\n• Quem éo dono da jornada em cada etapa?\n• Como garantir que o paciente sempre saia\ncom o próximo passo definido'\n• Acesso e agendamento\nComo simplificar as múltiplas portas de\nentrada?\nComo sincronizar consultas e exames\nmultidisciplinares'\nAplicável a todos os tipos\nde câncer\nDados e visibilidade\n• Como enxergar pendências, gargalos eo\ntempo entre etapas?\n• Como integrar informações hoje dispersas em\nsistemas diferentes'\nDesfechos e PROs\n• Como acompanhar qualidade de vida e efeitos\ntardios ao longo dos anos?\n• Como transformar esses dados em decisões\nmelhores'\nUMA BOA SOLUÇÃO É...\nCentrada no paciente\nMensurável\nViável na operação real",
+      "linhas_ocr": [
+        "O DESAFIO E O QUE CONSIDERAR",
+        "Uma jornada contínua, coordenada e mensurável, para qualquer tipo de câncer.",
+        "Como podemos redesenhar a jornada oncológica para que o paciente não precise coordenar o próprio cuidado?",
+        "Exemplos ilustrativos. O desafio está aberto a qualquer tipo de câncer.",
+        "DESAFIO",
+        "Como tornar a jornada",
+        "oncológica contínua,",
+        "coordenada e mensurável —",
+        "da prevenção ao",
+        "survivorship?",
+        "ESCOPO: TODA A JORNADA",
+        "Prevenção e rastreamento",
+        "Diagnóstico e estadiamento",
+        "O Decisão rnul:idisciplinar",
+        "O Tratamento e terapias relacionadas",
+        "O Suoortc e iorgo prazo",
+        "O QUE CONSIDERAR",
+        "Navegação e coordenação",
+        "• Quem éo dono da jornada em cada etapa?",
+        "• Como garantir que o paciente sempre saia",
+        "com o próximo passo definido'",
+        "• Acesso e agendamento",
+        "Como simplificar as múltiplas portas de",
+        "entrada?",
+        "Como sincronizar consultas e exames",
+        "multidisciplinares'",
+        "Aplicável a todos os tipos",
+        "de câncer",
+        "Dados e visibilidade",
+        "• Como enxergar pendências, gargalos eo",
+        "tempo entre etapas?",
+        "• Como integrar informações hoje dispersas em",
+        "sistemas diferentes'",
+        "Desfechos e PROs",
+        "• Como acompanhar qualidade de vida e efeitos",
+        "tardios ao longo dos anos?",
+        "• Como transformar esses dados em decisões",
+        "melhores'",
+        "UMA BOA SOLUÇÃO É...",
+        "Centrada no paciente",
+        "Mensurável",
+        "Viável na operação real"
+      ]
+    },
+    {
+      "id": "FOTO_036",
+      "numero": 36,
+      "arquivo": "FOTO_036_2026-10-31_09h58.png",
+      "caminho_relativo": "fotos/FOTO_036_2026-10-31_09h58.png",
+      "original": "IMG_20261031_095809161_PCT.jpg",
+      "quando": "2026-10-31T09:58:09",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.35,
+      "categoria": "Desafio Oncológico",
+      "titulo": "Slide: O Desafio e o que considerar — Pergunta norteadora (4/5)",
+      "resumo_visual": "Pergunta norteadora completa do hackathon, escopo de ponta a ponta e critérios (navegação, acesso, dados, PROs, viabilidade).",
+      "palavras_chave": [
+        "o desafio",
+        "pergunta norteadora",
+        "navegacao",
+        "acesso e agendamento",
+        "dados e visibilidade",
+        "desfechos e pros",
+        "centrada no paciente",
+        "mensuravel",
+        "viavel"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "NotebookLM PNG (1500px)",
+      "texto_ocr": "O DESAFIO E O QUE CONSIDERAR\nUma jornada contínua, coordenada e mensurável, para qualquer tipo de câncer.\nComo podemos redesenhar a jornada oncológica para que o paciente não precise coordenar o próprio cuidado?\nExemplos ilustrativos. O desafio está aberto a qualquer tipo de câncer.\nDESAFIO\nComo tornar a jornada\noncológica contínua,\ncoordenada e mensurável —\nda prevenção ao\nsurvivorship?\nESCOPO: TOOA A JORNADA\nPrevençao e rastreamento\nDiagnóstico e estadiamento\nDecisão multidisciplinar\nTratamento e terapias relacionadas\nO QUE CONSIDERAR\nNavegação e coordenação\nQuem é o dono da jornada em cada etapa?\n• Como garantir que 0 paciente sempre saia\ncom o próximo passo definido?\nAcesso e agendamento\nComo simplificar as múltiplas portas de\nentrada?\nComo sincronizar consultas e exames\nmultidisciplinares?\nAplicável a todos os tipos\nde câncer\nDados e visibilidade\n• Como enxergar pendências, gargalos e o\ntem po entre eta pas?\n• Como integrar informações hoje dispersas em\nsistemas diferentes?\nDesfechos e PROs\nComo acompanhar qualidade de vida e efeitos\ntardios ao longo dos anos?\n• Como transformar esses dados em decisões\nmelhores?\nO Suporte e longo prazo\nUMA BOA SOLUÇÃO\nCentrada no paciente\nMeásurável\nViável na operaçao real",
+      "linhas_ocr": [
+        "O DESAFIO E O QUE CONSIDERAR",
+        "Uma jornada contínua, coordenada e mensurável, para qualquer tipo de câncer.",
+        "Como podemos redesenhar a jornada oncológica para que o paciente não precise coordenar o próprio cuidado?",
+        "Exemplos ilustrativos. O desafio está aberto a qualquer tipo de câncer.",
+        "DESAFIO",
+        "Como tornar a jornada",
+        "oncológica contínua,",
+        "coordenada e mensurável —",
+        "da prevenção ao",
+        "survivorship?",
+        "ESCOPO: TOOA A JORNADA",
+        "Prevençao e rastreamento",
+        "Diagnóstico e estadiamento",
+        "Decisão multidisciplinar",
+        "Tratamento e terapias relacionadas",
+        "O QUE CONSIDERAR",
+        "Navegação e coordenação",
+        "Quem é o dono da jornada em cada etapa?",
+        "• Como garantir que 0 paciente sempre saia",
+        "com o próximo passo definido?",
+        "Acesso e agendamento",
+        "Como simplificar as múltiplas portas de",
+        "entrada?",
+        "Como sincronizar consultas e exames",
+        "multidisciplinares?",
+        "Aplicável a todos os tipos",
+        "de câncer",
+        "Dados e visibilidade",
+        "• Como enxergar pendências, gargalos e o",
+        "tem po entre eta pas?",
+        "• Como integrar informações hoje dispersas em",
+        "sistemas diferentes?",
+        "Desfechos e PROs",
+        "Como acompanhar qualidade de vida e efeitos",
+        "tardios ao longo dos anos?",
+        "• Como transformar esses dados em decisões",
+        "melhores?",
+        "O Suporte e longo prazo",
+        "UMA BOA SOLUÇÃO",
+        "Centrada no paciente",
+        "Meásurável",
+        "Viável na operaçao real"
+      ]
+    },
+    {
+      "id": "FOTO_037",
+      "numero": 37,
+      "arquivo": "FOTO_037_2026-10-31_09h58.png",
+      "caminho_relativo": "fotos/FOTO_037_2026-10-31_09h58.png",
+      "original": "IMG_20261031_095822922_PCT.jpg",
+      "quando": "2026-10-31T09:58:22",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.67,
+      "categoria": "Desafio Oncológico",
+      "titulo": "Slide: O Desafio e o que considerar — Pergunta norteadora (5/5)",
+      "resumo_visual": "Pergunta norteadora completa do hackathon, escopo de ponta a ponta e critérios (navegação, acesso, dados, PROs, viabilidade).",
+      "palavras_chave": [
+        "o desafio",
+        "pergunta norteadora",
+        "navegacao",
+        "acesso e agendamento",
+        "dados e visibilidade",
+        "desfechos e pros",
+        "centrada no paciente",
+        "mensuravel",
+        "viavel"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "O DESAFIO E O QUE CONSIDERAR\nUma jornada contínua, coordenada e mensurável, para qualquer tipo de câncer.\nMIT HACKING MEDICINE I PERGUNTA NORTEADORA\nComo podemos redesenhar a jornada oncológica para que o paciente não precise coordenar o próprio cuidado?\nExemplos ilustrativos. O desafio está aberto a qualquer tipo de câncer.\nDESAFIO\nComo tornar a jornada\noncológica contínua,\ncoordenada e mensurável —\nda prevenção ao\nsurvivorship?\nESCOPO: TODA A JORNADA\nPrevenção e rastreamento\nDiagnóstico e estadiamento\nDecisão multidisciplinar\nTratamento e terapias relacionadas\nO QUE CONSIDERAR\n/ Navegação e coordenação\nQuem é o dono da jornada em cada etapa?\nComo garantir que o paciente sempre saia\ncom o próximo passo definido?\nAcesso e agendamento\nComo simplificar as múltiplas portas de\nentrada?\nComo sincronizar consultas e exames\nmultidisciplinares?\nAplicável a todos os tipos\nde câncer\nDados e visibilidade\nComo enxergar pendências, gargalos e o\ntempo entre etapas?\nComo integrar informações hoje dispersas em\nsistemas diferentes?\nDesfechos e PROs\nComo acompanhar qualidade de vida e efeitos\ntardios ao longo dos anos?\n• Como transformar esses dados em decisões\nmelhores?\nO Suporte e longo prazo\nUMA BOA SOLUÇÃO É...\nCentrada no paciente\nMensurável\n) Viável na operação real",
+      "linhas_ocr": [
+        "O DESAFIO E O QUE CONSIDERAR",
+        "Uma jornada contínua, coordenada e mensurável, para qualquer tipo de câncer.",
+        "MIT HACKING MEDICINE I PERGUNTA NORTEADORA",
+        "Como podemos redesenhar a jornada oncológica para que o paciente não precise coordenar o próprio cuidado?",
+        "Exemplos ilustrativos. O desafio está aberto a qualquer tipo de câncer.",
+        "DESAFIO",
+        "Como tornar a jornada",
+        "oncológica contínua,",
+        "coordenada e mensurável —",
+        "da prevenção ao",
+        "survivorship?",
+        "ESCOPO: TODA A JORNADA",
+        "Prevenção e rastreamento",
+        "Diagnóstico e estadiamento",
+        "Decisão multidisciplinar",
+        "Tratamento e terapias relacionadas",
+        "O QUE CONSIDERAR",
+        "/ Navegação e coordenação",
+        "Quem é o dono da jornada em cada etapa?",
+        "Como garantir que o paciente sempre saia",
+        "com o próximo passo definido?",
+        "Acesso e agendamento",
+        "Como simplificar as múltiplas portas de",
+        "entrada?",
+        "Como sincronizar consultas e exames",
+        "multidisciplinares?",
+        "Aplicável a todos os tipos",
+        "de câncer",
+        "Dados e visibilidade",
+        "Como enxergar pendências, gargalos e o",
+        "tempo entre etapas?",
+        "Como integrar informações hoje dispersas em",
+        "sistemas diferentes?",
+        "Desfechos e PROs",
+        "Como acompanhar qualidade de vida e efeitos",
+        "tardios ao longo dos anos?",
+        "• Como transformar esses dados em decisões",
+        "melhores?",
+        "O Suporte e longo prazo",
+        "UMA BOA SOLUÇÃO É...",
+        "Centrada no paciente",
+        "Mensurável",
+        ") Viável na operação real"
+      ]
+    },
+    {
+      "id": "FOTO_038",
+      "numero": 38,
+      "arquivo": "FOTO_038_2026-10-31_10h26.png",
+      "caminho_relativo": "fotos/FOTO_038_2026-10-31_10h26.png",
+      "original": "IMG_20261031_102650945_HDR_PCT.jpg",
+      "quando": "2026-10-31T10:26:50",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.74,
+      "categoria": "Regras & Dicas de Pitch",
+      "titulo": "Slide: The Hack DOs (boas práticas do hackathon)",
+      "resumo_visual": "Lista de atitudes recomendadas: Open yourselves to crazy ideas, Leave job titles at the door, Seek diverse teams, Fail fast, Focus, Build something.",
+      "palavras_chave": [
+        "hack dos",
+        "regras",
+        "boas praticas",
+        "iterate and pivot",
+        "diverse teams",
+        "focus"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "THE\nHACK DOs\nMIT\nCeretzbio EINSTEIN\nOPEP! YOURSELVES TO\nCRAZY IDEAS\nLEAVE JOB TITLES AT THE\nDOOR\nSEEK DIVERSE TEAMS\nREACH OUT FOR HELP\nFAIL FAST AND CHANGE\n(ITERATE and PIVOT)\nFOCUS YOUR PROBLEM\nBUILD! SOMETHING",
+      "linhas_ocr": [
+        "THE",
+        "HACK DOs",
+        "MIT",
+        "Ceretzbio EINSTEIN",
+        "OPEP! YOURSELVES TO",
+        "CRAZY IDEAS",
+        "LEAVE JOB TITLES AT THE",
+        "DOOR",
+        "SEEK DIVERSE TEAMS",
+        "REACH OUT FOR HELP",
+        "FAIL FAST AND CHANGE",
+        "(ITERATE and PIVOT)",
+        "FOCUS YOUR PROBLEM",
+        "BUILD! SOMETHING"
+      ]
+    },
+    {
+      "id": "FOTO_039",
+      "numero": 39,
+      "arquivo": "FOTO_039_2026-10-31_10h28.png",
+      "caminho_relativo": "fotos/FOTO_039_2026-10-31_10h28.png",
+      "original": "IMG_20261031_102833669_PCT.jpg",
+      "quando": "2026-10-31T10:28:33",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1125x1500",
+      "mb": 1.53,
+      "categoria": "Regras & Dicas de Pitch",
+      "titulo": "Slide: Judging Criteria (critérios de julgamento)",
+      "resumo_visual": "Os 4 blocos de avaliação dos jurados: Impact, Innovation, Business e Presentation.",
+      "palavras_chave": [
+        "judging criteria",
+        "criterios de julgamento",
+        "impact",
+        "innovation",
+        "business",
+        "presentation",
+        "stakeholders"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "JUDGING CRITERIA\nReal problem\nIMPACT\nPotential for widespread impact\nSolution addresses identified problem\nConvincing rationale for why solution will work\nAddresses challenges specific to stakeholders\nINNOVATION\nConsiders user experience, interface, and service\ndesign\nDemonstrates a plan to work in the field\nBUSINE\nSustainable business model\nPresentation effectiveness\nPRESENTATION\nTeam (diversity backgrounds, technical expertise,\netc.)\nHACKING\nOeretz.bio EINSTEIi",
+      "linhas_ocr": [
+        "JUDGING CRITERIA",
+        "Real problem",
+        "IMPACT",
+        "Potential for widespread impact",
+        "Solution addresses identified problem",
+        "Convincing rationale for why solution will work",
+        "Addresses challenges specific to stakeholders",
+        "INNOVATION",
+        "Considers user experience, interface, and service",
+        "design",
+        "Demonstrates a plan to work in the field",
+        "BUSINE",
+        "Sustainable business model",
+        "Presentation effectiveness",
+        "PRESENTATION",
+        "Team (diversity backgrounds, technical expertise,",
+        "etc.)",
+        "HACKING",
+        "Oeretz.bio EINSTEIi"
+      ]
+    },
+    {
+      "id": "FOTO_040",
+      "numero": 40,
+      "arquivo": "FOTO_040_2026-10-31_10h29.png",
+      "caminho_relativo": "fotos/FOTO_040_2026-10-31_10h29.png",
+      "original": "IMG_20261031_102943543.jpg",
+      "quando": "2026-10-31T10:29:43",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1125x1500",
+      "mb": 1.29,
+      "categoria": "Regras & Dicas de Pitch",
+      "titulo": "Slide: What is a pitch? (itens 1 e 2) (1/3)",
+      "resumo_visual": "Objetivo do pitch: contar uma história e convencer que o problema precisa ser resolvido e a solução é ideal.",
+      "palavras_chave": [
+        "what is a pitch",
+        "storytelling",
+        "problem",
+        "solution"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "HACKING\nMEDICINE\nOrgam:ed by.\nOeretz.bio E\nWhat is a pitch?\nA way for you to tell a story\nYour GOAL: convince the audience that...\n1. your problem is one that needs to be\na d d ressed\n2. your solution is ideal",
+      "linhas_ocr": [
+        "HACKING",
+        "MEDICINE",
+        "Orgam:ed by.",
+        "Oeretz.bio E",
+        "What is a pitch?",
+        "A way for you to tell a story",
+        "Your GOAL: convince the audience that...",
+        "1. your problem is one that needs to be",
+        "a d d ressed",
+        "2. your solution is ideal"
+      ]
+    },
+    {
+      "id": "FOTO_041",
+      "numero": 41,
+      "arquivo": "FOTO_041_2026-10-31_10h29.png",
+      "caminho_relativo": "fotos/FOTO_041_2026-10-31_10h29.png",
+      "original": "IMG_20261031_102952921_PCT.jpg",
+      "quando": "2026-10-31T10:29:52",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1125x1500",
+      "mb": 1.29,
+      "categoria": "Regras & Dicas de Pitch",
+      "titulo": "Slide: What is a pitch? (itens 1, 2 e 3) (2/3)",
+      "resumo_visual": "Inclui item 3: implementação viável e sustentável.",
+      "palavras_chave": [
+        "what is a pitch",
+        "storytelling",
+        "feasible",
+        "sustainable"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "HACKING\nMEDICINE\nWhat is a pitch?\nA way for you to tell a story\nYour COAL: convince the audience that...\n1. your problem is one that needs to be\naddressed\n2. your solution is ideal\nBeretz.t\n3 the implementation is feasible & sustainabl",
+      "linhas_ocr": [
+        "HACKING",
+        "MEDICINE",
+        "What is a pitch?",
+        "A way for you to tell a story",
+        "Your COAL: convince the audience that...",
+        "1. your problem is one that needs to be",
+        "addressed",
+        "2. your solution is ideal",
+        "Beretz.t",
+        "3 the implementation is feasible & sustainabl"
+      ]
+    },
+    {
+      "id": "FOTO_042",
+      "numero": 42,
+      "arquivo": "FOTO_042_2026-10-31_10h29.png",
+      "caminho_relativo": "fotos/FOTO_042_2026-10-31_10h29.png",
+      "original": "IMG_20261031_102953983_PCT.jpg",
+      "quando": "2026-10-31T10:29:53",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1125x1500",
+      "mb": 1.3,
+      "categoria": "Regras & Dicas de Pitch",
+      "titulo": "Slide: What is a pitch? (completo) (3/3)",
+      "resumo_visual": "Slide completo de definição e objetivos do pitch (slide 20).",
+      "palavras_chave": [
+        "what is a pitch",
+        "storytelling",
+        "feasible",
+        "sustainable"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "MIT\nHACKINCJ\nMEDICINE\nWhat is a pitch?\nA way for you to tell a story\noeretz.bio EINSTE\nHospital Israe\nYour COAL: convince the audience that...\n1. your problem is one that needs to be\na d d ressed\n2. your solution is ideal\n3. the implementation is feasible & sustainable\n20",
+      "linhas_ocr": [
+        "MIT",
+        "HACKINCJ",
+        "MEDICINE",
+        "What is a pitch?",
+        "A way for you to tell a story",
+        "oeretz.bio EINSTE",
+        "Hospital Israe",
+        "Your COAL: convince the audience that...",
+        "1. your problem is one that needs to be",
+        "a d d ressed",
+        "2. your solution is ideal",
+        "3. the implementation is feasible & sustainable",
+        "20"
+      ]
+    },
+    {
+      "id": "FOTO_043",
+      "numero": 43,
+      "arquivo": "FOTO_043_2026-10-31_10h30.png",
+      "caminho_relativo": "fotos/FOTO_043_2026-10-31_10h30.png",
+      "original": "IMG_20261031_103011282_PCT.jpg",
+      "quando": "2026-10-31T10:30:11",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.66,
+      "categoria": "Regras & Dicas de Pitch",
+      "titulo": "Slide: Four Pillars of a Pitch (Story, Focus, Preparation, Expertise)",
+      "resumo_visual": "Os 4 pilares do pitch no MIT Hacking Medicine.",
+      "palavras_chave": [
+        "four pillars",
+        "story",
+        "focus",
+        "preparation",
+        "expertise",
+        "pitch"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "Four Pillars of a Pitch\nStory\nFocus\nPreparation\n/ (17\nExpertise\nHACKING\nCeretzbio EINSTEIN",
+      "linhas_ocr": [
+        "Four Pillars of a Pitch",
+        "Story",
+        "Focus",
+        "Preparation",
+        "/ (17",
+        "Expertise",
+        "HACKING",
+        "Ceretzbio EINSTEIN"
+      ]
+    },
+    {
+      "id": "FOTO_044",
+      "numero": 44,
+      "arquivo": "FOTO_044_2026-10-31_10h30.png",
+      "caminho_relativo": "fotos/FOTO_044_2026-10-31_10h30.png",
+      "original": "IMG_20261031_103020598_PCT.jpg",
+      "quando": "2026-10-31T10:30:20",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.32,
+      "categoria": "Regras & Dicas de Pitch",
+      "titulo": "Slide: Pilar 1 — Story (Humanity > Technology)",
+      "resumo_visual": "Dica de contar uma história emocional: motivação, paixão e foco humano acima da tecnologia.",
+      "palavras_chave": [
+        "story",
+        "humanity > technology",
+        "emotional story",
+        "pitch"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "1.\nSTORY\nTell an emotional story\nMIT\nHACKING\nMEDICINE\nOrnaru:ec\nBeretz.bio EINSTEIN\nHospital\nWhat motivated you to solve this problem?\nWhy are you passionate about this project?\nHumanity > Technology\nFOCUS\nPREPARATION",
+      "linhas_ocr": [
+        "1.",
+        "STORY",
+        "Tell an emotional story",
+        "MIT",
+        "HACKING",
+        "MEDICINE",
+        "Ornaru:ec",
+        "Beretz.bio EINSTEIN",
+        "Hospital",
+        "What motivated you to solve this problem?",
+        "Why are you passionate about this project?",
+        "Humanity > Technology",
+        "FOCUS",
+        "PREPARATION"
+      ]
+    },
+    {
+      "id": "FOTO_045",
+      "numero": 45,
+      "arquivo": "FOTO_045_2026-10-31_10h30.png",
+      "caminho_relativo": "fotos/FOTO_045_2026-10-31_10h30.png",
+      "original": "IMG_20261031_103059660_PCT.jpg",
+      "quando": "2026-10-31T10:30:59",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.44,
+      "categoria": "Regras & Dicas de Pitch",
+      "titulo": "Slide: Pilar 2 — Single-minded focus (foco em 1 caso de uso e early adopters)",
+      "resumo_visual": "Focar em um estudo de caso, stakeholders, clientes e onde aplicar US$ 300.000 primeiro.",
+      "palavras_chave": [
+        "single-minded focus",
+        "case study",
+        "early adopters",
+        "stakeholders",
+        "customers",
+        "pitch"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "MIT\nHACKING\nMEDICINE\n2. Single-minded focus\ntseretz.bio EINSTEIN\n-à Business pitch should focus on one case study\n-z» Identify target demographic & early adopters\nWho are your stakeholders? Who are your customers?\n-à If I gave you 300,000, where would you start?\n, STORY\nFOCUS\nPREPARATION",
+      "linhas_ocr": [
+        "MIT",
+        "HACKING",
+        "MEDICINE",
+        "2. Single-minded focus",
+        "tseretz.bio EINSTEIN",
+        "-à Business pitch should focus on one case study",
+        "-z» Identify target demographic & early adopters",
+        "Who are your stakeholders? Who are your customers?",
+        "-à If I gave you 300,000, where would you start?",
+        ", STORY",
+        "FOCUS",
+        "PREPARATION"
+      ]
+    },
+    {
+      "id": "FOTO_046",
+      "numero": 46,
+      "arquivo": "FOTO_046_2026-10-31_10h31.png",
+      "caminho_relativo": "fotos/FOTO_046_2026-10-31_10h31.png",
+      "original": "IMG_20261031_103159092_HDR_PCT.jpg",
+      "quando": "2026-10-31T10:31:59",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.69,
+      "categoria": "Regras & Dicas de Pitch",
+      "titulo": "Slide: Pilar 3 — Preparation (3 minutos e checagem de demo/áudio/vídeo)",
+      "resumo_visual": "Lembrete do limite de 3 minutos para apresentar tudo e testar áudio/vídeo/demos antes.",
+      "palavras_chave": [
+        "preparation",
+        "3 minutes",
+        "demo",
+        "pitch"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "MIT\neretz.bio\n30\n. A LOT\nYou have 3 minutes to present everything\nThe ending isjust as important as the beginning, so\nmake sure you get to it!\nKey Tip: Triple check any audio/video/demos\n• STORY\nFOCUS\nPREPARATION",
+      "linhas_ocr": [
+        "MIT",
+        "eretz.bio",
+        "30",
+        ". A LOT",
+        "You have 3 minutes to present everything",
+        "The ending isjust as important as the beginning, so",
+        "make sure you get to it!",
+        "Key Tip: Triple check any audio/video/demos",
+        "• STORY",
+        "FOCUS",
+        "PREPARATION"
+      ]
+    },
+    {
+      "id": "FOTO_047",
+      "numero": 47,
+      "arquivo": "FOTO_047_2026-10-31_10h32.png",
+      "caminho_relativo": "fotos/FOTO_047_2026-10-31_10h32.png",
+      "original": "IMG_20261031_103211835_PCT.jpg",
+      "quando": "2026-10-31T10:32:11",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.07,
+      "categoria": "Regras & Dicas de Pitch",
+      "titulo": "Slide: Pilar 4 — Expertise e Q&A",
+      "resumo_visual": "Estratégia para perguntas dos jurados: especialistas técnicos respondem e nunca contradizer colegas no Q&A.",
+      "palavras_chave": [
+        "expertise",
+        "q&a",
+        "teammate",
+        "jurados",
+        "pitch"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "MIT\nMEDICINE\nDemonstrate your knowLedge!\nDrive the point home with Q&A\ní&eretz-bio EINSTEIN\nHave the technical experts answer technical questions\nDO NOT EVER: contradict your teammate during Q&A\nSTORY\nFOCUS\nPREPARATION\n25",
+      "linhas_ocr": [
+        "MIT",
+        "MEDICINE",
+        "Demonstrate your knowLedge!",
+        "Drive the point home with Q&A",
+        "í&eretz-bio EINSTEIN",
+        "Have the technical experts answer technical questions",
+        "DO NOT EVER: contradict your teammate during Q&A",
+        "STORY",
+        "FOCUS",
+        "PREPARATION",
+        "25"
+      ]
+    },
+    {
+      "id": "FOTO_048",
+      "numero": 48,
+      "arquivo": "FOTO_048_2026-10-31_10h33.png",
+      "caminho_relativo": "fotos/FOTO_048_2026-10-31_10h33.png",
+      "original": "IMG_20261031_103303601_HDR_PCT.jpg",
+      "quando": "2026-10-31T10:33:03",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.84,
+      "categoria": "Regras & Dicas de Pitch",
+      "titulo": "Slide: Overview de tempo do Pitch (1 min Problem / 1 min Solution / 1 min Business Model) (1/2)",
+      "resumo_visual": "Divisão sugerida dos 3 minutos de pitch no telão com apresentadoras no palco.",
+      "palavras_chave": [
+        "overview",
+        "problem 1 min",
+        "solution 1 min",
+        "business model 1 min",
+        "tempo do pitch"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072) + revisão visual",
+      "texto_ocr": "> eretzt)10\nOverview\nSolution\nBusiness\nModel\n7 min\nProblem\n1 min\nBusiness\nSolution\nModel\n1 min\nmin",
+      "linhas_ocr": [
+        "> eretzt)10",
+        "Overview",
+        "Solution",
+        "Business",
+        "Model",
+        "7 min",
+        "Problem",
+        "1 min",
+        "Business",
+        "Solution",
+        "Model",
+        "1 min",
+        "min"
+      ],
+      "texto_transcrito": "Overview | Problem: 1 min -> Solution: 1 min -> Business Model: 1 min (slide 27)"
+    },
+    {
+      "id": "FOTO_049",
+      "numero": 49,
+      "arquivo": "FOTO_049_2026-10-31_10h33.png",
+      "caminho_relativo": "fotos/FOTO_049_2026-10-31_10h33.png",
+      "original": "IMG_20261031_103306874_PCT.jpg",
+      "quando": "2026-10-31T10:33:06",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.22,
+      "categoria": "Regras & Dicas de Pitch",
+      "titulo": "Slide: Overview de tempo do Pitch (zoom no telão) (2/2)",
+      "resumo_visual": "Zoom no slide Overview mostrando Problem 1 min, Solution 1 min, Business Model 1 min.",
+      "palavras_chave": [
+        "overview",
+        "problem 1 min",
+        "solution 1 min",
+        "business model 1 min",
+        "tempo do pitch"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072) + revisão visual",
+      "texto_ocr": "Overview\nSolution\nProblem\n1 min\nBusiness\nModel\nmin",
+      "linhas_ocr": [
+        "Overview",
+        "Solution",
+        "Problem",
+        "1 min",
+        "Business",
+        "Model",
+        "min"
+      ],
+      "texto_transcrito": "Overview | Problem: 1 min -> Solution: 1 min -> Business Model: 1 min (slide 27)"
+    },
+    {
+      "id": "FOTO_050",
+      "numero": 50,
+      "arquivo": "FOTO_050_2026-10-31_10h33.png",
+      "caminho_relativo": "fotos/FOTO_050_2026-10-31_10h33.png",
+      "original": "IMG_20261031_103349650_HDR_PCT.jpg",
+      "quando": "2026-10-31T10:33:49",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.34,
+      "categoria": "Regras & Dicas de Pitch",
+      "titulo": "Slide: Key Tips — Demo e design de slides",
+      "resumo_visual": "Quando usar demo (só se impressionar; caso contrário usar imagens) e dicas de slides concisos.",
+      "palavras_chave": [
+        "key tips",
+        "demo",
+        "effective slides",
+        "visuals",
+        "pitch"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "Key Tips\n1. Should I Have A Demo?\na. No, unless it \"wows\"judges.\nb. Use pictures to showcase your solution instead.\n1. Designing Effective Slides\na. Not too overwhelming concise information, aiding visuals\nb. Supplements your presentation\nCeretzbio EINSTEIN",
+      "linhas_ocr": [
+        "Key Tips",
+        "1. Should I Have A Demo?",
+        "a. No, unless it \"wows\"judges.",
+        "b. Use pictures to showcase your solution instead.",
+        "1. Designing Effective Slides",
+        "a. Not too overwhelming concise information, aiding visuals",
+        "b. Supplements your presentation",
+        "Ceretzbio EINSTEIN"
+      ]
+    },
+    {
+      "id": "FOTO_051",
+      "numero": 51,
+      "arquivo": "FOTO_051_2026-10-31_10h34.png",
+      "caminho_relativo": "fotos/FOTO_051_2026-10-31_10h34.png",
+      "original": "IMG_20261031_103442535_PCT.jpg",
+      "quando": "2026-10-31T10:34:42",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.22,
+      "categoria": "Regras & Dicas de Pitch",
+      "titulo": "Slide: Reminders! (3 min pitch + 2 min Q&A, entrega 12h domingo, Google Slides)",
+      "resumo_visual": "Prazos e regras operacionais: 3 min pitch, 2 min Q&A, slides até domingo 12h no link do Google Slides sem links externos.",
+      "palavras_chave": [
+        "reminders",
+        "prazos",
+        "google slides",
+        "12 pm sunday",
+        "q&a",
+        "regras"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "NotebookLM PNG (1500px)",
+      "texto_ocr": "Reminders!\n3 minutes of pitching, 2 minutes of Q&A\nSlides due at 12 PM Sunday\nUse the google slides link provided!\nWe will not be opening any external links\n•ôeretz.bio EINSTEIN",
+      "linhas_ocr": [
+        "Reminders!",
+        "3 minutes of pitching, 2 minutes of Q&A",
+        "Slides due at 12 PM Sunday",
+        "Use the google slides link provided!",
+        "We will not be opening any external links",
+        "•ôeretz.bio EINSTEIN"
+      ]
+    },
+    {
+      "id": "FOTO_052",
+      "numero": 52,
+      "arquivo": "FOTO_052_2026-10-31_10h35.png",
+      "caminho_relativo": "fotos/FOTO_052_2026-10-31_10h35.png",
+      "original": "IMG_20261031_103526217_HDR_PCT.jpg",
+      "quando": "2026-10-31T10:35:26",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1500x1125",
+      "mb": 1.89,
+      "categoria": "Regras & Dicas de Pitch",
+      "titulo": "Slide: Problem Pitching (45 segundos, sem soluções, seja específico)",
+      "resumo_visual": "Orientações da rodada de Problem Pitching de 45s para formação de equipes.",
+      "palavras_chave": [
+        "problem pitching",
+        "45 sec",
+        "no solutions",
+        "be specific"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "4 PITCHING\nBE SPECIFIC No SOLUTIONS\npitch #'s you want to follow up with\nMIT\nCeretzbio\nPROBLEM PITCHING\nNO SOLUTIONS\nBE SPECIFIC\n45 SEC\nTake notes on the pitch #'s you want to follow up with",
+      "linhas_ocr": [
+        "4 PITCHING",
+        "BE SPECIFIC No SOLUTIONS",
+        "pitch #'s you want to follow up with",
+        "MIT",
+        "Ceretzbio",
+        "PROBLEM PITCHING",
+        "NO SOLUTIONS",
+        "BE SPECIFIC",
+        "45 SEC",
+        "Take notes on the pitch #'s you want to follow up with"
+      ]
+    },
+    {
+      "id": "FOTO_053",
+      "numero": 53,
+      "arquivo": "FOTO_053_2026-10-31_13h17.png",
+      "caminho_relativo": "fotos/FOTO_053_2026-10-31_13h17.png",
+      "original": "IMG_20261031_131752880_HDR_PCT.jpg",
+      "quando": "2026-10-31T13:17:52",
+      "dia": "Dia 1 (31/10/2026)",
+      "px": "1125x1500",
+      "mb": 2.04,
+      "categoria": "Alimentação / Cardápio",
+      "titulo": "Cardápio do almoço (Cada Canto Gastronomia) — Dia 1",
+      "resumo_visual": "Etiqueta impressa na sacola de almoço com salada, risoto de limão siciliano com ragu de fraldinha e mini brownie.",
+      "palavras_chave": [
+        "almoco",
+        "cardapio",
+        "cada canto",
+        "risoto",
+        "brownie",
+        "dia 1"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072) + revisão visual",
+      "texto_ocr": "cnon ANTO\nSALADA\nAlface f7izze e zoxa, palmitos\n[aminados, tomate seco e milho\nao molho de pazmesâo\nPRA mHO QUENTE\nRisoto de [ímâo siciliano com zagu\nde fuzldínha\nSOBREMESAS\nMíni Bzownie de chocolate e\nnozes\nAcessõ'zíos.•\nguaulanapos talherzes",
+      "linhas_ocr": [
+        "cnon ANTO",
+        "SALADA",
+        "Alface f7izze e zoxa, palmitos",
+        "[aminados, tomate seco e milho",
+        "ao molho de pazmesâo",
+        "PRA mHO QUENTE",
+        "Risoto de [ímâo siciliano com zagu",
+        "de fuzldínha",
+        "SOBREMESAS",
+        "Míni Bzownie de chocolate e",
+        "nozes",
+        "Acessõ'zíos.•",
+        "guaulanapos talherzes"
+      ],
+      "texto_transcrito": "CADA CANTO gastronomia | SALADA: Alface frizze e roxa, palmitos laminados, tomate seco e milho ao molho de parmesão | PRATINHO QUENTE: Risoto de limão siciliano com ragu de fraldinha | SOBREMESAS: Mini Brownie de chocolate e nozes | Acessórios: guardanapos & talheres"
+    },
+    {
+      "id": "FOTO_054",
+      "numero": 54,
+      "arquivo": "FOTO_054_2026-11-01_09h09.png",
+      "caminho_relativo": "fotos/FOTO_054_2026-11-01_09h09.png",
+      "original": "IMG_20261101_090946924_HDR_PCT.jpg",
+      "quando": "2026-11-01T09:09:46",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1125x1500",
+      "mb": 1.48,
+      "categoria": "Cronograma & Inscrições",
+      "titulo": "Slide: Schedule Highlights (programação de sábado e domingo)",
+      "resumo_visual": "Horários e salas das atividades (Problem Pitching, Mentors, 3D Printing, Electronic Prototyping, Final Presentations, Awards).",
+      "palavras_chave": [
+        "schedule",
+        "cronograma",
+        "horarios",
+        "saturday",
+        "sunday",
+        "maker lab",
+        "mezzanine",
+        "track 1",
+        "awards"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "SCHEDULE\nSchedule Highlights\nSaturday\nSunday\n10:00 AM\n12:30 PM\n1:30 PM\n1:30 PM\n2:45 PM\n6:00 PM\n9:00 AM\n12:00 PM\n1:00 PM\n3:00 PM\n3:45 PM\nProblem Pitching\nTeam Registration Deadline + Lunch\nMentors Available\n3D Printing Open\nCoffee Break\nDinner\nElectronic Prototyping Open\nFINAL PRESENTATIONS DUE + Lunch\nFinal Pítch Presentations\nCoffee Break\nAwards & Prizes\nTrack 1\n203 and 205\n203 and 20S\nMezzanine\nMezzanine\nMaker Lab\n203 and 205\nMezzanine\nTraci\n211 anc\n211\nm:\nMezza\nMezzc\nMake\nAudit\nMezz\nAudif\nMore Details on Participant Handbook",
+      "linhas_ocr": [
+        "SCHEDULE",
+        "Schedule Highlights",
+        "Saturday",
+        "Sunday",
+        "10:00 AM",
+        "12:30 PM",
+        "1:30 PM",
+        "1:30 PM",
+        "2:45 PM",
+        "6:00 PM",
+        "9:00 AM",
+        "12:00 PM",
+        "1:00 PM",
+        "3:00 PM",
+        "3:45 PM",
+        "Problem Pitching",
+        "Team Registration Deadline + Lunch",
+        "Mentors Available",
+        "3D Printing Open",
+        "Coffee Break",
+        "Dinner",
+        "Electronic Prototyping Open",
+        "FINAL PRESENTATIONS DUE + Lunch",
+        "Final Pítch Presentations",
+        "Coffee Break",
+        "Awards & Prizes",
+        "Track 1",
+        "203 and 205",
+        "203 and 20S",
+        "Mezzanine",
+        "Mezzanine",
+        "Maker Lab",
+        "203 and 205",
+        "Mezzanine",
+        "Traci",
+        "211 anc",
+        "211",
+        "m:",
+        "Mezza",
+        "Mezzc",
+        "Make",
+        "Audit",
+        "Mezz",
+        "Audif",
+        "More Details on Participant Handbook"
+      ]
+    },
+    {
+      "id": "FOTO_055",
+      "numero": 55,
+      "arquivo": "FOTO_055_2026-11-01_09h12.png",
+      "caminho_relativo": "fotos/FOTO_055_2026-11-01_09h12.png",
+      "original": "IMG_20261101_091200104_PCT.jpg",
+      "quando": "2026-11-01T09:12:00",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1125x1500",
+      "mb": 1.31,
+      "categoria": "Cronograma & Inscrições",
+      "titulo": "Slide: Practice Pitch Sign-ups (com QR Code) (1/2)",
+      "resumo_visual": "Instruções e QR Code para agendar os ensaios (practice pitches).",
+      "palavras_chave": [
+        "practice pitch",
+        "sign-ups",
+        "qr code",
+        "ensaio",
+        "feedback"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "Practice pitch\nSign-ups\nhttps(\nFirst come first serve - signup up now!\nSign up for practice pitches on this sheet\nPlease sign up under the right day and\ntrack\nTry to attend both practice pitches\nTake feedback as opinions and change\nwhat you think makes most sense to your\nteam\nPirst come first serve sign-up slots",
+      "linhas_ocr": [
+        "Practice pitch",
+        "Sign-ups",
+        "https(",
+        "First come first serve - signup up now!",
+        "Sign up for practice pitches on this sheet",
+        "Please sign up under the right day and",
+        "track",
+        "Try to attend both practice pitches",
+        "Take feedback as opinions and change",
+        "what you think makes most sense to your",
+        "team",
+        "Pirst come first serve sign-up slots"
+      ]
+    },
+    {
+      "id": "FOTO_056",
+      "numero": 56,
+      "arquivo": "FOTO_056_2026-11-01_09h12.png",
+      "caminho_relativo": "fotos/FOTO_056_2026-11-01_09h12.png",
+      "original": "IMG_20261101_091208022_HDR_PCT.jpg",
+      "quando": "2026-11-01T09:12:08",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1125x1500",
+      "mb": 1.49,
+      "categoria": "Cronograma & Inscrições",
+      "titulo": "Slide: Practice Pitch Sign-ups (URL legível: mithackmed.live/r/practice-pitch) (2/2)",
+      "resumo_visual": "Slide nítido exibindo o QR Code e o link curto https://mithackmed.live/r/practice-pitch.",
+      "palavras_chave": [
+        "practice pitch",
+        "sign-ups",
+        "qr code",
+        "mithackmed.live",
+        "ensaio",
+        "feedback"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "Practice Pitch\nSign-ups\nhttps://mithackmed.live/r/practice-pitch\neretz.b10\nFirst come first serve - signup up now!\n•\nSign up for practice pitches on this sheet\nPlease sign up under the right day and\ntrack\nTry to attend both practice pitches\nTake feedback as opinions and change\nwhat you think makes most sense to your\nteam\nFirst come first serve sign-up slots",
+      "linhas_ocr": [
+        "Practice Pitch",
+        "Sign-ups",
+        "https://mithackmed.live/r/practice-pitch",
+        "eretz.b10",
+        "First come first serve - signup up now!",
+        "•",
+        "Sign up for practice pitches on this sheet",
+        "Please sign up under the right day and",
+        "track",
+        "Try to attend both practice pitches",
+        "Take feedback as opinions and change",
+        "what you think makes most sense to your",
+        "team",
+        "First come first serve sign-up slots"
+      ]
+    },
+    {
+      "id": "FOTO_057",
+      "numero": 57,
+      "arquivo": "FOTO_057_2026-11-01_12h10.png",
+      "caminho_relativo": "fotos/FOTO_057_2026-11-01_12h10.png",
+      "original": "IMG_20261101_121039512_HDR_PCT.jpg",
+      "quando": "2026-11-01T12:10:39",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1500x1125",
+      "mb": 2.43,
+      "categoria": "Área Externa / Almoço",
+      "titulo": "Selfie da equipe almoçando no jardim interno (Dia 2) (1/2)",
+      "resumo_visual": "Cinco integrantes da equipe almoçando à mesa no pátio externo com sacolas da Cada Canto.",
+      "palavras_chave": [
+        "almoco",
+        "equipe",
+        "jardim",
+        "selfie",
+        "dia 2"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "NotebookLM PNG (1500px) + revisão visual",
+      "texto_ocr": "idêtv:.",
+      "linhas_ocr": [
+        "idêtv:."
+      ],
+      "texto_transcrito": "Camisetas MIT Hacking Medicine / Participant (espelhado pela câmera frontal)"
+    },
+    {
+      "id": "FOTO_058",
+      "numero": 58,
+      "arquivo": "FOTO_058_2026-11-01_12h10.png",
+      "caminho_relativo": "fotos/FOTO_058_2026-11-01_12h10.png",
+      "original": "IMG_20261101_121040491_HDR_PCT.jpg",
+      "quando": "2026-11-01T12:10:40",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1500x1125",
+      "mb": 2.35,
+      "categoria": "Área Externa / Almoço",
+      "titulo": "Selfie da equipe almoçando no jardim interno (Dia 2) (2/2)",
+      "resumo_visual": "Segundo registro da equipe reunida à mesa durante o almoço no jardim.",
+      "palavras_chave": [
+        "almoco",
+        "equipe",
+        "jardim",
+        "selfie",
+        "dia 2"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Transcrição visual",
+      "texto_ocr": "",
+      "linhas_ocr": [],
+      "texto_transcrito": "Camisetas MIT Hacking Medicine / Participant (espelhado pela câmera frontal)"
+    },
+    {
+      "id": "FOTO_059",
+      "numero": 59,
+      "arquivo": "FOTO_059_2026-11-01_12h11.png",
+      "caminho_relativo": "fotos/FOTO_059_2026-11-01_12h11.png",
+      "original": "IMG_20261101_121138812_HDR_PCT.jpg",
+      "quando": "2026-11-01T12:11:38",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1125x1500",
+      "mb": 3.22,
+      "categoria": "Área Externa / Prédio Einstein",
+      "titulo": "Átrio com jardim interno e cobertura de vidro (vista da mesa)",
+      "resumo_visual": "Foto vertical mostrando a árvore central e a cúpula de vidro do edifício, com integrantes da equipe abaixo.",
+      "palavras_chave": [
+        "jardim",
+        "atrio",
+        "arquitetura",
+        "teto de vidro",
+        "einstein",
+        "dia 2"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "NotebookLM PNG (1500px)",
+      "texto_ocr": "*92as.",
+      "linhas_ocr": [
+        "*92as."
+      ]
+    },
+    {
+      "id": "FOTO_060",
+      "numero": 60,
+      "arquivo": "FOTO_060_2026-11-01_12h11.png",
+      "caminho_relativo": "fotos/FOTO_060_2026-11-01_12h11.png",
+      "original": "IMG_20261101_121141551_HDR_PCT.jpg",
+      "quando": "2026-11-01T12:11:41",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1125x1500",
+      "mb": 3.06,
+      "categoria": "Área Externa / Prédio Einstein",
+      "titulo": "Átrio com palmeiras e teto de vidro",
+      "resumo_visual": "Vista para as palmeiras e andares curvos do átrio, com Sarah e Pedro na parte inferior.",
+      "palavras_chave": [
+        "jardim",
+        "atrio",
+        "palmeiras",
+        "arquitetura",
+        "einstein",
+        "dia 2"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "••@itTPFz",
+      "linhas_ocr": [
+        "••@itTPFz"
+      ]
+    },
+    {
+      "id": "FOTO_061",
+      "numero": 61,
+      "arquivo": "FOTO_061_2026-11-01_12h11.png",
+      "caminho_relativo": "fotos/FOTO_061_2026-11-01_12h11.png",
+      "original": "IMG_20261101_121143862_HDR_PCT.jpg",
+      "quando": "2026-11-01T12:11:43",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1125x1500",
+      "mb": 2.77,
+      "categoria": "Área Externa / Prédio Einstein",
+      "titulo": "Átrio interno visto do térreo (mesas e vegetação)",
+      "resumo_visual": "Vista ampla dos andares curvos, cobertura de vidro e área de convivência no jardim.",
+      "palavras_chave": [
+        "jardim",
+        "atrio",
+        "arquitetura",
+        "einstein",
+        "dia 2"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "NotebookLM PNG (1500px)",
+      "texto_ocr": "11a",
+      "linhas_ocr": [
+        "11a"
+      ]
+    },
+    {
+      "id": "FOTO_062",
+      "numero": 62,
+      "arquivo": "FOTO_062_2026-11-01_12h11.png",
+      "caminho_relativo": "fotos/FOTO_062_2026-11-01_12h11.png",
+      "original": "IMG_20261101_121146437_HDR_PCT.jpg",
+      "quando": "2026-11-01T12:11:46",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1125x1500",
+      "mb": 2.48,
+      "categoria": "Área Externa / Almoço",
+      "titulo": "Sarah Cunha (UFMG) e Pedro Caversan dos Passos almoçando à mesa",
+      "resumo_visual": "Sarah Cunha (crachá UFMG) e Pedro Caversan dos Passos (crachá visível) à mesa com tablet e almoço.",
+      "palavras_chave": [
+        "sarah cunha",
+        "pedro caversan",
+        "ufmg",
+        "equipe",
+        "almoco",
+        "jardim",
+        "cracha",
+        "dia 2"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072) + revisão visual",
+      "texto_ocr": "MIT\nPXICIPAI\nEINSTEIN\nMIT\nHACKIN\nMEDICIN\nMtO'ClNt\nSarah Cunha\nuFM0\nASÚCAR",
+      "linhas_ocr": [
+        "MIT",
+        "PXICIPAI",
+        "EINSTEIN",
+        "MIT",
+        "HACKIN",
+        "MEDICIN",
+        "MtO'ClNt",
+        "Sarah Cunha",
+        "uFM0",
+        "ASÚCAR"
+      ],
+      "texto_transcrito": "Crachás visíveis: MIT HACKING MEDICINE — Sarah Cunha (UFMG) e Pedro Caversan dos Passos | Camisetas: PARTICIPANT Organized by eretz.bio EINSTEIN | Lata Coca-Cola Sem Açúcar"
+    },
+    {
+      "id": "FOTO_063",
+      "numero": 63,
+      "arquivo": "FOTO_063_2026-11-01_12h11.png",
+      "caminho_relativo": "fotos/FOTO_063_2026-11-01_12h11.png",
+      "original": "IMG_20261101_121148349_HDR_PCT.jpg",
+      "quando": "2026-11-01T12:11:48",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1125x1500",
+      "mb": 2.6,
+      "categoria": "Área Externa / Almoço",
+      "titulo": "Pedro Caversan almoçando nhoque no jardim",
+      "resumo_visual": "Pedro comendo nhoque (Gnocchi de batata) da embalagem com sacola do cardápio Cada Canto ao lado.",
+      "palavras_chave": [
+        "pedro caversan",
+        "almoco",
+        "cada canto",
+        "gnocchi",
+        "jardim",
+        "dia 2"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Transcrição visual",
+      "texto_ocr": "",
+      "linhas_ocr": [],
+      "texto_transcrito": "Sacola Cada Canto: SALADA (Alface frizze e roxa...) | PRATINHO QUENTE (Gnocchi de batata com ragu de...) | SOBREMESAS"
+    },
+    {
+      "id": "FOTO_064",
+      "numero": 64,
+      "arquivo": "FOTO_064_2026-11-01_12h11.png",
+      "caminho_relativo": "fotos/FOTO_064_2026-11-01_12h11.png",
+      "original": "IMG_20261101_121152156_HDR_PCT.jpg",
+      "quando": "2026-11-01T12:11:52",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1125x1500",
+      "mb": 1.91,
+      "categoria": "Área Externa / Equipe",
+      "titulo": "Selfie de Clévio Ferreira no jardim interno",
+      "resumo_visual": "Selfie de Clévio com camiseta e cordão azul do MIT Hacking Medicine sob as palmeiras do átrio.",
+      "palavras_chave": [
+        "clevio ferreira",
+        "selfie",
+        "jardim",
+        "dia 2"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Transcrição visual",
+      "texto_ocr": "",
+      "linhas_ocr": [],
+      "texto_transcrito": "Cordão azul: MIT HACKING MEDICINE"
+    },
+    {
+      "id": "FOTO_065",
+      "numero": 65,
+      "arquivo": "FOTO_065_2026-11-01_12h55.png",
+      "caminho_relativo": "fotos/FOTO_065_2026-11-01_12h55.png",
+      "original": "IMG_20261101_125553932_PCT.jpg",
+      "quando": "2026-11-01T12:55:53",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1500x1125",
+      "mb": 1.91,
+      "categoria": "Visita Técnica / Sala Limpa",
+      "titulo": "Painel SCADA da Sala Limpa — Nível L5 (Expansão de Células, Edição Gênica, Quarentena)",
+      "resumo_visual": "Monitor Schneider Electric / Convergint mostrando planta e telemetria (temperatura, umidade, pressão diferencial em Pa) das salas limpas em 01/11/2026 12:55:53.",
+      "palavras_chave": [
+        "sala limpa",
+        "nivel l5",
+        "expansao de celulas",
+        "edicao genica",
+        "quarentena",
+        "schneider electric",
+        "convergint",
+        "terapia celular",
+        "visita tecnica",
+        "dia 2"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072) + revisão visual",
+      "texto_ocr": "< SALAUMPA\nÉaoo.aA\nEXPANSÀO DE\nNiVELL5- SALA LIMPA\n...ruo S,'\ni Q 2 Pa\nANTECA•RA\n20 • C\nugo SI. r\n-414 Pa\nEDIÇÃO\nGÊNICA\nPa\nANTECAuRA\n01/1112026\n12:55:53\nS6S\n200 •c\n569\n-363 Pa\n20'C xc\nQUARENTENA\nARU.R0004\nCIRCULAÇÀO¯\nWROOOI\nNomd\n20.2 • C f\nS' •sth ,\n4 0 Pa\nENTRADA\nSAA\nnt",
+      "linhas_ocr": [
+        "< SALAUMPA",
+        "Éaoo.aA",
+        "EXPANSÀO DE",
+        "NiVELL5- SALA LIMPA",
+        "...ruo S,'",
+        "i Q 2 Pa",
+        "ANTECA•RA",
+        "20 • C",
+        "ugo SI. r",
+        "-414 Pa",
+        "EDIÇÃO",
+        "GÊNICA",
+        "Pa",
+        "ANTECAuRA",
+        "01/1112026",
+        "12:55:53",
+        "S6S",
+        "200 •c",
+        "569",
+        "-363 Pa",
+        "20'C xc",
+        "QUARENTENA",
+        "ARU.R0004",
+        "CIRCULAÇÀO¯",
+        "WROOOI",
+        "Nomd",
+        "20.2 • C f",
+        "S' •sth ,",
+        "4 0 Pa",
+        "ENTRADA",
+        "SAA",
+        "nt"
+      ],
+      "texto_transcrito": "SALA LIMPA | NÍVEL L5 - SALA LIMPA (Schneider Electric / Convergint) | 01/11/2026 12:55:53 | Áreas: ANTECÂMARA (-26.1 Pa / 20.6°C), EXPANSÃO DE CÉLULAS (Sala 506D, -37.0 Pa / 20.8°C), EDIÇÃO GÊNICA (Sala 506C, -41.4 Pa / 20.5°C), QUARENTENA (Sala 506B, -36.5 Pa / 20.0°C), ALMOXARIFADO (Sala 506A, 21.4 Pa / 20.0°C), VESTIÁRIO ENTRADA (32.1 Pa), VESTIÁRIO SAÍDA (34.5 Pa), ANTECÂMARA ENTRADA/SAÍDA, CIRCULAÇÃO LIMPA (16.3 Pa) | Status: Normal / Alerta / Alarme | Álim. Água Gelada: 7.04°C"
+    },
+    {
+      "id": "FOTO_066",
+      "numero": 66,
+      "arquivo": "FOTO_066_2026-11-01_12h58.png",
+      "caminho_relativo": "fotos/FOTO_066_2026-11-01_12h58.png",
+      "original": "IMG_20261101_125811517_HDR_PCT.jpg",
+      "quando": "2026-11-01T12:58:11",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1125x1500",
+      "mb": 3.27,
+      "categoria": "Área Externa / Prédio Einstein",
+      "titulo": "Vista panorâmica do jardim interno a partir da escadaria superior (1/2)",
+      "resumo_visual": "Foto tirada da escada nos andares superiores mostrando todo o jardim central e o teto envidraçado.",
+      "palavras_chave": [
+        "jardim",
+        "atrio",
+        "panoramica",
+        "escadaria",
+        "arquitetura",
+        "einstein",
+        "dia 2"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "úrq\nuvu",
+      "linhas_ocr": [
+        "úrq",
+        "uvu"
+      ]
+    },
+    {
+      "id": "FOTO_067",
+      "numero": 67,
+      "arquivo": "FOTO_067_2026-11-01_12h58.png",
+      "caminho_relativo": "fotos/FOTO_067_2026-11-01_12h58.png",
+      "original": "IMG_20261101_125816323_HDR_PCT.jpg",
+      "quando": "2026-11-01T12:58:16",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1125x1500",
+      "mb": 3.23,
+      "categoria": "Área Externa / Prédio Einstein",
+      "titulo": "Vista panorâmica do jardim interno a partir da escadaria superior (2/2)",
+      "resumo_visual": "Segundo ângulo semelhante da escadaria superior sobre o jardim central.",
+      "palavras_chave": [
+        "jardim",
+        "atrio",
+        "panoramica",
+        "escadaria",
+        "arquitetura",
+        "einstein",
+        "dia 2"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "ugu",
+      "linhas_ocr": [
+        "ugu"
+      ]
+    },
+    {
+      "id": "FOTO_068",
+      "numero": 68,
+      "arquivo": "FOTO_068_2026-11-01_13h53.png",
+      "caminho_relativo": "fotos/FOTO_068_2026-11-01_13h53.png",
+      "original": "IMG_20261101_135313967_HDR_PCT.jpg",
+      "quando": "2026-11-01T13:53:13",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1500x1125",
+      "mb": 1.51,
+      "categoria": "Jurados & Pitches (Dia 2)",
+      "titulo": "Slide: Judges Track 1 — Oncology (banca avaliadora)",
+      "resumo_visual": "Banca de jurados da Track 1 (Oncology) exibida no monitor da sala antes dos pitches finais.",
+      "palavras_chave": [
+        "judges",
+        "jurados",
+        "track 1",
+        "oncology",
+        "rodrigo demarch",
+        "gabriel dias francozo",
+        "linus fascina",
+        "bruno rizzato",
+        "dia 2"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072) + revisão visual",
+      "texto_ocr": "O. Tela de hllian King\nJillian King está\nJudges Track\nRodrigo Demarch\nCIO, Einstein Hospital\nIsraelita\n- Oncology\nGabriel Dias Francozo\nResearch Administratcr, Centro\nUniversitario Sao Carni'o\nMsc Student in Molecular\nMedicine\nUNOS P. FASCINA\nVedtcal Manager Putit-\nand Pnuate\nand Hematology. Enstein\nHospital Israelita\nBruno Rizzatc Coelho Pina\nCata and\nCocrdLr¿'.or - Orco'ogy\nHematology, Einstein\nEinstein\n$BID\nSPONSORS\nGrupoBoticá(io",
+      "linhas_ocr": [
+        "O. Tela de hllian King",
+        "Jillian King está",
+        "Judges Track",
+        "Rodrigo Demarch",
+        "CIO, Einstein Hospital",
+        "Israelita",
+        "- Oncology",
+        "Gabriel Dias Francozo",
+        "Research Administratcr, Centro",
+        "Universitario Sao Carni'o",
+        "Msc Student in Molecular",
+        "Medicine",
+        "UNOS P. FASCINA",
+        "Vedtcal Manager Putit-",
+        "and Pnuate",
+        "and Hematology. Enstein",
+        "Hospital Israelita",
+        "Bruno Rizzatc Coelho Pina",
+        "Cata and",
+        "CocrdLr¿'.or - Orco'ogy",
+        "Hematology, Einstein",
+        "Einstein",
+        "$BID",
+        "SPONSORS",
+        "GrupoBoticá(io"
+      ],
+      "texto_transcrito": "TRACK 1 — Judges Track 1 - Oncology | Rodrigo Demarch (CIO, Einstein Hospital Israelita) | Gabriel Dias Francozo (Research Administrator, Centro Universitário São Camilo; MSc Student in Molecular Medicine, Einstein) | LINUS P. FASCINA (Medical Manager Public and Private - Oncology and Hematology, Einstein Hospital Israelita) | Bruno Rizzato Coelho Pina (Data and Business Intelligence Coordinator - Oncology and Hematology, Einstein Hospital Israelita) | Sponsors: GrupoBoticário, BID LAB"
+    },
+    {
+      "id": "FOTO_069",
+      "numero": 69,
+      "arquivo": "FOTO_069_2026-11-01_14h11.png",
+      "caminho_relativo": "fotos/FOTO_069_2026-11-01_14h11.png",
+      "original": "IMG_20261101_141123570_PCT.jpg",
+      "quando": "2026-11-01T14:11:23",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1125x1500",
+      "mb": 1.16,
+      "categoria": "Jurados & Pitches (Dia 2)",
+      "titulo": "Telão de chamada: Team 114 - Link Trial / Coming Up: Team 112 - NeuroDynamics (zoom)",
+      "resumo_visual": "Foto aproximada da tela anunciando o pitch do Team 114 (Link Trial) e o próximo time (Team 112 - NeuroDynamics).",
+      "palavras_chave": [
+        "team 114",
+        "link trial",
+        "team 112",
+        "neurodynamics",
+        "pitch final",
+        "coming up",
+        "dia 2"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "NotebookLM PNG (1500px) + revisão visual",
+      "texto_ocr": "Coming Up•.\nTeam - NeuroDynamics\nÓ $BID\nGrupoBoticátio\np u o 20",
+      "linhas_ocr": [
+        "Coming Up•.",
+        "Team - NeuroDynamics",
+        "Ó $BID",
+        "GrupoBoticátio",
+        "p u o 20"
+      ],
+      "texto_transcrito": "Team 114 - Link Trial | Coming Up: Team 112 - NeuroDynamics | Sponsors: GrupoBoticário, BID LAB"
+    },
+    {
+      "id": "FOTO_070",
+      "numero": 70,
+      "arquivo": "FOTO_070_2026-11-01_14h11.png",
+      "caminho_relativo": "fotos/FOTO_070_2026-11-01_14h11.png",
+      "original": "IMG_20261101_141126850_HDR_PCT.jpg",
+      "quando": "2026-11-01T14:11:26",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1125x1500",
+      "mb": 1.59,
+      "categoria": "Jurados & Pitches (Dia 2)",
+      "titulo": "Apresentadores do Team 114 - Link Trial à frente do telão (próximo: Team 112 - NeuroDynamics)",
+      "resumo_visual": "Integrantes da equipe Link Trial no palco com microfone antes de iniciar o pitch; NeuroDynamics anunciado na sequência.",
+      "palavras_chave": [
+        "team 114",
+        "link trial",
+        "team 112",
+        "neurodynamics",
+        "pitch final",
+        "palco",
+        "dia 2"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "NotebookLM PNG (1500px) + revisão visual",
+      "texto_ocr": "Team 114 - Link Trial\nCorning IJp:\nTeam 112 - NeuroDynamics\nSPONSons",
+      "linhas_ocr": [
+        "Team 114 - Link Trial",
+        "Corning IJp:",
+        "Team 112 - NeuroDynamics",
+        "SPONSons"
+      ],
+      "texto_transcrito": "Team 114 - Link Trial | Coming Up: Team 112 - NeuroDynamics | Sponsors: GrupoBoticário, BID LAB"
+    },
+    {
+      "id": "FOTO_071",
+      "numero": 71,
+      "arquivo": "FOTO_071_2026-11-01_14h11.png",
+      "caminho_relativo": "fotos/FOTO_071_2026-11-01_14h11.png",
+      "original": "IMG_20261101_141130028_HDR.jpg",
+      "quando": "2026-11-01T14:11:30",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1500x1125",
+      "mb": 1.34,
+      "categoria": "Jurados & Pitches (Dia 2)",
+      "titulo": "Team 114 - Link Trial iniciando apresentação diante da banca",
+      "resumo_visual": "Plano aberto da sala com os apresentadores do Link Trial e os jurados sentados à mesa à direita.",
+      "palavras_chave": [
+        "team 114",
+        "link trial",
+        "team 112",
+        "neurodynamics",
+        "banca",
+        "pitch final",
+        "dia 2"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "NotebookLM PNG (1500px) + revisão visual",
+      "texto_ocr": "Team 114 - Link",
+      "linhas_ocr": [
+        "Team 114 - Link"
+      ],
+      "texto_transcrito": "Team 114 - Link Trial | Coming Up: Team 112 - NeuroDynamics"
+    },
+    {
+      "id": "FOTO_072",
+      "numero": 72,
+      "arquivo": "FOTO_072_2026-11-01_14h11.png",
+      "caminho_relativo": "fotos/FOTO_072_2026-11-01_14h11.png",
+      "original": "IMG_20261101_141136328_HDR_PCT.jpg",
+      "quando": "2026-11-01T14:11:36",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1500x1125",
+      "mb": 1.61,
+      "categoria": "Jurados & Pitches (Dia 2)",
+      "titulo": "Team 114 - Link Trial com banca de jurados em foco",
+      "resumo_visual": "Mesma cena com enquadramento mais nítido da banca avaliadora à direita e do telão.",
+      "palavras_chave": [
+        "team 114",
+        "link trial",
+        "team 112",
+        "neurodynamics",
+        "banca",
+        "pitch final",
+        "dia 2"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "NotebookLM PNG (1500px) + revisão visual",
+      "texto_ocr": "Coming Op.\n:eam - NeuroDynam\\cs",
+      "linhas_ocr": [
+        "Coming Op.",
+        ":eam - NeuroDynam\\cs"
+      ],
+      "texto_transcrito": "Team 114 - Link Trial | Coming Up: Team 112 - NeuroDynamics"
+    },
+    {
+      "id": "FOTO_073",
+      "numero": 73,
+      "arquivo": "FOTO_073_2026-11-01_16h27.png",
+      "caminho_relativo": "fotos/FOTO_073_2026-11-01_16h27.png",
+      "original": "IMG_20261101_162724711_PCT.jpg",
+      "quando": "2026-11-01T16:27:24",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1125x1500",
+      "mb": 2.37,
+      "categoria": "Ranking & Premiação",
+      "titulo": "Planilha de Ranking Final — Pontuação de todas as 16 equipes (Track 1)",
+      "resumo_visual": "Foto de tela com a classificação completa (Team Name, Total Score, Rank e Deliberation Notes), incluindo Team 112 - NeuroDynamics em 8º lugar (58 pontos).",
+      "palavras_chave": [
+        "ranking",
+        "resultado",
+        "pontuacao",
+        "total score",
+        "linfotrack",
+        "passionfruit popsi",
+        "oncosurvive",
+        "hepapatch",
+        "pancreasync",
+        "rent a grands",
+        "nextpath",
+        "link trial",
+        "neurodynamics",
+        "trackcare",
+        "cora",
+        "oncoflow",
+        "my navigation",
+        "elo",
+        "soul voice",
+        "oncoguide",
+        "premiacao"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "NotebookLM PNG (1500px) + revisão visual",
+      "texto_ocr": "Scot•\nRani\nO.Ub«aOon\n'SECONO",
+      "linhas_ocr": [
+        "Scot•",
+        "Rani",
+        "O.Ub«aOon",
+        "'SECONO"
+      ],
+      "texto_transcrito": "Team Name | Total Score | Rank | Deliberation Notes\nTeam 103 - LinfoTrack | 82 | 1 | *FIRST\nTeam 107 - Passionfruit Popsi | 82 | 1 | *SECOND\nTeam 101 - OncoSurvive | 66 | 3 | *\nTeam 102 - HepaPatch | 64 | 4 | *\nTeam 106 - PancreaSync | 63 | 5 | *\nTeam 115 - RENT A GRANDS | 61 | 6 | *\nTeam 105 - NextPath | 61 | 6\nTeam 114 - Link Trial | 58 | 8\nTeam 112 - NeuroDynamics | 58 | 8\nTeam 113 - Trackcare | 56 | 10\nTeam 117 - Cora | 56 | 10\nTeam 108 - OncoFlow | 53 | 12\nTeam 111 - My navigation | 50 | 13\nTEam 115 - Elo | 48 | 14\nTeam 118 - Soul Voice | 46 | 15\nTeam 104 - Oncoguide | 45 | 16"
+    },
+    {
+      "id": "FOTO_074",
+      "numero": 74,
+      "arquivo": "FOTO_074_2026-11-01_16h45.png",
+      "caminho_relativo": "fotos/FOTO_074_2026-11-01_16h45.png",
+      "original": "IMG_20261101_164537342_HDR_PCT.jpg",
+      "quando": "2026-11-01T16:45:37",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1500x1125",
+      "mb": 2.05,
+      "categoria": "Ranking & Premiação",
+      "titulo": "Auditório no encerramento / cerimônia de premiação (1/2)",
+      "resumo_visual": "Organizadoras no palco do auditório com os dois telões do MIT Hacking Medicine ao final do evento.",
+      "palavras_chave": [
+        "encerramento",
+        "premiacao",
+        "auditorio",
+        "mit hacking medicine",
+        "dia 2"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "MIT\nHACKING\n$BID t\nEINSTEIN\nMIT\nHACKING\nMEDICINE\n$ BID",
+      "linhas_ocr": [
+        "MIT",
+        "HACKING",
+        "$BID t",
+        "EINSTEIN",
+        "MIT",
+        "HACKING",
+        "MEDICINE",
+        "$ BID"
+      ]
+    },
+    {
+      "id": "FOTO_075",
+      "numero": 75,
+      "arquivo": "FOTO_075_2026-11-01_16h45.png",
+      "caminho_relativo": "fotos/FOTO_075_2026-11-01_16h45.png",
+      "original": "IMG_20261101_164541089_HDR_PCT.jpg",
+      "quando": "2026-11-01T16:45:41",
+      "dia": "Dia 2 (01/11/2026)",
+      "px": "1500x1125",
+      "mb": 2.01,
+      "categoria": "Ranking & Premiação",
+      "titulo": "Auditório no encerramento / cerimônia de premiação (2/2)",
+      "resumo_visual": "Segundo registro da plateia e organizadoras no encerramento do evento.",
+      "palavras_chave": [
+        "encerramento",
+        "premiacao",
+        "auditorio",
+        "mit hacking medicine",
+        "dia 2"
+      ],
+      "tem_texto": true,
+      "fonte_ocr": "Camera (4096x3072)",
+      "texto_ocr": "êeretzi*)\nMIT\nHACKING\nHACKING\n$BID 1.»t\nvd $BID",
+      "linhas_ocr": [
+        "êeretzi*)",
+        "MIT",
+        "HACKING",
+        "HACKING",
+        "$BID 1.»t",
+        "vd $BID"
+      ]
+    }
+  ],
+  "indice_por_categoria": {
+    "Credencial": [
+      "FOTO_001"
+    ],
+    "Auditório / Equipe": [
+      "FOTO_002",
+      "FOTO_003",
+      "FOTO_004",
+      "FOTO_005",
+      "FOTO_006",
+      "FOTO_007",
+      "FOTO_008"
+    ],
+    "Abertura": [
+      "FOTO_009",
+      "FOTO_010"
+    ],
+    "Abertura / Metodologia": [
+      "FOTO_011",
+      "FOTO_012"
+    ],
+    "Palestra / Dados Oncológicos": [
+      "FOTO_013"
+    ],
+    "Palestra / Einstein": [
+      "FOTO_014",
+      "FOTO_015",
+      "FOTO_016",
+      "FOTO_017"
+    ],
+    "Palestra / Pesquisa Clínica": [
+      "FOTO_018"
+    ],
+    "Palestra / Novo Cancer Center": [
+      "FOTO_019",
+      "FOTO_020",
+      "FOTO_021"
+    ],
+    "Palestra / Medicina de Precisão": [
+      "FOTO_022"
+    ],
+    "Palestra / Jornada do Paciente": [
+      "FOTO_023",
+      "FOTO_024",
+      "FOTO_025"
+    ],
+    "Palestra / Centros de Excelência": [
+      "FOTO_026",
+      "FOTO_027"
+    ],
+    "Desafio Oncológico": [
+      "FOTO_028",
+      "FOTO_029",
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032",
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "Regras & Dicas de Pitch": [
+      "FOTO_038",
+      "FOTO_039",
+      "FOTO_040",
+      "FOTO_041",
+      "FOTO_042",
+      "FOTO_043",
+      "FOTO_044",
+      "FOTO_045",
+      "FOTO_046",
+      "FOTO_047",
+      "FOTO_048",
+      "FOTO_049",
+      "FOTO_050",
+      "FOTO_051",
+      "FOTO_052"
+    ],
+    "Alimentação / Cardápio": [
+      "FOTO_053"
+    ],
+    "Cronograma & Inscrições": [
+      "FOTO_054",
+      "FOTO_055",
+      "FOTO_056"
+    ],
+    "Área Externa / Almoço": [
+      "FOTO_057",
+      "FOTO_058",
+      "FOTO_062",
+      "FOTO_063"
+    ],
+    "Área Externa / Prédio Einstein": [
+      "FOTO_059",
+      "FOTO_060",
+      "FOTO_061",
+      "FOTO_066",
+      "FOTO_067"
+    ],
+    "Área Externa / Equipe": [
+      "FOTO_064"
+    ],
+    "Visita Técnica / Sala Limpa": [
+      "FOTO_065"
+    ],
+    "Jurados & Pitches (Dia 2)": [
+      "FOTO_068",
+      "FOTO_069",
+      "FOTO_070",
+      "FOTO_071",
+      "FOTO_072"
+    ],
+    "Ranking & Premiação": [
+      "FOTO_073",
+      "FOTO_074",
+      "FOTO_075"
+    ]
+  },
+  "indice_palavras_chave": {
+    "01/11/2026": [
+      "FOTO_065"
+    ],
+    "12 pm sunday": [
+      "FOTO_051"
+    ],
+    "191 leitos": [
+      "FOTO_021"
+    ],
+    "20.6": [
+      "FOTO_065"
+    ],
+    "20.8": [
+      "FOTO_065"
+    ],
+    "2027": [
+      "FOTO_019",
+      "FOTO_020"
+    ],
+    "23ex": [
+      "FOTO_015"
+    ],
+    "26.1": [
+      "FOTO_065"
+    ],
+    "3 minutes": [
+      "FOTO_046"
+    ],
+    "37.0": [
+      "FOTO_065"
+    ],
+    "41.4": [
+      "FOTO_065"
+    ],
+    "42 salas quimioterapia": [
+      "FOTO_021"
+    ],
+    "45 sec": [
+      "FOTO_052"
+    ],
+    "506c": [
+      "FOTO_065"
+    ],
+    "506d": [
+      "FOTO_065"
+    ],
+    "63 consultorios": [
+      "FOTO_021"
+    ],
+    "7.9mil": [
+      "FOTO_014"
+    ],
+    "92as": [
+      "FOTO_059"
+    ],
+    "aberto": [
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036"
+    ],
+    "abertura": [
+      "FOTO_002",
+      "FOTO_003",
+      "FOTO_004",
+      "FOTO_005",
+      "FOTO_006",
+      "FOTO_007",
+      "FOTO_008",
+      "FOTO_009",
+      "FOTO_010"
+    ],
+    "abordagem": [
+      "FOTO_022"
+    ],
+    "aceleradores": [
+      "FOTO_015",
+      "FOTO_016"
+    ],
+    "acesso": [
+      "FOTO_029"
+    ],
+    "acesso e agendamento": [
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "acima": [
+      "FOTO_024",
+      "FOTO_025"
+    ],
+    "acompanham": [
+      "FOTO_029"
+    ],
+    "aconselhamento": [
+      "FOTO_023"
+    ],
+    "adapta": [
+      "FOTO_022"
+    ],
+    "addressed": [
+      "FOTO_041"
+    ],
+    "addresses": [
+      "FOTO_039"
+    ],
+    "administrator": [
+      "FOTO_068"
+    ],
+    "adopters": [
+      "FOTO_045"
+    ],
+    "agregação": [
+      "FOTO_018"
+    ],
+    "aiding": [
+      "FOTO_050"
+    ],
+    "alface": [
+      "FOTO_053",
+      "FOTO_063"
+    ],
+    "aliancas assistenciais": [
+      "FOTO_017"
+    ],
+    "almoco": [
+      "FOTO_053",
+      "FOTO_057",
+      "FOTO_058",
+      "FOTO_062",
+      "FOTO_063"
+    ],
+    "ambiente": [
+      "FOTO_022"
+    ],
+    "amplia": [
+      "FOTO_024",
+      "FOTO_025"
+    ],
+    "answer": [
+      "FOTO_047"
+    ],
+    "antecâmara": [
+      "FOTO_065"
+    ],
+    "application": [
+      "FOTO_011",
+      "FOTO_012"
+    ],
+    "arquitetura": [
+      "FOTO_059",
+      "FOTO_060",
+      "FOTO_061",
+      "FOTO_066",
+      "FOTO_067"
+    ],
+    "atendimento": [
+      "FOTO_015",
+      "FOTO_016"
+    ],
+    "atendimento privado": [
+      "FOTO_015",
+      "FOTO_016"
+    ],
+    "ativos": [
+      "FOTO_018"
+    ],
+    "atrio": [
+      "FOTO_059",
+      "FOTO_060",
+      "FOTO_061",
+      "FOTO_066",
+      "FOTO_067"
+    ],
+    "atrás": [
+      "FOTO_013"
+    ],
+    "attend": [
+      "FOTO_055",
+      "FOTO_056"
+    ],
+    "atuação": [
+      "FOTO_014"
+    ],
+    "audience": [
+      "FOTO_040",
+      "FOTO_041",
+      "FOTO_042"
+    ],
+    "audio/video/demos": [
+      "FOTO_046"
+    ],
+    "auditorio": [
+      "FOTO_002",
+      "FOTO_003",
+      "FOTO_004",
+      "FOTO_005",
+      "FOTO_006",
+      "FOTO_007",
+      "FOTO_008",
+      "FOTO_009",
+      "FOTO_010",
+      "FOTO_074",
+      "FOTO_075"
+    ],
+    "available": [
+      "FOTO_054"
+    ],
+    "avançadas": [
+      "FOTO_019",
+      "FOTO_020"
+    ],
+    "awards": [
+      "FOTO_054"
+    ],
+    "azul": [
+      "FOTO_064"
+    ],
+    "açúcar": [
+      "FOTO_062"
+    ],
+    "banca": [
+      "FOTO_071",
+      "FOTO_072"
+    ],
+    "batata": [
+      "FOTO_063"
+    ],
+    "be specific": [
+      "FOTO_052"
+    ],
+    "beginning": [
+      "FOTO_046"
+    ],
+    "beretz.bio": [
+      "FOTO_044"
+    ],
+    "beretz.t": [
+      "FOTO_041"
+    ],
+    "better": [
+      "FOTO_001",
+      "FOTO_009",
+      "FOTO_010"
+    ],
+    "bid": [
+      "FOTO_009",
+      "FOTO_010"
+    ],
+    "biopsia": [
+      "FOTO_023"
+    ],
+    "biopsia liquida": [
+      "FOTO_023"
+    ],
+    "boas praticas": [
+      "FOTO_038"
+    ],
+    "both": [
+      "FOTO_055",
+      "FOTO_056"
+    ],
+    "break": [
+      "FOTO_001",
+      "FOTO_009",
+      "FOTO_010",
+      "FOTO_054"
+    ],
+    "brownie": [
+      "FOTO_053"
+    ],
+    "bruno rizzato": [
+      "FOTO_068"
+    ],
+    "build": [
+      "FOTO_001",
+      "FOTO_009",
+      "FOTO_010"
+    ],
+    "business": [
+      "FOTO_039",
+      "FOTO_045",
+      "FOTO_048",
+      "FOTO_049"
+    ],
+    "business model 1 min": [
+      "FOTO_048",
+      "FOTO_049"
+    ],
+    "cada canto": [
+      "FOTO_053",
+      "FOTO_063"
+    ],
+    "camilo": [
+      "FOTO_068"
+    ],
+    "camisetas": [
+      "FOTO_057",
+      "FOTO_058",
+      "FOTO_062"
+    ],
+    "cancer": [
+      "FOTO_028"
+    ],
+    "cancer center": [
+      "FOTO_019",
+      "FOTO_020"
+    ],
+    "cancer no mundo": [
+      "FOTO_013"
+    ],
+    "canto": [
+      "FOTO_053",
+      "FOTO_063"
+    ],
+    "características": [
+      "FOTO_022"
+    ],
+    "cardapio": [
+      "FOTO_053"
+    ],
+    "cardio-oncologia": [
+      "FOTO_027"
+    ],
+    "cardovascutares": [
+      "FOTO_013"
+    ],
+    "care": [
+      "FOTO_012"
+    ],
+    "case": [
+      "FOTO_045"
+    ],
+    "case study": [
+      "FOTO_045"
+    ],
+    "causa": [
+      "FOTO_013"
+    ],
+    "caversan": [
+      "FOTO_062"
+    ],
+    "celular": [
+      "FOTO_027"
+    ],
+    "center": [
+      "FOTO_028"
+    ],
+    "centrada no paciente": [
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "centralizam": [
+      "FOTO_026"
+    ],
+    "centro": [
+      "FOTO_019",
+      "FOTO_020",
+      "FOTO_024",
+      "FOTO_025",
+      "FOTO_068"
+    ],
+    "centro de cuidados": [
+      "FOTO_019",
+      "FOTO_020"
+    ],
+    "centros": [
+      "FOTO_018",
+      "FOTO_021",
+      "FOTO_026",
+      "FOTO_027"
+    ],
+    "centros de excelencia": [
+      "FOTO_021",
+      "FOTO_026",
+      "FOTO_027"
+    ],
+    "ceretz.bio": [
+      "FOTO_010"
+    ],
+    "ceretzbio": [
+      "FOTO_038",
+      "FOTO_043",
+      "FOTO_052"
+    ],
+    "ceucemias": [
+      "FOTO_018"
+    ],
+    "challenges": [
+      "FOTO_039"
+    ],
+    "change": [
+      "FOTO_038"
+    ],
+    "check": [
+      "FOTO_046"
+    ],
+    "cirurgia": [
+      "FOTO_021"
+    ],
+    "cirurgia robotica": [
+      "FOTO_021"
+    ],
+    "cirúrgicos": [
+      "FOTO_014"
+    ],
+    "clevio ferreira": [
+      "FOTO_001",
+      "FOTO_064"
+    ],
+    "clobal": [
+      "FOTO_028"
+    ],
+    "clévio": [
+      "FOTO_001"
+    ],
+    "clínica": [
+      "FOTO_018"
+    ],
+    "clínico": [
+      "FOTO_014"
+    ],
+    "coal": [
+      "FOTO_041",
+      "FOTO_042"
+    ],
+    "coca-cola": [
+      "FOTO_062"
+    ],
+    "coffee": [
+      "FOTO_054"
+    ],
+    "colombia": [
+      "FOTO_017"
+    ],
+    "colorretal": [
+      "FOTO_013"
+    ],
+    "colômbia": [
+      "FOTO_017"
+    ],
+    "come": [
+      "FOTO_055",
+      "FOTO_056"
+    ],
+    "coming": [
+      "FOTO_069",
+      "FOTO_070",
+      "FOTO_071",
+      "FOTO_072"
+    ],
+    "coming up": [
+      "FOTO_069"
+    ],
+    "community": [
+      "FOTO_011",
+      "FOTO_012"
+    ],
+    "complexidade": [
+      "FOTO_029"
+    ],
+    "compromisso": [
+      "FOTO_019",
+      "FOTO_020"
+    ],
+    "concise": [
+      "FOTO_050"
+    ],
+    "conectando": [
+      "FOTO_028"
+    ],
+    "conectando a jornada": [
+      "FOTO_028"
+    ],
+    "conectar": [
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "conectar interfaces": [
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "conexões": [
+      "FOTO_029"
+    ],
+    "considerando": [
+      "FOTO_022"
+    ],
+    "considerar": [
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "considers": [
+      "FOTO_039"
+    ],
+    "consultas": [
+      "FOTO_014"
+    ],
+    "consultorios": [
+      "FOTO_021"
+    ],
+    "continuidade": [
+      "FOTO_029"
+    ],
+    "contradict": [
+      "FOTO_047"
+    ],
+    "contínua": [
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "convergint": [
+      "FOTO_065"
+    ],
+    "convince": [
+      "FOTO_040",
+      "FOTO_041",
+      "FOTO_042"
+    ],
+    "convincing": [
+      "FOTO_039"
+    ],
+    "coordenacao": [
+      "FOTO_029"
+    ],
+    "coordenada": [
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032",
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "coordenar": [
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "cora": [
+      "FOTO_073"
+    ],
+    "cordão": [
+      "FOTO_064"
+    ],
+    "corpo": [
+      "FOTO_014"
+    ],
+    "coràhecicicà": [
+      "FOTO_015"
+    ],
+    "cracha": [
+      "FOTO_001",
+      "FOTO_062"
+    ],
+    "crachás": [
+      "FOTO_062"
+    ],
+    "crazy": [
+      "FOTO_038"
+    ],
+    "credencial": [
+      "FOTO_001"
+    ],
+    "crescimento": [
+      "FOTO_019",
+      "FOTO_020"
+    ],
+    "criteria": [
+      "FOTO_039"
+    ],
+    "criterios de julgamento": [
+      "FOTO_039"
+    ],
+    "cronograma": [
+      "FOTO_054"
+    ],
+    "crowd": [
+      "FOTO_011",
+      "FOTO_012"
+    ],
+    "ctdna": [
+      "FOTO_023"
+    ],
+    "cuidado": [
+      "FOTO_014",
+      "FOTO_019",
+      "FOTO_020",
+      "FOTO_024",
+      "FOTO_025",
+      "FOTO_026",
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "cuidado humanizado": [
+      "FOTO_024",
+      "FOTO_025"
+    ],
+    "cuidado integrado": [
+      "FOTO_026"
+    ],
+    "cuidados": [
+      "FOTO_019",
+      "FOTO_020",
+      "FOTO_025"
+    ],
+    "cuidados paliativos": [
+      "FOTO_025"
+    ],
+    "cumprindo": [
+      "FOTO_019",
+      "FOTO_020"
+    ],
+    "cunha": [
+      "FOTO_062"
+    ],
+    "customers": [
+      "FOTO_045"
+    ],
+    "câmera": [
+      "FOTO_057",
+      "FOTO_058"
+    ],
+    "câncer": [
+      "FOTO_013",
+      "FOTO_021",
+      "FOTO_026",
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "cânceres": [
+      "FOTO_013"
+    ],
+    "células": [
+      "FOTO_065"
+    ],
+    "dados": [
+      "FOTO_013",
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "dados dispersos": [
+      "FOTO_029"
+    ],
+    "dados e visibilidade": [
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "darcy": [
+      "FOTO_017"
+    ],
+    "darcy vargas": [
+      "FOTO_014"
+    ],
+    "deadline": [
+      "FOTO_054"
+    ],
+    "decisoes": [
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "decisões": [
+      "FOTO_022"
+    ],
+    "dedicado": [
+      "FOTO_019",
+      "FOTO_020"
+    ],
+    "deliberation": [
+      "FOTO_073"
+    ],
+    "demarch": [
+      "FOTO_068"
+    ],
+    "demo": [
+      "FOTO_046",
+      "FOTO_050"
+    ],
+    "democratizing": [
+      "FOTO_012"
+    ],
+    "democratizing healthcare": [
+      "FOTO_011",
+      "FOTO_012"
+    ],
+    "demographic": [
+      "FOTO_045"
+    ],
+    "demonstrate": [
+      "FOTO_047"
+    ],
+    "desafio": [
+      "FOTO_028",
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "desfechos e pros": [
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "design methodology": [
+      "FOTO_011",
+      "FOTO_012"
+    ],
+    "designing": [
+      "FOTO_050"
+    ],
+    "deum": [
+      "FOTO_026"
+    ],
+    "dia 1": [
+      "FOTO_002",
+      "FOTO_003",
+      "FOTO_004",
+      "FOTO_005",
+      "FOTO_006",
+      "FOTO_007",
+      "FOTO_008",
+      "FOTO_053"
+    ],
+    "dia 2": [
+      "FOTO_057",
+      "FOTO_058",
+      "FOTO_059",
+      "FOTO_060",
+      "FOTO_061",
+      "FOTO_062",
+      "FOTO_063",
+      "FOTO_064",
+      "FOTO_065",
+      "FOTO_066",
+      "FOTO_067",
+      "FOTO_068",
+      "FOTO_069",
+      "FOTO_070",
+      "FOTO_071",
+      "FOTO_072",
+      "FOTO_074",
+      "FOTO_075"
+    ],
+    "diagnostico": [
+      "FOTO_025"
+    ],
+    "diagnóstico": [
+      "FOTO_025"
+    ],
+    "dias": [
+      "FOTO_068"
+    ],
+    "diferentes": [
+      "FOTO_029"
+    ],
+    "dinner": [
+      "FOTO_054"
+    ],
+    "direcionada": [
+      "FOTO_022"
+    ],
+    "diverse": [
+      "FOTO_038"
+    ],
+    "diverse teams": [
+      "FOTO_038"
+    ],
+    "diversity": [
+      "FOTO_011",
+      "FOTO_012"
+    ],
+    "divulgadas": [
+      "FOTO_013"
+    ],
+    "doenças": [
+      "FOTO_013",
+      "FOTO_018",
+      "FOTO_019",
+      "FOTO_020",
+      "FOTO_027"
+    ],
+    "dois": [
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "door": [
+      "FOTO_038"
+    ],
+    "down": [
+      "FOTO_001",
+      "FOTO_009",
+      "FOTO_010"
+    ],
+    "draws": [
+      "FOTO_011",
+      "FOTO_012"
+    ],
+    "drive": [
+      "FOTO_047"
+    ],
+    "during": [
+      "FOTO_047"
+    ],
+    "early": [
+      "FOTO_045"
+    ],
+    "early adopters": [
+      "FOTO_045"
+    ],
+    "edicao genica": [
+      "FOTO_065"
+    ],
+    "edição": [
+      "FOTO_065"
+    ],
+    "effective": [
+      "FOTO_050"
+    ],
+    "effective slides": [
+      "FOTO_050"
+    ],
+    "einste": [
+      "FOTO_042"
+    ],
+    "einstein": [
+      "FOTO_001",
+      "FOTO_009",
+      "FOTO_010",
+      "FOTO_011",
+      "FOTO_012",
+      "FOTO_014",
+      "FOTO_016",
+      "FOTO_017",
+      "FOTO_019",
+      "FOTO_020",
+      "FOTO_022",
+      "FOTO_024",
+      "FOTO_025",
+      "FOTO_027",
+      "FOTO_028",
+      "FOTO_038",
+      "FOTO_043",
+      "FOTO_044",
+      "FOTO_045",
+      "FOTO_047",
+      "FOTO_051",
+      "FOTO_059",
+      "FOTO_060",
+      "FOTO_061",
+      "FOTO_062",
+      "FOTO_066",
+      "FOTO_067",
+      "FOTO_068",
+      "FOTO_074"
+    ],
+    "einstein cancer center": [
+      "FOTO_028"
+    ],
+    "electric": [
+      "FOTO_065"
+    ],
+    "electronic": [
+      "FOTO_054"
+    ],
+    "elekta": [
+      "FOTO_015"
+    ],
+    "eles": [
+      "FOTO_029"
+    ],
+    "elo": [
+      "FOTO_073"
+    ],
+    "emotional": [
+      "FOTO_044"
+    ],
+    "emotional story": [
+      "FOTO_044"
+    ],
+    "encerramento": [
+      "FOTO_074",
+      "FOTO_075"
+    ],
+    "ending": [
+      "FOTO_046"
+    ],
+    "ensaio": [
+      "FOTO_055",
+      "FOTO_056"
+    ],
+    "ensino": [
+      "FOTO_024",
+      "FOTO_025",
+      "FOTO_026"
+    ],
+    "entrada": [
+      "FOTO_029"
+    ],
+    "epidemiologia": [
+      "FOTO_013"
+    ],
+    "equador": [
+      "FOTO_017"
+    ],
+    "equipe": [
+      "FOTO_002",
+      "FOTO_003",
+      "FOTO_004",
+      "FOTO_005",
+      "FOTO_006",
+      "FOTO_007",
+      "FOTO_008",
+      "FOTO_026",
+      "FOTO_057",
+      "FOTO_058",
+      "FOTO_062"
+    ],
+    "equipe de apoio": [
+      "FOTO_015",
+      "FOTO_016"
+    ],
+    "equipe multidisciplinar": [
+      "FOTO_026"
+    ],
+    "eretz-bio": [
+      "FOTO_047"
+    ],
+    "eretz.b10": [
+      "FOTO_056"
+    ],
+    "eretz.bio": [
+      "FOTO_001",
+      "FOTO_009",
+      "FOTO_010",
+      "FOTO_011",
+      "FOTO_012",
+      "FOTO_046",
+      "FOTO_062"
+    ],
+    "escadaria": [
+      "FOTO_066",
+      "FOTO_067"
+    ],
+    "especialidades": [
+      "FOTO_016"
+    ],
+    "especialistas": [
+      "FOTO_029"
+    ],
+    "especializado": [
+      "FOTO_019",
+      "FOTO_020"
+    ],
+    "específico": [
+      "FOTO_026"
+    ],
+    "espelhado": [
+      "FOTO_057",
+      "FOTO_058"
+    ],
+    "estilo": [
+      "FOTO_023"
+    ],
+    "estilo de vida": [
+      "FOTO_022"
+    ],
+    "estimativas": [
+      "FOTO_013"
+    ],
+    "estomago": [
+      "FOTO_013"
+    ],
+    "estudos": [
+      "FOTO_018"
+    ],
+    "estudos ativos": [
+      "FOTO_018"
+    ],
+    "ever": [
+      "FOTO_047"
+    ],
+    "everything": [
+      "FOTO_046"
+    ],
+    "evolução": [
+      "FOTO_015",
+      "FOTO_016"
+    ],
+    "excelência": [
+      "FOTO_018",
+      "FOTO_021",
+      "FOTO_024",
+      "FOTO_025",
+      "FOTO_026",
+      "FOTO_027"
+    ],
+    "exemplos": [
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032",
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "existe": [
+      "FOTO_021"
+    ],
+    "expansao de celulas": [
+      "FOTO_065"
+    ],
+    "expansão": [
+      "FOTO_065"
+    ],
+    "experience": [
+      "FOTO_039"
+    ],
+    "experiência": [
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "expertise": [
+      "FOTO_043",
+      "FOTO_047"
+    ],
+    "experts": [
+      "FOTO_047"
+    ],
+    "exponencial": [
+      "FOTO_019",
+      "FOTO_020"
+    ],
+    "external": [
+      "FOTO_051"
+    ],
+    "fail": [
+      "FOTO_038"
+    ],
+    "fascina": [
+      "FOTO_068"
+    ],
+    "fast": [
+      "FOTO_038"
+    ],
+    "feasibility": [
+      "FOTO_012"
+    ],
+    "feasible": [
+      "FOTO_041",
+      "FOTO_042"
+    ],
+    "feedback": [
+      "FOTO_055",
+      "FOTO_056"
+    ],
+    "ferreira": [
+      "FOTO_001"
+    ],
+    "figado": [
+      "FOTO_013"
+    ],
+    "final": [
+      "FOTO_054"
+    ],
+    "first": [
+      "FOTO_055",
+      "FOTO_056",
+      "FOTO_073"
+    ],
+    "focus": [
+      "FOTO_038",
+      "FOTO_043",
+      "FOTO_044",
+      "FOTO_045",
+      "FOTO_046",
+      "FOTO_047"
+    ],
+    "follow": [
+      "FOTO_052"
+    ],
+    "follow-up": [
+      "FOTO_029"
+    ],
+    "fornecer": [
+      "FOTO_026"
+    ],
+    "foto clareada": [
+      "FOTO_031"
+    ],
+    "four": [
+      "FOTO_043"
+    ],
+    "four pillars": [
+      "FOTO_043"
+    ],
+    "fragmentada": [
+      "FOTO_029"
+    ],
+    "fraldinha": [
+      "FOTO_053"
+    ],
+    "francozo": [
+      "FOTO_068"
+    ],
+    "free": [
+      "FOTO_011",
+      "FOTO_012"
+    ],
+    "fresh": [
+      "FOTO_011",
+      "FOTO_012"
+    ],
+    "frizze": [
+      "FOTO_053",
+      "FOTO_063"
+    ],
+    "frontal": [
+      "FOTO_057",
+      "FOTO_058"
+    ],
+    "funcionar": [
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "gabriel": [
+      "FOTO_068"
+    ],
+    "gabriel dias francozo": [
+      "FOTO_068"
+    ],
+    "gargalos": [
+      "FOTO_029"
+    ],
+    "gastronomia": [
+      "FOTO_053"
+    ],
+    "gave": [
+      "FOTO_045"
+    ],
+    "genes": [
+      "FOTO_022"
+    ],
+    "genomica": [
+      "FOTO_022"
+    ],
+    "genéticas": [
+      "FOTO_022"
+    ],
+    "genômica": [
+      "FOTO_022"
+    ],
+    "globocan": [
+      "FOTO_013"
+    ],
+    "globocan 2024": [
+      "FOTO_013"
+    ],
+    "gnocchi": [
+      "FOTO_063"
+    ],
+    "goal": [
+      "FOTO_040"
+    ],
+    "goiania": [
+      "FOTO_014"
+    ],
+    "goiânia": [
+      "FOTO_017"
+    ],
+    "google": [
+      "FOTO_051"
+    ],
+    "google slides": [
+      "FOTO_051"
+    ],
+    "grands": [
+      "FOTO_073"
+    ],
+    "grupoboticario": [
+      "FOTO_001",
+      "FOTO_009",
+      "FOTO_010"
+    ],
+    "grupoboticário": [
+      "FOTO_001",
+      "FOTO_009",
+      "FOTO_069",
+      "FOTO_070"
+    ],
+    "gênica": [
+      "FOTO_065"
+    ],
+    "hack": [
+      "FOTO_038"
+    ],
+    "hack dos": [
+      "FOTO_038"
+    ],
+    "hackinc": [
+      "FOTO_028"
+    ],
+    "hackincj": [
+      "FOTO_042"
+    ],
+    "healthcare": [
+      "FOTO_011",
+      "FOTO_012"
+    ],
+    "heliopolis": [
+      "FOTO_014"
+    ],
+    "heliópolis": [
+      "FOTO_017"
+    ],
+    "help": [
+      "FOTO_038"
+    ],
+    "hematologia": [
+      "FOTO_015",
+      "FOTO_016",
+      "FOTO_017",
+      "FOTO_018",
+      "FOTO_019",
+      "FOTO_020"
+    ],
+    "hematológicas": [
+      "FOTO_018",
+      "FOTO_027"
+    ],
+    "hematológico": [
+      "FOTO_026"
+    ],
+    "hematológicos": [
+      "FOTO_027"
+    ],
+    "hemostasia": [
+      "FOTO_027"
+    ],
+    "hepapatch": [
+      "FOTO_073"
+    ],
+    "hereditário": [
+      "FOTO_023"
+    ],
+    "highlights": [
+      "FOTO_054"
+    ],
+    "histiocíticas": [
+      "FOTO_018",
+      "FOTO_027"
+    ],
+    "hllp": [
+      "FOTO_024"
+    ],
+    "hmvsc": [
+      "FOTO_017"
+    ],
+    "home": [
+      "FOTO_047"
+    ],
+    "horarios": [
+      "FOTO_054"
+    ],
+    "hosp": [
+      "FOTO_011"
+    ],
+    "https": [
+      "FOTO_055",
+      "FOTO_056"
+    ],
+    "humanity": [
+      "FOTO_044"
+    ],
+    "humanity > technology": [
+      "FOTO_044"
+    ],
+    "humanizado": [
+      "FOTO_024",
+      "FOTO_025"
+    ],
+    "híbrida": [
+      "FOTO_021"
+    ],
+    "iarc": [
+      "FOTO_013"
+    ],
+    "iarc/oms": [
+      "FOTO_013"
+    ],
+    "icário": [
+      "FOTO_010"
+    ],
+    "ideal": [
+      "FOTO_040",
+      "FOTO_041",
+      "FOTO_042"
+    ],
+    "ideas": [
+      "FOTO_038"
+    ],
+    "identified": [
+      "FOTO_039"
+    ],
+    "identify": [
+      "FOTO_045"
+    ],
+    "ilustrativos": [
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036"
+    ],
+    "impact": [
+      "FOTO_039"
+    ],
+    "implementation": [
+      "FOTO_041",
+      "FOTO_042"
+    ],
+    "important": [
+      "FOTO_046"
+    ],
+    "impulsionada": [
+      "FOTO_023"
+    ],
+    "inauguraçào": [
+      "FOTO_028"
+    ],
+    "individualizadas": [
+      "FOTO_022"
+    ],
+    "information": [
+      "FOTO_050"
+    ],
+    "infraestrutura": [
+      "FOTO_015",
+      "FOTO_016",
+      "FOTO_021"
+    ],
+    "innovation": [
+      "FOTO_011",
+      "FOTO_012",
+      "FOTO_039"
+    ],
+    "inovadora": [
+      "FOTO_022"
+    ],
+    "inovação": [
+      "FOTO_019",
+      "FOTO_020",
+      "FOTO_023",
+      "FOTO_026"
+    ],
+    "instead": [
+      "FOTO_050"
+    ],
+    "integrada": [
+      "FOTO_028",
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "integrado": [
+      "FOTO_014",
+      "FOTO_026"
+    ],
+    "integral": [
+      "FOTO_019",
+      "FOTO_020"
+    ],
+    "integrativa": [
+      "FOTO_025"
+    ],
+    "interdisciplinary": [
+      "FOTO_012"
+    ],
+    "interfaces": [
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "ipiranga": [
+      "FOTO_014",
+      "FOTO_017"
+    ],
+    "isjust": [
+      "FOTO_046"
+    ],
+    "israe": [
+      "FOTO_042"
+    ],
+    "israelitd": [
+      "FOTO_011"
+    ],
+    "iterate": [
+      "FOTO_038"
+    ],
+    "iterate and pivot": [
+      "FOTO_038"
+    ],
+    "ittpfz": [
+      "FOTO_060"
+    ],
+    "jardim": [
+      "FOTO_057",
+      "FOTO_058",
+      "FOTO_059",
+      "FOTO_060",
+      "FOTO_061",
+      "FOTO_062",
+      "FOTO_063",
+      "FOTO_064",
+      "FOTO_066",
+      "FOTO_067"
+    ],
+    "jhospital": [
+      "FOTO_028"
+    ],
+    "jornada": [
+      "FOTO_019",
+      "FOTO_020",
+      "FOTO_023",
+      "FOTO_028",
+      "FOTO_029",
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "jornada do paciente": [
+      "FOTO_023",
+      "FOTO_026"
+    ],
+    "jornada fragmentada": [
+      "FOTO_029"
+    ],
+    "jornadas": [
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "judges": [
+      "FOTO_050",
+      "FOTO_068"
+    ],
+    "judging": [
+      "FOTO_039"
+    ],
+    "judging criteria": [
+      "FOTO_039"
+    ],
+    "julho": [
+      "FOTO_013",
+      "FOTO_028"
+    ],
+    "julho 2027": [
+      "FOTO_028"
+    ],
+    "jurados": [
+      "FOTO_047",
+      "FOTO_068"
+    ],
+    "key tips": [
+      "FOTO_050"
+    ],
+    "knowledge": [
+      "FOTO_047"
+    ],
+    "laminados": [
+      "FOTO_053"
+    ],
+    "lata": [
+      "FOTO_062"
+    ],
+    "leave": [
+      "FOTO_038"
+    ],
+    "leitos": [
+      "FOTO_021"
+    ],
+    "leucemias": [
+      "FOTO_018"
+    ],
+    "limpa": [
+      "FOTO_065"
+    ],
+    "limão": [
+      "FOTO_053"
+    ],
+    "linfomas": [
+      "FOTO_018",
+      "FOTO_027"
+    ],
+    "linfotrack": [
+      "FOTO_073"
+    ],
+    "link": [
+      "FOTO_051",
+      "FOTO_069",
+      "FOTO_070",
+      "FOTO_071",
+      "FOTO_072",
+      "FOTO_073"
+    ],
+    "link trial": [
+      "FOTO_069",
+      "FOTO_070",
+      "FOTO_071",
+      "FOTO_072",
+      "FOTO_073"
+    ],
+    "links": [
+      "FOTO_051"
+    ],
+    "linus": [
+      "FOTO_068"
+    ],
+    "linus fascina": [
+      "FOTO_068"
+    ],
+    "liquida": [
+      "FOTO_023"
+    ],
+    "lunch": [
+      "FOTO_054"
+    ],
+    "maker lab": [
+      "FOTO_054"
+    ],
+    "malignas": [
+      "FOTO_027"
+    ],
+    "mama": [
+      "FOTO_013",
+      "FOTO_018",
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "manager": [
+      "FOTO_068"
+    ],
+    "mapa": [
+      "FOTO_017"
+    ],
+    "marginal pinheiros": [
+      "FOTO_019",
+      "FOTO_020"
+    ],
+    "mars": [
+      "FOTO_013"
+    ],
+    "matam": [
+      "FOTO_013"
+    ],
+    "medical": [
+      "FOTO_068"
+    ],
+    "medicina": [
+      "FOTO_022",
+      "FOTO_024",
+      "FOTO_025",
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "medicina de precisao": [
+      "FOTO_022"
+    ],
+    "medicina integrativa": [
+      "FOTO_024",
+      "FOTO_025"
+    ],
+    "medula": [
+      "FOTO_014"
+    ],
+    "melhor": [
+      "FOTO_015",
+      "FOTO_016"
+    ],
+    "mensuravel": [
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "mensurável": [
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "mentors": [
+      "FOTO_054"
+    ],
+    "metropolitano": [
+      "FOTO_017"
+    ],
+    "mezzanine": [
+      "FOTO_054"
+    ],
+    "mieloides": [
+      "FOTO_027"
+    ],
+    "mieloma": [
+      "FOTO_018",
+      "FOTO_027"
+    ],
+    "milho": [
+      "FOTO_053"
+    ],
+    "milhões": [
+      "FOTO_013"
+    ],
+    "minutes": [
+      "FOTO_046",
+      "FOTO_051"
+    ],
+    "mit hacking medicine": [
+      "FOTO_001",
+      "FOTO_009",
+      "FOTO_010",
+      "FOTO_074",
+      "FOTO_075"
+    ],
+    "mithackmed.live": [
+      "FOTO_056"
+    ],
+    "mithackmed.live/r/practice-pitch": [
+      "FOTO_056"
+    ],
+    "mocratizing": [
+      "FOTO_011"
+    ],
+    "model": [
+      "FOTO_048",
+      "FOTO_049"
+    ],
+    "moderno": [
+      "FOTO_021"
+    ],
+    "molecular": [
+      "FOTO_068"
+    ],
+    "molho": [
+      "FOTO_053"
+    ],
+    "morte": [
+      "FOTO_013"
+    ],
+    "mortes": [
+      "FOTO_013"
+    ],
+    "morumbi": [
+      "FOTO_014",
+      "FOTO_015",
+      "FOTO_017"
+    ],
+    "motivated": [
+      "FOTO_044"
+    ],
+    "multidisciplinar": [
+      "FOTO_026"
+    ],
+    "mundo": [
+      "FOTO_013",
+      "FOTO_015",
+      "FOTO_016"
+    ],
+    "my navigation": [
+      "FOTO_073"
+    ],
+    "médicas": [
+      "FOTO_014",
+      "FOTO_016"
+    ],
+    "múltiplos": [
+      "FOTO_029"
+    ],
+    "name": [
+      "FOTO_073"
+    ],
+    "navegacao": [
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "needs": [
+      "FOTO_040",
+      "FOTO_041",
+      "FOTO_042"
+    ],
+    "neoplasias": [
+      "FOTO_018",
+      "FOTO_027"
+    ],
+    "neoplasias hematologicas": [
+      "FOTO_027"
+    ],
+    "neuro-oncologia": [
+      "FOTO_027"
+    ],
+    "neurodynamics": [
+      "FOTO_001",
+      "FOTO_069",
+      "FOTO_070",
+      "FOTO_071",
+      "FOTO_072",
+      "FOTO_073"
+    ],
+    "newsweek": [
+      "FOTO_015",
+      "FOTO_016"
+    ],
+    "nextpath": [
+      "FOTO_073"
+    ],
+    "ngs": [
+      "FOTO_023"
+    ],
+    "nivel l5": [
+      "FOTO_065"
+    ],
+    "nm/ct": [
+      "FOTO_014"
+    ],
+    "no solutions": [
+      "FOTO_052"
+    ],
+    "norteadora": [
+      "FOTO_033",
+      "FOTO_037"
+    ],
+    "notes": [
+      "FOTO_052",
+      "FOTO_073"
+    ],
+    "novo": [
+      "FOTO_028"
+    ],
+    "nuclear": [
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "nível": [
+      "FOTO_065"
+    ],
+    "números": [
+      "FOTO_014"
+    ],
+    "o desafio": [
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "objetivo": [
+      "FOTO_022"
+    ],
+    "oeretz.bio": [
+      "FOTO_009",
+      "FOTO_040",
+      "FOTO_042"
+    ],
+    "oms": [
+      "FOTO_013"
+    ],
+    "onco-hematológicas": [
+      "FOTO_019",
+      "FOTO_020"
+    ],
+    "oncoflow": [
+      "FOTO_073"
+    ],
+    "oncogenetica": [
+      "FOTO_027"
+    ],
+    "oncogeriatria": [
+      "FOTO_027"
+    ],
+    "oncoguide": [
+      "FOTO_073"
+    ],
+    "oncologia": [
+      "FOTO_015",
+      "FOTO_016",
+      "FOTO_017",
+      "FOTO_018",
+      "FOTO_019",
+      "FOTO_020",
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "oncology": [
+      "FOTO_068"
+    ],
+    "oncológica": [
+      "FOTO_028",
+      "FOTO_029",
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "oncológico": [
+      "FOTO_026"
+    ],
+    "oncosurvive": [
+      "FOTO_073"
+    ],
+    "one stop shop": [
+      "FOTO_026"
+    ],
+    "open": [
+      "FOTO_011",
+      "FOTO_012",
+      "FOTO_054"
+    ],
+    "opening": [
+      "FOTO_051"
+    ],
+    "opep": [
+      "FOTO_038"
+    ],
+    "opinions": [
+      "FOTO_055"
+    ],
+    "orgam": [
+      "FOTO_040"
+    ],
+    "organized": [
+      "FOTO_001",
+      "FOTO_009",
+      "FOTO_010",
+      "FOTO_062"
+    ],
+    "ornaru": [
+      "FOTO_044"
+    ],
+    "orocess": [
+      "FOTO_011"
+    ],
+    "outras": [
+      "FOTO_027"
+    ],
+    "overview": [
+      "FOTO_048",
+      "FOTO_049"
+    ],
+    "overwhelming": [
+      "FOTO_050"
+    ],
+    "paciente": [
+      "FOTO_022",
+      "FOTO_023",
+      "FOTO_024",
+      "FOTO_025",
+      "FOTO_029",
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "paciente no centro": [
+      "FOTO_024",
+      "FOTO_025"
+    ],
+    "palco": [
+      "FOTO_070"
+    ],
+    "paliativos": [
+      "FOTO_025"
+    ],
+    "palmeiras": [
+      "FOTO_060"
+    ],
+    "palmitos": [
+      "FOTO_053"
+    ],
+    "pancreasync": [
+      "FOTO_073"
+    ],
+    "panoramica": [
+      "FOTO_066",
+      "FOTO_067"
+    ],
+    "paraproteinemias": [
+      "FOTO_027"
+    ],
+    "parmesão": [
+      "FOTO_053"
+    ],
+    "parque": [
+      "FOTO_028"
+    ],
+    "parque global": [
+      "FOTO_019",
+      "FOTO_020",
+      "FOTO_028"
+    ],
+    "participant": [
+      "FOTO_057",
+      "FOTO_058",
+      "FOTO_062"
+    ],
+    "participantes": [
+      "FOTO_002",
+      "FOTO_003",
+      "FOTO_004",
+      "FOTO_005",
+      "FOTO_006",
+      "FOTO_007",
+      "FOTO_008"
+    ],
+    "partida": [
+      "FOTO_022"
+    ],
+    "passionate": [
+      "FOTO_044"
+    ],
+    "passionfruit": [
+      "FOTO_073"
+    ],
+    "passionfruit popsi": [
+      "FOTO_073"
+    ],
+    "passos": [
+      "FOTO_062"
+    ],
+    "paulo": [
+      "FOTO_017"
+    ],
+    "pediatrica": [
+      "FOTO_027"
+    ],
+    "pedro": [
+      "FOTO_062"
+    ],
+    "pedro caversan": [
+      "FOTO_062",
+      "FOTO_063"
+    ],
+    "percorre": [
+      "FOTO_029"
+    ],
+    "perde": [
+      "FOTO_029"
+    ],
+    "perdizes": [
+      "FOTO_014",
+      "FOTO_015",
+      "FOTO_017"
+    ],
+    "pergunta": [
+      "FOTO_033",
+      "FOTO_037"
+    ],
+    "pergunta norteadora": [
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "perspectives": [
+      "FOTO_011",
+      "FOTO_012"
+    ],
+    "pesquisa": [
+      "FOTO_018",
+      "FOTO_023",
+      "FOTO_026"
+    ],
+    "pesquisa clinica": [
+      "FOTO_018"
+    ],
+    "pesquisa translacional": [
+      "FOTO_023"
+    ],
+    "pessoas": [
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "pictures": [
+      "FOTO_050"
+    ],
+    "pillars": [
+      "FOTO_043"
+    ],
+    "pitch": [
+      "FOTO_040",
+      "FOTO_041",
+      "FOTO_042",
+      "FOTO_043",
+      "FOTO_044",
+      "FOTO_045",
+      "FOTO_046",
+      "FOTO_047",
+      "FOTO_050",
+      "FOTO_052",
+      "FOTO_055",
+      "FOTO_056"
+    ],
+    "pitch final": [
+      "FOTO_069",
+      "FOTO_070",
+      "FOTO_071",
+      "FOTO_072"
+    ],
+    "pitches": [
+      "FOTO_055",
+      "FOTO_056"
+    ],
+    "pitching": [
+      "FOTO_051",
+      "FOTO_052",
+      "FOTO_054"
+    ],
+    "pivot": [
+      "FOTO_038"
+    ],
+    "please": [
+      "FOTO_055",
+      "FOTO_056"
+    ],
+    "podemos": [
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "point": [
+      "FOTO_047"
+    ],
+    "ponto": [
+      "FOTO_022"
+    ],
+    "pontos": [
+      "FOTO_029"
+    ],
+    "pontuacao": [
+      "FOTO_073"
+    ],
+    "popsi": [
+      "FOTO_073"
+    ],
+    "portas": [
+      "FOTO_029"
+    ],
+    "portas de entrada": [
+      "FOTO_029"
+    ],
+    "potential": [
+      "FOTO_039"
+    ],
+    "practice": [
+      "FOTO_055",
+      "FOTO_056"
+    ],
+    "practice pitch": [
+      "FOTO_055",
+      "FOTO_056"
+    ],
+    "pratinho": [
+      "FOTO_053",
+      "FOTO_063"
+    ],
+    "prazos": [
+      "FOTO_051"
+    ],
+    "precisam": [
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "precisamos": [
+      "FOTO_030",
+      "FOTO_032"
+    ],
+    "precise": [
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "precisão": [
+      "FOTO_022"
+    ],
+    "predição": [
+      "FOTO_023"
+    ],
+    "premiacao": [
+      "FOTO_073",
+      "FOTO_074",
+      "FOTO_075"
+    ],
+    "preparation": [
+      "FOTO_043",
+      "FOTO_044",
+      "FOTO_046",
+      "FOTO_047"
+    ],
+    "present": [
+      "FOTO_046"
+    ],
+    "presentation": [
+      "FOTO_039",
+      "FOTO_050"
+    ],
+    "prevencao": [
+      "FOTO_023"
+    ],
+    "prevenção": [
+      "FOTO_022",
+      "FOTO_023",
+      "FOTO_025",
+      "FOTO_028",
+      "FOTO_029"
+    ],
+    "prevista": [
+      "FOTO_028"
+    ],
+    "principal": [
+      "FOTO_013"
+    ],
+    "printing": [
+      "FOTO_054"
+    ],
+    "privadas": [
+      "FOTO_017"
+    ],
+    "privado": [
+      "FOTO_014",
+      "FOTO_015",
+      "FOTO_016"
+    ],
+    "problem": [
+      "FOTO_039",
+      "FOTO_040",
+      "FOTO_041",
+      "FOTO_042",
+      "FOTO_044",
+      "FOTO_048",
+      "FOTO_049",
+      "FOTO_052",
+      "FOTO_054"
+    ],
+    "problem 1 min": [
+      "FOTO_048",
+      "FOTO_049"
+    ],
+    "problem pitching": [
+      "FOTO_052"
+    ],
+    "problem-solution fit": [
+      "FOTO_011",
+      "FOTO_012"
+    ],
+    "procedimentos": [
+      "FOTO_014"
+    ],
+    "process": [
+      "FOTO_012"
+    ],
+    "processos": [
+      "FOTO_021"
+    ],
+    "programas": [
+      "FOTO_023"
+    ],
+    "projecao 2050": [
+      "FOTO_013"
+    ],
+    "project": [
+      "FOTO_044"
+    ],
+    "promoçao": [
+      "FOTO_025"
+    ],
+    "promoção": [
+      "FOTO_023"
+    ],
+    "pros": [
+      "FOTO_023",
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "prostata": [
+      "FOTO_018",
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "prototyping": [
+      "FOTO_054"
+    ],
+    "provided": [
+      "FOTO_051"
+    ],
+    "próprio": [
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "próstata": [
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "publico": [
+      "FOTO_014"
+    ],
+    "pulmao": [
+      "FOTO_013",
+      "FOTO_018"
+    ],
+    "públicas": [
+      "FOTO_017"
+    ],
+    "público": [
+      "FOTO_014"
+    ],
+    "q&a": [
+      "FOTO_047",
+      "FOTO_051"
+    ],
+    "qr code": [
+      "FOTO_055",
+      "FOTO_056"
+    ],
+    "qualquer": [
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "quarentena": [
+      "FOTO_065"
+    ],
+    "quente": [
+      "FOTO_053",
+      "FOTO_063"
+    ],
+    "questions": [
+      "FOTO_047"
+    ],
+    "quimioterapia": [
+      "FOTO_015",
+      "FOTO_016",
+      "FOTO_021"
+    ],
+    "radioterapia": [
+      "FOTO_015",
+      "FOTO_016",
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "ragu": [
+      "FOTO_053",
+      "FOTO_063"
+    ],
+    "rank": [
+      "FOTO_073"
+    ],
+    "ranking": [
+      "FOTO_015",
+      "FOTO_016",
+      "FOTO_073"
+    ],
+    "rastreamento": [
+      "FOTO_023",
+      "FOTO_029"
+    ],
+    "rationale": [
+      "FOTO_039"
+    ],
+    "rdisciplinary": [
+      "FOTO_011"
+    ],
+    "reabilitação": [
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "reach": [
+      "FOTO_038"
+    ],
+    "real": [
+      "FOTO_039"
+    ],
+    "reca": [
+      "FOTO_021"
+    ],
+    "reconhecida": [
+      "FOTO_016"
+    ],
+    "rede": [
+      "FOTO_017"
+    ],
+    "rede einstein": [
+      "FOTO_017"
+    ],
+    "redesenhar": [
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "redução": [
+      "FOTO_023"
+    ],
+    "registration": [
+      "FOTO_054"
+    ],
+    "regras": [
+      "FOTO_038",
+      "FOTO_051"
+    ],
+    "reminders": [
+      "FOTO_051"
+    ],
+    "rent": [
+      "FOTO_073"
+    ],
+    "rent a grands": [
+      "FOTO_073"
+    ],
+    "research": [
+      "FOTO_068"
+    ],
+    "ressed": [
+      "FOTO_040",
+      "FOTO_042"
+    ],
+    "resultado": [
+      "FOTO_073"
+    ],
+    "resultados": [
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "revista": [
+      "FOTO_016"
+    ],
+    "reúne": [
+      "FOTO_021"
+    ],
+    "reúnem": [
+      "FOTO_026"
+    ],
+    "right": [
+      "FOTO_055",
+      "FOTO_056"
+    ],
+    "risco": [
+      "FOTO_023"
+    ],
+    "risoto": [
+      "FOTO_053"
+    ],
+    "robótica": [
+      "FOTO_021"
+    ],
+    "rodrigo": [
+      "FOTO_068"
+    ],
+    "rodrigo demarch": [
+      "FOTO_068"
+    ],
+    "roxa": [
+      "FOTO_053",
+      "FOTO_063"
+    ],
+    "sacola": [
+      "FOTO_063"
+    ],
+    "sala": [
+      "FOTO_065"
+    ],
+    "sala limpa": [
+      "FOTO_065"
+    ],
+    "salada": [
+      "FOTO_053",
+      "FOTO_063"
+    ],
+    "salas": [
+      "FOTO_021"
+    ],
+    "saluo": [
+      "FOTO_017"
+    ],
+    "sarah": [
+      "FOTO_062"
+    ],
+    "sarah cunha": [
+      "FOTO_062"
+    ],
+    "saturday": [
+      "FOTO_054"
+    ],
+    "saúde": [
+      "FOTO_023",
+      "FOTO_025",
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "schedule": [
+      "FOTO_054"
+    ],
+    "schneider": [
+      "FOTO_065"
+    ],
+    "schneider electric": [
+      "FOTO_065"
+    ],
+    "score": [
+      "FOTO_073"
+    ],
+    "seco": [
+      "FOTO_053"
+    ],
+    "second": [
+      "FOTO_073"
+    ],
+    "seek": [
+      "FOTO_038"
+    ],
+    "segue": [
+      "FOTO_019",
+      "FOTO_020"
+    ],
+    "segundo": [
+      "FOTO_015",
+      "FOTO_016"
+    ],
+    "selfie": [
+      "FOTO_002",
+      "FOTO_003",
+      "FOTO_004",
+      "FOTO_005",
+      "FOTO_006",
+      "FOTO_007",
+      "FOTO_008",
+      "FOTO_057",
+      "FOTO_058",
+      "FOTO_064"
+    ],
+    "serve": [
+      "FOTO_055",
+      "FOTO_056"
+    ],
+    "servicos": [
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "serviços": [
+      "FOTO_029"
+    ],
+    "setores": [
+      "FOTO_014"
+    ],
+    "sexual": [
+      "FOTO_031"
+    ],
+    "sheet": [
+      "FOTO_055",
+      "FOTO_056"
+    ],
+    "should": [
+      "FOTO_045",
+      "FOTO_050"
+    ],
+    "showcase": [
+      "FOTO_050"
+    ],
+    "siciliano": [
+      "FOTO_053"
+    ],
+    "sign": [
+      "FOTO_055",
+      "FOTO_056"
+    ],
+    "sign-ups": [
+      "FOTO_055",
+      "FOTO_056"
+    ],
+    "signup": [
+      "FOTO_055",
+      "FOTO_056"
+    ],
+    "single-minded": [
+      "FOTO_045"
+    ],
+    "single-minded focus": [
+      "FOTO_045"
+    ],
+    "skills": [
+      "FOTO_011"
+    ],
+    "slide": [
+      "FOTO_048",
+      "FOTO_049"
+    ],
+    "slides": [
+      "FOTO_050",
+      "FOTO_051"
+    ],
+    "sobremesas": [
+      "FOTO_063"
+    ],
+    "sobrevivencia": [
+      "FOTO_023"
+    ],
+    "solution": [
+      "FOTO_039",
+      "FOTO_040",
+      "FOTO_041",
+      "FOTO_042",
+      "FOTO_048",
+      "FOTO_049",
+      "FOTO_050"
+    ],
+    "solution 1 min": [
+      "FOTO_048",
+      "FOTO_049"
+    ],
+    "solutions": [
+      "FOTO_052"
+    ],
+    "solve": [
+      "FOTO_044"
+    ],
+    "soul voice": [
+      "FOTO_073"
+    ],
+    "specific": [
+      "FOTO_039",
+      "FOTO_052"
+    ],
+    "sponsor": [
+      "FOTO_001"
+    ],
+    "sponsors": [
+      "FOTO_069",
+      "FOTO_070"
+    ],
+    "stakeholders": [
+      "FOTO_039",
+      "FOTO_045"
+    ],
+    "start": [
+      "FOTO_045"
+    ],
+    "statista": [
+      "FOTO_015",
+      "FOTO_016"
+    ],
+    "story": [
+      "FOTO_040",
+      "FOTO_041",
+      "FOTO_042",
+      "FOTO_043",
+      "FOTO_044",
+      "FOTO_046",
+      "FOTO_047"
+    ],
+    "storytelling": [
+      "FOTO_040",
+      "FOTO_041",
+      "FOTO_042"
+    ],
+    "student": [
+      "FOTO_068"
+    ],
+    "study": [
+      "FOTO_045"
+    ],
+    "sunday": [
+      "FOTO_051",
+      "FOTO_054"
+    ],
+    "supplements": [
+      "FOTO_050"
+    ],
+    "sure": [
+      "FOTO_046"
+    ],
+    "survivor": [
+      "FOTO_024"
+    ],
+    "survivorship": [
+      "FOTO_024",
+      "FOTO_025",
+      "FOTO_028"
+    ],
+    "surwvorship": [
+      "FOTO_025"
+    ],
+    "sus": [
+      "FOTO_014"
+    ],
+    "sustainability": [
+      "FOTO_012"
+    ],
+    "sustainabl": [
+      "FOTO_041"
+    ],
+    "sustainable": [
+      "FOTO_041",
+      "FOTO_042"
+    ],
+    "sustentabilidade 2025": [
+      "FOTO_015",
+      "FOTO_016"
+    ],
+    "sólidos": [
+      "FOTO_027"
+    ],
+    "take": [
+      "FOTO_052",
+      "FOTO_055",
+      "FOTO_056"
+    ],
+    "target": [
+      "FOTO_045"
+    ],
+    "team": [
+      "FOTO_054",
+      "FOTO_069",
+      "FOTO_070",
+      "FOTO_071",
+      "FOTO_072",
+      "FOTO_073"
+    ],
+    "team 112": [
+      "FOTO_069",
+      "FOTO_070",
+      "FOTO_071",
+      "FOTO_072"
+    ],
+    "team 114": [
+      "FOTO_069",
+      "FOTO_070",
+      "FOTO_071",
+      "FOTO_072"
+    ],
+    "teammate": [
+      "FOTO_047"
+    ],
+    "teams": [
+      "FOTO_038"
+    ],
+    "technical": [
+      "FOTO_047"
+    ],
+    "technology": [
+      "FOTO_044"
+    ],
+    "telao": [
+      "FOTO_009",
+      "FOTO_010"
+    ],
+    "tell": [
+      "FOTO_040",
+      "FOTO_041",
+      "FOTO_042",
+      "FOTO_044"
+    ],
+    "tempo do pitch": [
+      "FOTO_048",
+      "FOTO_049"
+    ],
+    "terapia": [
+      "FOTO_027"
+    ],
+    "terapia celular": [
+      "FOTO_065"
+    ],
+    "terapias": [
+      "FOTO_019",
+      "FOTO_020",
+      "FOTO_021"
+    ],
+    "terapias avancadas": [
+      "FOTO_019",
+      "FOTO_020"
+    ],
+    "terapêutica": [
+      "FOTO_018"
+    ],
+    "terapêuticas": [
+      "FOTO_018"
+    ],
+    "teto de vidro": [
+      "FOTO_059"
+    ],
+    "tipo": [
+      "FOTO_026",
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "tips": [
+      "FOTO_050"
+    ],
+    "titles": [
+      "FOTO_038"
+    ],
+    "tmo": [
+      "FOTO_014",
+      "FOTO_015",
+      "FOTO_016"
+    ],
+    "tomate": [
+      "FOTO_053"
+    ],
+    "torno": [
+      "FOTO_026"
+    ],
+    "total": [
+      "FOTO_018",
+      "FOTO_073"
+    ],
+    "total score": [
+      "FOTO_073"
+    ],
+    "track": [
+      "FOTO_055",
+      "FOTO_056",
+      "FOTO_068"
+    ],
+    "track 1": [
+      "FOTO_054",
+      "FOTO_068"
+    ],
+    "trackcare": [
+      "FOTO_073"
+    ],
+    "transformar": [
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "transplantes": [
+      "FOTO_014"
+    ],
+    "tratamentcs": [
+      "FOTO_025"
+    ],
+    "tratamento": [
+      "FOTO_021",
+      "FOTO_022",
+      "FOTO_026"
+    ],
+    "tratamento individualizado": [
+      "FOTO_022"
+    ],
+    "trial": [
+      "FOTO_069",
+      "FOTO_070",
+      "FOTO_071",
+      "FOTO_072",
+      "FOTO_073"
+    ],
+    "triple": [
+      "FOTO_046"
+    ],
+    "trombose": [
+      "FOTO_027"
+    ],
+    "truebeam": [
+      "FOTO_015",
+      "FOTO_016"
+    ],
+    "tseretz.bio": [
+      "FOTO_045"
+    ],
+    "tudo": [
+      "FOTO_024",
+      "FOTO_025"
+    ],
+    "tumor board": [
+      "FOTO_023",
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "tumores": [
+      "FOTO_027"
+    ],
+    "tumores solids": [
+      "FOTO_018",
+      "FOTO_027"
+    ],
+    "u9bld": [
+      "FOTO_009"
+    ],
+    "ufmg": [
+      "FOTO_001",
+      "FOTO_062"
+    ],
+    "under": [
+      "FOTO_055",
+      "FOTO_056"
+    ],
+    "unidade": [
+      "FOTO_014"
+    ],
+    "unidades": [
+      "FOTO_017"
+    ],
+    "unidades privadas": [
+      "FOTO_017"
+    ],
+    "unidades publicas": [
+      "FOTO_017"
+    ],
+    "universitário": [
+      "FOTO_068"
+    ],
+    "unless": [
+      "FOTO_050"
+    ],
+    "urologia": [
+      "FOTO_030",
+      "FOTO_031",
+      "FOTO_032"
+    ],
+    "user": [
+      "FOTO_039"
+    ],
+    "vacinação": [
+      "FOTO_023"
+    ],
+    "vargas": [
+      "FOTO_017"
+    ],
+    "varian": [
+      "FOTO_015",
+      "FOTO_016"
+    ],
+    "varied": [
+      "FOTO_011"
+    ],
+    "versa": [
+      "FOTO_015"
+    ],
+    "viability": [
+      "FOTO_011",
+      "FOTO_012"
+    ],
+    "viavel": [
+      "FOTO_033",
+      "FOTO_034",
+      "FOTO_035",
+      "FOTO_036",
+      "FOTO_037"
+    ],
+    "vida": [
+      "FOTO_023"
+    ],
+    "visita tecnica": [
+      "FOTO_065"
+    ],
+    "visuals": [
+      "FOTO_050"
+    ],
+    "visíveis": [
+      "FOTO_062"
+    ],
+    "volumes": [
+      "FOTO_015",
+      "FOTO_016"
+    ],
+    "want": [
+      "FOTO_052"
+    ],
+    "what is a pitch": [
+      "FOTO_040",
+      "FOTO_041",
+      "FOTO_042"
+    ],
+    "where": [
+      "FOTO_045"
+    ],
+    "widespread": [
+      "FOTO_039"
+    ],
+    "work": [
+      "FOTO_039"
+    ],
+    "would": [
+      "FOTO_045"
+    ],
+    "wows": [
+      "FOTO_050"
+    ],
+    "yourselves": [
+      "FOTO_038"
+    ],
+    "área": [
+      "FOTO_018"
+    ],
+    "áreas": [
+      "FOTO_018",
+      "FOTO_065"
+    ],
+    "êeretzi": [
+      "FOTO_075"
+    ],
+    "óbitos": [
+      "FOTO_013"
+    ],
+    "óssea": [
+      "FOTO_014"
+    ],
+    "ôeretz.bio": [
+      "FOTO_051"
+    ]
+  }
+}

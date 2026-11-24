@@ -1,0 +1,974 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Completo - Contratualização de Ações e Serviços de Saúde (Copy)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #333;
+            line-height: 1.7;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .header-meta {
+            margin-top: 20px;
+            font-size: 0.95em;
+            opacity: 0.85;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 15px;
+        }
+
+        /* Content */
+        .content {
+            padding: 40px 30px;
+        }
+
+        .toc {
+            background: #f0f4f8;
+            border-left: 4px solid #2a5298;
+            padding: 25px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+        }
+
+        .toc h2 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .toc-item {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 16px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .toc-item:hover {
+            border-color: #8b5cf6;
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .toc-item a {
+            color: #1e3c72;
+            text-decoration: none;
+            font-weight: 600;
+            display: block;
+            font-size: 1em;
+            margin-bottom: 8px;
+        }
+
+        .toc-item a:hover {
+            color: #8b5cf6;
+        }
+
+        .toc-pages {
+            color: #666;
+            font-size: 0.85em;
+        }
+
+        /* FAQ Items */
+        .faq-item {
+            margin-bottom: 25px;
+            border-left: 4px solid #2a5298;
+            padding-left: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-left-color: #8b5cf6;
+            transform: translateX(5px);
+        }
+
+        .question {
+            font-size: 1.02em;
+            font-weight: 600;
+            color: #1e3c72;
+            margin-bottom: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .question::before {
+            content: "Q";
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: #8b5cf6;
+            color: white;
+            border-radius: 50%;
+            font-size: 0.8em;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .answer {
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.8;
+            padding: 15px;
+            background: #f9fafb;
+            border-radius: 6px;
+            border-left: 2px solid #2a5298;
+        }
+
+        .answer ul {
+            margin: 15px 0 15px 30px;
+            list-style: none;
+        }
+
+        .answer ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .answer ul li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #8b5cf6;
+            font-weight: bold;
+        }
+
+        .answer strong {
+            color: #1e3c72;
+        }
+
+        .answer p {
+            margin-bottom: 12px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f5f7fa;
+            padding: 30px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .footer h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+
+        .authors {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .author-group h4 {
+            color: #2a5298;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .author-name {
+            font-size: 0.85em;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        /* Destaque */
+        .highlight {
+            background: #f3e8ff;
+            border-left: 4px solid #8b5cf6;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.6em;
+            }
+
+            .toc-list {
+                grid-template-columns: 1fr;
+            }
+
+            .authors {
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+        }
+        /* Identificação institucional */
+        .inst-top {
+            font-size: 0.8em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .inst-top strong { display: block; font-size: 1.05em; letter-spacing: 3px; }
+
+        .project-badge {
+            display: inline-block;
+            background: #8b5cf6;
+            color: white;
+            padding: 8px 22px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.95em;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .about {
+            background: #f3e8ff;
+            border-left: 4px solid #8b5cf6;
+            border-radius: 8px;
+            padding: 22px 25px;
+            margin-bottom: 35px;
+            color: #333;
+            font-size: 0.95em;
+            line-height: 1.8;
+        }
+
+        .about h2 { color: #1e3c72; font-size: 1.2em; margin-bottom: 10px; }
+        .about strong { color: #1e3c72; }
+
+        .team-lead {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0 25px;
+        }
+
+        .lead-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-top: 4px solid #8b5cf6;
+            border-radius: 8px;
+            padding: 14px 16px;
+        }
+
+        .lead-card .role { font-size: 0.75em; text-transform: uppercase; letter-spacing: 1px; color: #8b5cf6; font-weight: 700; }
+        .lead-card .name { color: #1e3c72; font-weight: 600; margin-top: 4px; }
+
+        .team-list { display: grid; grid-template-columns: 1fr 1fr; gap: 5px 20px; margin-top: 10px; }
+
+        @media (max-width: 768px) {
+            .team-lead, .team-list { grid-template-columns: 1fr; }
+        }
+
+        /* Seções */
+        .section-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 20px 25px;
+            margin: 40px -30px 25px -30px;
+            font-size: 1.1em;
+            font-weight: 600;
+            page-break-after: avoid;
+        }
+
+        @media print {
+            .header { page-break-after: always; padding: 440px 40px; border-radius: 0; }
+            .faq-item { page-break-inside: avoid; }
+        }
+
+        .toc-intro { color:#555; font-size:0.95em; margin-bottom:18px; }
+        .toc-table { width:100%; border-collapse:separate; border-spacing:0 8px; }
+        .toc-head th { text-align:left; font-size:0.72em; letter-spacing:1px; text-transform:uppercase; color:#6b7280; font-weight:600; padding:0 14px 2px; }
+        .toc-table td { background:#fff; padding:12px 14px; vertical-align:middle; border-top:1px solid #e3e8ef; border-bottom:1px solid #e3e8ef; }
+        .toc-table tr { cursor:pointer; page-break-inside:avoid; }
+        .toc-table tr:hover td { background:#f3e8ff; }
+        .toc-n { width:46px; text-align:center; font-weight:700; font-size:1.15em; color:#fff; background:#2a5298 !important; border-radius:8px 0 0 8px; border:none !important; }
+        .toc-t a { color:#1e3c72; font-weight:700; text-decoration:none; display:block; font-size:1em; }
+        .toc-t span { display:block; color:#666; font-size:0.84em; line-height:1.4; margin-top:2px; }
+        .toc-q { width:92px; text-align:center; color:#555; font-size:0.82em; line-height:1.35; white-space:nowrap; }
+        .toc-q strong { color:#1e3c72; font-size:1.1em; }
+        .toc-p { width:128px; text-align:center; font-weight:700; color:#6d28d9; background:#f3e8ff !important; border-radius:0 8px 8px 0; border:1px solid #e3d5fb !important; font-size:0.92em; white-space:nowrap; }
+        .section-header { border-radius:8px; margin:40px 0 25px 0; }
+        .sec-num { display:block; font-size:0.72em; letter-spacing:2px; text-transform:uppercase; opacity:0.85; font-weight:600; }
+        .sec-title { display:block; font-size:1.15em; font-weight:700; margin:2px 0; }
+        .sec-range { display:block; font-size:0.8em; opacity:0.9; font-weight:400; }
+        .keep { page-break-inside:avoid; }
+        @media (max-width: 600px) {
+            .toc-head { display:none; }
+            .toc-table td { padding:10px 8px; }
+            .toc-q { display:none; }
+            .toc-p { width:auto; white-space:normal; font-size:0.8em; }
+        }
+        @media print {
+            body { background:#fff !important; padding:0; }
+            .container { box-shadow:none; border-radius:0; max-width:100%; }
+            .header { padding:0 40px !important; height:360mm; display:flex; flex-direction:column; justify-content:center; align-items:center; border-radius:10px !important; }
+            .content { padding:30px 10px; }
+            .toc { page-break-after: always; page-break-inside: avoid; }
+            .footer { page-break-inside: avoid; }
+            .section-header, .question { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="inst-top">
+                <strong>Governo do Estado de Minas Gerais</strong>
+                Secretaria de Estado de Saúde – SES/MG<br>
+                Subsecretaria de Regionalização<br>
+                Superintendência de Integração Regional<br>
+                Diretoria de Monitoramento de Políticas de Saúde
+            </div>
+            <div class="project-badge">PROJETO CONTRATUALIZASUS</div>
+            <h1>FAQ – Contratualização de Ações e Serviços de Saúde</h1>
+            <p>56 Perguntas e Respostas sobre o Processo de Contratualização</p>
+            <div class="header-meta">
+                Coordenação de Contratos Assistenciais – CCTA | Belo Horizonte, outubro de 2026
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="about">
+                <h2>Sobre este FAQ</h2>
+                <p>Este FAQ é uma ferramenta do projeto <strong>ContratualizaSUS</strong>, da <strong>Diretoria de Monitoramento de Políticas de Saúde (DMPS)</strong>, vinculada à <strong>Superintendência de Integração Regional</strong> da <strong>Subsecretaria de Regionalização</strong> da Secretaria de Estado de Saúde de Minas Gerais (SES/MG). Está sob a gestão da equipe da <strong>Coordenação de Contratos Assistenciais (CCTA)</strong>.</p>
+            </div>
+
+            <div class="toc">
+                <h2>Sumário por tema</h2>
+                <p class="toc-intro">As 56 perguntas estão agrupadas em 9 temas. Localize o tema de seu interesse e vá direto às páginas indicadas.</p>
+                <table class="toc-table">
+                    <tr class="toc-head"><th></th><th>Tema</th><th>Perguntas</th><th>Onde encontrar</th></tr>
+                    <tr onclick="location.href='#tema1'">
+                        <td class="toc-n">1</td>
+                        <td class="toc-t"><a href="#tema1">Planejamento e início da contratação</a><span>Formalização da demanda, estimativa de despesa, ETP, credenciamento e obrigatoriedade do contrato</span></td>
+                        <td class="toc-q">Perguntas<br><strong>1 a 7</strong></td>
+                        <td class="toc-p">Páginas 3 a 4</td>
+                    </tr>
+                    <tr onclick="location.href='#tema2'">
+                        <td class="toc-n">2</td>
+                        <td class="toc-t"><a href="#tema2">Papéis da URS, da CCTA e do Município</a><span>Quem apoia, quem responde e a quem recorrer em caso de dúvida</span></td>
+                        <td class="toc-q">Perguntas<br><strong>8 a 13</strong></td>
+                        <td class="toc-p">Páginas 5 a 6</td>
+                    </tr>
+                    <tr onclick="location.href='#tema3'">
+                        <td class="toc-n">3</td>
+                        <td class="toc-t"><a href="#tema3">Documentos do processo e Documento Descritivo</a><span>O que deve instruir o processo e para que serve o Documento Descritivo</span></td>
+                        <td class="toc-q">Perguntas<br><strong>14 a 17</strong></td>
+                        <td class="toc-p">Páginas 6 a 7</td>
+                    </tr>
+                    <tr onclick="location.href='#tema4'">
+                        <td class="toc-n">4</td>
+                        <td class="toc-t"><a href="#tema4">PPI, metas e teto financeiro</a><span>Programação Pactuada e Integrada, quantitativos, limites e alterações</span></td>
+                        <td class="toc-q">Perguntas<br><strong>18 a 27</strong></td>
+                        <td class="toc-p">Páginas 7 a 9</td>
+                    </tr>
+                    <tr onclick="location.href='#tema5'">
+                        <td class="toc-n">5</td>
+                        <td class="toc-t"><a href="#tema5">Recursos estaduais e federais no contrato</a><span>Habilitações, Valora Minas, portarias ministeriais e inclusão no contrato</span></td>
+                        <td class="toc-q">Perguntas<br><strong>28 a 31</strong></td>
+                        <td class="toc-p">Página 10</td>
+                    </tr>
+                    <tr onclick="location.href='#tema6'">
+                        <td class="toc-n">6</td>
+                        <td class="toc-t"><a href="#tema6">Alterações contratuais: termo aditivo e apostilamento</a><span>Quando alterar, como solicitar e o que não pode ser antecipado</span></td>
+                        <td class="toc-q">Perguntas<br><strong>32 a 37</strong></td>
+                        <td class="toc-p">Página 11</td>
+                    </tr>
+                    <tr onclick="location.href='#tema7'">
+                        <td class="toc-n">7</td>
+                        <td class="toc-t"><a href="#tema7">Gestão, fiscalização e execução financeira</a><span>Gestor e fiscal do contrato, estágios da despesa e execução orçamentária</span></td>
+                        <td class="toc-q">Perguntas<br><strong>38 a 41</strong></td>
+                        <td class="toc-p">Página 12</td>
+                    </tr>
+                    <tr onclick="location.href='#tema8'">
+                        <td class="toc-n">8</td>
+                        <td class="toc-t"><a href="#tema8">Acompanhamento e avaliação das metas</a><span>Quem acompanha, periodicidade, verificação e descumprimento de metas</span></td>
+                        <td class="toc-q">Perguntas<br><strong>42 a 49</strong></td>
+                        <td class="toc-p">Páginas 13 a 14</td>
+                    </tr>
+                    <tr onclick="location.href='#tema9'">
+                        <td class="toc-n">9</td>
+                        <td class="toc-t"><a href="#tema9">Comissão de Acompanhamento da Contratualização</a><span>Obrigatoriedade, composição, reuniões e papel na avaliação</span></td>
+                        <td class="toc-q">Perguntas<br><strong>50 a 56</strong></td>
+                        <td class="toc-p">Páginas 15 a 16</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="keep">
+            <div class="section-header" id="tema1"><span class="sec-num">Tema 1</span><span class="sec-title">Planejamento e início da contratação</span><span class="sec-range">Perguntas 1 a 7</span></div>
+            <div class="faq-item" id="q1">
+                <div class="question">1. Como iniciar formalmente um processo de contratação de serviços de saúde?</div>
+                <div class="answer">
+                    <p>A maioria das contratações de ações e serviços de saúde deve ser precedida de licitação ou, nos casos em que seja inviável ou impossível a competição, através de contratação direta por dispensa ou inexigibilidade de licitação, conforme inciso XXI do art. 37 da CF/1988.</p>
+                    <p>O início formal ocorre com a identificação pelo gestor público de uma demanda de ações e serviços de saúde que não pode ser absorvida pela estrutura própria do SUS, optando-se então por contratar os serviços da rede privada com preferência para instituições filantrópicas e sem fins lucrativos, conforme § 1º do art. 199 da CF/1988 e art. 25 da Lei Federal 8.080/1990.</p>
+                    <p>O processo deve começar com o <strong>Documento de Formalização da Demanda (DFD)</strong>, conforme art. 72, I, da Lei Federal 14.133/2021, que deve refletir fielmente a necessidade da área demandante, conter a justificativa e quantidade do serviço, e indicar os servidores para a equipe de planejamento.</p>
+                </div>
+            </div>
+            </div>
+            <div class="faq-item" id="q2">
+                <div class="question">2. Quais fontes devem fundamentar a estimativa de despesa na saúde?</div>
+                <div class="answer">
+                    <p>A estimativa de despesa deve ser <strong>transparente, rastreável e fundamentada em dados públicos</strong>:</p>
+                    <ul>
+                        <li>Pesquisas no painel de preços do PNCP</li>
+                        <li>Contratações públicas similares anteriores (até 12 meses)</li>
+                        <li>Tabelas oficiais aprovadas pelo Executivo federal ou site do SUS</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="faq-item" id="q3">
+                <div class="question">3. Como incluir as políticas estaduais de saúde no Estudo Técnico Preliminar (ETP)?</div>
+                <div class="answer">
+                    <p>As políticas públicas devem constar como subitem específico da necessidade da contratação, devendo:</p>
+                    <ul>
+                        <li>Descrever a política e sua norma reguladora</li>
+                        <li>Detalhar metas qualitativas e quantitativas exigidas</li>
+                        <li>Inserir regras de repasse e programação orçamentária</li>
+                        <li>Apresentar memória de cálculo nos quantitativos financeiros</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="faq-item" id="q4">
+                <div class="question">4. Em quais situações a contratação direta por credenciamento é juridicamente adequada?</div>
+                <div class="answer">
+                    <p>Nas situações previstas nos incisos I e II do art. 79 da Lei Federal 14.133/2021, a saber:</p>
+                    <p><strong>Art. 79.</strong> O credenciamento poderá ser usado nas seguintes hipóteses de contratação:</p>
+                    <ul>
+                        <li><strong>I -</strong> paralela e não excludente: caso em que é viável e vantajosa para a Administração a realização de contratações simultâneas em condições padronizadas</li>
+                        <li><strong>II -</strong> com seleção a critério de terceiros: caso em que a seleção do contratado está a cargo do beneficiário direto da prestação</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="faq-item" id="q5">
+                <div class="question">5. Um Município informou que pretende contratualizar um hospital filantrópico. Qual deve ser a primeira orientação?</div>
+                <div class="answer">
+                    <p><strong>A primeira orientação é que o Município não inicie pela elaboração do contrato.</strong> Antes disso, é necessário verificar a necessidade assistencial, a oferta existente na rede, a previsão da Programação Pactuada e Integrada (PPI), a disponibilidade de recursos financeiros e o modelo de contratação adequado.</p>
+                    <p>A contratualização deve decorrer do planejamento da assistência e não apenas da intenção de contratar um prestador. A PPI orienta quais serviços, quantitativos e recursos deverão compor o contrato.</p>
+                    <p>Havendo a necessidade de contratação, é necessário instruir o processo de credenciamento, com elaboração de todos os documentos legalmente exigidos, conforme art. 72 da Lei Federal 14.133/2021.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q6">
+                <div class="question">6. Todo hospital que presta atendimento ao SUS precisa possuir contrato assistencial?</div>
+                <div class="answer">
+                    <p><strong>Em regra, sim.</strong> A prestação complementar de ações e serviços ao SUS deve estar formalizada por instrumento contratual que estabeleça direitos, deveres, metas, responsabilidades, forma de pagamento, critérios de avaliação e fiscalização.</p>
+                    <p>O contrato é o instrumento que formaliza a relação entre gestor e prestador, permitindo ao primeiro acompanhar a execução dos serviços do segundo.</p>
+                    <p>A referência técnica deverá orientar o Município a verificar qual instrumento jurídico vigente foi formalizado com o prestador e, se necessário, adequá-lo às normas vigentes.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q7">
+                <div class="question">7. O Município afirma que já possui convênio vigente e pergunta se precisa celebrar contrato assistencial?</div>
+                <div class="answer">
+                    <p>Se a contratação for de hospital, em conformidade com a política hospitalar, a Portaria de Consolidação nº 2/2017 traz as diretrizes para a contratualização de hospitais no âmbito do SUS (Origem: PRT MS/GM 3410/2013).</p>
+                    <p>Quanto às contratações de prestadores, no âmbito de atuação estadual, serão seguidas as diretrizes aplicadas aos hospitais, conforme mencionada Portaria, aplicada de forma análoga aos contratos com prestadores laboratoriais. É necessário analisar qual o instrumento atualmente utilizado e qual o objeto da prestação de serviços. A referência técnica deverá solicitar cópia do instrumento de convênio para identificação do objeto e avaliação da necessidade de adequação.</p>
+                </div>
+            </div>
+            <div class="keep">
+            <div class="section-header" id="tema2"><span class="sec-num">Tema 2</span><span class="sec-title">Papéis da URS, da CCTA e do Município</span><span class="sec-range">Perguntas 8 a 13</span></div>
+            <div class="faq-item" id="q8">
+                <div class="question">8. Se um gestor municipal perguntar qual é o papel da URS no processo de contratualização, como explicar?</div>
+                <div class="answer">
+                    <p>A URS exerce papel de <strong>apoio técnico aos Municípios</strong>. Ela orienta sobre fluxos, documentação, interpretação dos instrumentos, acompanha o processo quando necessário e faz a interlocução com a Coordenação de Contratos Assistenciais (CCTA).</p>
+                    <p>A responsabilidade pela contratação permanece com o ente contratante.</p>
+                </div>
+            </div>
+            </div>
+            <div class="faq-item" id="q9">
+                <div class="question">9. Quais são as principais diferenças entre o apoio da URS e as atribuições da CCTA?</div>
+                <div class="answer">
+                    <p><strong>URS:</strong> Atua como apoio técnico regional, auxiliando os Municípios na condução dos processos e esclarecendo dúvidas.</p>
+                    <p><strong>CCTA:</strong> Tem competência de prestar apoio técnico na contratualização de serviços de média e alta complexidade.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q10">
+                <div class="question">10. Se o Município não possui equipe técnica especializada, em que etapas pode solicitar apoio?</div>
+                <div class="answer">
+                    <p>A referência técnica pode apoiar os Municípios durante todo o processo de contratualização, especialmente na interpretação das normas, organização documental, esclarecimento de dúvidas sobre fluxos, PPI, documento descritivo, avaliação contratual.</p>
+                    <p>Entretanto, a competência legal para análise e parecer sobre qualquer contratualização, no âmbito municipal, é da Procuradoria do Município.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q11">
+                <div class="question">11. Quem responde se houver algum erro na contratualização: o Município ou a URS?</div>
+                <div class="answer">
+                    <p>A responsabilidade pela contratação é da pessoa jurídica contratante. A URS somente presta apoio técnico e orientações, mas não substitui a competência administrativa do Município na condução do processo.</p>
+                    <p>Recomenda-se que as orientações prestadas sejam registradas e, caso se trate de dúvidas complexas, encaminhar o questionamento à CCTA para auxílio.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q12">
+                <div class="question">12. Quando a dúvida é específica, deve procurar URS ou CCTA?</div>
+                <div class="answer">
+                    <p>Como regra, todas as dúvidas oriundas do Município, cujo tema esteja relacionado à contratação assistencial, devem ser direcionadas primeiro à referência técnica da URS e, a partir de sua análise, poderá ser solicitado suporte à CCTA.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q13">
+                <div class="question">13. Quais são os principais pontos ao receber uma dúvida sobre contratualização?</div>
+                <div class="answer">
+                    <p>Alguns pontos merecem atenção especial:</p>
+                    <ul>
+                        <li>Ausência de documento descritivo</li>
+                        <li>Metas incompatíveis com a PPI</li>
+                        <li>Documentação incompleta</li>
+                        <li>Ausência de justificativa para a contratação</li>
+                        <li>Inconsistência entre valores, metas e recursos financeiros</li>
+                        <li>Falta de definição das responsabilidades das partes</li>
+                    </ul>
+                    <div class="highlight">
+                        💡 <strong>Dica:</strong> Utilize um <strong>checklist</strong> antes de analisar qualquer processo para agilizar a tramitação e evitar retrabalho.
+                    </div>
+                </div>
+            </div>
+            <div class="keep">
+            <div class="section-header" id="tema3"><span class="sec-num">Tema 3</span><span class="sec-title">Documentos do processo e Documento Descritivo</span><span class="sec-range">Perguntas 14 a 17</span></div>
+            <div class="faq-item" id="q14">
+                <div class="question">14. O Município encaminhou apenas uma minuta de contrato para análise. Que outros documentos verificar?</div>
+                <div class="answer">
+                    <p>Antes de analisar a minuta contratual, é importante verificar se o processo possui documentação que demonstre o planejamento da contratação, especialmente:</p>
+                    <ul>
+                        <li>Justificativa da necessidade</li>
+                        <li>Minuta de documento descritivo</li>
+                        <li>Definição das metas</li>
+                        <li>Documentação que fundamenta os valores</li>
+                        <li>Demais documentos que compõem a instrução processual</li>
+                        <li>O contrato deve refletir o planejamento realizado anteriormente</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div class="faq-item" id="q15">
+                <div class="question">15. Durante a análise, percebe-se que não existe documento descritivo. Como orientar?</div>
+                <div class="answer">
+                    <p>A Portaria de Consolidação GM/MS nº 2/2017 prevê que os instrumentos devem ser acompanhados de documento descritivo, sendo este um dos principais instrumentos da contratualização, pois detalha metas, indicadores, quantitativos, responsabilidades e critérios de acompanhamento da execução contratual.</p>
+                    <p>Sem ele, torna-se difícil monitorar o cumprimento do contrato e avaliar os resultados. A referência técnica deverá orientar o Município quanto à elaboração do documento descritivo, parte integrante do instrumento contratual, antes de sua formalização.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q16">
+                <div class="question">16. O Município pergunta para que serve o documento descritivo se já existe contrato?</div>
+                <div class="answer">
+                    <p>O contrato estabelece a relação jurídica entre as partes. O documento descritivo detalha como essa relação funcionará na prática, especificando:</p>
+                    <ul>
+                        <li>Serviços ofertados</li>
+                        <li>Metas quantitativas</li>
+                        <li>Metas qualitativas</li>
+                        <li>Indicadores</li>
+                        <li>Critérios de avaliação</li>
+                        <li>Responsabilidades</li>
+                    </ul>
+                    <p>Em outras palavras, o contrato diz o que foi contratado e quais as obrigações de contratante e contratado, enquanto o documento descritivo explica como a assistência será executada e avaliada.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q17">
+                <div class="question">17. O Município informa que pretende alterar apenas as metas do contrato. Exige atualização do documento descritivo?</div>
+                <div class="answer">
+                    <p>Como as metas integram o documento descritivo, qualquer alteração quantitativa ou qualitativa deve ser refletida nesse documento. Dependendo da alteração, poderá também ser necessária formalização por termo aditivo ou por apostilamento, conforme o caso.</p>
+                </div>
+            </div>
+            <div class="keep">
+            <div class="section-header" id="tema4"><span class="sec-num">Tema 4</span><span class="sec-title">PPI, metas e teto financeiro</span><span class="sec-range">Perguntas 18 a 27</span></div>
+            <div class="faq-item" id="q18">
+                <div class="question">18. Nunca trabalhei com PPI. O que preciso saber para contratar corretamente?</div>
+                <div class="answer">
+                    <p>Para fins de contratualização, é importante compreender que a PPI é um instrumento de planejamento físico-orçamentário que organiza a oferta de serviços de saúde, especialmente de média e alta complexidade.</p>
+                    <p>Ela define quais serviços serão ofertados, em que quantidade e para qual população, além de estabelecer os recursos financeiros destinados ao custeio desses serviços. Por isso, a PPI é uma referência importante para a definição das metas físicas e financeiras do contrato.</p>
+                    <p>Explique ao gestor que ele deve verificar primeiro <strong>o que está programado</strong> antes de definir o que pretende contratar. A contratação deve estar alinhada à organização regional da assistência e aos recursos disponíveis.</p>
+                </div>
+            </div>
+            </div>
+            <div class="faq-item" id="q19">
+                <div class="question">19. Por que a PPI é considerada uma das principais referências para definição das metas do contrato?</div>
+                <div class="answer">
+                    <p>Porque ela define:</p>
+                    <ul>
+                        <li>Quais serviços serão ofertados</li>
+                        <li>Para qual população</li>
+                        <li>Em que quantidade</li>
+                        <li>Qual teto financeiro está disponível</li>
+                    </ul>
+                    <p>O contrato deve refletir exatamente essa programação.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q20">
+                <div class="question">20. Como explicar a relação entre a PPI e o teto financeiro do contrato?</div>
+                <div class="answer">
+                    <p>A PPI organiza a distribuição dos recursos destinados aos serviços de média e alta complexidade. Assim, o teto financeiro previsto na programação subsidia a definição dos valores que poderão compor o contrato assistencial.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q21">
+                <div class="question">21. O Município deseja contratar novos serviços com recursos federais, mas não estão previstos na PPI. Como orientar?</div>
+                <div class="answer">
+                    <p>A primeira orientação é verificar a possibilidade de adequação da programação assistencial.</p>
+                    <p>A PPI é o instrumento que orienta quais serviços, quantidades e recursos devem compor os contratos assistenciais. Contratar serviços fora dessa programação pode comprometer o planejamento regional.</p>
+                    <p>Importante também avaliar a necessidade assistencial que fundamenta a contratação e identificar a fonte de financiamento prevista para o serviço (federal, estadual ou recursos próprios do Município).</p>
+                    <p>Em seguida, deve ser verificada a compatibilidade da demanda com os instrumentos de planejamento e programação do SUS, especialmente a PPI, o Plano Municipal de Saúde e a Programação Anual de Saúde.</p>
+                    <p>Caso os serviços pretendidos não estejam contemplados na PPI, recomenda-se avaliar a possibilidade de adequação da programação assistencial e discutir a necessidade junto às áreas responsáveis pela programação e financiamento. Quando os recursos forem vinculados à programação federal, a orientação é consultar o Núcleo de Processamento e Programação (NPP/SUBRAS) quanto aos procedimentos para atualização ou readequação da programação.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q22">
+                <div class="question">22. Um hospital deseja aumentar o número de cirurgias contratadas, mas não há recursos disponíveis. Que orientação dar?</div>
+                <div class="answer">
+                    <p>O aumento da produção contratada deve ser compatível com a disponibilidade financeira e com o planejamento assistencial. Caso não existam recursos previstos, o Município deverá avaliar alternativas de financiamento e eventual necessidade de alteração da programação antes da formalização do aditivo.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q23">
+                <div class="question">23. Um Município pretende contratar procedimentos para população de outro território de saúde. Quais aspectos observar?</div>
+                <div class="answer">
+                    <p>É necessário verificar se esses atendimentos estão previstos nos fluxos de referência da PPI e do Plano Diretor de Regionalização (PDR), respeitando a organização regional da assistência.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q24">
+                <div class="question">24. O Município quer aumentar consultas dos recursos federais. Precisa alterar a PPI?</div>
+                <div class="answer">
+                    <p>É necessário verificar se o aumento pretendido está compatível com a programação existente na PPI, que define os quantitativos de serviços e os respectivos recursos financeiros. Portanto, se o Município pretende alterar a quantidade de serviços programados na PPI, é necessário verificar junto ao Núcleo de Processamento e Programação (NPP) as possibilidades e as tratativas necessárias.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q25">
+                <div class="question">25. O Município informa que a produção do hospital é maior do que previsto na PPI. Como proceder?</div>
+                <div class="answer">
+                    <p>A produção realizada pelo hospital não significa, automaticamente, que o Município possa incorporar esse quantitativo ao contrato.</p>
+                    <p>É necessário confrontar a produção realizada com aquilo que foi pactuado e com o que foi aprovado pelo DATASUS, verificar a necessidade assistencial, a programação existente e a disponibilidade de recursos.</p>
+                    <p>A execução contratual deve ser monitorada considerando as metas e os recursos programados.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q26">
+                <div class="question">26. Posso contratar quantitativo maior do que está previsto na PPI?</div>
+                <div class="answer">
+                    <p>Em se tratando de recursos federais, não se deve simplesmente estabelecer no contrato um quantitativo superior ao previsto na programação sem verificar previamente a compatibilidade com a PPI e com os recursos financeiros disponíveis. A PPI é o instrumento que especifica quais serviços, em que quantidade e para qual população serão contratados.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q27">
+                <div class="question">27. Quem pode alterar a PPI?</div>
+                <div class="answer">
+                    <p>A PPI é instrumento de pactuação intergestores, utilizado para definir responsabilidades, fluxos de referência e contrarreferência e a organização da oferta de serviços. Portanto, não se trata de uma alteração que possa ser realizada unilateralmente pelo Município.</p>
+                </div>
+            </div>
+            <div class="keep">
+            <div class="section-header" id="tema5"><span class="sec-num">Tema 5</span><span class="sec-title">Recursos estaduais e federais no contrato</span><span class="sec-range">Perguntas 28 a 31</span></div>
+            <div class="faq-item" id="q28">
+                <div class="question">28. O Município recebeu habilitação em política estadual. O recurso pode começar a ser pago imediatamente?</div>
+                <div class="answer">
+                    <p><strong>Não. Habilitação não é sinônimo de pagamento imediato.</strong> O início do repasse depende das regras da política estadual, do cumprimento de requisitos administrativos e assistenciais, e da formalização dos instrumentos exigidos pela norma regulamentadora.</p>
+                    <p>Recomenda-se consultar o decreto, resolução ou normativa estadual que regulamenta a política, confirmando:</p>
+                    <ul>
+                        <li>Data prevista para início do repasse</li>
+                        <li>Condições exigidas para recebimento do recurso</li>
+                        <li>Instrumento de formalização necessário</li>
+                        <li>Critérios de monitoramento e prestação de contas</li>
+                        <li>Forma de cálculo e periodicidade do pagamento</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div class="faq-item" id="q29">
+                <div class="question">29. Como orientar um Município que recebeu recurso do Valora Minas mas não realizou o aditamento contratual?</div>
+                <div class="answer">
+                    <p>A referência técnica deverá explicar que o recebimento de recursos vinculados a políticas estaduais pode exigir atualização do contrato e do documento descritivo, para que os novos valores, metas e obrigações fiquem formalmente registrados.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q30">
+                <div class="question">30. Por que determinados recursos estaduais precisam constar no contrato assistencial?</div>
+                <div class="answer">
+                    <p>Porque o contrato é o instrumento que formaliza como os recursos serão utilizados, quais serviços serão executados e quais metas deverão ser cumpridas. Isso garante transparência, segurança jurídica e possibilidade de monitoramento.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q31">
+                <div class="question">31. O Município recebeu recurso por portaria ministerial. É necessário alterar o contrato?</div>
+                <div class="answer">
+                    <p>A referência técnica deverá esclarecer que as publicações de portarias ministeriais destinadas a instituições específicas podem gerar necessidade de aditamento contratual, desde que o recurso interfira nas metas, valores ou obrigações pactuadas.</p>
+                </div>
+            </div>
+            <div class="keep">
+            <div class="section-header" id="tema6"><span class="sec-num">Tema 6</span><span class="sec-title">Alterações contratuais: termo aditivo e apostilamento</span><span class="sec-range">Perguntas 32 a 37</span></div>
+            <div class="faq-item" id="q32">
+                <div class="question">32. Quais situações normalmente levam à necessidade de um termo aditivo nos contratos?</div>
+                <div class="answer">
+                    <p>São situações geradoras de aditamento contratual, dentre outras:</p>
+                    <ul>
+                        <li>Prorrogação da vigência</li>
+                        <li>Acréscimo ou supressão de recursos</li>
+                        <li>Alterações decorrentes da PPI</li>
+                        <li>Publicação de portarias ministeriais</li>
+                        <li>Alterações quantitativas ou qualitativas das metas</li>
+                        <li>Remanejamentos assistenciais</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div class="faq-item" id="q33">
+                <div class="question">33. Qual é a diferença entre termo aditivo e apostilamento?</div>
+                <div class="answer">
+                    <p>O termo aditivo é utilizado quando há alteração contratual decorrente de fato superveniente. O apostilamento é utilizado para registros que não alteram o objeto do contrato, como reajustes previstos contratualmente, alterações de razão social, atualizações financeiras ou empenho de dotações orçamentárias.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q34">
+                <div class="question">34. O hospital solicitou aumento do teto financeiro. Basta encaminhar um ofício?</div>
+                <div class="answer">
+                    <p>Não, o aumento do valor contratado exige análise técnica, justificativa, disponibilidade orçamentária e formalização por meio do instrumento adequado, quando cabível.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q35">
+                <div class="question">35. É possível alterar o contrato várias vezes durante o ano?</div>
+                <div class="answer">
+                    <p>Sim. Um mesmo contrato pode receber diversos termos aditivos durante sua execução, desde que exista fato superveniente que justifique a alteração e sejam observados os procedimentos administrativos.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q36">
+                <div class="question">36. O hospital mudou sua razão social. É necessário celebrar termo aditivo?</div>
+                <div class="answer">
+                    <p>A alteração da razão social é uma das situações que podem ser formalizadas por apostilamento, dispensando termo aditivo, conforme determina o art. 136, III, da Lei Federal 14.133/2021.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q37">
+                <div class="question">37. O hospital quer começar a prestar novo serviço antes da assinatura do aditivo. Isso pode ser autorizado?</div>
+                <div class="answer">
+                    <p>Reforça-se que alterações contratuais devem ser formalizadas antes de produzirem efeitos. Assim, a orientação é que o Município observe a formalização necessária antes da execução da alteração.</p>
+                </div>
+            </div>
+            <div class="keep">
+            <div class="section-header" id="tema7"><span class="sec-num">Tema 7</span><span class="sec-title">Gestão, fiscalização e execução financeira</span><span class="sec-range">Perguntas 38 a 41</span></div>
+            <div class="faq-item" id="q38">
+                <div class="question">38. Quais são as competências do gestor de contrato?</div>
+                <div class="answer">
+                    <p>O gestor de contratos coordena a rotina de fiscalização e gerencia o contrato de forma ampla. Possui as seguintes funções:</p>
+                    <ul>
+                        <li>Apreciar o termo de contrato e aditivos</li>
+                        <li>Manter banco de dados atualizado dos contratos</li>
+                        <li>Orientar os fiscais no desempenho de atribuições</li>
+                        <li>Tomar providências formais para renovações ou extinções contratuais</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div class="faq-item" id="q39">
+                <div class="question">39. Qual o papel do fiscal de contrato no acompanhamento dos serviços?</div>
+                <div class="answer">
+                    <p>O fiscal atua diretamente no controle diário e na conformidade da execução. Possui as seguintes funções:</p>
+                    <ul>
+                        <li>Registrar individualmente todas as ocorrências contratuais</li>
+                        <li>Verificar a qualidade dos insumos empregados</li>
+                        <li>Acompanhar <strong>in loco</strong> a execução dos serviços</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="faq-item" id="q40">
+                <div class="question">40. Quais são os estágios obrigatórios da execução financeira dos contratos?</div>
+                <div class="answer">
+                    <p>A execução financeira ocorre estritamente em três estágios sucessivos vinculados ao orçamento:</p>
+                    <ul>
+                        <li><strong>Empenho:</strong> reserva prévia de fundos para gasto futuro</li>
+                        <li><strong>Liquidação:</strong> verificação do serviço efetivamente prestado pelo hospital</li>
+                        <li><strong>Pagamento:</strong> efetivação da transferência financeira ao prestador</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="faq-item" id="q41">
+                <div class="question">41. Como a execução financeira se relaciona com a execução orçamentária?</div>
+                <div class="answer">
+                    <p>A execução financeira e a execução orçamentária são duas faces da mesma moeda no setor público, atuando de forma interdependente: a execução orçamentária autoriza e planeja o gasto (o crédito), enquanto a execução financeira concretiza a movimentação do dinheiro (o recurso).</p>
+                </div>
+            </div>
+            <div class="keep">
+            <div class="section-header" id="tema8"><span class="sec-num">Tema 8</span><span class="sec-title">Acompanhamento e avaliação das metas</span><span class="sec-range">Perguntas 42 a 49</span></div>
+            <div class="faq-item" id="q42">
+                <div class="question">42. Quem acompanha as metas dos contratos?</div>
+                <div class="answer">
+                    <p>O ente contratante, por meio da Comissão de Acompanhamento, realizando o monitoramento da execução das ações e serviços pactuados, avaliando metas quantitativas e qualitativas e a qualidade da atenção prestada. O gestor e o fiscal do contrato possuem responsabilidades próprias no acompanhamento da execução.</p>
+                </div>
+            </div>
+            </div>
+            <div class="faq-item" id="q43">
+                <div class="question">43. Quem deve acompanhar o cumprimento das metas pactuadas?</div>
+                <div class="answer">
+                    <p>O acompanhamento das metas é uma responsabilidade compartilhada entre o gestor do contrato, o fiscal do contrato e a Comissão de Acompanhamento da Contratualização (CAC), cada um dentro de suas atribuições.</p>
+                    <p>A comissão é responsável por monitorar a execução das ações e serviços pactuados e avaliar o cumprimento das metas quantitativas e qualitativas.</p>
+                    <p>Explique que o acompanhamento não acontece apenas nas reuniões da comissão. O contrato deve ser monitorado continuamente para identificar situações que possam comprometer sua execução.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q44">
+                <div class="question">44. Com que frequência ocorrem as avaliações contratuais?</div>
+                <div class="answer">
+                    <p>As avaliações ocorrerão de acordo com o cronograma definido pela comissão, levando em consideração o formato avaliativo bem como a disposição dos resultados a serem avaliados. No âmbito estadual, as avaliações eram realizadas de forma quadrimestral, seguindo cronograma definido conforme a disponibilidade dos dados oficiais de produção (SIA e SIH).</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q45">
+                <div class="question">45. Como saber se o hospital realmente cumpriu as metas contratadas?</div>
+                <div class="answer">
+                    <p>O cumprimento das metas é verificado por meio do monitoramento da execução dos serviços e da análise das informações de produção disponíveis nas bases oficiais. As avaliações contratuais utilizam os dados dos sistemas oficiais de produção do Ministério da Saúde, especialmente SIA e SIH.</p>
+                    <p>Não se deve considerar apenas informações apresentadas informalmente pelo prestador. É necessário confrontar a produção com as metas estabelecidas e com as bases oficiais utilizadas para a avaliação.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q46">
+                <div class="question">46. Na avaliação, constata-se que o hospital não atingiu as metas quantitativas. Como proceder?</div>
+                <div class="answer">
+                    <p>O não cumprimento das metas deve ser acompanhado e avaliado conforme os critérios previstos no contrato e no documento descritivo. Na avaliação contratual, são analisadas as metas quantitativas e qualitativas pactuadas. Para as metas quantitativas, há critérios específicos de desempenho; já em relação às metas qualitativas, podem ser apresentadas justificativas, que serão analisadas pela Comissão de Acompanhamento.</p>
+                    <p>Caso a comissão entenda que há necessidade de alteração do instrumento contratual à realidade do prestador, poderá solicitar a alteração do instrumento mediante justificativa – se houver essa competência atribuída à Comissão de Acompanhamento.</p>
+                    <p>No regramento estadual, o não cumprimento de pelo menos 50% das metas quantitativas pactuadas por três meses consecutivos ou cinco meses alternados, ou o cumprimento superior a 100% por doze meses consecutivos, obriga a Comissão de Acompanhamento de Contratualização a informar a necessidade de revisão do documento descritivo e do contrato. (Ver <strong>Manual de Avaliação</strong>, 2025, p. 14).</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q47">
+                <div class="question">47. O hospital não cumpriu determinada meta qualitativa. Como tratar?</div>
+                <div class="answer">
+                    <p>A comissão deverá analisar a justificativa apresentada pelo prestador e decidir sobre seu aceite. O <strong>Manual de Avaliação e Monitoramento de Contratos</strong> estabelece que justificativas podem ser apresentadas apenas para o descumprimento das metas qualitativas.</p>
+                    <p>Caso seja descumprimento de metas quantitativas – observando a produção aprovada pelos bancos oficiais, poderá ser aceita a justificativa em casos de erros de processamento.</p>
+                    <p>A referência técnica deverá orientar o Município para que sejam registradas em ata da comissão a justificativa apresentada, a análise realizada e a decisão adotada pela comissão.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q48">
+                <div class="question">48. A URS identifica possível descumprimento contratual. Qual a primeira providência?</div>
+                <div class="answer">
+                    <p>A situação deve ser formalmente comunicada ao gestor e ao fiscal do contrato para que seja analisada e registrada. O acompanhamento permanente prevê comunicação imediata de fatos que possam resultar em inexecução parcial ou total dos serviços.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q49">
+                <div class="question">49. Se há constatação de problema durante execução, deve-se esperar reunião ou agir imediatamente?</div>
+                <div class="answer">
+                    <p>Não é necessário esperar a reunião da comissão. O acompanhamento permanente prevê comunicação formal e imediata ao gestor e ao fiscal do contrato sobre fatos que resultem ou possam resultar em inexecução parcial ou total dos serviços ou em descumprimento das obrigações contratuais.</p>
+                    <p>Orienta-se o registro formal da ocorrência e comunicação aos responsáveis pelo acompanhamento do contrato. A reunião da comissão poderá posteriormente analisar a situação dentro de suas atribuições.</p>
+                </div>
+            </div>
+            <div class="keep">
+            <div class="section-header" id="tema9"><span class="sec-num">Tema 9</span><span class="sec-title">Comissão de Acompanhamento da Contratualização</span><span class="sec-range">Perguntas 50 a 56</span></div>
+            <div class="faq-item" id="q50">
+                <div class="question">50. É obrigatório criar uma Comissão de Acompanhamento da Contratualização?</div>
+                <div class="answer">
+                    <p><strong>Sim, conforme determina o art. 32 da Portaria 3.410/2013 do Ministério da Saúde.</strong> Além disso, a comissão é o instrumento responsável pelo monitoramento e avaliação da execução contratual, sendo fundamental para avaliar o real cumprimento das metas e apoiar a gestão do contrato.</p>
+                </div>
+            </div>
+            </div>
+            <div class="faq-item" id="q51">
+                <div class="question">51. Quem deve compor a Comissão de Acompanhamento da Contratualização?</div>
+                <div class="answer">
+                    <p>Conforme o art. 32 da Portaria 3.410/2013 do Ministério da Saúde, a comissão será instituída pelo ente federativo contratante e será composta, no mínimo, por 1 (um) representante do ente federativo contratante e um representante do hospital contratualizado.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q52">
+                <div class="question">52. O hospital pode indicar qualquer profissional para participar da Comissão?</div>
+                <div class="answer">
+                    <p>O hospital deve indicar um profissional de sua escolha para compor a comissão, inclusive a Lei Federal 14.133/2021 traz a figura do preposto em seu artigo 118: "O contratado deverá manter preposto aceito pela Administração no local da obra ou do serviço para representá-lo na execução do contrato."</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q53">
+                <div class="question">53. Se um dos membros da comissão sair, precisa publicar nova composição?</div>
+                <div class="answer">
+                    <p>Sim. A substituição de membros deve ser formalizada de acordo com o procedimento definido para a composição da comissão. O regramento desse procedimento está previsto no art. 32 da Portaria nº 3.410/2013 do Ministério da Saúde:</p>
+                    <p><strong>Art. 32.</strong> Será instituída pelo ente federativo contratante a Comissão de Acompanhamento da Contratualização, que será composta, no mínimo, por 1 (um) representante do ente federativo contratante e um representante do hospital contratualizado.</p>
+                    <p><strong>§ 1º</strong> A Comissão de que trata o "caput" monitorará a execução das ações e serviços de saúde pactuados, devendo:</p>
+                    <ul>
+                        <li>Avaliar o cumprimento das metas quali-quantitativas e físico-financeiras</li>
+                        <li>Avaliar a capacidade instalada</li>
+                        <li>Readequar as metas pactuadas, os recursos financeiros a serem repassados e outras que se fizerem necessárias</li>
+                    </ul>
+                    <p><strong>§ 2º</strong> A composição da Comissão de que trata o "caput" será objeto de publicação no Diário Oficial do ente federativo contratante ou publicação equivalente.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q54">
+                <div class="question">54. Com que frequência a Comissão deve se reunir?</div>
+                <div class="answer">
+                    <p>As reuniões ordinárias acompanham o cronograma de avaliações definido. Também podem ocorrer reuniões extraordinárias quando houver necessidade, especialmente nos casos de encerramento contratual.</p>
+                    <p>A comissão pode identificar necessidade de readequação das metas durante o acompanhamento contratual. Entretanto, qualquer alteração deverá observar os instrumentos formais de alteração contratual previstos para o contrato.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q55">
+                <div class="question">55. Qual é o principal objetivo das reuniões da comissão?</div>
+                <div class="answer">
+                    <p>O objetivo é acompanhar e avaliar a execução das ações e serviços de saúde pactuados. Entre as atribuições, estão a apuração do cumprimento das metas quantitativas e qualitativas, o acompanhamento dos indicadores pactuados, a possibilidade de readequação de metas quando necessária e a avaliação da qualidade da atenção prestada aos usuários.</p>
+                    <p>A reunião da Comissão de Acompanhamento não deve ser vista apenas como uma reunião administrativa. Ela é um espaço de monitoramento da execução do contrato e da qualidade da assistência prestada.</p>
+                </div>
+            </div>
+            <div class="faq-item" id="q56">
+                <div class="question">56. Qual é o papel da Comissão de Acompanhamento da Contratualização na avaliação dos serviços?</div>
+                <div class="answer">
+                    <p>A comissão acompanha a execução das ações e serviços contratados, analisa o cumprimento das metas quantitativas e qualitativas, avalia indicadores pactuados, pode propor readequações quando necessárias e acompanha a qualidade da assistência prestada aos usuários.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h3>📝 Elaboração</h3>
+            <p>Projeto ContratualizaSUS – Coordenação de Contratos Assistenciais (CCTA)</p>
+            <div class="team-lead">
+                <div class="lead-card"><div class="role">Liderança</div><div class="name">Neuma Maria de Jesus</div></div>
+                <div class="lead-card"><div class="role">Liderança</div><div class="name">Jonathan dos Santos Ramos Rosa</div></div>
+            </div>
+            <h4 style="color:#2a5298;">Equipe de elaboração</h4>
+            <div class="team-list">
+                <div class="author-name">Diego Ferreira Barbosa e Oliveira</div>
+                <div class="author-name">Jonathan dos Santos Ramos Rosa</div>
+                <div class="author-name">Neuma Maria de Jesus</div>
+                <div class="author-name">Rosemar Gomes Vital</div>
+                <div class="author-name">Tânia Assis Souza Lopes</div>
+                <div class="author-name">Wagner Vieira de Carvalho</div>
+            </div>
+            <p style="margin-top: 25px; font-size: 0.85em; color: #777;">
+                <strong>Secretaria de Estado de Saúde de Minas Gerais</strong> – Subsecretaria de Regionalização<br>
+                Superintendência de Integração Regional<br>
+                Diretoria de Monitoramento de Políticas de Saúde | Projeto ContratualizaSUS<br>
+                Belo Horizonte, outubro de 2026
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+</body></html>

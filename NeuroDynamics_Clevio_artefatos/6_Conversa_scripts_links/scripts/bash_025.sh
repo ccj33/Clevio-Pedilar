@@ -1,0 +1,2 @@
+# 2026-11-24 13:38 - Check uploads, repo and session dirs for surviving files
+ls -la /root/.claude/uploads/72f1d19b-8183-5f85-98cc-106ac2c334e3/ 2>&1 | head -60; echo ---; ls /tmp/claude-0/-home-user-Claude-Teste/72f1d19b-8183-5f85-98cc-106ac2c334e3/ 2>&1; echo ---; ls -la /home/user/Claude-Teste | head -30; cd /home/user/Claude-Teste && git status --short | head; git log --oneline | head -5; echo ---; ls /root/.claude/projects/-home-user-Claude-Teste/ 2>&1; ls -la /root/.claude/projects/-home-user-Claude-Teste/*/ 2>&1 | head -20

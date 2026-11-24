@@ -1,0 +1,2 @@
+# 2026-11-24 13:38 - List what is left in the scratchpad
+S=/tmp/claude-0/-home-user-Claude-Teste/72f1d19b-8183-5f85-98cc-106ac2c334e3/scratchpad; ls $S 2>&1 | head -50; echo ---; du -sh $S 2>/dev/null; echo ---; find $S -maxdepth 3 \( -name '*.pdf' -o -name '*.docx' -o -name '*.zip' -o -name '*.html' -o -name '*.png' -o -name '*.pptx' \) -not -path '*/dl/*' -not -path '*/node_modules/*' 2>/dev/null | head -80

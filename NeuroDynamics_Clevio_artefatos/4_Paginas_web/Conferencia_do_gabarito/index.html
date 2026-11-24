@@ -1,0 +1,1006 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Conferência do gabarito</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Schibsted+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+/* Layout: uma coluna de leitura sob uma barra de progresso fixa. Cada exigência é uma ficha com duas vozes:
+   o que o sistema entendeu (sem serifa) e o trecho do edital (serifa, com marca-texto). O veredito vira carimbo. */
+:root {
+  --bg: #F1F3F6;
+  --surface: #FFFFFF;
+  --paper: #F7F7F3;
+  --ink: #172033;
+  --muted: #586377;
+  --line: #D9DEE6;
+  --track: #E3E7ED;
+  --accent: #2F3E9E;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #E7EAF7;
+  --mark: #FFE36E;
+  --mark-ink: #172033;
+  --ok: #16774A;
+  --ok-soft: #E2F2E9;
+  --bad: #B3261E;
+  --bad-soft: #FBE8E6;
+  --doubt: #965A00;
+  --doubt-soft: #FAEFD9;
+  --font-ui: "Schibsted Grotesk", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-doc: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --col: 48rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1218; --surface: #161B23; --paper: #1B2028; --ink: #E6E9EF; --muted: #9AA3B2; --line: #2B323D;
+    --track: #252C37; --accent: #AEB8FF; --accent-ink: #0E1218; --accent-soft: #232A47; --mark: #6A5612;
+    --mark-ink: #FFF4C7; --ok: #67CB95; --ok-soft: #15301F; --bad: #FF8E84; --bad-soft: #3B1D1B;
+    --doubt: #F2B862; --doubt-soft: #3A2A11; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E1218; --surface: #161B23; --paper: #1B2028; --ink: #E6E9EF; --muted: #9AA3B2; --line: #2B323D;
+  --track: #252C37; --accent: #AEB8FF; --accent-ink: #0E1218; --accent-soft: #232A47; --mark: #6A5612;
+  --mark-ink: #FFF4C7; --ok: #67CB95; --ok-soft: #15301F; --bad: #FF8E84; --bad-soft: #3B1D1B;
+  --doubt: #F2B862; --doubt-soft: #3A2A11; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg);
+}
+h1, h2, h3, h4, p, ul, figure, blockquote { margin: 0; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+.band-inner, .wrap {
+  max-width: calc(var(--col) + 2 * 16px);
+  margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+/* Barra fixa */
+.topbar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: var(--bg); border-bottom: 1px solid var(--line);
+}
+.topbar .band-inner { padding-block: 12px 10px; display: grid; gap: 8px; }
+.topbar-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.eyebrow {
+  font-family: var(--font-mono); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted);
+}
+h1 { font-size: 1.25rem; line-height: 1.2; font-weight: 700; letter-spacing: -0.01em; text-wrap: balance; }
+.progress-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 0.9rem; }
+.progress-text { font-variant-numeric: tabular-nums; }
+.progress-text strong { font-weight: 700; }
+.save-status { color: var(--muted); font-size: 0.82rem; }
+.save-status.is-warn { color: var(--doubt); }
+.bar { display: flex; height: 6px; border-radius: 999px; overflow: hidden; background: var(--track); }
+.bar span { display: block; height: 100%; transition: width 0.3s ease; }
+.bar .s-certo { background: var(--ok); }
+.bar .s-erro { background: var(--bad); }
+.bar .s-duvida { background: var(--doubt); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 40px; padding: 8px 14px; border-radius: var(--radius-sm);
+  border: 1px solid var(--line); background: var(--surface); cursor: pointer;
+  font-weight: 600; font-size: 0.92rem; line-height: 1.2; text-align: center;
+}
+.btn:hover { border-color: var(--muted); }
+.btn-primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.btn-primary:hover { border-color: var(--accent); filter: brightness(1.08); }
+.btn:disabled { opacity: 0.55; cursor: not-allowed; }
+.btn svg { width: 18px; height: 18px; flex: none; }
+.linklike {
+  background: none; border: 0; padding: 4px 0; color: var(--accent); font-weight: 600; font-size: 0.9rem;
+  cursor: pointer; text-decoration: underline; text-underline-offset: 3px;
+}
+
+/* Corpo */
+.wrap { padding-block: 24px 64px; display: grid; gap: 24px; }
+.lead { font-size: 1.05rem; max-width: 62ch; }
+.lead + .lead { margin-top: 8px; color: var(--muted); font-size: 0.95rem; }
+.notice {
+  border: 1px solid var(--doubt); background: var(--doubt-soft); color: var(--ink);
+  border-radius: var(--radius-sm); padding: 12px 14px; font-size: 0.95rem;
+}
+.done-banner {
+  border: 1px solid var(--ok); background: var(--ok-soft); border-radius: var(--radius-sm); padding: 12px 14px; font-weight: 600;
+}
+
+.tabs { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 8px; }
+.tab {
+  display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; align-items: baseline; text-align: left;
+  padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--line); background: var(--surface); cursor: pointer;
+}
+.tab:hover { border-color: var(--muted); }
+.tab[aria-selected="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.tab-name { font-weight: 700; }
+.tab-count { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.tab-nick { grid-column: 1 / -1; color: var(--muted); font-size: 0.85rem; }
+
+.case { display: grid; gap: 20px; }
+.case-head { display: grid; gap: 10px; }
+.case-head h2 { font-size: 1.35rem; line-height: 1.25; font-weight: 700; text-wrap: balance; }
+.facts { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 0.9rem; color: var(--muted); }
+.facts strong { color: var(--ink); font-weight: 600; }
+.scope { font-size: 0.95rem; max-width: 64ch; }
+.scope-label { font-weight: 700; }
+.reader-note { font-size: 0.95rem; padding: 10px 14px; border-radius: var(--radius-sm); background: var(--accent-soft); }
+
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.toolbar-label { font-size: 0.85rem; color: var(--muted); margin-right: 4px; }
+.chip {
+  border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 12px;
+  font-size: 0.88rem; font-weight: 500; cursor: pointer; font-variant-numeric: tabular-nums;
+}
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.empty { color: var(--muted); font-style: italic; }
+
+/* Fichas */
+.list { display: grid; gap: 16px; }
+.ficha {
+  position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 18px 18px 16px; display: grid; gap: 16px; scroll-margin-top: 150px;
+}
+.ficha-top { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; min-height: 26px; }
+.ficha.is-done .ficha-top { padding-right: 8.5rem; }
+.seq { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.actor { font-size: 0.78rem; font-weight: 600; padding: 2px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--ink); }
+.code { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); }
+.ficha-title { font-size: 1.12rem; line-height: 1.3; font-weight: 700; text-wrap: balance; }
+.ficha-title:focus { outline: none; }
+.ficha-body { display: grid; gap: 16px; }
+.label {
+  font-family: var(--font-mono); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 8px;
+}
+.explain-text { font-size: 1.02rem; }
+.explain-group { display: grid; gap: 6px; }
+.explain-lead { font-weight: 600; font-size: 0.95rem; }
+.explain-list { list-style: none; padding: 0; display: grid; gap: 4px; }
+.explain-list > li { padding: 8px 12px; border-radius: var(--radius-sm); background: var(--bg); min-width: 0; }
+.explain-list > li + li::before {
+  content: attr(data-sep); display: block; width: max-content; margin: -2px 0 8px -4px;
+  font-family: var(--font-mono); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--accent); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 1px 8px;
+}
+.explain-list .explain-list > li { background: var(--surface); }
+
+.trechos { display: grid; gap: 12px; }
+.trecho { display: grid; gap: 6px; min-width: 0; }
+.trecho-meta { display: flex; flex-wrap: wrap; gap: 4px 12px; font-family: var(--font-mono); font-size: 0.74rem; color: var(--muted); }
+.trecho-text {
+  font-family: var(--font-doc); font-size: 1.02rem; line-height: 1.65; padding: 12px 16px;
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-sm); overflow-wrap: anywhere;
+}
+.trecho-text mark {
+  color: var(--mark-ink); padding: 0 0.12em; border-radius: 2px;
+  background: linear-gradient(transparent 8%, var(--mark) 8%, var(--mark) 92%, transparent 92%);
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+.trecho-text .gap { color: var(--muted); }
+.links { display: grid; gap: 6px; font-size: 0.9rem; }
+.links ul { list-style: none; padding: 0; display: grid; gap: 4px; }
+.links q { font-family: var(--font-doc); }
+.links .where { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); margin-left: 6px; }
+
+.verdict { display: grid; gap: 10px; padding-top: 14px; border-top: 1px dashed var(--line); }
+.verdict-q { font-weight: 700; }
+.verdict-buttons { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 8px; }
+.vbtn[aria-pressed="true"][data-v="certo"] { background: var(--ok-soft); border-color: var(--ok); color: var(--ok); }
+.vbtn[aria-pressed="true"][data-v="erro"] { background: var(--bad-soft); border-color: var(--bad); color: var(--bad); }
+.vbtn[aria-pressed="true"][data-v="duvida"] { background: var(--doubt-soft); border-color: var(--doubt); color: var(--doubt); }
+.note { display: grid; gap: 8px; }
+.note label { font-size: 0.92rem; font-weight: 600; }
+.note textarea, .missing textarea {
+  width: 100%; min-height: 84px; resize: vertical; padding: 10px 12px; border-radius: var(--radius-sm);
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink); font: inherit; font-size: 0.95rem;
+}
+.note-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.note-status { font-size: 0.85rem; color: var(--muted); }
+.who { font-size: 0.85rem; color: var(--muted); }
+.saved-note { font-size: 0.95rem; padding: 10px 12px; border-radius: var(--radius-sm); background: var(--bg); white-space: pre-wrap; overflow-wrap: anywhere; }
+.saved-note-label { font-weight: 600; }
+
+.ficha.is-collapsed .ficha-body, .ficha.is-collapsed .verdict { display: none; }
+.ficha .summary { display: none; }
+.ficha.is-collapsed .summary { display: grid; gap: 10px; }
+.summary-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; }
+
+.stamp {
+  position: absolute; top: 14px; right: 16px; display: none;
+  font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 5px 9px; border: 2px solid currentColor; border-radius: 4px; outline: 1px solid currentColor; outline-offset: 2px;
+  transform: rotate(-5deg); background: var(--surface); pointer-events: none;
+}
+.ficha.is-done .stamp { display: block; }
+.ficha[data-verdict="certo"] .stamp { color: var(--ok); }
+.ficha[data-verdict="erro"] .stamp { color: var(--bad); }
+.ficha[data-verdict="duvida"] .stamp { color: var(--doubt); }
+.stamp.is-new { animation: carimbo 0.32s ease-out; }
+@keyframes carimbo {
+  0% { transform: rotate(-5deg) scale(1.35); opacity: 0; }
+  70% { transform: rotate(-5deg) scale(0.96); opacity: 1; }
+  100% { transform: rotate(-5deg) scale(1); }
+}
+
+.missing { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; display: grid; gap: 10px; }
+.missing h3 { font-size: 1.05rem; }
+.missing p { font-size: 0.95rem; color: var(--muted); max-width: 64ch; }
+
+.changed {
+  display: grid; gap: 4px; padding: 10px 12px; border-radius: var(--radius-sm);
+  background: var(--accent-soft); border: 1px solid var(--accent); font-size: 0.95rem;
+}
+.changed-old { color: var(--muted); overflow-wrap: anywhere; }
+
+.foot { font-size: 0.82rem; color: var(--muted); }
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.1rem; }
+  .topbar .eyebrow { display: none; }
+  .topbar-row { flex-wrap: nowrap; }
+  .topbar .btn-primary { min-height: 36px; padding: 6px 12px; font-size: 0.85rem; white-space: nowrap; }
+  .ficha { padding: 16px 14px 14px; }
+  .trecho-text { padding: 10px 12px; font-size: 0.98rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stamp.is-new { animation: none; }
+  .bar span { transition: none; }
+}
+</style>
+
+<header class="topbar">
+  <div class="band-inner">
+    <div class="topbar-row">
+      <div>
+        <p class="eyebrow">Analisador de editais</p>
+        <h1>Conferência do gabarito</h1>
+      </div>
+      <button class="btn btn-primary" id="next-pending" type="button">Próxima pendente</button>
+    </div>
+    <div class="progress-row">
+      <p class="progress-text" id="progress-text"><strong>0</strong> de 0 conferidas</p>
+      <p class="save-status" id="save-status" aria-live="polite">Carregando marcações…</p>
+    </div>
+    <div class="bar" id="bar" aria-hidden="true"><span class="s-certo"></span><span class="s-erro"></span><span class="s-duvida"></span></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <p class="lead">O analisador leu três editais reais e anotou as exigências que podem eliminar uma proposta. Para cada uma, compare o que o sistema entendeu com o trecho do edital e diga se está certo.</p>
+    <p class="lead">As marcações ficam salvas e voltam para o Claude corrigir o gabarito. Não precisa conferir tudo de uma vez.</p>
+  </section>
+  <div class="notice" id="notice" hidden></div>
+  <div class="notice" id="changed-banner" hidden></div>
+  <div class="done-banner" id="done-banner" hidden>Tudo conferido. Avise no chat que terminou.</div>
+  <nav class="tabs" id="tabs" role="tablist" aria-label="Editais"></nav>
+  <div id="cases"></div>
+  <p class="foot" id="foot"></p>
+</main>
+
+<script type="application/json" id="gabarito">{"generated_at":"2026-10-16T14:36:42+00:00","cases":[{"id":"fapemig-sede-018-2026","title":"Chamada FAPEMIG-SEDE 018/2026 — HubMG Gov","source":"Processo SEI 2070.01.0004193/2026-74, publicado em 09/10/2026. edital.txt é a camada de texto do PDF oficial; anexos I–IX em DOCX como publicados.","notes":"Primeira chamada real. Gabarito cobre os requisitos de elegibilidade verificáveis na submissão (itens 3, 5.1, 5.4 e 13.1). Itens de mérito, contratação e prestação de contas ficam de fora.","short":"FAPEMIG 018/2026","nickname":"HubMG Gov","reader_note":"","rules":[{"id":"FAP-TIPO","title":"Proponente é empresa, startup, cooperativa ou ICT-MG","actor":"Proponente","explain":{"text":"A proponente é empresa, startup, cooperativa ou ICT de Minas Gerais"},"evidence":[{"id":"EV-TIPO","section":"item 3.1.1","page":6,"document":"edital","before":"3.1.1.","quote":"Poderão figurar como Proponente empresas, startups, cooperativas ou ICTs-MG","after":", observadas as seguintes condições:","cut_before":false,"cut_after":false,"full":""}],"links":[{"id":"EV-TIPO-OU","section":"item 3.1.1","quote":"empresas, startups, cooperativas ou ICTs-MG"}],"rev":"da2291747e39"},{"id":"FAP-MEI","title":"Proponente não é MEI","actor":"Proponente","explain":{"text":"A proponente não é MEI (microempreendedor individual)"},"evidence":[{"id":"EV-MEI","section":"item 3.1.1, alínea d","page":7,"document":"edital","before":"d)","quote":"a Proponente não poderá ser enquadrada como Microempreendedor Individual (MEI)","after":";","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"d3090af45036"},{"id":"FAP-EXEC-MG","title":"Execução em Minas Gerais; fora do estado, só atividades acessórias e justificadas","actor":"Projeto","explain":{"all":[{"text":"O projeto é executado em Minas Gerais"},{"any":[{"text":"O projeto não tem atividades fora de Minas Gerais"},{"text":"As atividades fora de Minas Gerais são só acessórias ou complementares, sem ser o núcleo do projeto e as atividades fora de Minas Gerais estão justificadas no Plano de Trabalho"}]}]},"evidence":[{"id":"EV-EXEC","section":"item 3.1.1, alínea c","page":7,"document":"edital","before":"c) em qualquer hipótese,","quote":"a execução do projeto deverá ocorrer no Estado de Minas Gerais","after":", conforme declarado no Plano de Trabalho, ressalvado o disposto na alínea “e” deste item da Chamada;","cut_before":false,"cut_after":false,"full":""},{"id":"EV-EXEC-FORA","section":"item 3.1.1, alínea e","page":7,"document":"edital","before":"e)","quote":"admite-se a realização, fora do território estadual, de atividades acessórias ou complementares tecnicamente necessárias ao desenvolvimento da Solução","after":", tais como o uso de infraestrutura tecnológica, serviços especializados, ambientes de teste e competências técnicas, desde que justificadas no Plano de Trabalho e que não constituam o núcleo do objeto do projeto.","cut_before":false,"cut_after":false,"full":""},{"id":"EV-EXEC-COND","section":"item 3.1.1, alínea e","page":7,"document":"edital","before":"a realização, fora do território estadual, de atividades acessórias ou complementares tecnicamente necessárias ao desenvolvimento da Solução, tais como o uso de infraestrutura tecnológica, serviços especializados, ambientes de teste e competências técnicas,","quote":"desde que justificadas no Plano de Trabalho e que não constituam o núcleo do objeto do projeto","after":".","cut_before":true,"cut_after":false,"full":"e) admite-se a realização, fora do território estadual, de atividades acessórias ou complementares tecnicamente necessárias ao desenvolvimento da Solução, tais como o uso de infraestrutura tecnológica, serviços especializados, ambientes de teste e competências técnicas, desde que justificadas no Plano de Trabalho e que não constituam o núcleo do objeto do projeto."}],"links":[{"id":"EV-EXEC-RES","section":"item 3.1.1, alínea c","quote":"ressalvado o disposto na alínea “e” deste item da Chamada"}],"rev":"f9d191ae3ee9"},{"id":"FAP-CADASTRO","title":"Pré-cadastro ou cadastro regular na FAPEMIG","actor":"Proponente","explain":{"text":"A proponente tem pré-cadastro ou cadastro regular na FAPEMIG"},"evidence":[{"id":"EV-CAD","section":"item 3.1.2","page":7,"document":"edital","before":"3.1.2.","quote":"Todas as Proponentes deverão ter pré-cadastro ou cadastro regular na FAPEMIG","after":", nos termos da Portaria FAPEMIG PRE N. 020/2024.","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"283f5f437c43"},{"id":"FAP-LIMITE","title":"Uma proposta, ou até três para Desafios distintos com faturamento ≥ R$ 16 milhões","actor":"Proponente","explain":{"any":[{"text":"A proponente envia no máximo 1 proposta"},{"all":[{"text":"O faturamento bruto anual da proponente é de pelo menos R$ 16.000.000,00"},{"text":"A proponente envia no máximo 3 propostas"},{"text":"Cada proposta da proponente é para um Desafio diferente"}]}]},"evidence":[{"id":"EV-LIM1","section":"item 3.1.5","page":7,"document":"edital","before":"3.1.5.","quote":"Cada Proponente poderá submeter 1 (uma) Proposta","after":", ressalvado o disposto no item 3.1.5.1.","cut_before":false,"cut_after":false,"full":""},{"id":"EV-LIM3","section":"item 3.1.5.1","page":7,"document":"edital","before":"3.1.5.1. A Proponente que comprovar","quote":"faturamento bruto anual igual ou superior a R$ 16.000.000,00 (dezesseis milhões de reais) poderá submeter até 3 (três) propostas, vinculadas a Desafios distintos","after":". É vedada a apresentação, pela mesma Proponente, de mais de uma Proposta para o mesmo Desafio.","cut_before":false,"cut_after":false,"full":""},{"id":"EV-LIM-DES","section":"item 3.1.5.1","page":7,"document":"edital","before":"3.1.5.1. A Proponente que comprovar faturamento bruto anual igual ou superior a R$ 16.000.000,00 (dezesseis milhões de reais) poderá submeter até 3 (três) propostas, vinculadas a Desafios distintos.","quote":"É vedada a apresentação, pela mesma Proponente, de mais de uma Proposta para o mesmo Desafio","after":".","cut_before":false,"cut_after":false,"full":""}],"links":[{"id":"EV-LIM-EXC","section":"item 3.1.5","quote":"ressalvado o disposto no item 3.1.5.1"}],"rev":"723bdd0b1ba6"},{"id":"FAP-DESAFIO","title":"Proposta vinculada a um único Desafio","actor":"Projeto","explain":{"text":"A proposta atende a exatamente 1 Desafio"},"evidence":[{"id":"EV-DES","section":"item 3.2.1","page":8,"document":"edital","before":"3.2.1.","quote":"Cada proposta deverá atender a um único Desafio","after":", dentre os relacionados no Anexo V, identificando-o de forma clara, objetiva e inequívoca, e demonstrando a aderência da Solução proposta às necessidades explicitadas pelo Órgão Demandante.","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"e0f2f986d44b"},{"id":"FAP-MANIFESTACAO","title":"Manifestação de Interesse na Proposta Prévia","actor":"Projeto","explain":{"text":"A proposta traz a Manifestação de Interesse emitida pelo Órgão Demandante"},"evidence":[{"id":"EV-MAN","section":"item 3.2.2, alínea a","page":8,"document":"edital","before":"a)","quote":"estar acompanhadas da Manifestação de Interesse na Proposta Prévia emitida pelo Órgão Demandante","after":", nos termos do item 4;","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"0033d624f078"},{"id":"FAP-DURACAO","title":"Prazo de execução entre 18 e 30 meses","actor":"Projeto","explain":{"text":"O prazo de execução é de 18 a 30 meses"},"evidence":[{"id":"EV-DUR","section":"item 3.2.2, alínea g","page":8,"document":"edital","before":"g)","quote":"apresentar prazo de execução de, no mínimo, 18 (dezoito) e, no máximo, 30 (trinta) meses","after":", nos termos do item 6, contados a partir da data de publicação do extrato do instrumento jurídico no Diário Oficial do Estado de Minas Gerais;","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"fb7309925516"},{"id":"FAP-CONTRAPARTIDA","title":"Contrapartida de 10%: financeira para empresas, startups e cooperativas; econômica ou financeira para ICTs-MG","actor":"Proponente","explain":{"any":[{"text":"A proponente é empresa, startup ou cooperativa e a contrapartida financeira é de pelo menos 10% do valor pedido"},{"text":"A proponente é ICT de Minas Gerais e a contrapartida, somando a econômica e a financeira, é de pelo menos 10% do valor pedido"}]},"evidence":[{"id":"EV-CP-EMP","section":"item 5.4.1","page":12,"document":"edital","before":"5.4.1.","quote":"As Proponentes Empresas, Startups e Cooperativas deverão apresentar contrapartida financeira mínima obrigatória equivalente a 10% (dez por cento) do valor total a ser solicitado à FAPEMIG","after":", a ser aportada na conta bancária específica da parceria.","cut_before":false,"cut_after":false,"full":""},{"id":"EV-CP-ICT","section":"item 5.4.2","page":12,"document":"edital","before":"5.4.2.","quote":"As Proponentes ICTs-MG deverão apresentar contrapartida econômica mínima obrigatória equivalente a 10% (dez por cento) do valor total a ser solicitado à FAPEMIG","after":", e cuja contribuição possa ser mensurada financeiramente.","cut_before":false,"cut_after":false,"full":""},{"id":"EV-CP-SUB","section":"item 5.4.2.1","page":12,"document":"edital","before":"5.4.2.1.","quote":"A contrapartida econômica poderá ser substituída, total ou parcialmente, por contrapartida financeira, desde que o valor global da contrapartida exigida para a proposta seja integralmente atendido","after":".","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"e800b7272acd"},{"id":"FAP-VALOR","title":"Valor solicitado dentro do teto da categoria","actor":"Projeto","explain":{"any":[{"text":"O projeto é da Categoria A (pesquisa científica ou metodologias) e o valor pedido é de no máximo R$ 1.000.000,00"},{"text":"O projeto é da Categoria B (desenvolvimento tecnológico) e o valor pedido é de no máximo R$ 2.000.000,00"}]},"evidence":[{"id":"EV-VAL","section":"item 5.1","page":11,"document":"edital","before":"5.1. Esta Chamada contempla 2 (duas) categorias de apoio, conforme a natureza do projeto: Categoria Descrição Valor máximo a ser solicitado à FAPEMIG","quote":"A Projeto de pesquisa científica ou desenvolvimento de metodologias R$ 1.000.000,00 (um milhão de reais) B Projeto de desenvolvimento tecnológico R$ 2.000.000,00 (dois milhões de reais)","after":"","cut_before":false,"cut_after":false,"full":""}],"links":[{"id":"EV-VAL-CAT","section":"item 5.1","quote":"Esta Chamada contempla 2 (duas) categorias de apoio, conforme a natureza do projeto"}],"rev":"dfbb0e6351c1"},{"id":"FAP-COORD-VINCULO","title":"Coordenador com vínculo com a Proponente","actor":"Coordenador(a)","explain":{"text":"O(a) coordenador(a) tem vínculo com a proponente"},"evidence":[{"id":"EV-CVIN","section":"item 3.3.1","page":8,"document":"edital","before":"3.3.1.","quote":"Possuir vínculo com a Proponente que celebrará instrumento jurídico com a FAPEMIG","after":"na condição celetista, estatutário, contratual, como representante legal, sócio ou cooperado.","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"007db09c9866"},{"id":"FAP-COORD-EVEREST","title":"Coordenador cadastrado no EVEREST","actor":"Coordenador(a)","explain":{"text":"O(a) coordenador(a) está cadastrado(a) no sistema EVEREST da FAPEMIG"},"evidence":[{"id":"EV-CEV","section":"item 3.3.3","page":9,"document":"edital","before":"3.3.3.","quote":"Estar cadastrado no sistema EVEREST da FAPEMIG.","after":"","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"50eaeeb75baa"},{"id":"FAP-COORD-UMA","title":"Coordenador de no máximo uma proposta","actor":"Coordenador(a)","explain":{"text":"O(a) coordenador(a) coordena no máximo 1 proposta"},"evidence":[{"id":"EV-CUMA","section":"item 3.3.4","page":9,"document":"edital","before":"3.3.4.","quote":"Submeter e ser responsável por apenas 1 (uma) Proposta, na condição de Coordenador","after":". Compete ao(à) Coordenador(a) realizar a submissão da proposta no sistema EVEREST da FAPEMIG mediante o uso de login e senha de caráter pessoal e intransferível. O sistema EVEREST da FAPEMIG considera automaticamente como coordenador(a) do projeto o usuário","cut_before":false,"cut_after":true,"full":"3.3.4. Submeter e ser responsável por apenas 1 (uma) Proposta, na condição de Coordenador. Compete ao(à) Coordenador(a) realizar a submissão da proposta no sistema EVEREST da FAPEMIG mediante o uso de login e senha de caráter pessoal e intransferível. O sistema EVEREST da FAPEMIG considera automaticamente como coordenador(a) do projeto o usuário responsável pela submissão, não sendo permitida sua alteração na fase de julgamento e seleção."}],"links":[],"rev":"f4b55e031154"},{"id":"FAP-SUBCOORD","title":"Um único subcoordenador, que atende 3.5.1 a–d","actor":"Subcoordenador(a)","explain":{"all":[{"text":"O(a) subcoordenador(a) é servidor(a) ou empregado(a) público(a) de carreira"},{"text":"O(a) subcoordenador(a) é de órgão ou entidade do Estado de Minas Gerais autor do Desafio"},{"text":"O(a) subcoordenador(a) não ocupa só cargo em comissão"},{"text":"O(a) subcoordenador(a) atua no Órgão Demandante, em área ligada ao Desafio"},{"text":"O(a) subcoordenador(a) tem declaração do Órgão Demandante autorizando sua participação"},{"text":"O(a) subcoordenador(a) está indicado(a) como subcoordenador(a) da proposta no EVEREST"},{"text":"O(a) subcoordenador(a) assina a Manifestação de Interesse na Proposta Prévia"},{"text":"A proposta tem exatamente 1 subcoordenador(a)"}]},"evidence":[{"id":"EV-SUB-A","section":"item 3.5.1, alínea a","page":9,"document":"edital","before":"a)","quote":"ser servidor público ou empregado público, de carreira ou concursado","after":", de órgão ou entidade da Administração Pública direta ou indireta do Estado de Minas Gerais autora do Desafio, vedada a participação de ocupante exclusivamente de cargo em comissão;","cut_before":false,"cut_after":false,"full":""},{"id":"EV-SUB-A-ORG","section":"item 3.5.1, alínea a","page":9,"document":"edital","before":"a) ser servidor público ou empregado público, de carreira ou concursado,","quote":"de órgão ou entidade da Administração Pública direta ou indireta do Estado de Minas Gerais autora do Desafio","after":", vedada a participação de ocupante exclusivamente de cargo em comissão;","cut_before":false,"cut_after":false,"full":""},{"id":"EV-SUB-A-COM","section":"item 3.5.1, alínea a","page":9,"document":"edital","before":"a) ser servidor público ou empregado público, de carreira ou concursado, de órgão ou entidade da Administração Pública direta ou indireta do Estado de Minas Gerais autora do Desafio,","quote":"vedada a participação de ocupante exclusivamente de cargo em comissão","after":";","cut_before":false,"cut_after":false,"full":""},{"id":"EV-SUB-B","section":"item 3.5.1, alínea b","page":9,"document":"edital","before":"b)","quote":"atuar no Órgão Demandante em área vinculada à temática do Desafio","after":";","cut_before":false,"cut_after":false,"full":""},{"id":"EV-SUB-C","section":"item 3.5.1, alínea c","page":9,"document":"edital","before":"c)","quote":"apresentar declaração formal do Órgão Demandante autorizando sua participação no projeto","after":", nos termos do Anexo IV, inclusive na hipótese de servidor cedido, caso em que a autorização deverá ser assinada também pelo órgão de origem;","cut_before":false,"cut_after":false,"full":""},{"id":"EV-SUB-D","section":"item 3.5.1, alínea d","page":9,"document":"edital","before":"d)","quote":"ser formalmente indicado como Subcoordenador da Proposta no sistema EVEREST da FAPEMIG","after":"e sua assinatura constar na Manifestação de Interesse na Proposta Prévia, a ser encaminhada no momento da submissão da proposta. Será admitido(a) um(a) único(a) Subcoordenador(a) por proposta.","cut_before":false,"cut_after":false,"full":""},{"id":"EV-SUB-D-ASS","section":"item 3.5.1, alínea d","page":9,"document":"edital","before":"d) ser formalmente indicado como Subcoordenador da Proposta no sistema EVEREST da FAPEMIG e","quote":"sua assinatura constar na Manifestação de Interesse na Proposta Prévia","after":", a ser encaminhada no momento da submissão da proposta. Será admitido(a) um(a) único(a) Subcoordenador(a) por proposta.","cut_before":false,"cut_after":false,"full":""},{"id":"EV-SUB-UM","section":"item 3.5.1, alínea d","page":9,"document":"edital","before":"d) ser formalmente indicado como Subcoordenador da Proposta no sistema EVEREST da FAPEMIG e sua assinatura constar na Manifestação de Interesse na Proposta Prévia, a ser encaminhada no momento da submissão da proposta.","quote":"Será admitido(a) um(a) único(a) Subcoordenador(a) por proposta","after":".","cut_before":false,"cut_after":false,"full":""},{"id":"EV-SUB-INAB","section":"item 3.5.2","page":9,"document":"edital","before":"3.5.2.","quote":"A ausência da assinatura do Subcoordenador na Manifestação de Interesse na Proposta Prévia ou da sua indicação no sistema EVEREST da FAPEMIG, no momento da submissão da proposta, implicará a inabilitação do projeto","after":".","cut_before":false,"cut_after":false,"full":""}],"links":[{"id":"EV-SUB-E","section":"item 3.5.1","quote":"deverá atender, cumulativamente, aos seguintes requisitos"}],"rev":"1b77c6442d14"},{"id":"FAP-DEADLINE","title":"Proposta iniciada até 17h e enviada até 23h59 de 09/12/2026","actor":"Proponente","explain":{"all":[{"text":"A proposta é iniciada no sistema até 09/12/2026, às 17h00 (horário de Brasília)"},{"text":"A proposta é enviada até 09/12/2026, às 23h59 (horário de Brasília)"}]},"evidence":[{"id":"EV-DL","section":"item 13.1","page":25,"document":"edital","before":"13.1.","quote":"As propostas devem ser iniciadas no sistema EVEREST até as 17h do dia 09 de dezembro de 2026, ficando o sistema disponível para a conclusão e o envio definitivo até as 23h59 do mesmo dia","after":".","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"1623b665d928"}]},{"id":"cnpq-arc-34-2026","title":"Chamada CNPq Nº 34/2026 — ARC (Auxílio à Promoção de Eventos)","source":"PDF oficial publicado em 14/10/2026 na página do CNPq.","notes":"Gabarito cobre o item 3 (elegibilidade), 1.3.4 (porte), 2.1 (período por Linha), 4.3 (teto por Linha), 6.6.2–6.6.3 (arquivo) e o prazo. Ficam de fora: definição das Linhas por histórico (5/10 anos), 6.8/6.9 (vale a última proposta, não indefere) e mérito.","short":"CNPq 34/2026","nickname":"Promoção de eventos (ARC)","reader_note":"Nesta chamada, quem envia a proposta é o(a) coordenador(a) do projeto (item 3.2.1, alínea c).","rules":[{"id":"ARC-LATTES","title":"Currículo Lattes atualizado até a submissão","actor":"Coordenador(a)","explain":{"text":"O(a) coordenador(a) tem currículo Lattes atualizado até o prazo de envio"},"evidence":[{"id":"EV-LAT","section":"item 3.2.1, alínea a","page":3,"document":"chamada","before":"a)","quote":"ter seu currículo cadastrado na Plataforma Lattes, atualizado até a data limite para submissão da proposta","after":";","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"3db09f88711c"},{"id":"ARC-PHD","title":"Proponente com doutorado","actor":"Coordenador(a)","explain":{"text":"O(a) coordenador(a) tem doutorado"},"evidence":[{"id":"EV-PHD","section":"item 3.2.1, alínea b","page":3,"document":"chamada","before":"b)","quote":"possuir o título de Doutor","after":";","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"6c81d7b8190d"},{"id":"ARC-COMISSAO","title":"Proponente na comissão organizadora","actor":"Coordenador(a)","explain":{"text":"O(a) coordenador(a) faz parte da comissão organizadora do evento"},"evidence":[{"id":"EV-COM","section":"item 3.2.1, alínea d","page":3,"document":"chamada","before":"d)","quote":"participar da comissão organizadora do evento","after":". A participação na comissão organizadora deve estar claramente informada na proposta detalhada, conforme previsto no subitem 6.6 desta Chamada;","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"acd61c791eec"},{"id":"ARC-VINCULO","title":"Vínculo formal com a instituição de execução","actor":"Coordenador(a)","explain":{"text":"O(a) coordenador(a) tem vínculo formal com a instituição de execução"},"evidence":[{"id":"EV-VIN","section":"item 3.2.1, alínea e","page":3,"document":"chamada","before":"e)","quote":"ter vínculo formal com a instituição de execução do projeto","after":".","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"a9b5000343de"},{"id":"ARC-ADIMPLENTE","title":"Declara não ter inadimplência com CNPq e APF","actor":"Coordenador(a)","explain":{"text":"O(a) coordenador(a) declara que não tem dívidas (inadimplência) com o CNPq nem com a Administração Pública Federal"},"evidence":[{"id":"EV-ADI","section":"item 3.2.2","page":4,"document":"chamada","before":"3.2.2 – No formulário de submissão da proposta,","quote":"o proponente deverá declarar para os devidos fins de direito que não possui qualquer inadimplência com o CNPq e com a Administração Pública Federal","after":", direta ou indireta, sob pena de indeferimento.","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"2c2562092210"},{"id":"ARC-INEDITO","title":"Evento ainda não apoiado pelo CNPq em outra ação","actor":"Projeto","explain":{"text":"O evento ainda não recebeu apoio do CNPq em outra ação"},"evidence":[{"id":"EV-INED","section":"item 3.2.3","page":4,"document":"chamada","before":"3.2.3 - No formulário de submissão, o proponente deverá declarar para os devidos fins de direito que","quote":"o evento objeto da proposta ainda não foi contemplado com auxílio financeiro do CNPq em outra ação de fomento","after":", sob pena de indeferimento.","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"fab1dcc33559"},{"id":"ARC-INST","title":"Instituição de execução no Diretório e ICT, empresa pública ou OSC","actor":"Instituição de execução","explain":{"all":[{"text":"A instituição de execução está cadastrada no Diretório de Instituições do CNPq"},{"text":"A instituição de execução é ICT (instituição científica, tecnológica e de inovação), empresa pública ou organização da sociedade civil sem fins lucrativos"}]},"evidence":[{"id":"EV-INST","section":"item 3.3.1","page":4,"document":"chamada","before":"3.3.1 –","quote":"A instituição de execução do projeto deverá estar cadastrada no Diretório de Instituições do CNPq, devendo ser uma Instituição Científica, Tecnológica e de Inovação (ICT), empresa pública ou organização da sociedade civil sem fins lucrativos","after":".","cut_before":false,"cut_after":false,"full":""}],"links":[{"id":"EV-INST-E","section":"item 3.3.1","quote":"devendo ser"}],"rev":"67ca42e0b401"},{"id":"ARC-PROMOTOR","title":"Promotor é sociedade científica ou unidade de ICT","actor":"Projeto","explain":{"text":"Quem promove o evento é uma sociedade ou associação científica ou tecnológica, ou uma unidade acadêmica ou tecnológica de uma ICT"},"evidence":[{"id":"EV-PROM","section":"item 3.4.1","page":4,"document":"chamada","before":"3.4.1 -","quote":"Os eventos deverão ser promovidos por sociedades ou associações científicas e/ou tecnológicas ou unidades acadêmicas ou tecnológicas integrantes da estrutura de Instituições Científicas, Tecnológicas e de Inovação (ICTs)","after":".","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"6b7c2cabe620"},{"id":"ARC-PORTE","title":"Evento de grande porte e abrangência nacional ou maior","actor":"Projeto","explain":{"all":[{"text":"O evento é de grande porte"},{"text":"A abrangência do evento é mundial, internacional ou nacional"}]},"evidence":[{"id":"EV-PORTE","section":"item 1.3.4, alínea a","page":2,"document":"chamada","before":"a)","quote":"eventos de médio e pequeno porte","after":";","cut_before":false,"cut_after":false,"full":""},{"id":"EV-ABR","section":"item 1.3.4, alínea b","page":2,"document":"chamada","before":"b)","quote":"eventos de abrangência local ou regional","after":";","cut_before":false,"cut_after":false,"full":""}],"links":[{"id":"EV-NAO","section":"item 1.3.4","quote":"Não serão elegíveis a esta Chamada"}],"rev":"6b2bfc9e7c61"},{"id":"ARC-VALOR","title":"Valor dentro do teto da Linha","actor":"Projeto","explain":{"any":[{"text":"A proposta é da Linha 1 (eventos mundiais) e o valor pedido é de no máximo R$ 200.000,00"},{"text":"A proposta é da Linha 2 (eventos tradicionais) e o valor pedido é de no máximo R$ 200.000,00"},{"text":"A proposta é da Linha 3 (eventos não tradicionais) e o valor pedido é de no máximo R$ 150.000,00"}]},"evidence":[{"id":"EV-VAL","section":"item 4.3","page":5,"document":"chamada","before":"4.3 – Os projetos terão o valor máximo de financiamento de acordo com uma das seguintes faixas: Faixa Intervalo de Financiamento","quote":"Linha 1 – Eventos Mundiais Até R$ 200.000,00 Linha 2 – Eventos Tradicionais Até R$ 200.000,00 Linha 3 – Eventos Não Tradicionais Até R$ 150.000,00","after":"","cut_before":false,"cut_after":false,"full":""}],"links":[{"id":"EV-VAL-FX","section":"item 4.3","quote":"de acordo com uma das seguintes faixas"}],"rev":"f1d8ed3899ae"},{"id":"ARC-PERIODO","title":"Evento realizado no período da Linha","actor":"Projeto","explain":{"any":[{"text":"A proposta é da Linha 1 (eventos mundiais) e o evento acontece entre 01/07/2027 e 31/07/2028"},{"text":"A proposta é da Linha 2 (eventos tradicionais) ou Linha 3 (eventos não tradicionais) e o evento acontece entre 01/07/2027 e 30/06/2028"}]},"evidence":[{"id":"EV-PER1","section":"item 2.1, alínea a","page":2,"document":"chamada","before":"a) LINHA 1 – Eventos Mundiais que serão","quote":"realizados no período de 01/07/2027 a 31/07/2028","after":"; e","cut_before":false,"cut_after":false,"full":""},{"id":"EV-PER2","section":"item 2.1, alínea b","page":2,"document":"chamada","before":"b) LINHA 2 – Eventos Tradicionais Nacionais ou Internacionais que serão","quote":"realizados no período de 01/07/2027 a 30/06/2028","after":"; e","cut_before":false,"cut_after":false,"full":""},{"id":"EV-PER3","section":"item 2.1, alínea c","page":3,"document":"chamada","before":"c) LINHA 3 – Eventos Não Tradicionais Nacionais ou Internacionais que serão","quote":"realizados no período de 01/07/2027 a 30/06/2028","after":".","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"e99cde382997"},{"id":"ARC-ARQUIVO","title":"Arquivo anexo enviado, em PDF OCR de até 1 Mb","actor":"Projeto","explain":{"all":[{"text":"A proposta leva o arquivo anexo obrigatório"},{"text":"O arquivo anexo é um PDF com OCR (texto pesquisável)"},{"text":"O arquivo anexo tem no máximo 1 MB"}]},"evidence":[{"id":"EV-ARQ","section":"item 6.6.2","page":9,"document":"chamada","before":"6.6.2 -","quote":"O envio do arquivo é obrigatório e a ausência implicará no indeferimento da proposta","after":".","cut_before":false,"cut_after":false,"full":""},{"id":"EV-ARQ-OCR","section":"item 6.6.3","page":9,"document":"chamada","before":"6.6.3 –","quote":"O arquivo deverá ser gerado em formato PDF OCR","after":"e anexado ao Formulário de Propostas online, limitando-se a 1Mb (um megabyte).","cut_before":false,"cut_after":false,"full":""},{"id":"EV-ARQ-MB","section":"item 6.6.3","page":9,"document":"chamada","before":"6.6.3 – O arquivo deverá ser gerado em formato PDF OCR e anexado ao Formulário de Propostas online,","quote":"limitando-se a 1Mb (um megabyte)","after":".","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"4615bd8dce2b"},{"id":"ARC-DEADLINE","title":"Envio até 23h59 de 04/12/2026","actor":"Proponente","explain":{"text":"A proposta é enviada até 04/12/2026, às 23h59 (horário de Brasília)"},"evidence":[{"id":"EV-DL","section":"item 2.1, alínea c","page":3,"document":"chamada","before":"Lançamento da Chamada no Diário Oficial da União e na página do CNPq 14/10/2026 Prazo para impugnação da Chamada 26/10/2026","quote":"Data limite para submissão das propostas 04/12/2026","after":"Período de Julgamento 01/02/2027 a 19/02/2027 Divulgação do resultado preliminar do julgamento no Diário Oficial da União, por extrato, e na página do CNPq na internet 15/03/2027 Prazo final para interposição de recurso administrativo 25/03/2027 Divulgação","cut_before":false,"cut_after":true,"full":"Lançamento da Chamada no Diário Oficial da União e na página do CNPq 14/10/2026 Prazo para impugnação da Chamada 26/10/2026 Data limite para submissão das propostas 04/12/2026 Período de Julgamento 01/02/2027 a 19/02/2027 Divulgação do resultado preliminar do julgamento no Diário Oficial da União, por extrato, e na página do CNPq na internet 15/03/2027 Prazo final para interposição de recurso administrativo 25/03/2027 Divulgação da decisão no Diário Oficial da União, por extrato, e na página do CNPq na internet 30/04/2027"},{"id":"EV-DL-H","section":"item 6.2","page":7,"document":"chamada","before":"6.2 – O horário limite para submissão das propostas ao CNPq","quote":"será até às 23h59 (vinte e três horas e cinquenta e nove minutos), horário de Brasília","after":", da data descrita no CRONOGRAMA.","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"1363a15ebbee"}]},{"id":"cnpq-anr-32-2026","title":"Chamada Pública MCTI/CNPq/ANR Nº 32/2026 — cooperação Brasil–França","source":"Impressão do SEI/CNPq 2766435 (02/09/2026).","notes":"Gabarito cobre o item 3 (elegibilidade), 4.1.1 (teto e só custeio), 6.7 (Diretório), 6.9.2–6.9.5 (arquivo e cooperação com a França) e o prazo. Fica de fora a aderência às áreas (1.1 diz que é avaliada no julgamento) e o que a ANR exige da equipe francesa.","short":"CNPq 32/2026","nickname":"Cooperação Brasil–França (ANR)","reader_note":"Nesta chamada, quem envia a proposta é o(a) coordenador(a) brasileiro(a) do projeto (item 3.2.1).","rules":[{"id":"ANR-LATTES","title":"Currículo Lattes atualizado até a submissão","actor":"Coordenador(a)","explain":{"text":"O(a) coordenador(a) tem currículo Lattes atualizado até o prazo de envio"},"evidence":[{"id":"EV-LAT","section":"item 3.2.1, alínea a","page":1,"document":"chamada","before":"a)","quote":"ter seu currículo cadastrado na Plataforma Lattes, atualizado até a data limite para submissão da proposta","after":";","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"3db09f88711c"},{"id":"ANR-PHD","title":"Proponente com doutorado","actor":"Coordenador(a)","explain":{"text":"O(a) coordenador(a) tem doutorado"},"evidence":[{"id":"EV-PHD","section":"item 3.2.1, alínea b","page":1,"document":"chamada","before":"b)","quote":"possuir o título de doutor(a)","after":";","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"a95ee705be26"},{"id":"ANR-VINCULO","title":"Vínculo celetista/estatutário, ou aposentado em atividade com concordância","actor":"Coordenador(a)","explain":{"any":[{"text":"O vínculo do(a) coordenador(a) com a instituição de execução é celetista (CLT) ou estatutário"},{"all":[{"text":"O(a) coordenador(a) é aposentado(a)"},{"text":"O(a) coordenador(a) comprova que mantém atividade acadêmico-científica"},{"text":"A instituição de execução declara que concorda com a execução do projeto"}]}]},"evidence":[{"id":"EV-VIN","section":"item 3.2.1, alínea c","page":1,"document":"chamada","before":"c)","quote":"possuir vínculo celetista ou estatutário com a instituição de execução do projeto","after":"ou, caso seja aposentado, comprovar que mantém atividade acadêmico-científica e apresentar declaração da instituição de execução do projeto concordando com a sua execução.","cut_before":false,"cut_after":false,"full":""},{"id":"EV-APOS","section":"item 3.2.1, alínea c","page":1,"document":"chamada","before":"c) possuir vínculo celetista ou estatutário com a instituição de execução do projeto ou,","quote":"caso seja aposentado, comprovar que mantém atividade acadêmico-científica e apresentar declaração da instituição de execução do projeto concordando com a sua execução","after":".","cut_before":false,"cut_after":false,"full":""}],"links":[{"id":"EV-VIN-OU","section":"item 3.2.1, alínea c","quote":"ou, caso seja aposentado"}],"rev":"40e993f85a83"},{"id":"ANR-ADIMPLENTE","title":"Declara não estar inadimplente com CNPq e APF","actor":"Coordenador(a)","explain":{"text":"O(a) coordenador(a) declara que não tem dívidas (inadimplência) com o CNPq nem com a Administração Pública Federal"},"evidence":[{"id":"EV-ADI","section":"item 3.2.2","page":1,"document":"chamada","before":"3.2.2 - No formulário de submissão da proposta, o(a) proponente deverá declarar, para os devidos fins de direito, que","quote":"não está inadimplente junto ao CNPq e à Administração Pública Federal","after":", direta ou indireta, sob pena de indeferimento.","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"f5bb220ba0db"},{"id":"ANR-INST","title":"Instituição de execução no Diretório e de tipo admitido","actor":"Instituição de execução","explain":{"all":[{"text":"A instituição de execução está cadastrada no Diretório de Instituições do CNPq"},{"text":"A instituição de execução é ICT (instituição científica, tecnológica e de inovação), empresa privada brasileira, empresa pública ou organização da sociedade civil sem fins lucrativos"}]},"evidence":[{"id":"EV-INST","section":"item 3.3.1","page":1,"document":"chamada","before":"3.3.1 -","quote":"A instituição de execução do projeto deverá estar cadastrada no Diretório de Instituições do CNPq, devendo ser uma Instituição Científica, Tecnológica e de Inovação (ICT) e/ou empresa privada constituída sob as leis brasileiras, com sede e foro no Brasil, bem como empresa pública ou organização da sociedade civil sem fins lucrativos","after":". Observar o item 6.7.","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"0b79ba5f7dfb"},{"id":"ANR-DI-TODAS","title":"Todas as instituições envolvidas no Diretório","actor":"Instituição de execução","explain":{"text":"Todas as instituições envolvidas estão cadastradas no Diretório de Instituições do CNPq"},"evidence":[{"id":"EV-DI","section":"item 6.7","page":2,"document":"chamada","before":"6.7 -","quote":"Todas as instituições de pesquisas envolvidas com o projeto, sejam nacionais ou internacionais, devem estar cadastradas previamente no Diretório de Instituições do CNPq","after":". Para obter informações sobre esse procedimento, acesse o Diretório de Instituições do CNPq. Recomenda-se ler o FAQ disponível em http://di.cnpq.br/di/faqs.jsp. Recomenda-se ainda realizar o cadastro das instituições com antecedência à data limite para a","cut_before":false,"cut_after":true,"full":"6.7 - Todas as instituições de pesquisas envolvidas com o projeto, sejam nacionais ou internacionais, devem estar cadastradas previamente no Diretório de Instituições do CNPq. Para obter informações sobre esse procedimento, acesse o Diretório de Instituições do CNPq. Recomenda-se ler o FAQ disponível em http://di.cnpq.br/di/faqs.jsp. Recomenda-se ainda realizar o cadastro das instituições com antecedência à data limite para a submissão das propostas. Após a realização do cadastro, é necessário entrar em contato com o CNPq (atendimento@cnpq.br) e encaminhar a documentação exigida, conforme item 3 do FAQ, para conclusão do cadastro."}],"links":[],"rev":"26d0e35cf753"},{"id":"ANR-VALOR","title":"Até R$ 1,5 milhão, só custeio","actor":"Projeto","explain":{"all":[{"text":"O valor pedido é de no máximo R$ 1.500.000,00"},{"text":"O pedido é só de despesas de custeio"}]},"evidence":[{"id":"EV-VAL","section":"item 4.1.1","page":1,"document":"chamada","before":"4.1.1 - Pelo CNPq, serão destinados recursos de até R$ 6.000.000,00 (seis milhões de reais), na modalidade de custeio, para o financiamento das propostas aprovadas, a serem liberados de acordo com a disponibilidade orçamentária e financeira da instituição.","quote":"Cada proposta poderá solicitar até R$ 1.500.000,00 (um milhão e quinhentos mil reais), exclusivamente em despesas de custeio","after":".","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"7d49e1558471"},{"id":"ANR-FRANCA","title":"Cooperação com grupo de pesquisa da França, com missões técnicas","actor":"Projeto","explain":{"all":[{"text":"O projeto tem cooperação com um grupo de pesquisa da França"},{"text":"O projeto prevê missões técnicas entre os grupos do Brasil e da França"}]},"evidence":[{"id":"EV-FR","section":"item 6.9.5","page":3,"document":"chamada","before":"6.9.5 -","quote":"Os projetos de pesquisa devem prever, obrigatoriamente, a cooperação entre grupos de pesquisa do Brasil e da França","after":", incluindo a realização de missões técnicas, e outras atividades de cooperação conjuntamente pactuadas pelos grupos envolvidos.","cut_before":false,"cut_after":false,"full":""},{"id":"EV-FR-MIS","section":"item 6.9.5","page":3,"document":"chamada","before":"6.9.5 - Os projetos de pesquisa devem prever, obrigatoriamente, a cooperação entre grupos de pesquisa do Brasil e da França,","quote":"incluindo a realização de missões técnicas","after":", e outras atividades de cooperação conjuntamente pactuadas pelos grupos envolvidos.","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"6a148e36a485"},{"id":"ANR-ARQUIVO","title":"Arquivo anexo enviado, em PDF OCR de até 1 Mb","actor":"Projeto","explain":{"all":[{"text":"A proposta leva o arquivo anexo obrigatório"},{"text":"O arquivo anexo é um PDF com OCR (texto pesquisável)"},{"text":"O arquivo anexo tem no máximo 1 MB"}]},"evidence":[{"id":"EV-ARQ","section":"item 6.9.2","page":3,"document":"chamada","before":"6.9.2 -","quote":"O envio do arquivo é obrigatório e a ausência de qualquer um deles implicará no indeferimento da proposta","after":".","cut_before":false,"cut_after":false,"full":""},{"id":"EV-ARQ-OCR","section":"item 6.9.3","page":3,"document":"chamada","before":"6.9.3 -","quote":"O arquivo deverá ser gerado em formato PDF OCR","after":"e anexado ao Formulário de Propostas online, limitando-se a 1 Mb (um megabyte).","cut_before":false,"cut_after":false,"full":""},{"id":"EV-ARQ-MB","section":"item 6.9.3","page":3,"document":"chamada","before":"6.9.3 - O arquivo deverá ser gerado em formato PDF OCR e anexado ao Formulário de Propostas online,","quote":"limitando-se a 1 Mb (um megabyte)","after":".","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"dba2c371e4d3"},{"id":"ANR-DEADLINE","title":"Envio até 23h59 de 31/03/2027","actor":"Proponente","explain":{"text":"A proposta é enviada até 31/03/2027, às 23h59 (horário de Brasília)"},"evidence":[{"id":"EV-DL","section":"item 2","page":1,"document":"chamada","before":"Lançamento da Chamada no Diário Oficial da União e na página do CNPq 03/09/2026 Prazo para impugnação da Chamada 14/09/2026","quote":"Data limite para submissão das propostas 31/03/2027","after":"Período de Julgamento abril a setembro/2027 Divulgação do resultado do julgamento no Diário Oficial da União, por extrato, e na página do CNPq na internet a partir de outubro/2027 Prazo final para interposição de recurso administrativo 10 dias corridos após","cut_before":false,"cut_after":true,"full":"Lançamento da Chamada no Diário Oficial da União e na página do CNPq 03/09/2026 Prazo para impugnação da Chamada 14/09/2026 Data limite para submissão das propostas 31/03/2027 Período de Julgamento abril a setembro/2027 Divulgação do resultado do julgamento no Diário Oficial da União, por extrato, e na página do CNPq na internet a partir de outubro/2027 Prazo final para interposição de recurso administrativo 10 dias corridos após divulgação do resultado preliminar Divulgação da decisão no Diário Oficial da União, por extrato, e na página do CNPq na internet a partir de outubro/2027 Contratação das propostas aprovadas janeiro/2028"},{"id":"EV-DL-H","section":"item 6.5","page":2,"document":"chamada","before":"6.5 - O horário limite para submissão das propostas ao CNPq","quote":"será até às 23h59 (vinte e três horas e cinquenta e nove minutos), horário de Brasília","after":", conforme data descrita no CRONOGRAMA.","cut_before":false,"cut_after":false,"full":""}],"links":[],"rev":"a6bc0c0424bc"}]}]}</script>
+<script>
+(function () {
+  "use strict";
+  var DATA = JSON.parse(document.getElementById("gabarito").textContent);
+  // versão de cada regra: marcação feita sobre outra versão volta como pendente
+  var REV = {};
+  DATA.cases.forEach(function (c) { c.rules.forEach(function (r) { REV[r.id] = r.rev; }); });
+  var VERDICTS = {
+    certo: { label: "Está certo", stamp: "Conferido" },
+    erro: { label: "Tem erro", stamp: "Com erro" },
+    duvida: { label: "Não tenho certeza", stamp: "Em dúvida" }
+  };
+  var NOTE_PROMPT = {
+    erro: "O que está errado? Se souber, diga como deveria ser e cite o item do edital.",
+    duvida: "O que deixou você em dúvida?"
+  };
+  var ICONS = {
+    certo: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l5 5L19.5 7"/></svg>',
+    erro: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>',
+    duvida: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.2 9.2a2.9 2.9 0 1 1 4.1 2.6c-.8.4-1.3 1-1.3 1.9v.6"/><circle cx="12" cy="17.6" r="0.6" fill="currentColor"/></svg>'
+  };
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var state = {
+    reviews: new Map(),   // ruleId -> {verdict, note, by, at, rev, via}
+    stale: new Map(),     // marcações feitas sobre uma versão anterior da regra
+    missing: new Map(),   // caseId -> {note, by, at}
+    active: DATA.cases[0].id,
+    filter: "todas",
+    expanded: new Set(),
+    names: {}
+  };
+  // canInteract: só depois que as marcações salvas chegaram (ou ficou claro que não há onde salvar),
+  // para um clique não ser apagado pela primeira leitura da loja
+  var db = null, user = null, myId = null, readOnly = false, storeLive = false, canInteract = false, pending = 0;
+  var cards = new Map(), ruleCase = new Map(), caseEls = new Map(), tabEls = new Map(), queues = new Map();
+  var allRules = [];
+
+  try { var saved = localStorage.getItem("gabarito-aba"); if (saved && DATA.cases.some(function (c) { return c.id === saved; })) state.active = saved; } catch (e) {}
+
+  function el(tag, cls, text) {
+    var node = document.createElement(tag);
+    if (cls) node.className = cls;
+    if (text != null) node.textContent = text;
+    return node;
+  }
+  function cap(text) { return text ? text.charAt(0).toUpperCase() + text.slice(1) : text; }
+  function findText(node, re) {
+    if (!node) return null;
+    if (node.text != null) return re.test(node.text) ? node.text : null;
+    var kids = node.all || node.any || [];
+    for (var i = 0; i < kids.length; i++) {
+      var hit = findText(kids[i], re);
+      if (hit) return hit;
+    }
+    return null;
+  }
+
+  /* ---------- montagem ---------- */
+  function explainEl(node, depth) {
+    if (node.text != null) return el("p", "explain-text", node.text);
+    var kind = node.all ? "all" : node.any ? "any" : null;
+    if (kind) {
+      var box = el("div", "explain-group");
+      var lead = kind === "all"
+        ? (depth ? "Todas estas:" : "Precisa cumprir todas estas condições:")
+        : (depth ? "Uma destas:" : "Basta cumprir uma destas opções:");
+      box.append(el("p", "explain-lead", lead));
+      var ul = el("ul", "explain-list");
+      node[kind].forEach(function (item) {
+        var li = el("li");
+        li.setAttribute("data-sep", kind === "all" ? "e" : "ou");
+        li.append(explainEl(item, depth + 1));
+        ul.append(li);
+      });
+      box.append(ul);
+      return box;
+    }
+    if (node.not) {
+      var neg = el("div", "explain-group");
+      neg.append(el("p", "explain-lead", "Não pode acontecer:"), explainEl(node.not, depth + 1));
+      return neg;
+    }
+    if (node.unless) {
+      var un = el("div", "explain-group");
+      un.append(explainEl(node.unless.rule, depth + 1), el("p", "explain-lead", "A não ser que:"), explainEl(node.unless.except, depth + 1));
+      return un;
+    }
+    return el("p", "explain-text", JSON.stringify(node));
+  }
+
+  function fillExcerpt(block, ev, full) {
+    block.textContent = "";
+    if (full) {
+      var at = ev.full.indexOf(ev.quote);
+      if (at < 0) { block.textContent = ev.full; return; }
+      block.append(document.createTextNode(ev.full.slice(0, at)), el("mark", null, ev.quote), document.createTextNode(ev.full.slice(at + ev.quote.length)));
+      return;
+    }
+    if (ev.cut_before) block.append(el("span", "gap", "… "));
+    if (ev.before) block.append(document.createTextNode(ev.before + " "));
+    block.append(el("mark", null, ev.quote));
+    if (ev.after) block.append(document.createTextNode(/^[.,;:)]/.test(ev.after) ? ev.after : " " + ev.after));
+    if (ev.cut_after) block.append(el("span", "gap", " …"));
+  }
+
+  function excerptEl(ev) {
+    var fig = el("figure", "trecho");
+    var meta = el("figcaption", "trecho-meta");
+    meta.append(el("span", null, cap(ev.section)));
+    if (ev.page) meta.append(el("span", null, "página " + ev.page));
+    var block = el("blockquote", "trecho-text");
+    fillExcerpt(block, ev, false);
+    fig.append(meta, block);
+    if (ev.full) {
+      var more = el("button", "linklike", "Ver a cláusula inteira");
+      more.type = "button";
+      more.setAttribute("aria-expanded", "false");
+      more.addEventListener("click", function () {
+        var open = more.getAttribute("aria-expanded") !== "true";
+        fillExcerpt(block, ev, open);
+        more.setAttribute("aria-expanded", String(open));
+        more.textContent = open ? "Mostrar só o trecho" : "Ver a cláusula inteira";
+      });
+      fig.append(more);
+    }
+    return fig;
+  }
+
+  function buildCard(rule, index, total, caseId) {
+    var art = el("article", "ficha");
+    art.id = "r-" + rule.id;
+    var top = el("div", "ficha-top");
+    top.append(el("span", "seq", (index + 1) + " de " + total), el("span", "actor", rule.actor), el("span", "code", rule.id));
+    var stamp = el("div", "stamp");
+    stamp.setAttribute("aria-hidden", "true");
+    var title = el("h3", "ficha-title", rule.title);
+    title.tabIndex = -1;
+    var changed = el("div", "changed");
+    changed.hidden = true;
+
+    var body = el("div", "ficha-body");
+    var reading = el("section");
+    reading.append(el("h4", "label", "O que o sistema vai conferir"), explainEl(rule.explain, 0));
+    var source = el("section");
+    source.append(el("h4", "label", "O que o edital diz"));
+    var trechos = el("div", "trechos");
+    rule.evidence.forEach(function (ev) { trechos.append(excerptEl(ev)); });
+    source.append(trechos);
+    if (rule.links.length) {
+      var links = el("div", "links");
+      links.append(el("p", "label", "Palavras do edital que ligam as condições"));
+      var ul = el("ul");
+      rule.links.forEach(function (link) {
+        var li = el("li");
+        li.append(el("q", null, link.quote), el("span", "where", link.section));
+        ul.append(li);
+      });
+      links.append(ul);
+      source.append(links);
+    }
+    body.append(reading, source);
+
+    var verdict = el("div", "verdict");
+    var qid = "q-" + rule.id;
+    var q = el("p", "verdict-q", "O sistema entendeu certo?");
+    q.id = qid;
+    var group = el("div", "verdict-buttons");
+    group.setAttribute("role", "group");
+    group.setAttribute("aria-labelledby", qid);
+    var buttons = {};
+    Object.keys(VERDICTS).forEach(function (v) {
+      var b = el("button", "btn vbtn");
+      b.type = "button";
+      b.setAttribute("data-v", v);
+      b.setAttribute("aria-pressed", "false");
+      b.innerHTML = ICONS[v];
+      b.append(document.createTextNode(VERDICTS[v].label));
+      b.addEventListener("click", function () { choose(rule, caseId, v); });
+      buttons[v] = b;
+      group.append(b);
+    });
+    var note = el("div", "note");
+    note.hidden = true;
+    var noteId = "note-" + rule.id;
+    var noteLabel = el("label");
+    noteLabel.setAttribute("for", noteId);
+    var area = el("textarea");
+    area.id = noteId;
+    area.rows = 3;
+    var noteActions = el("div", "note-actions");
+    var saveNote = el("button", "btn", "Salvar comentário");
+    saveNote.type = "button";
+    var noteStatus = el("span", "note-status");
+    noteStatus.setAttribute("aria-live", "polite");
+    saveNote.addEventListener("click", function () { saveComment(rule, caseId); });
+    noteActions.append(saveNote, noteStatus);
+    note.append(noteLabel, area, noteActions);
+    var who = el("p", "who");
+    var undo = el("button", "linklike", "Desfazer marcação");
+    undo.type = "button";
+    undo.hidden = true;
+    undo.addEventListener("click", function () { clearVerdict(rule); });
+    verdict.append(q, group, note, who, undo);
+
+    var summary = el("div", "summary");
+    var savedNote = el("p", "saved-note");
+    var sumRow = el("div", "summary-row");
+    var sumWho = el("p", "who");
+    var reopen = el("button", "linklike", "Rever");
+    reopen.type = "button";
+    reopen.addEventListener("click", function () {
+      state.expanded.add(rule.id);
+      updateCard(rule.id);
+      buttons[(state.reviews.get(rule.id) || {}).verdict || "certo"].focus();
+    });
+    sumRow.append(sumWho, reopen);
+    summary.append(savedNote, sumRow);
+
+    art.append(top, stamp, title, changed, body, verdict, summary);
+    cards.set(rule.id, {
+      root: art, stamp: stamp, title: title, changed: changed, buttons: buttons, note: note, noteLabel: noteLabel, area: area,
+      noteStatus: noteStatus, saveNote: saveNote, who: who, undo: undo, savedNote: savedNote, sumWho: sumWho
+    });
+    return art;
+  }
+
+  function buildCase(c) {
+    var sec = el("section", "case");
+    sec.id = "edital-" + c.id;
+    sec.setAttribute("role", "tabpanel");
+    var head = el("div", "case-head");
+    head.append(el("p", "eyebrow", c.short + " · " + c.nickname), el("h2", null, c.title));
+    var facts = el("div", "facts");
+    var deadline = c.rules.filter(function (r) { return /DEADLINE$/.test(r.id); })[0];
+    [["Iniciar no sistema até: ", /^A proposta é iniciada no sistema até /], ["Prazo de envio: ", /^A proposta é enviada até /]].forEach(function (pair) {
+      var found = deadline ? findText(deadline.explain, pair[1]) : null;
+      if (!found) return;
+      var span = el("span");
+      span.append(el("strong", null, pair[0]), document.createTextNode(found.replace(pair[1], "")));
+      facts.append(span);
+    });
+    var count = el("span");
+    count.append(el("strong", null, c.rules.length + " exigências"), document.createTextNode(" no gabarito"));
+    facts.append(count);
+    head.append(facts);
+    if (c.source) {
+      var first = c.source.split(". ")[0];
+      head.append(el("p", "facts", /\.$/.test(first) ? first : first + "."));
+    }
+    var scope = el("p", "scope");
+    scope.append(el("span", "scope-label", "O que este gabarito cobre: "), document.createTextNode(c.notes));
+    head.append(scope);
+    if (c.reader_note) head.append(el("p", "reader-note", c.reader_note));
+
+    var toolbar = el("div", "toolbar");
+    toolbar.setAttribute("role", "group");
+    toolbar.setAttribute("aria-label", "Filtrar exigências");
+    toolbar.append(el("span", "toolbar-label", "Mostrar:"));
+    var chips = {};
+    [["todas", "Todas"], ["pendentes", "Pendentes"], ["erro", "Com erro"], ["duvida", "Em dúvida"]].forEach(function (f) {
+      var chip = el("button", "chip");
+      chip.type = "button";
+      chip.setAttribute("data-filter", f[0]);
+      chip.addEventListener("click", function () { state.filter = f[0]; applyFilter(); });
+      chips[f[0]] = { btn: chip, label: f[1] };
+      toolbar.append(chip);
+    });
+
+    var list = el("div", "list");
+    c.rules.forEach(function (rule, i) {
+      ruleCase.set(rule.id, c.id);
+      allRules.push(rule);
+      list.append(buildCard(rule, i, c.rules.length, c.id));
+    });
+    var empty = el("p", "empty", "Nenhuma exigência neste filtro.");
+    empty.hidden = true;
+
+    var missing = el("section", "missing");
+    missing.append(el("h3", null, "Faltou alguma exigência?"));
+    missing.append(el("p", null, "Se este edital tem outra exigência que pode eliminar a proposta e não está na lista, descreva aqui com o número do item."));
+    var mid = "missing-" + c.id;
+    var mlabel = el("label", "scope-label", "Exigências que faltaram");
+    mlabel.setAttribute("for", mid);
+    var marea = el("textarea");
+    marea.id = mid;
+    marea.rows = 3;
+    var mactions = el("div", "note-actions");
+    var msave = el("button", "btn", "Salvar");
+    msave.type = "button";
+    var mstatus = el("span", "note-status");
+    mstatus.setAttribute("aria-live", "polite");
+    msave.addEventListener("click", function () { saveMissing(c.id); });
+    mactions.append(msave, mstatus);
+    missing.append(mlabel, marea, mactions);
+
+    sec.append(head, toolbar, list, empty, missing);
+    caseEls.set(c.id, { root: sec, chips: chips, list: list, empty: empty, marea: marea, mstatus: mstatus, msave: msave });
+    return sec;
+  }
+
+  function buildTabs() {
+    var tabs = document.getElementById("tabs");
+    DATA.cases.forEach(function (c) {
+      var t = el("button", "tab");
+      t.type = "button";
+      t.setAttribute("role", "tab");
+      t.setAttribute("aria-controls", "edital-" + c.id);
+      var count = el("span", "tab-count");
+      t.append(el("span", "tab-name", c.short), count, el("span", "tab-nick", c.nickname));
+      t.addEventListener("click", function () { selectCase(c.id); });
+      tabs.append(t);
+      tabEls.set(c.id, { btn: t, count: count });
+    });
+  }
+
+  /* ---------- estado → tela ---------- */
+  function updateCard(id) {
+    var card = cards.get(id);
+    var review = state.reviews.get(id);
+    var verdict = review ? review.verdict : null;
+    var done = !!verdict;
+    card.root.classList.toggle("is-done", done);
+    card.root.classList.toggle("is-collapsed", done && !state.expanded.has(id));
+    if (verdict) card.root.setAttribute("data-verdict", verdict); else card.root.removeAttribute("data-verdict");
+    card.stamp.textContent = verdict ? VERDICTS[verdict].stamp : "";
+    var old = !review ? state.stale.get(id) : null;
+    card.changed.hidden = !old;
+    card.changed.textContent = "";
+    if (old) {
+      var head = el("p");
+      head.append(el("strong", null, "Corrigida depois da conferência."), document.createTextNode(" Confira se agora ficou certo."));
+      var before = "Na conferência anterior: “" + VERDICTS[old.verdict].label + "”" + (old.note ? ". " + old.note : "");
+      card.changed.append(head, el("p", "changed-old", before));
+    }
+    Object.keys(card.buttons).forEach(function (v) {
+      card.buttons[v].setAttribute("aria-pressed", String(v === verdict));
+      card.buttons[v].disabled = readOnly || !canInteract;
+    });
+    var wantsNote = verdict === "erro" || verdict === "duvida";
+    card.note.hidden = !wantsNote;
+    if (wantsNote) {
+      card.noteLabel.textContent = NOTE_PROMPT[verdict];
+      if (document.activeElement !== card.area && !card.area.dataset.dirty) card.area.value = review.note || "";
+    }
+    card.area.disabled = readOnly;
+    card.saveNote.disabled = readOnly;
+    card.undo.hidden = !done || readOnly;
+    var whoText = done ? whoLine(review) : "";
+    card.who.textContent = whoText;
+    card.sumWho.textContent = whoText;
+    card.savedNote.hidden = !(review && review.note);
+    card.savedNote.textContent = "";
+    if (review && review.note) {
+      card.savedNote.append(el("span", "saved-note-label", verdict === "erro" ? "Erro apontado: " : verdict === "duvida" ? "Dúvida: " : "Comentário: "), document.createTextNode(review.note));
+    }
+  }
+
+  function whoLine(review) {
+    var when = "";
+    if (review.at) {
+      var d = new Date(review.at);
+      if (!isNaN(d)) when = d.toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
+    }
+    if (review.via === "chat") return "Conferido no chat" + (when ? " em " + when : "");
+    var name = review.by && review.by === myId ? "você" : (review.by && state.names[review.by]) || (review.by ? "alguém da equipe" : "");
+    var text = name ? "Marcado por " + name : "Marcado";
+    return when ? text + " em " + when : text;
+  }
+
+  function counts(rules) {
+    var out = { certo: 0, erro: 0, duvida: 0, total: rules.length };
+    rules.forEach(function (r) {
+      var v = (state.reviews.get(r.id) || {}).verdict;
+      if (v) out[v] += 1;
+    });
+    out.done = out.certo + out.erro + out.duvida;
+    return out;
+  }
+
+  function updateCounts() {
+    var all = counts(allRules);
+    var text = document.getElementById("progress-text");
+    text.textContent = "";
+    text.append(el("strong", null, String(all.done)), document.createTextNode(" de " + all.total + " conferidas"));
+    if (all.erro || all.duvida) {
+      var parts = [];
+      if (all.erro) parts.push(all.erro + (all.erro === 1 ? " com erro" : " com erro"));
+      if (all.duvida) parts.push(all.duvida + " em dúvida");
+      text.append(document.createTextNode(" · " + parts.join(" · ")));
+    }
+    var bar = document.getElementById("bar").children;
+    bar[0].style.width = (100 * all.certo / all.total) + "%";
+    bar[1].style.width = (100 * all.erro / all.total) + "%";
+    bar[2].style.width = (100 * all.duvida / all.total) + "%";
+    document.getElementById("done-banner").hidden = all.done < all.total;
+    var changedCount = 0;
+    state.stale.forEach(function (_, id) { if (!state.reviews.has(id)) changedCount += 1; });
+    var banner = document.getElementById("changed-banner");
+    banner.hidden = changedCount === 0;
+    banner.textContent = changedCount === 1
+      ? "1 exigência foi corrigida depois da conferência. Em “Mostrar”, escolha “Pendentes” para ver só ela."
+      : changedCount + " exigências foram corrigidas depois da conferência. Em “Mostrar”, escolha “Pendentes” para ver só elas.";
+    document.getElementById("next-pending").hidden = all.done >= all.total;
+    DATA.cases.forEach(function (c) {
+      var k = counts(c.rules);
+      tabEls.get(c.id).count.textContent = k.done + "/" + k.total;
+      var chips = caseEls.get(c.id).chips;
+      var n = { todas: k.total, pendentes: k.total - k.done, erro: k.erro, duvida: k.duvida };
+      Object.keys(chips).forEach(function (f) { chips[f].btn.textContent = chips[f].label + " (" + n[f] + ")"; });
+    });
+    applyFilter();
+  }
+
+  function matches(id) {
+    var v = (state.reviews.get(id) || {}).verdict;
+    if (state.filter === "pendentes") return !v;
+    if (state.filter === "erro") return v === "erro";
+    if (state.filter === "duvida") return v === "duvida";
+    return true;
+  }
+
+  function applyFilter() {
+    DATA.cases.forEach(function (c) {
+      var ce = caseEls.get(c.id);
+      var shown = 0;
+      c.rules.forEach(function (r) {
+        var ok = matches(r.id);
+        cards.get(r.id).root.hidden = !ok;
+        if (ok) shown += 1;
+      });
+      ce.empty.hidden = shown > 0;
+      Object.keys(ce.chips).forEach(function (f) { ce.chips[f].btn.setAttribute("aria-pressed", String(f === state.filter)); });
+    });
+  }
+
+  function selectCase(id) {
+    state.active = id;
+    try { localStorage.setItem("gabarito-aba", id); } catch (e) {}
+    DATA.cases.forEach(function (c) {
+      var on = c.id === id;
+      caseEls.get(c.id).root.hidden = !on;
+      tabEls.get(c.id).btn.setAttribute("aria-selected", String(on));
+    });
+  }
+
+  function setStatus(text, warn) {
+    var s = document.getElementById("save-status");
+    s.textContent = text;
+    s.classList.toggle("is-warn", !!warn);
+  }
+  function refreshStatus() {
+    if (!db) return;
+    if (readOnly) return setStatus("Só leitura", true);
+    if (pending > 0) return setStatus("Salvando…");
+    setStatus(storeLive ? "Tudo salvo" : "Carregando marcações…");
+  }
+  function showNotice(text) {
+    var n = document.getElementById("notice");
+    n.textContent = text;
+    n.hidden = false;
+  }
+
+  /* ---------- ações ---------- */
+  function enqueue(path, fn) {
+    var prev = queues.get(path) || Promise.resolve();
+    var next = prev.catch(function () {}).then(fn);
+    queues.set(path, next);
+    return next;
+  }
+
+  function write(path, fn, onFail) {
+    if (!db) return Promise.resolve();
+    pending += 1;
+    refreshStatus();
+    return enqueue(path, function () {
+      return fn().catch(function (err) {
+        if (err && err.code === "unavailable") {
+          return new Promise(function (r) { setTimeout(r, 400 + Math.random() * 600); }).then(fn);
+        }
+        throw err;
+      });
+    }).catch(function (err) {
+      var code = err && err.code;
+      if (code === "invalid_argument" || code === "not_granted") {
+        readOnly = true;
+        showNotice("Você pode ver esta página, mas não marcar. Peça a quem compartilhou para dar acesso de edição.");
+        allRules.forEach(function (r) { updateCard(r.id); });
+      } else if (code === "quota_exceeded") {
+        showNotice("O espaço de marcações desta página acabou. Avise o Claude no chat.");
+      } else {
+        showNotice("Não deu para salvar agora. Tente de novo em instantes; o que você marcou continua na tela.");
+      }
+      if (onFail) onFail();
+    }).finally(function () {
+      pending -= 1;
+      refreshStatus();
+    });
+  }
+
+  function choose(rule, caseId, verdict) {
+    if (readOnly) return;
+    var prev = state.reviews.get(rule.id);
+    var card = cards.get(rule.id);
+    var keepNote = verdict !== "certo" ? (card.area.value.trim() || (prev && prev.note) || "") : "";
+    var body = { rule: rule.id, "case": caseId, verdict: verdict, note: keepNote, by: myId || "", at: new Date().toISOString(), rev: REV[rule.id], via: "pagina" };
+    state.reviews.set(rule.id, body);
+    if (verdict === "certo") state.expanded.delete(rule.id); else state.expanded.add(rule.id);
+    updateCard(rule.id);
+    updateCounts();
+    if (!reduceMotion) {
+      card.stamp.classList.remove("is-new");
+      void card.stamp.offsetWidth;
+      card.stamp.classList.add("is-new");
+    }
+    write("reviews/" + rule.id, function () { return db.doc("reviews/" + rule.id).set(body); }, function () {
+      if (prev) state.reviews.set(rule.id, prev); else state.reviews.delete(rule.id);
+      updateCard(rule.id);
+      updateCounts();
+    });
+    if (verdict === "certo") goToNext(rule.id);
+    else card.area.focus();
+  }
+
+  function saveComment(rule, caseId) {
+    var current = state.reviews.get(rule.id);
+    if (!current || readOnly) return;
+    var card = cards.get(rule.id);
+    var body = Object.assign({}, current, { note: card.area.value.trim(), by: myId || current.by || "", at: new Date().toISOString(), rev: REV[rule.id], via: "pagina" });
+    state.reviews.set(rule.id, body);
+    delete card.area.dataset.dirty;
+    card.noteStatus.textContent = db ? "Salvando…" : "Anotado nesta tela";
+    write("reviews/" + rule.id, function () { return db.doc("reviews/" + rule.id).set(body); }).then(function () {
+      card.noteStatus.textContent = db && !readOnly ? "Comentário salvo" : card.noteStatus.textContent;
+    });
+    state.expanded.delete(rule.id);
+    updateCard(rule.id);
+    updateCounts();
+    goToNext(rule.id);
+  }
+
+  function clearVerdict(rule) {
+    if (readOnly) return;
+    var prev = state.reviews.get(rule.id);
+    state.reviews.delete(rule.id);
+    state.expanded.delete(rule.id);
+    cards.get(rule.id).area.value = "";
+    updateCard(rule.id);
+    updateCounts();
+    write("reviews/" + rule.id, function () { return db.doc("reviews/" + rule.id).delete(); }, function () {
+      if (prev) state.reviews.set(rule.id, prev);
+      updateCard(rule.id);
+      updateCounts();
+    });
+    cards.get(rule.id).buttons.certo.focus();
+  }
+
+  function saveMissing(caseId) {
+    if (readOnly) return;
+    var ce = caseEls.get(caseId);
+    var body = { "case": caseId, note: ce.marea.value.trim(), by: myId || "", at: new Date().toISOString() };
+    state.missing.set(caseId, body);
+    delete ce.marea.dataset.dirty;
+    ce.mstatus.textContent = db ? "Salvando…" : "Anotado nesta tela";
+    write("missing/" + caseId, function () { return db.doc("missing/" + caseId).set(body); }).then(function () {
+      if (db && !readOnly) ce.mstatus.textContent = "Salvo";
+    });
+  }
+
+  function firstPending(caseId, afterId) {
+    var rules = DATA.cases.filter(function (c) { return c.id === caseId; })[0].rules;
+    var start = 0;
+    if (afterId) start = rules.findIndex(function (r) { return r.id === afterId; }) + 1;
+    for (var pass = 0; pass < 2; pass++) {
+      for (var i = pass ? 0 : start; i < (pass ? start : rules.length); i++) {
+        if (!state.reviews.get(rules[i].id)) return rules[i].id;
+      }
+    }
+    return null;
+  }
+
+  function goToNext(afterId) {
+    var caseId = afterId ? ruleCase.get(afterId) : state.active;
+    var target = firstPending(caseId, afterId);
+    if (!target) {
+      var other = DATA.cases.filter(function (c) { return c.id !== caseId && firstPending(c.id); })[0];
+      if (!other) return;
+      if (afterId) return; // termina este edital sem pular de aba sozinho
+      selectCase(other.id);
+      target = firstPending(other.id);
+    }
+    if (state.filter !== "todas" && state.filter !== "pendentes") { state.filter = "pendentes"; applyFilter(); }
+    var card = cards.get(target);
+    card.root.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+    card.title.focus({ preventScroll: true });
+  }
+
+  /* ---------- loja ---------- */
+  function onReviews(snap) {
+    var next = new Map(), stale = new Map();
+    snap.docs.forEach(function (d) {
+      if (!d.exists) return;
+      var data = d.data() || {};
+      if (!VERDICTS[data.verdict] || !ruleCase.has(d.id)) return;
+      var entry = {
+        rule: d.id, "case": ruleCase.get(d.id), verdict: data.verdict,
+        note: typeof data.note === "string" ? data.note.slice(0, 4000) : "",
+        by: typeof data.by === "string" ? data.by : "",
+        at: typeof data.at === "string" ? data.at : "",
+        rev: typeof data.rev === "string" ? data.rev : "",
+        via: typeof data.via === "string" ? data.via : ""
+      };
+      if (entry.rev && entry.rev !== REV[d.id]) stale.set(d.id, entry); else next.set(d.id, entry);
+    });
+    state.reviews = next;
+    state.stale = stale;
+    storeLive = true;
+    canInteract = true;
+    allRules.forEach(function (r) { updateCard(r.id); });
+    updateCounts();
+    refreshStatus();
+    resolveNames();
+  }
+
+  function onMissing(snap) {
+    snap.docs.forEach(function (d) {
+      if (!d.exists || !caseEls.has(d.id)) return;
+      var data = d.data() || {};
+      var note = typeof data.note === "string" ? data.note.slice(0, 8000) : "";
+      state.missing.set(d.id, { note: note, by: data.by || "", at: data.at || "" });
+      var ce = caseEls.get(d.id);
+      if (document.activeElement !== ce.marea && !ce.marea.dataset.dirty) ce.marea.value = note;
+    });
+  }
+
+  function resolveNames() {
+    if (!user) return;
+    var ids = [];
+    state.reviews.forEach(function (r) { if (r.by && ids.indexOf(r.by) < 0) ids.push(r.by); });
+    if (!ids.length) return;
+    user.profiles(ids).then(function (ps) {
+      ids.forEach(function (id) { if (ps[id] && ps[id].name) state.names[id] = ps[id].name; });
+      allRules.forEach(function (r) { updateCard(r.id); });
+    });
+  }
+
+  function onDbError(err) {
+    if (err && err.code === "revoked") {
+      readOnly = true;
+      allRules.forEach(function (r) { updateCard(r.id); });
+      setStatus("Sem acesso às marcações", true);
+      return;
+    }
+    setStatus("Marcações fora do ar. Recarregue a página.", true);
+  }
+
+  /* ---------- início ---------- */
+  buildTabs();
+  var casesRoot = document.getElementById("cases");
+  DATA.cases.forEach(function (c) { casesRoot.append(buildCase(c)); });
+  allRules.forEach(function (r) { updateCard(r.id); });
+  selectCase(state.active);
+  updateCounts();
+  document.getElementById("next-pending").addEventListener("click", function () { goToNext(null); });
+  document.addEventListener("input", function (e) {
+    if (e.target && e.target.tagName === "TEXTAREA") e.target.dataset.dirty = "1";
+  });
+  var gen = new Date(DATA.generated_at);
+  document.getElementById("foot").textContent = "Gabarito exportado em " + (isNaN(gen) ? DATA.generated_at : gen.toLocaleDateString("pt-BR")) +
+    ". Ficam de fora as exigências de mérito, contratação e prestação de contas.";
+
+  function offline(message) {
+    canInteract = true;
+    allRules.forEach(function (r) { updateCard(r.id); });
+    setStatus("Marcações não estão sendo salvas", true);
+    showNotice(message);
+  }
+
+  var claude = window.claude;
+  if (!claude || typeof claude.use !== "function") {
+    offline("Esta cópia da página foi aberta fora do Claude, então as marcações não ficam salvas. Abra pelo link do Claude, com a sua conta.");
+    return;
+  }
+  Promise.all([claude.use("db").catch(function () { return null; }), claude.use("user").catch(function () { return null; })]).then(function (res) {
+    db = res[0];
+    user = res[1];
+    if (!db) {
+      offline("Não foi possível ligar o salvamento das marcações. Entre na sua conta do Claude e abra a página de novo.");
+      return;
+    }
+    var who = user ? Promise.all([user.id(), user.can("data.write")]) : Promise.resolve([null, null]);
+    who.then(function (r) {
+      myId = r[0];
+      if (r[1] === false) {
+        readOnly = true;
+        showNotice("Você pode ver esta página, mas não marcar. Peça a quem compartilhou para dar acesso de edição.");
+      }
+      allRules.forEach(function (rule) { updateCard(rule.id); });
+      refreshStatus();
+      db.collection("reviews").onSnapshot(onReviews, onDbError);
+      db.collection("missing").onSnapshot(onMissing, onDbError);
+    });
+  });
+})();
+</script>
+
+</body></html>

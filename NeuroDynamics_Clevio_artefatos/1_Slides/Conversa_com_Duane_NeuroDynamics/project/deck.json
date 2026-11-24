@@ -1,0 +1,55 @@
+{
+  "v": 4,
+  "attachments": {},
+  "cover": "capa",
+  "createdOnFiles": {
+    "at": "2026-10-14T13:59:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "faces": {
+    "archivo": {
+      "family": "Archivo",
+      "href": "https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&display=swap"
+    },
+    "ibm-plex-mono": {
+      "family": "IBM Plex Mono",
+      "href": "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap"
+    },
+    "instrument-sans": {
+      "family": "Instrument Sans",
+      "href": "https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap"
+    }
+  },
+  "lists": "css",
+  "order": [
+    "capa",
+    "neuro",
+    "grupo",
+    "trajetoria",
+    "parcerias",
+    "logos",
+    "frentes",
+    "triciclo",
+    "orion",
+    "opalina",
+    "estrutura",
+    "ia",
+    "contato"
+  ],
+  "sections": {
+    "s1": {
+      "description": "Quem somos: a NeuroDynamics, o grupo, a trajetória e as parcerias.",
+      "start": "capa"
+    },
+    "s2": {
+      "description": "Os projetos e as simulações, apresentados pela equipe técnica.",
+      "start": "frentes"
+    },
+    "s3": {
+      "description": "Onde queremos usar IA e os próximos passos.",
+      "start": "ia"
+    }
+  },
+  "title": "NeuroDynamics: conversa com a Duane"
+}

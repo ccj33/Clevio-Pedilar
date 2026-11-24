@@ -1,0 +1,67 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "02-mit-einstein.dc.html": {
+      "h": 1350,
+      "title": "02 Do MIT ao Einstein",
+      "w": 1080,
+      "x": 1160,
+      "y": 0
+    },
+    "03-oncologia.dc.html": {
+      "h": 1350,
+      "title": "03 A edição brasileira",
+      "w": 1080,
+      "x": 2320,
+      "y": 0
+    },
+    "04-neurodynamics.dc.html": {
+      "h": 1350,
+      "title": "04 Trilha de Oncologia",
+      "w": 1080,
+      "x": 3480,
+      "y": 0
+    },
+    "05-banca.dc.html": {
+      "h": 1350,
+      "title": "05 Da UFMG ao Einstein",
+      "w": 1080,
+      "x": 4640,
+      "y": 0
+    },
+    "06-ufmg.dc.html": {
+      "h": 1350,
+      "title": "06 De volta à UFMG",
+      "w": 1080,
+      "x": 5800,
+      "y": 0
+    },
+    "Main.dc.html": {
+      "h": 1350,
+      "title": "01 Capa",
+      "w": 1080,
+      "x": 0,
+      "y": 0
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-11-10T12:10:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "notes": {},
+  "order": [
+    "Main.dc.html",
+    "02-mit-einstein.dc.html",
+    "03-oncologia.dc.html",
+    "04-neurodynamics.dc.html",
+    "05-banca.dc.html",
+    "06-ufmg.dc.html"
+  ],
+  "pages": [],
+  "title": "Carrossel MIT Hacking Medicine"
+}

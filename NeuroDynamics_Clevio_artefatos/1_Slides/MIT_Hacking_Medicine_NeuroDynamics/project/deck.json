@@ -1,0 +1,19 @@
+{
+  "v": 4,
+  "createdOnFiles": { "v": 1, "at": "2026-11-10T18:20:00Z" },
+  "lists": "css",
+  "title": "MIT Hacking Medicine: NeuroDynamics",
+  "order": ["cover", "mit", "edicao", "oncologia", "equipe", "ufmg"],
+  "sections": {
+    "s1": { "description": "Abertura: a NeuroDynamics na segunda edição brasileira do MIT Hacking Medicine.", "start": "cover" },
+    "s2": { "description": "O programa e a edição brasileira, em números.", "start": "mit" },
+    "s3": { "description": "A participação da NeuroDynamics na trilha de Oncologia e a apresentação final.", "start": "oncologia" },
+    "s4": { "description": "Encerramento: de volta à UFMG e o apoio à participação.", "start": "ufmg" }
+  },
+  "faces": {
+    "archivo": { "family": "Archivo", "href": "https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&display=swap" },
+    "instrument-sans": { "family": "Instrument Sans", "href": "https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&display=swap" },
+    "ibm-plex-mono": { "family": "IBM Plex Mono", "href": "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap" }
+  },
+  "designSystems": []
+}

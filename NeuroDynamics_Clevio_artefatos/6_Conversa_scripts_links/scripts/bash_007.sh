@@ -1,0 +1,2 @@
+# 2026-11-09 04:04 - Download feed examples and reference post image
+cd /tmp/claude-0/-home-user-Claude-Teste/72f1d19b-8183-5f85-98cc-106ac2c334e3/scratchpad/hackmed/dl && curl -sSL -o feed-retina.jpg https://brand.neurodynamics.dev/assets/manual/social-feed-retina.jpg && grep -o 'href="[^"]*modelo[^"]*\|href="[^"]*\.html[^"]*' social.html | head; curl -sSL -o post.jpg "https://scontent-ord5-2.cdninstagram.com/v/t51.82787-15/833333519_17985450747077436_4370916976211437250_n.jpg" -w "%{http_code} %{size_download}\n"

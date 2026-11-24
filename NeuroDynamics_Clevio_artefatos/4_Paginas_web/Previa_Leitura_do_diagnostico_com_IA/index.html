@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prévia · Leitura do diagnóstico com IA (Copy)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE: painel de gestão pública, sóbrio, direto, verificável.
+   IDEA: um painel de projeto — menu lateral, uma tela por assunto, decisão e situação sempre à vista.
+   PICTURE: faixa de decisão, indicadores, fases com portões, matriz de responsabilidades e mapa de riscos.
+   COLOUR and TYPE: fundo cinza-claro, cartões brancos, verde institucional #1e6b4a, coral só para alerta; Inter. */
+:root{color-scheme:light dark;
+--bg:light-dark(#f4f6f5,#0e1412);--card:light-dark(#ffffff,#151d1a);--ink:light-dark(#111a16,#e7efea);
+--mute:light-dark(#5d6b64,#9bb0a5);--line:light-dark(#e2e8e4,#25332d);--g:light-dark(#1e6b4a,#5cc293);
+--gs:light-dark(#e7f2ec,#173328);--hot:light-dark(#b4412a,#ff8f6e);--hs:light-dark(#fbece7,#3a2019);
+--amb:light-dark(#9a6408,#f0c060);--as:light-dark(#fbf3e3,#352a14);--chip:light-dark(#eef2f0,#1d2823)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.55 Inter,system-ui,sans-serif;overflow-x:clip;font-feature-settings:"tnum" 1}
+.wrap{max-width:1180px;margin:0 auto;padding:0 max(4vw,16px)}
+h1,h2,h3{margin:0;line-height:1.15;text-wrap:balance}
+h1{font-size:clamp(28px,3.4vw,40px);font-weight:600;letter-spacing:-.02em}
+h2{font-size:clamp(20px,2.2vw,24px);font-weight:600;letter-spacing:-.01em}
+h3{font-size:16px;font-weight:600}
+p{margin:0}
+.mute{color:var(--mute)}.small{font-size:13.5px}
+.top{background:var(--card);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-block:12px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:600;font-size:14px}
+.mark{width:28px;height:28px;border-radius:8px;background:var(--g);display:grid;place-items:center;color:#fff;font-weight:600;font-size:13px}
+.tag{font-size:12.5px;font-weight:600;padding:4px 12px;border-radius:99px;background:var(--chip);color:var(--mute);white-space:nowrap}
+.hero{padding-top:clamp(28px,4vw,44px);padding-bottom:24px}
+.hero p.lead{margin-top:12px;max-width:72ch;font-size:16.5px;color:var(--mute)}
+.verdict{margin-top:24px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:20px;align-items:center;background:var(--gs);border:1px solid color-mix(in srgb,var(--g) 30%,transparent);border-radius:14px;padding:20px 24px}
+.verdict .ic{width:42px;height:42px;border-radius:50%;background:var(--g);display:grid;place-items:center;color:#fff;font-size:22px;font-weight:600}
+.verdict b{display:block;font-size:18px}
+.score{text-align:right}.score strong{display:block;font-size:30px;font-weight:600;color:var(--g);line-height:1}
+@media(max-width:640px){.verdict{grid-template-columns:auto minmax(0,1fr)}.score{grid-column:1/-1;text-align:left}}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:16px}
+@media(max-width:860px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px}
+.kpi strong{display:block;font-size:clamp(26px,3vw,34px);font-weight:600;line-height:1.05}
+.kpi span{display:block;margin-top:4px;font-size:13.5px;color:var(--mute)}
+.kpi em{font-style:normal;font-size:12.5px;font-weight:600;color:var(--g)}
+.kpi em.w{color:var(--amb)}
+.sechead{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:clamp(16px,2vw,24px)}
+.grid2{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:16px}
+@media(max-width:900px){.grid2{grid-template-columns:minmax(0,1fr)}}
+.bars{display:grid;gap:8px;margin-top:12px}
+.bar{display:grid;grid-template-columns:13em minmax(0,1fr) 2.6em;gap:12px;align-items:center;font-size:14px}
+.bar .t{height:14px;background:var(--chip);border-radius:7px;overflow:hidden}
+.bar .t i{display:block;height:100%;border-radius:7px;background:color-mix(in srgb,var(--mute) 45%,transparent)}
+.bar.c .t i{background:var(--g)}.bar.c{font-weight:600}
+.bar b{text-align:right}
+.rank{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--g);color:#fff;font-size:11.5px;font-weight:600;margin-right:8px}
+.just{display:grid;gap:12px;margin-top:4px}
+.just details{border:1px solid var(--line);border-radius:10px;padding:12px 16px;background:var(--card)}
+.just summary{cursor:pointer;font-weight:600;list-style:none;display:flex;align-items:center;gap:8px;min-height:28px}
+.just summary::-webkit-details-marker{display:none}
+.just summary::after{content:"+";margin-left:auto;color:var(--mute);font-weight:600}
+.just details[open] summary::after{content:"–"}
+.just p{margin-top:8px;font-size:14.5px}
+.note{margin-top:12px;font-size:13px;color:var(--mute);border-left:3px solid var(--amb);padding-left:12px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;vertical-align:top;padding:12px 12px;border-bottom:1px solid var(--line)}
+th{font-size:12px;text-transform:none;color:var(--mute);font-weight:600;background:var(--chip)}
+tr:last-child td{border-bottom:0}
+.tbl{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card)}
+.st{display:inline-block;font-size:12px;font-weight:600;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.st.ok{background:var(--gs);color:var(--g)}.st.ex{background:var(--as);color:var(--amb)}.st.er{background:var(--hs);color:var(--hot)}.st.mi{background:var(--hs);color:var(--hot)}
+.dom{font-weight:600;white-space:nowrap}
+.rev{display:block;margin-top:8px;font-size:12.5px;color:var(--mute)}
+.rev.w{color:var(--hot)}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filters button{font:600 13px Inter,sans-serif;min-height:36px;padding:0 16px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--mute);cursor:pointer}
+.filters button.on{background:var(--ink);color:var(--card);border-color:var(--ink)}
+.cards3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media(max-width:900px){.cards3{grid-template-columns:minmax(0,1fr)}}
+.eval h3{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.eval ul{margin:0;padding-left:20px;display:grid;gap:8px;font-size:14.5px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.eval.decide{background:var(--gs);border-color:color-mix(in srgb,var(--g) 30%,transparent)}
+.anc{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.anc .card p{margin-top:8px;font-size:14.5px}
+ol.gaps{margin:12px 0 0;padding-left:20px;display:grid;gap:8px;font-size:14.5px}
+.more{margin-top:12px;font:600 13.5px Inter,sans-serif;background:none;border:0;color:var(--g);cursor:pointer;padding:8px 0;min-height:36px}
+.heat{border-collapse:separate;border-spacing:3px;font-size:13.5px}
+.heat th,.heat td{border:0;padding:8px 8px;background:none}
+.heat th{background:none;text-align:center;font-size:11.5px}
+.heat th:first-child{text-align:left}
+.heat td.s{text-align:center;font-weight:600;border-radius:6px;color:#111a16;min-width:42px}
+.heat td.s.m-inc{box-shadow:inset 0 0 0 2.5px #b4412a}
+.heat td.s.m-ext{box-shadow:inset 0 0 0 2.5px #9a6408;outline:2px dashed #9a6408;outline-offset:-5px}
+.heat td.s.m-anc{box-shadow:inset 0 0 0 2.5px #1e6b4a}
+.heat tr.mean td{font-weight:600;border-top:0}
+.heat tr.mean td.s.cr{box-shadow:inset 0 0 0 2.5px var(--ink)}
+.heat td.n{white-space:nowrap;padding-right:12px}
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:12px;font-size:12.5px;color:var(--mute)}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:8px}
+.scroll{overflow-x:auto}
+.falas{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:16px}
+.fala{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;font-size:14px}
+.fala b{display:block;font-size:12.5px;color:var(--mute);margin-bottom:4px}
+details.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-top:12px}
+details.box>summary{cursor:pointer;font-weight:600;min-height:28px}
+pre{white-space:pre-wrap;background:var(--chip);padding:16px;border-radius:10px;font-size:12.5px;line-height:1.5;max-height:380px;overflow:auto;margin:12px 0 0}
+.crit{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:8px}
+.crit li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px}
+.runbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:16px}
+.btn{font:600 14.5px Inter,sans-serif;min-height:42px;padding:0 20px;border-radius:10px;border:1px solid var(--g);background:var(--g);color:#fff;cursor:pointer}
+.btn:disabled{opacity:.55;cursor:wait}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--amb);outline-offset:2px}
+footer{padding:32px 0 40px;font-size:12.5px;color:var(--mute)}
+@media(max-width:600px){.bar{grid-template-columns:8.5em minmax(0,1fr) 2.4em;font-size:13px}
+.stack thead{display:none}.stack tr{display:grid;padding-block:12px;border-bottom:1px solid var(--line)}.stack td{display:flow-root;border:0;padding:3px 12px;padding-inline-start:7.5em}.stack td::before{content:attr(data-l);float:inline-start;width:7em;margin-inline-start:-7em;color:var(--mute);font-size:12px}.stack td:empty{display:none}}
+
+.shell{display:grid;grid-template-columns:272px minmax(0,1fr);min-height:100vh}
+.side{position:sticky;top:0;height:100vh;overflow:auto;background:var(--card);border-right:1px solid var(--line);padding:24px 16px 20px;display:flex;flex-direction:column;gap:16px}
+.brand{display:flex;gap:12px;align-items:center;padding:0 8px 8px}
+.brand b{display:block;font-size:15px;line-height:1.2}
+.brand .s{display:block;font-size:12px;color:var(--mute);font-weight:500;line-height:1.3;margin-top:2px}
+.nav{display:grid;gap:8px}
+.ng{display:grid;gap:2px}
+.ng h4{margin:12px 12px 4px;font-size:11px;color:var(--mute);font-weight:600}
+.nav a{display:flex;align-items:center;gap:12px;padding:8px 12px;border-radius:9px;color:var(--ink);text-decoration:none;font-weight:600;font-size:14.5px;line-height:1.25}
+.nav a:hover{background:var(--chip)}
+.nav a.on{background:var(--gs);color:var(--g)}
+.nav a .n{flex:none;width:22px;height:22px;border-radius:6px;background:var(--chip);display:grid;place-items:center;font-size:11.5px;color:var(--mute);font-weight:600}
+.nav a.on .n{background:var(--g);color:#fff}
+.sidefoot{margin-top:auto;padding:0 8px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--card);padding:8px 12px;border-radius:8px;z-index:20}
+.skip:focus{left:8px}
+.main{padding:clamp(24px,3.4vw,44px) clamp(20px,4vw,52px) 0;max-width:1180px;width:100%}
+.view{display:none;padding-bottom:12px}
+.view.on{display:block}
+.vh{margin-bottom:24px}
+.eyebrow{display:block;font-size:12px;font-weight:600;color:var(--g)}
+.vh h1{margin-top:8px;font-size:clamp(24px,2.8vw,32px);font-weight:600;letter-spacing:-.02em}
+.vh p{margin-top:12px;color:var(--mute);max-width:68ch;font-size:16px}
+.vh.hero h1{font-size:clamp(28px,3.4vw,40px)}
+.blk{margin-top:32px}
+.grid2.blk,.cards3.blk{margin-top:32px}
+.toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.callout{margin-bottom:20px;padding:12px 16px;border-radius:10px;background:var(--as);border:1px solid color-mix(in srgb,var(--amb) 28%,transparent);font-size:14px}
+.callout b{color:var(--amb)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:12px}
+@media(max-width:1100px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;transition:border-color .15s}
+.stat:hover{border-color:var(--g)}
+.stat .k{display:block;font-size:12px;font-weight:600;color:var(--mute)}
+.stat strong{display:block;margin-top:8px;font-size:26px;font-weight:600;line-height:1.05}
+.stat .d{display:block;margin-top:4px;font-size:13.5px;color:var(--mute)}
+.todo{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:12px}
+.todo li{display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px;font-size:14.5px;align-items:start}
+.todo i{width:18px;height:18px;border:2px solid var(--line);border-radius:5px;margin-top:2px}
+.todo small{display:block;color:var(--mute);font-size:12.5px}
+.path{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:12px;counter-reset:p}
+.path li{counter-increment:p}
+.path a{display:grid;grid-template-columns:30px minmax(0,1fr);column-gap:12px;text-decoration:none;color:inherit;padding:12px 12px;border:1px solid var(--line);border-radius:10px}
+.path a:hover{border-color:var(--g)}
+.path a::before{content:counter(p);grid-row:1/3;width:28px;height:28px;border-radius:50%;background:var(--g);color:#fff;display:grid;place-items:center;font-weight:600;font-size:13px;align-self:center}
+.path b{font-size:14.5px}.path span{font-size:13px;color:var(--mute)}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+@media(max-width:1100px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.steps{grid-template-columns:minmax(0,1fr)}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;display:flex;flex-direction:column;gap:8px}
+.step.done{border-color:color-mix(in srgb,var(--g) 40%,transparent)}
+.step.next{border-color:var(--amb);box-shadow:0 0 0 3px color-mix(in srgb,var(--amb) 14%,transparent)}
+.step .no{font-size:12px;font-weight:600;color:var(--mute);}
+.step h3{font-size:16.5px}
+.step p{font-size:14px;color:var(--mute)}
+.step dl{margin:4px 0 0;display:grid;gap:8px;font-size:13.5px}
+.step dt{font-weight:600;font-size:12px;color:var(--mute);}
+.step dd{margin:2px 0 0}
+.st.gr{background:var(--chip);color:var(--mute)}
+.raci th,.raci td{text-align:center;vertical-align:middle}
+.raci th:first-child,.raci td:first-child{text-align:left}
+.rc{display:inline-grid;place-items:center;min-width:34px;height:26px;padding:0 8px;border-radius:7px;font-size:12.5px;font-weight:600}
+.rc.a{background:var(--g);color:#fff}.rc.r{background:var(--gs);color:var(--g)}.rc.c{background:var(--as);color:var(--amb)}.rc.i{background:var(--chip);color:var(--mute)}.rc.n{color:var(--mute);font-weight:500}
+.mx{display:grid;grid-template-columns:62px repeat(3,minmax(0,1fr));gap:8px;margin-top:16px;font-size:12.5px}
+.mx .h{color:var(--mute);font-weight:600;display:grid;place-items:center;text-align:center}
+.mx .c{min-height:62px;border-radius:9px;display:flex;flex-wrap:wrap;gap:4px;align-content:center;justify-content:center;padding:8px}
+.mx .c.l{background:var(--gs)}.mx .c.m{background:var(--as)}.mx .c.hh{background:var(--hs)}
+.mx .rid{font-weight:600;font-size:12px;padding:3px 8px;border-radius:99px;background:var(--card);border:1px solid var(--line)}
+.mxcap{grid-column:1/-1;text-align:center;color:var(--mute);font-weight:600;margin-top:2px}
+@media(max-width:900px){.mxwrap{grid-template-columns:minmax(0,1fr)}}
+#gDec td:first-child,#gRisk td:first-child{white-space:nowrap}
+h3.blk{margin-bottom:12px}
+h3.blk+p{margin-top:-8px}
+footer{padding:36px 0 40px;font-size:12.5px;color:var(--mute);border-top:1px solid var(--line);margin-top:36px}
+@media(max-width:959px){
+.shell{display:block}
+.side{position:sticky;top:0;z-index:10;height:auto;overflow:visible;flex-direction:row;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:12px 16px;border-right:0;border-bottom:1px solid var(--line)}
+.brand{padding:0}.brand .s{display:none}
+.sidefoot{margin:0 0 0 auto;padding:0}
+.nav{order:3;flex:1 1 100%;display:flex;overflow-x:auto;gap:4px;padding-bottom:2px}
+.ng{display:flex;gap:4px;align-items:center}
+.ng h4{display:none}
+.view{scroll-margin-top:150px}
+.ng{flex:none}
+.ng+.ng{border-left:1px solid var(--line);padding-left:4px}
+.stat strong{font-size:22px}
+.raci td:first-child{min-width:180px}
+.nav a{flex:none;white-space:nowrap;padding:8px 12px;font-size:14px}
+.nav a.on{background:var(--g);color:#fff}
+.main{padding-top:24px}
+}
+@media print{.side,.skip,.runbar,.filters,.more,.toolbar{display:none}.shell{display:block}body{background:#fff}.view{display:block!important;break-before:page}.view:first-of-type{break-before:auto}.card,.tbl,.kpi,.step{break-inside:avoid}}
+
+/* ---- v5: sistema visual (grade de 4px, uma família, pesos 400/500/600, um acento) ---- */
+:root{--ease:cubic-bezier(.2,.7,.2,1);--r1:6px;--r2:10px;--r3:14px;
+--bg:light-dark(#f3f6f4,#0d1311);--card:light-dark(#fff,#141c19);--line:light-dark(#dfe6e2,#26342e);
+--mute:light-dark(#566660,#9db3a8);--chip:light-dark(#edf2ef,#1c2723)}
+body{font-size:16px;line-height:1.55}
+h1,h2,h3{font-weight:600;letter-spacing:-.01em}
+h3{font-size:16px}
+.vh h1{font-size:clamp(24px,2.6vw,30px);font-weight:600}
+.vh.hero h1{font-size:clamp(26px,3vw,34px)}
+.eyebrow{font-size:13px;font-weight:500;color:var(--mute)}
+.vh p{font-size:16px}
+.nav .ng h4{font-size:13px;font-weight:500;color:var(--mute);margin:16px 12px 4px}
+.nav a{font-weight:500;font-size:15px;min-height:40px;padding:8px 12px;border-radius:var(--r2);transition:background-color .15s var(--ease),color .15s var(--ease)}
+.nav a svg{flex:none;width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;color:var(--mute)}
+.nav a.on{background:var(--gs);color:var(--g);font-weight:600}
+.nav a.on svg{color:var(--g)}
+.mark{border-radius:var(--r2);font-weight:600}
+.brand b{font-weight:600}
+.verdict{border-radius:var(--r3);padding:20px 24px;gap:20px}
+.verdict .ic{width:40px;height:40px;font-size:0;font-weight:500}
+.verdict .ic svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.verdict b{font-weight:600;font-size:18px}
+.score strong{font-weight:600;font-size:32px}
+.kpi,.stat,.card,.step,.tbl,details.box{border-radius:var(--r3)}
+.kpi strong,.stat strong{font-weight:600}
+.stat{transition:border-color .15s var(--ease)}
+.stat .k,.step .no,.step dt{font-size:13px;font-weight:500;color:var(--mute)}
+.step.next{border-color:var(--amb);box-shadow:none;position:relative}
+.step.next::before{content:"";position:absolute;left:-1px;top:16px;bottom:16px;width:3px;border-radius:0 2px 2px 0;background:var(--amb)}
+.st,.tag{font-weight:500;white-space:normal;display:inline-block;line-height:1.35}
+.rc{font-weight:600}
+th{font-weight:500}
+.bar.c{font-weight:500}
+.filters button{font-weight:500;min-height:40px;padding:0 16px}
+.btn{font-weight:500;min-height:44px;border-radius:var(--r2)}
+.more{font-weight:500;min-height:44px}
+.just summary,details.box>summary{font-weight:500;min-height:44px;display:flex;align-items:center}
+.just summary::after{font-weight:500}
+.dom,.heat td.s,.heat tr.mean td{font-weight:500}
+.heat tr.mean td{font-weight:600}
+.rank{font-weight:600}
+button,summary,.nav a,.stat,.path a{touch-action:manipulation}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--g);outline-offset:2px;border-radius:var(--r1)}
+.stat:hover,.path a:hover{border-color:color-mix(in srgb,var(--g) 55%,var(--line))}
+.path a{transition:border-color .15s var(--ease)}
+.main{padding-top:clamp(24px,3.2vw,40px)}
+/* próxima decisão: o item que o painel pede para resolver */
+.pnext{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px 24px;align-items:center;margin-top:24px;padding:20px 24px;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--amb);border-radius:var(--r3)}
+.pnext .k{display:block;font-size:13px;font-weight:500;color:var(--mute)}
+.pnext b{display:block;margin-top:4px;font-size:17px;font-weight:600;line-height:1.35}
+.pnext p{margin-top:4px;font-size:14px;color:var(--mute)}
+.pnext a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:var(--r2);border:1px solid var(--line);color:var(--ink);text-decoration:none;font-weight:500;font-size:14px;white-space:nowrap}
+.pnext a:hover{border-color:var(--g);color:var(--g)}
+@media(max-width:700px){.pnext{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+<script>new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true})</script>
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+<div class="shell">
+<aside class="side">
+<div class="brand"><span class="mark">PL</span><div><b>Leitura do diagnóstico</b><span class="s">Planejamento Local em Saúde Digital</span></div></div>
+<nav class="nav" id="nav" aria-label="Seções"><div class="ng"><h4>Visão geral</h4><a href="#painel" data-go="painel"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>Painel</a></div><div class="ng"><h4>Teste do protótipo</h4><a href="#avaliacao" data-go="avaliacao"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>Avaliação</a><a href="#achados" data-go="achados"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>Achados da IA</a><a href="#dados" data-go="dados"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>Dados de entrada</a><a href="#metodo" data-go="metodo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg>Método</a></div><div class="ng"><h4>Governança do projeto</h4><a href="#gov-estrutura" data-go="gov-estrutura"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Papéis e responsabilidades</a><a href="#gov-fases" data-go="gov-fases"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></svg>Fases e decisões</a><a href="#gov-ritos" data-go="gov-ritos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>Ritos e indicadores</a><a href="#gov-riscos" data-go="gov-riscos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>Riscos e salvaguardas</a></div></nav>
+<div class="sidefoot"><span class="tag">Dados fictícios · teste de 23/11/2026</span></div>
+</aside>
+<main id="main" class="main">
+<section class="view" id="painel" aria-labelledby="painel-h">
+<header class="vh hero"><span class="eyebrow">Visão geral</span><h1 id="painel-h">Leitura assistida do diagnóstico, antes da oficina</h1>
+<p>A IA lê escores, indicadores e falas de 8 municípios e prepara a oficina: onde a microrregião está mais frágil, onde o escore declarado não bate com a realidade e quem tem experiência a compartilhar. O plano de ação continua pactuado pelos municípios.</p></header>
+<div class="verdict">
+<div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
+<div><b id="vTitle">Aguardando o teste</b><span class="mute small" id="vSub"></span></div>
+<div class="score"><strong id="vScore">–</strong><span class="mute small">critérios, em média</span></div>
+</div>
+<div class="kpis" id="kpis"></div>
+
+<div class="pnext" id="pNext"></div>
+
+<h3 class="blk">Situação do projeto</h3>
+<div class="stats" id="pStatus"></div>
+
+<div class="grid2 blk">
+<div class="card">
+<h3>O que destrava o piloto</h3>
+<p class="mute small">Pendências para passar da fase 2 para a fase 3.</p>
+<ul class="todo" id="pDestrava"></ul>
+</div>
+<div class="card">
+<h3>Como percorrer esta página</h3>
+<ol class="path">
+<li><a href="#avaliacao" data-go="avaliacao"><b>Avaliação</b><span>o resultado do teste contra os critérios</span></a></li>
+<li><a href="#achados" data-go="achados"><b>Achados da IA</b><span>a evidência, caso a caso, com a pergunta para a oficina</span></a></li>
+<li><a href="#gov-estrutura" data-go="gov-estrutura"><b>Governança</b><span>quem decide, em que ordem e com que salvaguardas</span></a></li>
+</ol>
+</div>
+</div>
+</section>
+<section class="view" id="avaliacao" aria-labelledby="avaliacao-h"><header class="vh"><span class="eyebrow">Teste do protótipo</span><h1 id="avaliacao-h">Avaliação do teste</h1><p>A versão 3 do comando foi rodada 3 vezes, sem reaproveitar respostas, e comparada com critérios fixados antes do teste.</p></header>
+
+<div class="tbl scroll"><table id="cons"></table></div>
+<h3 style="margin:22px 0 10px">Evolução das 3 versões do teste</h3>
+<div class="tbl scroll"><table class="stack"><thead><tr><th>Versão</th><th>Rodadas</th><th>Explícitas (de 6)</th><th>Sutis (de 2)</th><th>Fora do gabarito</th><th>Erros numéricos</th><th>O que mudou</th></tr></thead><tbody>
+<tr><td><b>1</b></td><td>1</td><td>6</td><td>não testado</td><td>2</td><td>2</td><td>Primeira versão, só com contradições explícitas.</td></tr>
+<tr><td><b>2</b></td><td>3</td><td>6 · 6 · 6</td><td>2 · 2 · 2</td><td>4 · 3 · 4</td><td>0 · 3 · 1</td><td>Médias calculadas pela página, 2 contradições sutis, comando para as secretarias municipais.</td></tr>
+<tr><td><b>3</b></td><td>3</td><td>5 · 5 · 6</td><td>2 · 2 · 2</td><td>0 · 1 · 1</td><td>0 · 0 · 0</td><td>Definição de cada domínio, contagens prontas, lista separada de “pontos a validar”.</td></tr>
+</tbody></table></div>
+<div class="cards3" style="margin-top:16px" id="evalCards"></div>
+
+</section>
+<section class="view" id="achados" aria-labelledby="achados-h"><header class="vh"><span class="eyebrow">Teste do protótipo</span><h1 id="achados-h">Achados da IA</h1><p>O que a IA devolveu em cada rodada: domínios mais frágeis, escores que não batem com a realidade, referências e o que falta saber.</p></header>
+<div class="toolbar"><span class="mute small">Rodada exibida</span><div class="filters" id="runSel" role="group" aria-label="Escolher rodada"></div></div>
+
+<div class="grid2">
+<div class="card">
+<h3>Domínios mais frágeis da microrregião</h3>
+<p class="mute small">Média dos 8 municípios, calculada pela página. Em verde, os 3 que a IA apontou como críticos nesta rodada.</p>
+<div class="bars" id="bars"></div>
+</div>
+<div class="card">
+<h3>Por que a IA escolheu esses domínios</h3>
+<div class="just" id="just"></div>
+</div>
+</div>
+
+<div class="sechead" style="margin-top:28px"><h3>Escores que não batem com a realidade</h3>
+<div class="filters" id="filters" role="group" aria-label="Filtrar inconsistências">
+<button data-f="all" class="on">Todas</button><button data-f="ok">No gabarito</button><button data-f="ex">Fora do gabarito</button>
+</div></div>
+<div class="tbl scroll"><table class="stack" id="incTbl"><thead><tr><th>Situação</th><th>Município</th><th>Domínio</th><th>Evidência apontada pela IA</th><th>Pergunta para a oficina</th></tr></thead><tbody></tbody></table></div>
+
+<div class="grid2" style="margin-top:28px">
+<div>
+<h3 style="margin-bottom:10px">Municípios-âncora</h3>
+<div class="anc" id="anc"></div>
+</div>
+<div class="card">
+<h3>O que falta saber para planejar</h3>
+<ol class="gaps" id="gaps"></ol>
+</div>
+</div>
+<div class="card" style="margin-top:16px">
+<h3>Pontos a validar na oficina</h3>
+<p class="mute small">O que a IA separou como dúvida, não como contradição. Não conta como erro; ajuste previsto: limitar a 5.</p>
+<ol class="gaps" id="pav"></ol>
+</div>
+</section>
+<section class="view" id="dados" aria-labelledby="dados-h"><header class="vh"><span class="eyebrow">Teste do protótipo</span><h1 id="dados-h">Dados de entrada</h1><p>Microrregião Vale do Pontal: 8 municípios fictícios e os 7 domínios do Índice Nacional de Maturidade em Saúde Digital.</p></header>
+
+<div class="card">
+<div class="scroll"><table class="heat" id="heat"></table></div>
+<div class="legend" id="legend"></div>
+</div>
+<details class="box"><summary>Falas dos gestores nas entrevistas</summary><div class="falas" id="falas"></div></details>
+</section>
+<section class="view" id="metodo" aria-labelledby="metodo-h"><header class="vh"><span class="eyebrow">Teste do protótipo</span><h1 id="metodo-h">Método</h1><p>Critérios, ferramenta, comando e gabarito. Dá para rodar 3 novas leituras e comparar com as salvas.</p></header>
+
+<div class="grid2">
+<div class="card">
+<h3>Critérios fixados antes do teste</h3>
+<ul class="crit" id="crit"></ul>
+</div>
+<div class="card">
+<h3>Como foi feito</h3>
+<p class="small" style="margin-top:8px">Ferramenta: Claude (Anthropic). A página calcula médias e extremos, envia os dados ao modelo, recebe a leitura em formato estruturado e compara com o gabarito escrito antes do teste. Cada rodada é uma chamada nova, sem reaproveitar respostas. Sem programação manual e sem custo.</p>
+<div class="runbar"><button class="btn" id="run">Rodar 3 novas leituras</button><span class="mute small" id="status" role="status"></span></div>
+</div>
+</div>
+<details class="box"><summary>Comando usado no teste (íntegra)</summary><pre id="prompt"></pre></details>
+<details class="box"><summary>Gabarito do teste</summary><div id="gab" class="small" style="margin-top:10px"></div></details>
+</section>
+<section class="view" id="gov-estrutura" aria-labelledby="gov-estrutura-h"><header class="vh"><span class="eyebrow">Governança do projeto</span><h1 id="gov-estrutura-h">Papéis e responsabilidades</h1><p>Quem decide, quem executa e quem confere. A IA prepara a leitura; as pessoas decidem.</p></header><div class="callout"><b>Proposta para o piloto com a equipe.</b> Os papéis são por função; nomes, datas e frequência serão definidos com a coordenação.</div>
+<div class="cards3 blk" id="gPrinc"></div>
+<h3 class="blk">Três níveis de decisão</h3>
+<div class="cards3" id="gNiveis"></div>
+<h3 class="blk">Matriz de responsabilidades</h3>
+<p class="mute small" style="margin-bottom:10px">Cada atividade tem um único responsável final (A).</p>
+<div class="tbl scroll"><table class="raci" id="gRaci"></table></div>
+<div class="legend" id="gRaciLeg"></div>
+</section>
+<section class="view" id="gov-fases" aria-labelledby="gov-fases-h"><header class="vh"><span class="eyebrow">Governança do projeto</span><h1 id="gov-fases-h">Fases e decisões</h1><p>O projeto avança por fases, cada uma com um portão: só passa para a seguinte quem cumpre o critério.</p></header><div class="callout"><b>Proposta para o piloto com a equipe.</b> Os papéis são por função; nomes, datas e frequência serão definidos com a coordenação.</div>
+<div class="steps" id="gFases"></div>
+<h3 class="blk">Registro de decisões</h3>
+<p class="mute small" style="margin-bottom:10px">Toda decisão fica registrada com motivo, responsável e situação, para a equipe não rediscutir o que já foi decidido.</p>
+<div class="tbl scroll"><table class="stack" id="gDec"></table></div>
+</section>
+<section class="view" id="gov-ritos" aria-labelledby="gov-ritos-h"><header class="vh"><span class="eyebrow">Governança do projeto</span><h1 id="gov-ritos-h">Ritos e indicadores</h1><p>Cada ciclo termina com um relatório de uma página: fase, indicadores, riscos e decisões.</p></header><div class="callout"><b>Proposta para o piloto com a equipe.</b> Os papéis são por função; nomes, datas e frequência serão definidos com a coordenação.</div>
+<h3>Cadência</h3>
+<div class="cards3" style="margin-top:12px" id="gRitos"></div>
+<h3 class="blk">Indicadores</h3>
+<p class="mute small" style="margin-bottom:10px">Cinco já medidos no teste com dados fictícios; três dependem do piloto.</p>
+<div class="tbl scroll"><table class="stack" id="gInd"></table></div>
+<h3 class="blk">Critérios para parar ou ajustar</h3>
+<div class="grid2" id="gStop" style="margin-top:12px"></div>
+</section>
+<section class="view" id="gov-riscos" aria-labelledby="gov-riscos-h"><header class="vh"><span class="eyebrow">Governança do projeto</span><h1 id="gov-riscos-h">Riscos e salvaguardas</h1><p>Oito riscos mapeados, com o que já foi feito, o gatilho de alerta e quem responde.</p></header><div class="callout"><b>Proposta para o piloto com a equipe.</b> Os papéis são por função; nomes, datas e frequência serão definidos com a coordenação.</div>
+<div class="grid2 mxwrap">
+<div class="card"><h3>Mapa de riscos</h3><p class="mute small">Probabilidade e impacto, já com as mitigações atuais.</p><div id="gMx" class="mx"></div></div>
+<div class="card"><h3>Salvaguardas de IA e de dados</h3><ol class="gaps" id="gRegras"></ol></div>
+</div>
+<h3 class="blk">Registro de riscos</h3>
+<div class="tbl scroll" style="margin-top:12px"><table class="stack" id="gRisk"></table></div>
+</section>
+<footer>Protótipo para o processo seletivo do programa Governos na Era da IA · Todos os municípios, pessoas e números são fictícios · João Paulo Gomes de Carvalho</footer>
+</main>
+</div>
+<script>
+{
+const DOM=[["D1","Gestão e Governança"],["D2","Formação"],["D3","Sistemas"],["D4","Telessaúde"],["D5","Infoestrutura"],["D6","Monitoramento"],["D7","Infraestrutura"]];
+const DOMFULL={D1:"Gestão e Governança em Saúde Digital",D2:"Formação e Desenvolvimento Profissional",D3:"Sistemas e Plataformas de Interoperabilidade",D4:"Telessaúde e Serviços Digitais",D5:"Infoestrutura",D6:"Monitoramento, Avaliação e Disseminação de Informações Estratégicas",D7:"Infraestrutura e Segurança"};
+const MUN=[
+{n:"Ribeirão Claro de Minas",pop:18,s:[55,30,60,25,30,50,45],ubs:7,bl:6,tc:12,ivs:"média",f:["Nosso maior problema é que os dados do PEC não batem com o que a equipe faz; falta alguém para cuidar da qualidade do registro.","Temos interesse em teleconsultoria, mas os médicos não conhecem o serviço."]},
+{n:"Serra do Pontal",pop:9,s:[50,28,80,78,32,45,50],ubs:4,bl:4,tc:5,ivs:"alta",f:["Duas equipes ainda registram na ficha de papel e alguém digita no fim do mês.","A internet funciona bem nas quatro unidades."]},
+{n:"Lagoa Mansa",pop:12,s:[48,35,58,28,35,52,85],ubs:6,bl:4,tc:8,ivs:"média",f:["As UBS rurais ainda não têm internet estável; o prontuário trava toda tarde.","Fizemos um curso de PEC no ano passado, mas metade da equipe já saiu."]},
+{n:"Vargem do Sertão",pop:6,s:[45,25,55,75,25,40,40],ubs:3,bl:2,tc:0,ivs:"alta",f:["Assinamos o termo de teleconsultoria, mas ainda não usamos.","Não temos técnico de informática; dependemos de uma empresa que vem uma vez por mês."]},
+{n:"São Joaquim da Vereda",pop:22,s:[90,40,65,35,40,55,60],ubs:9,bl:9,tc:20,ivs:"baixa",f:["Ainda não temos encarregado de dados nem política de proteção de dados; estamos começando a discutir.","Todas as unidades estão conectadas por fibra."]},
+{n:"Bom Jesus do Capão",pop:7,s:[40,70,50,22,28,42,38],ubs:4,bl:3,tc:3,ivs:"alta",f:["Não há ninguém responsável por capacitação; os 12 profissionais novos aprenderam o PEC com os colegas.","Quase não usamos teleconsultoria, os pedidos demoram."]},
+{n:"Cachoeira Alta de Minas",pop:11,s:[52,32,62,30,33,80,82],ubs:5,bl:2,tc:6,ivs:"média",f:["Não usamos os relatórios do sistema nas reuniões de equipe; ninguém sabe tirar.","Os ACS receberam tablets novos este ano."]},
+{n:"Santo Antônio do Brejo",pop:8,s:[50,35,57,70,30,48,44],ubs:4,bl:4,tc:46,ivs:"média",f:["A teleconsultoria virou rotina: a regulação só encaminha para especialista depois da teleconsultoria.","Ainda faltam computadores em duas salas de vacina."]}];
+const GAB={criticos:["D5","D2","D4"],
+exp:[["Lagoa Mansa","D7","escore 85, mas 2 de 6 UBS sem banda larga e prontuário travando"],["Serra do Pontal","D3","escore 80, mas duas equipes ainda registram em papel"],["Vargem do Sertão","D4","escore 75, mas nenhuma teleconsultoria em 2026 e termo sem uso"],["São Joaquim da Vereda","D1","escore 90, mas sem encarregado nem política de proteção de dados"],["Bom Jesus do Capão","D2","escore 70, mas ninguém responde por capacitação e 12 novos sem formação"],["Cachoeira Alta de Minas","D6","escore 80, mas relatórios não são usados e ninguém sabe tirar"]],
+sut:[["Serra do Pontal","D4","escore 78, mas só 5 teleconsultorias em 10 meses; nenhuma fala trata disso"],["Cachoeira Alta de Minas","D7","escore 82, mas só 2 de 5 UBS com banda larga; nenhuma fala trata disso"]],
+aceito:[["Ribeirão Claro de Minas","D3","dados do prontuário que não batem com a prática (achado procedente da versão 1, incorporado ao gabarito)"]],
+ancora:["Santo Antônio do Brejo","D4"]};
+const SAVED3={"runs": [{"at": "2026-11-23T14:05:38.213Z", "secs": 18, "result": {"ancoras": [{"dominio": "D4", "evidencia": "46 teleconsultorias de jan a out/2026 (a maior quantidade da microrregião, em município de 8 mil habitantes) e a regulação só encaminha ao especialista após a teleconsultoria, o que mostra integração ao fluxo assistencial.", "municipio": "Santo Antônio do Brejo"}], "criticos": [{"dominio": "D5", "justificativa": "Média 31,6, a mais baixa da microrregião, e 7 de 8 municípios com escore até 35. Ribeirão Claro de Minas relata que os dados do PEC não batem com a prática e que falta quem cuide da qualidade do registro. Serra do Pontal ainda digita fichas de papel no fim do mês. É um problema generalizado e de base, que limita o uso dos dados (D6) e a interoperabilidade (D3)."}, {"dominio": "D2", "justificativa": "Média 36,9 e 6 de 8 municípios com escore até 35. Lagoa Mansa perdeu metade da equipe treinada no PEC. Bom Jesus do Capão não tem responsável por capacitação e 12 profissionais novos aprenderam com os colegas. Em Ribeirão Claro de Minas, os médicos não conhecem a teleconsultoria. A rotatividade e a falta de responsável por capacitação tornam o problema recorrente."}, {"dominio": "D4", "justificativa": "Média 45,4, com 5 de 8 municípios com escore até 35 e grande dispersão (de 22 a 78). O uso real é baixo na maioria: 0 teleconsultorias em Vargem do Sertão, 3 em Bom Jesus do Capão (pedidos demorados), 12 em Ribeirão Claro de Minas. Há escores altos que não se sustentam nos números (ver inconsistências). O domínio é crítico tanto pelo baixo uso quanto pela dúvida sobre a confiabilidade dos escores."}], "inconsistencias": [{"dominio": "D3", "evidencia": "Escore 80 (o maior da microrregião), mas duas equipes ainda registram em ficha de papel e alguém digita no fim do mês, o que indica que o sistema não é usado de fato em parte das equipes.", "municipio": "Serra do Pontal", "pergunta": "Que parte do atendimento é registrada diretamente no sistema e que parte passa pelo papel? O que o escore 80 considerou?"}, {"dominio": "D4", "evidencia": "Escore 78 (o maior da microrregião), mas só 5 teleconsultorias de jan a out/2026 em um município com 4 UBS.", "municipio": "Serra do Pontal", "pergunta": "Que modalidades de telessaúde existem de fato e com que frequência são usadas? Em que se baseou o escore 78?"}, {"dominio": "D4", "evidencia": "Escore 75, mas 0 teleconsultorias de jan a out/2026. O gestor diz que assinou o termo e ainda não usa.", "municipio": "Vargem do Sertão", "pergunta": "O escore mede a adesão formal ou o uso real? Que barreiras impedem o início do uso?"}, {"dominio": "D7", "evidencia": "Escore 85 (o maior da microrregião), mas 2 das 6 UBS estão sem banda larga e o gestor diz que as UBS rurais não têm internet estável e que o prontuário trava toda tarde.", "municipio": "Lagoa Mansa", "pergunta": "O escore de D7 considerou as UBS rurais? Como ficaria a avaliação se elas fossem incluídas?"}, {"dominio": "D7", "evidencia": "Escore 82, mas 3 das 5 UBS estão sem banda larga. Os tablets novos dos ACS não resolvem a conectividade das unidades.", "municipio": "Cachoeira Alta de Minas", "pergunta": "Como o escore de D7 foi atribuído com 3 UBS sem banda larga? Os tablets funcionam sem conexão nas áreas de atuação dos ACS?"}, {"dominio": "D6", "evidencia": "Escore 80 (o maior da microrregião), mas o gestor diz que os relatórios do sistema não são usados nas reuniões de equipe e que ninguém sabe tirá-los.", "municipio": "Cachoeira Alta de Minas", "pergunta": "Que indicadores são de fato usados para planejar e decidir? Quem os produz e em que momentos são discutidos?"}, {"dominio": "D1", "evidencia": "Escore 90 (o maior da microrregião), mas o gestor afirma que não há encarregado de dados nem política de proteção de dados, itens que fazem parte de governança e proteção de dados.", "municipio": "São Joaquim da Vereda", "pergunta": "Que elementos de governança sustentam o escore 90 se não há política nem encarregado de dados? Existe algum documento formal?"}], "lacunas": ["Dados de uso real de cada sistema e de cada modalidade de telessaúde por município, com proporção de equipes que registram direto no sistema e não em papel.", "Como cada município preencheu o diagnóstico (quem respondeu e com que critérios), para calibrar os escores autodeclarados.", "Situação de cada UBS quanto à conectividade (estabilidade, velocidade) e equipamentos, incluindo as UBS rurais e as salas de vacina.", "Inventário de recursos humanos para saúde digital: responsáveis por capacitação, qualidade do registro, TI e proteção de dados, e a rotatividade das equipes.", "Tempos e resolutividade da teleconsultoria e da regulação, e quais especialidades são mais demandadas na microrregião."], "pontos_a_validar": [{"dominio": "D4", "motivo": "Tem 20 teleconsultorias em 10 meses, em um município grande com 9 UBS conectadas por fibra, mas escore de apenas 35. Pode estar subestimado ou o uso pode ser concentrado em poucas unidades ou especialidades. Confirmar quais modalidades são usadas e como.", "municipio": "São Joaquim da Vereda"}, {"dominio": "D4", "motivo": "Escore 70 coerente com 46 teleconsultorias e com a teleconsultoria como etapa prévia da regulação. Validar se o fluxo é formalizado e se os resultados (resolutividade, tempo de resposta) são acompanhados antes de tomá-lo como referência.", "municipio": "Santo Antônio do Brejo"}, {"dominio": "D7", "motivo": "Escore 44 com banda larga em todas as 4 UBS. A falta de computadores em duas salas de vacina pode explicar a nota, mas convém confirmar o inventário de equipamentos e se o escore reflete só essa carência.", "municipio": "Santo Antônio do Brejo"}, {"dominio": "D2", "motivo": "Escore 70 (o maior da microrregião), mas o gestor diz que ninguém é responsável por capacitação e que os 12 profissionais novos aprenderam com os colegas. Pode haver formação anterior ou informal que sustente a nota. Confirmar o que foi considerado.", "municipio": "Bom Jesus do Capão"}, {"dominio": "D3", "motivo": "Escore 60, mas o gestor diz que os dados do PEC não batem com o que a equipe faz. Confirmar se o problema é de qualidade do registro (D5) ou se também afeta o uso e a integração dos sistemas.", "municipio": "Ribeirão Claro de Minas"}, {"dominio": "D7", "motivo": "Escore 45 com 6 de 7 UBS com banda larga. Verificar se a nota reflete a unidade sem conexão, a qualidade da conexão, os equipamentos ou a segurança.", "municipio": "Ribeirão Claro de Minas"}, {"dominio": "D7", "motivo": "Escore 40 coerente com 1 UBS sem banda larga e sem técnico de informática (suporte mensal terceirizado). Confirmar o nível de segurança técnica, backup e a continuidade do suporte.", "municipio": "Vargem do Sertão"}, {"dominio": "D7", "motivo": "Gestor diz que a internet funciona bem nas 4 UBS, mas o escore é 50. Verificar se a nota reflete equipamentos, segurança ou arquitetura, e não a conectividade.", "municipio": "Serra do Pontal"}]}}, {"at": "2026-11-23T14:05:58.764Z", "secs": 20, "result": {"ancoras": [{"dominio": "D4", "evidencia": "46 teleconsultorias em jan–out/2026 (o maior volume da microrregião, em município de 8 mil habitantes), escore 70 e fala do gestor de que a teleconsultoria virou rotina, com a regulação só encaminhando ao especialista depois dela.", "municipio": "Santo Antônio do Brejo"}], "criticos": [{"dominio": "D5", "justificativa": "Média 31,6, a mais baixa da microrregião, e 7 de 8 municípios com escore até 35. O maior escore é 40. A fala de Ribeirão Claro de Minas (dados do PEC que não batem com o trabalho da equipe, sem responsável pela qualidade do registro) e a de Serra do Pontal (ficha de papel digitada no fim do mês) confirmam a fragilidade da qualidade e integridade dos dados."}, {"dominio": "D2", "justificativa": "Média 36,9, com 6 de 8 municípios com escore até 35. Só Bom Jesus do Capão destaca-se (70). Lagoa Mansa relata rotatividade que anulou o curso de PEC, e Bom Jesus do Capão relata que 12 profissionais novos aprenderam o PEC com os colegas. Ou seja, a capacitação não tem continuidade nem responsável."}, {"dominio": "D4", "justificativa": "Média 45,4, com 5 de 8 municípios com escore até 35 e grande dispersão (de 22 a 78). Em vários municípios o serviço é pouco usado: Ribeirão Claro de Minas diz que os médicos não conhecem a teleconsultoria, Bom Jesus do Capão relata demora nos pedidos e Vargem do Sertão não tem uso. Só Santo Antônio do Brejo mostra uso de rotina, enquanto os outros têm uso baixo ou nenhum."}], "inconsistencias": [{"dominio": "D3", "evidencia": "Escore 80 (o maior da microrregião), mas o gestor diz que duas equipes ainda registram em ficha de papel e alguém digita no fim do mês, o que mostra sistema não usado de forma plena.", "municipio": "Serra do Pontal", "pergunta": "Em que medida o PEC é usado em tempo real por todas as equipes, e o que sustenta o escore 80 diante do registro em papel?"}, {"dominio": "D4", "evidencia": "Escore 78, mas apenas 5 teleconsultorias de jan a out/2026, em município com 4 UBS.", "municipio": "Serra do Pontal", "pergunta": "Que serviços de telessaúde sustentam o escore 78 se o volume de teleconsultorias é tão baixo? Há outras modalidades em uso?"}, {"dominio": "D4", "evidencia": "Escore 75, mas 0 teleconsultorias jan–out/2026; o gestor diz que assinou o termo e ainda não usa.", "municipio": "Vargem do Sertão", "pergunta": "O escore reflete adesão formal ou uso real? Que modalidades de telessaúde funcionam de fato?"}, {"dominio": "D7", "evidencia": "Escore 85 (o maior da microrregião), mas 2 das 6 UBS não têm banda larga, e o gestor diz que as UBS rurais não têm internet estável e que o prontuário trava toda tarde.", "municipio": "Lagoa Mansa", "pergunta": "O escore de infraestrutura considerou as UBS rurais? Qual a situação real de conectividade e estabilidade nas unidades sem banda larga?"}, {"dominio": "D7", "evidencia": "Escore 82, mas 3 das 5 UBS não têm banda larga (a maioria das unidades).", "municipio": "Cachoeira Alta de Minas", "pergunta": "Como o escore 82 foi definido se a maior parte das UBS não tem banda larga? Os tablets novos dos ACS funcionam sem conexão?"}, {"dominio": "D6", "evidencia": "Escore 80 (o maior da microrregião), mas o gestor diz que os relatórios do sistema não são usados nas reuniões de equipe e que ninguém sabe extraí-los.", "municipio": "Cachoeira Alta de Minas", "pergunta": "Que indicadores são de fato usados para planejar e decidir? Quem produz e quem consome as informações?"}, {"dominio": "D1", "evidencia": "Escore 90 (o maior da microrregião), mas o gestor afirma não ter encarregado de dados nem política de proteção de dados, itens que o domínio mede (proteção de dados, políticas e regras).", "municipio": "São Joaquim da Vereda", "pergunta": "O que sustenta o escore 90 sem política de proteção de dados e sem encarregado? Quais elementos de governança existem formalmente?"}, {"dominio": "D7", "evidencia": "Escore 45 (médio) com 6 de 7 UBS com banda larga; não há contradição de fala, mas o escore parece baixo diante da conectividade. (Não é contradição de escore alto, ver pontos a validar.)", "municipio": "Ribeirão Claro de Minas", "pergunta": "Ver pontos a validar."}], "lacunas": ["Dados de uso real dos sistemas por UBS (registro em tempo real × papel, fichas digitadas depois) e indicadores de qualidade do registro no PEC, para validar D3, D5 e D6.", "Quais modalidades de telessaúde (teleconsultoria, teleconsulta, telemonitoramento, telerregulação) existem em cada município, com volume e tempo de resposta, para validar os escores de D4.", "Situação real de conectividade e equipamentos por UBS (estabilidade, velocidade, computadores por sala) nos municípios com UBS sem banda larga, para validar D7.", "Quadro de profissionais por município: rotatividade, profissionais novos e quem já foi capacitado, além de responsável por educação permanente, para planejar D2.", "Estrutura formal de governança e proteção de dados por município (políticas, encarregado, comitê, orçamento e equipe de TI ou suporte), para validar D1."], "pontos_a_validar": [{"dominio": "D3", "motivo": "Escore 60 (médio), mas o gestor diz que os dados do PEC não batem com o que a equipe faz. Confirmar se o problema está na qualidade do registro (D5) ou no uso do sistema e na troca de dados.", "municipio": "Ribeirão Claro de Minas"}, {"dominio": "D4", "motivo": "Escore 25 coerente com a fala de que os médicos não conhecem o serviço, mas houve 12 teleconsultorias; confirmar quem as solicitou e por que o serviço é desconhecido.", "municipio": "Ribeirão Claro de Minas"}, {"dominio": "D7", "motivo": "Escore 45 com 6 de 7 UBS com banda larga; verificar se o escore reflete equipamentos, segurança técnica ou a UBS sem conexão, e se está subestimado.", "municipio": "Ribeirão Claro de Minas"}, {"dominio": "D2", "motivo": "Escore 35 e relato de curso de PEC no ano passado com saída de metade da equipe; confirmar o tamanho da rotatividade e se há plano de reposição da capacitação.", "municipio": "Lagoa Mansa"}, {"dominio": "D2", "motivo": "Escore 70 (o maior da microrregião), mas o gestor diz que não há responsável por capacitação e que 12 profissionais novos aprenderam com os colegas. A aprendizagem informal pode sustentar o escore, mas convém confirmar o que foi considerado; pode haver superestimação.", "municipio": "Bom Jesus do Capão"}, {"dominio": "D4", "motivo": "Escore 22 coerente com 3 teleconsultorias e a queixa de demora; confirmar se a demora vem do fluxo de resposta do serviço ou da solicitação local.", "municipio": "Bom Jesus do Capão"}, {"dominio": "D4", "motivo": "Escore 35, embora tenha 20 teleconsultorias e 9 UBS conectadas por fibra; verificar se o escore está subestimado e quais modalidades existem além da teleconsultoria.", "municipio": "São Joaquim da Vereda"}, {"dominio": "D7", "motivo": "Escore 60 com 9 UBS conectadas por fibra; confirmar se a limitação está em equipamentos, segurança ou arquitetura.", "municipio": "São Joaquim da Vereda"}, {"dominio": "D7", "motivo": "Escore 44, com todas as 4 UBS com banda larga mas faltam computadores em duas salas de vacina; confirmar se o escore reflete a falta de equipamentos.", "municipio": "Santo Antônio do Brejo"}, {"dominio": "D4", "motivo": "Escore 70 e 46 teleconsultorias, coerentes entre si; validar se a regra de regulação (encaminhar só após teleconsultoria) é formalizada e documentada e se há resultados medidos.", "municipio": "Santo Antônio do Brejo"}, {"dominio": "D7", "motivo": "Escore 50 com internet funcionando nas 4 UBS; confirmar se o escore reflete equipamentos e segurança, e se está subestimado.", "municipio": "Serra do Pontal"}, {"dominio": "D7", "motivo": "Escore 40 com 1 de 3 UBS sem banda larga e sem técnico de informática (suporte mensal terceirizado); coerente, mas confirmar o impacto do suporte mensal na segurança e na continuidade.", "municipio": "Vargem do Sertão"}]}}, {"at": "2026-11-23T14:06:20.398Z", "secs": 21, "result": {"ancoras": [{"dominio": "D4", "evidencia": "46 teleconsultorias de jan a out/2026, o maior volume, em município de 8 mil habitantes. A teleconsultoria é rotina e a regulação só encaminha ao especialista após ela, o que mostra integração ao fluxo assistencial. Escore 70 coerente.", "municipio": "Santo Antônio do Brejo"}], "criticos": [{"dominio": "D5", "justificativa": "Média de 31,6, a mais baixa da microrregião, com 7 de 8 municípios com escore até 35 e maior escore de apenas 40. A fala de Ribeirão Claro de Minas (dados do PEC não batem com o que a equipe faz, sem responsável pela qualidade do registro) e o registro em papel com digitação mensal em Serra do Pontal mostram problemas de integridade e qualidade da informação."}, {"dominio": "D2", "justificativa": "Média de 36,9, com 6 de 8 municípios com escore até 35. Há rotatividade e ausência de responsável por capacitação (Lagoa Mansa: metade da equipe que fez o curso de PEC já saiu; Bom Jesus do Capão: 12 profissionais novos aprenderam com os colegas). O desconhecimento do serviço de teleconsultoria pelos médicos em Ribeirão Claro de Minas e a falta de saber extrair relatórios em Cachoeira Alta de Minas reforçam a lacuna. Bom Jesus do Capão é exceção no escore (70), mas a fala contradiz esse valor."}, {"dominio": "D4", "justificativa": "Média de 45,4, com 5 de 8 municípios com escore até 35 e grande dispersão (de 22 a 78). O uso é baixo na maioria: 0 teleconsultorias em Vargem do Sertão, 3 em Bom Jesus do Capão, 5 em Serra do Pontal, 6 em Cachoeira Alta de Minas e 8 em Lagoa Mansa. Há barreiras relatadas de desconhecimento do serviço e de demora nos pedidos. O desempenho é muito desigual, com Santo Antônio do Brejo como exceção real."}], "inconsistencias": [{"dominio": "D4", "evidencia": "Escore 78, mas apenas 5 teleconsultorias de jan a out/2026, em município com 4 UBS, todas com banda larga.", "municipio": "Serra do Pontal", "pergunta": "O que sustenta o escore de 78 em telessaúde? Quais modalidades (teleconsulta, telemonitoramento, telerregulação) funcionam de fato, e por que o volume de teleconsultorias é tão baixo?"}, {"dominio": "D4", "evidencia": "Escore 75, mas 0 teleconsultorias no ano; o gestor diz que assinou o termo e ainda não usa.", "municipio": "Vargem do Sertão", "pergunta": "Que serviços de telessaúde estão realmente em operação, além da assinatura do termo? O que impede o início do uso?"}, {"dominio": "D3", "evidencia": "Escore 80 (o maior da microrregião), mas duas equipes ainda registram em ficha de papel e alguém digita no fim do mês.", "municipio": "Serra do Pontal", "pergunta": "Quantas equipes registram direto no sistema? Os dados chegam em tempo oportuno aos sistemas e circulam entre eles?"}, {"dominio": "D7", "evidencia": "Escore 85 (o maior da microrregião), mas 2 de 6 UBS sem banda larga e o gestor diz que as UBS rurais não têm internet estável e o prontuário trava toda tarde.", "municipio": "Lagoa Mansa", "pergunta": "Como o escore de 85 foi calculado diante de unidades sem conectividade e de lentidão diária do prontuário? Qual a situação de rede, servidores e equipamentos?"}, {"dominio": "D7", "evidencia": "Escore 82, mas 3 de 5 UBS sem banda larga (a maior proporção sem conexão da microrregião).", "municipio": "Cachoeira Alta de Minas", "pergunta": "O escore considerou as UBS sem conexão? Como as equipes dessas unidades registram e acessam o sistema hoje?"}, {"dominio": "D6", "evidencia": "Escore 80 (o maior da microrregião), mas o gestor diz que os relatórios do sistema não são usados nas reuniões de equipe e ninguém sabe extraí-los.", "municipio": "Cachoeira Alta de Minas", "pergunta": "Que indicadores são de fato usados para planejar e decidir? Quem os produz e em quais espaços são discutidos?"}, {"dominio": "D1", "evidencia": "Escore 90 (o maior da microrregião), mas o gestor afirma que não há encarregado de dados nem política de proteção de dados, e que o tema está só começando a ser discutido. Proteção de dados faz parte do domínio.", "municipio": "São Joaquim da Vereda", "pergunta": "Quais elementos de governança existem formalmente (estratégia, normas, financiamento, instâncias) para justificar 90, dado que a proteção de dados ainda não está estruturada?"}, {"dominio": "D2", "evidencia": "Escore 70 (o maior da microrregião), mas não há responsável por capacitação e os 12 profissionais novos aprenderam o PEC com os colegas.", "municipio": "Bom Jesus do Capão", "pergunta": "Que ações formais de qualificação ocorreram e quantos profissionais foram atingidos? Como é a integração dos novos profissionais?"}, {"dominio": "D7", "evidencia": "Escore 44, com banda larga em todas as 4 UBS, mas o gestor relata falta de computadores em duas salas de vacina.", "municipio": "Santo Antônio do Brejo", "pergunta": "Qual é o inventário de equipamentos por unidade e sala? A baixa nota vem da falta de equipamentos ou de outros fatores como segurança e arquitetura?"}], "lacunas": ["Situação real da conectividade e dos equipamentos por UBS (velocidade, estabilidade, computadores disponíveis), especialmente nas 8 UBS sem banda larga em 5 municípios.", "Evidências que sustentam os escores altos contestados (D3 e D4 em Serra do Pontal, D4 em Vargem do Sertão, D1 em São Joaquim da Vereda, D6 em Cachoeira Alta de Minas, D7 em Lagoa Mansa), como documentos, fluxos e registros.", "Quantidade de equipes que registram em papel ou fora do sistema e qualidade do registro no PEC em cada município.", "Perfil e rotatividade da força de trabalho, e existência de rotina de educação permanente, com número de profissionais capacitados em sistemas e telessaúde.", "Estrutura de suporte técnico e de governança de dados por município (equipe de TI, encarregado de dados, política de proteção de dados e orçamento para saúde digital)."], "pontos_a_validar": [{"dominio": "D5", "motivo": "O escore (30) é compatível com a fala sobre dados do PEC que não batem com o registro. Vale confirmar a extensão do problema: quais indicadores são afetados e se há rotina de auditoria do registro.", "municipio": "Ribeirão Claro de Minas"}, {"dominio": "D4", "motivo": "Escore baixo (25) com 12 teleconsultorias. Confirmar se o desconhecimento do serviço pelos médicos é a principal barreira e se há demanda reprimida.", "municipio": "Ribeirão Claro de Minas"}, {"dominio": "D7", "motivo": "Escore 45 com 6 de 7 UBS com banda larga. Verificar qual unidade não tem conexão e se a nota reflete equipamentos e segurança, não só conectividade.", "municipio": "Ribeirão Claro de Minas"}, {"dominio": "D7", "motivo": "Todas as 4 UBS têm banda larga e o gestor diz que a internet funciona bem, mas o escore é 50. Verificar equipamentos, segurança e arquitetura que expliquem a nota.", "municipio": "Serra do Pontal"}, {"dominio": "D7", "motivo": "Fibra em todas as 9 UBS, mas escore 60. Conferir se faltam equipamentos, segurança técnica ou arquitetura.", "municipio": "São Joaquim da Vereda"}, {"dominio": "D4", "motivo": "Escore 35, mas 20 teleconsultorias no ano, o segundo maior volume. Confirmar se o escore está subestimado ou se o uso se concentra em uma só modalidade, e se o volume é adequado à população de 22 mil.", "municipio": "São Joaquim da Vereda"}, {"dominio": "D4", "motivo": "Escore 70 coerente com 46 teleconsultorias e uso integrado à regulação. Validar se há outras modalidades e se a rotina é documentada e reprodutível.", "municipio": "Santo Antônio do Brejo"}, {"dominio": "D4", "motivo": "Escore 22 coerente com 3 teleconsultorias e queixa de demora nos pedidos. Identificar em que etapa ocorre o atraso (solicitação, resposta, retorno).", "municipio": "Bom Jesus do Capão"}, {"dominio": "D2", "motivo": "Escore 35, com curso de PEC realizado e metade da equipe já desligada. Verificar se existe rotina de educação permanente e de integração dos novos profissionais.", "municipio": "Lagoa Mansa"}, {"dominio": "D7", "motivo": "Escore 40 coerente com 1 UBS sem banda larga e suporte técnico terceirizado uma vez por mês. Confirmar como os incidentes são tratados entre as visitas.", "municipio": "Vargem do Sertão"}]}}]};
+const REVIEW={"1": {"ribeirao claro de minas|D7": {"s": "er", "label": "Não procede", "t": "Erro de formato: o caso também está em pontos a validar, com a pergunta “Ver pontos a validar”.", "w": true}}, "2": {"santo antonio do brejo|D7": {"s": "ex", "label": "Discutível", "t": "Escore baixo (44) com falta de computadores é coerente; caberia em pontos a validar, não como contradição.", "w": true}}};const EVAL={"ok": ["Nas 3 rodadas, encontrou as 2 contradições sutis e os 3 domínios críticos, na ordem das médias.", "Nenhum erro numérico: médias e contagens passaram a vir prontas da página.", "Separar “pontos a validar” reduziu os apontamentos indevidos de 3 ou 4 para 0 ou 1 por rodada."], "mud": ["Em 2 rodadas, a contradição de Bom Jesus do Capão (Formação) foi para “a validar”: a conferência humana continua obrigatória.", "A lista de pontos a validar ficou longa (8 a 12 itens): limitar a 5.", "Um caso apareceu nas duas listas: reforçar a regra de não repetir."], "dec": ["<b>Avançar para um teste com a equipe</b>, com conferência humana, não para uso direto.", "Aplicar a dados reais, anonimizados, de 2 microrregiões já trabalhadas.", "Segue se encontrar 80% dos problemas levantados nas oficinas, sem erro numérico, e reduzir a preparação de dias para horas."]};
+
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const norm=s=>String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().trim();
+const mean=i=>MUN.reduce((a,m)=>a+m.s[i],0)/MUN.length;
+const heatBg=v=>{const t=Math.max(0,Math.min(1,(v-20)/70));return `hsl(${10+t*130} 55% ${80-t*14}%)`};
+const key=x=>norm(x.municipio)+"|"+x.dominio;
+const has=(list,x)=>list.some(g=>norm(g[0])===norm(x.municipio)&&g[1]===x.dominio);
+const kind=x=>has(GAB.exp,x)?"exp":has(GAB.sut,x)?"sut":has(GAB.aceito,x)?"ace":"extra";
+
+let runs=(typeof SAVED3!=="undefined"&&SAVED3)?SAVED3.runs:[],cur=0,filt="all";
+
+function score(r){
+  const crit=(r.criticos||[]).slice(0,3).map(c=>c.dominio);
+  const critOk=GAB.criticos.filter(c=>crit.includes(c)).length;
+  const inc=r.inconsistencias||[];
+  const nE=GAB.exp.filter(g=>inc.some(x=>norm(x.municipio)===norm(g[0])&&x.dominio===g[1])).length;
+  const nS=GAB.sut.filter(g=>inc.some(x=>norm(x.municipio)===norm(g[0])&&x.dominio===g[1])).length;
+  const extras=inc.filter(x=>kind(x)==="extra");
+  const anc=(r.ancoras||[]).some(a=>norm(a.municipio)===norm(GAB.ancora[0])&&a.dominio===GAB.ancora[1]);
+  const perg=inc.length>0&&inc.every(x=>String(x.pergunta||"").trim().length>8);
+  const gaps=(r.lacunas||[]).length;
+  return {critOk,nE,nS,extras,anc,perg,gaps,pass:[critOk===3,nE>=5,nS>=1,extras.length<=2,anc,perg]};
+}
+const CRIT=["Apontar os 3 domínios mais frágeis (Infoestrutura, Formação, Telessaúde)","Encontrar ao menos 5 das 6 contradições explícitas","Encontrar ao menos 1 das 2 contradições sutis (só aparecem cruzando números)","No máximo 2 apontamentos fora do gabarito","Reconhecer Santo Antônio do Brejo como âncora em telessaúde","Trazer uma pergunta de validação para cada inconsistência"];
+
+function renderTop(){
+  if(!runs.length){$("#vTitle").textContent="Aguardando o teste";$("#vSub").textContent="Use “Rodar 3 leituras” na seção Método.";$("#kpis").innerHTML="";$("#cons").innerHTML="";return}
+  const S=runs.map(x=>score(x.result));
+  const passes=S.map(s=>s.pass.filter(Boolean).length);
+  const all=passes.every(p=>p===6);
+  const avg=(passes.reduce((a,b)=>a+b,0)/passes.length);
+  $("#vScore").textContent=`${avg.toFixed(1).replace(".",",")}/6`;
+  $("#vTitle").textContent=all?"Decisão: avançar para um teste com a equipe, com conferência humana":"Decisão: ajustar antes de testar com a equipe";
+  $("#vSub").textContent=`Versão 3 do teste: ${runs.length} rodadas independentes; ${passes.filter(p=>p===6).length} de ${runs.length} atingiram os 6 critérios.`;
+  const rng=a=>{const mn=Math.min(...a),mx=Math.max(...a);return mn===mx?`${mn}`:`${mn} a ${mx}`};
+  $("#kpis").innerHTML=[
+    [`${rng(S.map(s=>s.critOk))}/3`,"domínios críticos iguais ao gabarito",`em ${runs.length} rodadas`],
+    [`${rng(S.map(s=>s.nE))}/6`,"contradições explícitas encontradas","meta: ao menos 5"],
+    [`${rng(S.map(s=>s.nS))}/2`,"contradições sutis encontradas","meta: ao menos 1"],
+    [`${rng(S.map(s=>s.extras.length))}`,"apontamentos fora do gabarito","conferidos um a um"]
+  ].map(k=>`<div class="kpi"><strong>${k[0]}</strong><span>${k[1]}</span><em>${k[2]}</em></div>`).join("");
+  const short=["3 domínios críticos","≥ 5 de 6 explícitas","≥ 1 de 2 sutis","≤ 2 fora do gabarito","Âncora reconhecida","Pergunta para cada caso"];
+  $("#cons").innerHTML=`<thead><tr><th>Critério (fixado antes)</th>${runs.map((_,i)=>`<th style="text-align:center">Rodada ${i+1}</th>`).join("")}</tr></thead><tbody>`+short.map((c,j)=>`<tr><td>${c}</td>${S.map(s=>`<td style="text-align:center"><span class="st ${s.pass[j]?"ok":"mi"}">${s.pass[j]?"atingido":"não"}</span></td>`).join("")}</tr>`).join("")+`<tr><td><b>Lacunas listadas (limite 5)</b></td>${S.map(s=>`<td style="text-align:center">${s.gaps}</td>`).join("")}</tr></tbody>`;
+  $("#crit").innerHTML=CRIT.map(c=>`<li><span class="st ok">critério</span><span>${c}</span></li>`).join("");
+  $("#runSel").innerHTML=runs.map((_,i)=>`<button data-r="${i}" class="${i===cur?"on":""}">Rodada ${i+1}</button>`).join("");
+  const ev=(typeof EVAL!=="undefined"&&EVAL)?EVAL:null;
+  $("#evalCards").innerHTML=ev?[["var(--g)","O que funcionou",ev.ok,""],["var(--hot)","O que precisa mudar",ev.mud,""],["var(--g)","Decisão e próximo passo",ev.dec," decide"]].map(c=>`<div class="card eval${c[3]}"><h3><span class="dot" style="background:${c[0]}"></span>${c[1]}</h3><ul>${c[2].map(x=>`<li>${x}</li>`).join("")}</ul></div>`).join(""):"";
+}
+function rv(x){const R=(typeof REVIEW!=="undefined"&&REVIEW)?REVIEW[cur]:null;return R?R[key(x)]:null}
+function renderRun(){
+  if(!runs.length){$("#bars").innerHTML="";return}
+  const r=runs[cur].result;
+  const crit=(r.criticos||[]).map(c=>c.dominio);
+  const rows=DOM.map((d,i)=>({c:d[0],n:d[1],v:mean(i)})).sort((a,b)=>a.v-b.v);
+  $("#bars").innerHTML=rows.map(x=>{const k=crit.indexOf(x.c);return `<div class="bar${k>=0?" c":""}" title="${esc(DOMFULL[x.c])}"><span>${k>=0?`<span class="rank">${k+1}</span>`:""}${x.c} · ${esc(x.n)}</span><div class="t"><i style="width:${x.v}%"></i></div><b>${x.v.toFixed(0)}</b></div>`}).join("");
+  $("#just").innerHTML=(r.criticos||[]).map((c,i)=>`<details${i===0?" open":""}><summary><span class="rank">${i+1}</span>${esc(c.dominio)} · ${esc(DOMFULL[c.dominio]||c.dominio)}</summary><p>${esc(c.justificativa)}</p></details>`).join("");
+  const lab={exp:"Explícita · gabarito",sut:"Sutil · gabarito",ace:"Aceita",extra:"Fora do gabarito"};
+  const cls={exp:"ok",sut:"ok",ace:"ok",extra:"ex"};
+  const list=(r.inconsistencias||[]).map(x=>({...x,k:kind(x),rv:rv(x)}));
+  const miss=[...GAB.exp.map(g=>[...g,"Explícita"]),...GAB.sut.map(g=>[...g,"Sutil"])].filter(g=>!(r.inconsistencias||[]).some(x=>norm(x.municipio)===norm(g[0])&&x.dominio===g[1]));
+  const inPav=g=>(r.pontos_a_validar||[]).some(p=>norm(p.municipio)===norm(g[0])&&p.dominio===g[1]);
+  const rows2=list.filter(x=>filt==="all"||(filt==="ok"?x.k!=="extra":x.k==="extra"));
+  $("#incTbl tbody").innerHTML=rows2.map(x=>{const c=x.rv?(x.rv.s==="er"?"er":x.rv.s==="ex"?"ex":cls[x.k]):cls[x.k];const l=x.rv&&x.rv.label?x.rv.label:lab[x.k];return `<tr><td><span class="st ${c}">${l}</span></td><td>${esc(x.municipio)}</td><td><span class="dom" title="${esc(DOMFULL[x.dominio]||"")}">${esc(x.dominio)}</span></td><td>${esc(x.evidencia)}${x.rv?`<span class="rev${x.rv.w?" w":""}">Conferência: ${esc(x.rv.t)}</span>`:(x.k==="extra"?`<span class="rev">Conferência humana pendente.</span>`:"")}</td><td>${esc(x.pergunta)}</td></tr>`}).join("")+(filt!=="ex"?miss.map(g=>`<tr><td><span class="st ${inPav(g)?"ex":"mi"}">${inPav(g)?"Foi para “a validar”":"Não encontrada"}</span></td><td>${esc(g[0])}</td><td><span class="dom">${g[1]}</span></td><td>Gabarito (${esc(g[3].toLowerCase())}): ${esc(g[2])}${inPav(g)?`<span class="rev w">Conferência: a IA levou o caso à oficina, mas como dúvida, não como contradição.</span>`:""}</td><td></td></tr>`).join(""):"");
+  $("#anc").innerHTML=(r.ancoras||[]).map(a=>{const g=norm(a.municipio)===norm(GAB.ancora[0])&&a.dominio===GAB.ancora[1];return `<div class="card"><span class="st ${g?"ok":"ex"}">${g?"No gabarito":"Indicação extra"}</span><h3 style="margin-top:10px">${esc(a.municipio)}</h3><p class="mute small">${esc(a.dominio)} · ${esc(DOMFULL[a.dominio]||"")}</p><p>${esc(a.evidencia)}</p></div>`}).join("")||`<p class="mute">Nenhuma indicada.</p>`;
+  $("#gaps").innerHTML=(r.lacunas||[]).map(l=>`<li>${esc(l)}</li>`).join("");
+  $("#pav").innerHTML=(r.pontos_a_validar||[]).map(p=>`<li><b>${esc(p.municipio)}, ${esc(p.dominio)}:</b> ${esc(p.motivo)}</li>`).join("")||`<li class="mute">Nenhum.</li>`;
+  const mark={};(r.inconsistencias||[]).forEach(x=>{const v=rv(x);if(v&&v.s==="er")return;const k=kind(x);mark[key(x)]=k==="extra"?"m-ext":"m-inc"});
+  (r.ancoras||[]).forEach(a=>{if(norm(a.municipio)===norm(GAB.ancora[0])&&a.dominio===GAB.ancora[1])mark[key(a)]="m-anc"});
+  renderHeat(mark,crit);
+}
+function renderHeat(mark,crit){
+  mark=mark||{};crit=crit||[];
+  const head=`<thead><tr><th>Município</th>${DOM.map(d=>`<th title="${esc(DOMFULL[d[0]])}">${d[0]}<br><span style="font-weight:500">${esc(d[1].split(" ")[0])}</span></th>`).join("")}<th>UBS com banda larga</th><th>Teleconsultorias 2026</th></tr></thead>`;
+  const rows=MUN.map(m=>`<tr><td class="n">${esc(m.n)} <span class="mute small">· ${m.pop} mil</span></td>${m.s.map((v,i)=>`<td class="s ${mark[norm(m.n)+"|"+DOM[i][0]]||""}" style="background:${heatBg(v)}">${v}</td>`).join("")}<td style="text-align:center">${m.bl} de ${m.ubs}</td><td style="text-align:center">${m.tc}</td></tr>`).join("");
+  const mrow=`<tr class="mean"><td class="n">Média da microrregião</td>${DOM.map((d,i)=>`<td class="s${crit.includes(d[0])?" cr":""}" style="background:${heatBg(mean(i))}">${mean(i).toFixed(0)}</td>`).join("")}<td></td><td></td></tr>`;
+  $("#heat").innerHTML=head+"<tbody>"+rows+mrow+"</tbody>";
+  $("#legend").innerHTML=`<span><i style="box-shadow:inset 0 0 0 2.5px #b4412a"></i>inconsistência do gabarito encontrada</span><span><i style="outline:2px dashed #9a6408;outline-offset:-3px"></i>apontamento fora do gabarito</span><span><i style="box-shadow:inset 0 0 0 2.5px #1e6b4a"></i>município-âncora</span><span><i style="box-shadow:inset 0 0 0 2.5px currentColor"></i>domínio crítico apontado</span>`;
+}
+function renderAll(){renderTop();renderRun();if(!runs.length)renderHeat()}
+
+const stats=()=>DOM.map((d,i)=>{const v=MUN.map(m=>({n:m.n,s:m.s[i]}));const mx=v.reduce((a,b)=>b.s>a.s?b:a),mn=v.reduce((a,b)=>b.s<a.s?b:a);const k=v.filter(x=>x.s<=35).length;return `${d[0]}: média ${mean(i).toFixed(1).replace(".",",")}; maior ${mx.s} (${mx.n}); menor ${mn.s} (${mn.n}); municípios com escore até 35: ${k} de 8`}).join("\n");
+const totals=()=>{const sem=MUN.reduce((a,m)=>a+(m.ubs-m.bl),0),mun=MUN.filter(m=>m.ubs>m.bl).length,tot=MUN.reduce((a,m)=>a+m.ubs,0);return `UBS na microrregião: ${tot}; sem banda larga: ${sem}, em ${mun} municípios.`};
+const DEFS=`D1 Gestão e Governança: lideranças, estratégia, políticas, regras, proteção de dados e financiamento da saúde digital.\nD2 Formação: qualificação das habilidades digitais dos profissionais.\nD3 Sistemas e Interoperabilidade: sistemas de saúde digital em uso e a troca de dados entre eles.\nD4 Telessaúde: teleconsulta, teleconsultoria, telemonitoramento e telerregulação.\nD5 Infoestrutura: base para gerenciar a informação (integridade, armazenamento, segurança dos dados e terminologias clínicas). Não é conectividade.\nD6 Monitoramento e Avaliação: uso de indicadores e informações estratégicas para planejar e decidir.\nD7 Infraestrutura e Segurança: conectividade, equipamentos, arquitetura e segurança técnica dos sistemas.`;
+const dataText=()=>MUN.map(m=>`${m.n} (pop. ${m.pop} mil; IVS ${m.ivs}; ${m.ubs} UBS, ${m.bl} com banda larga, ${m.ubs-m.bl} sem; ${m.tc} teleconsultorias jan–out/2026)\n  Escores: ${DOM.map((d,i)=>`${d[0]}=${m.s[i]}`).join(", ")}\n  Falas do gestor: "${m.f[0]}" / "${m.f[1]}"`).join("\n");
+const PROMPT=`Você apoia as secretarias municipais de saúde e a regional que preparam a oficina de Planejamento Local em Saúde Digital de uma microrregião de Minas Gerais. Elas precisam de uma leitura crítica do diagnóstico de maturidade dos municípios. Os escores são autodeclarados e podem não refletir a realidade.
+
+O que cada domínio mede:
+${DEFS}
+
+Dados da microrregião Vale do Pontal:
+${dataText()}
+
+Números já calculados (use apenas estes; não faça contas, somas, contagens nem comparações que não estejam aqui):
+${stats()}
+${totals()}
+
+Tarefa:
+1. Indique os 3 domínios mais críticos da microrregião, em ordem, com justificativa curta que considere escores, indicadores e falas.
+2. Em "inconsistencias", liste APENAS contradições claras: o escore de um domínio é alto ou médio e a fala do gestor OU um indicador (banda larga, teleconsultorias) mostra o contrário, considerando o que o domínio mede. Cruze os números mesmo quando nenhuma fala tratar do assunto. Para cada uma: município, domínio, evidência e uma pergunta para a oficina.
+3. Em "pontos_a_validar", coloque o que merece pergunta na oficina mas não é contradição clara (escore que parece subestimado, dúvida, coerência a confirmar). Nunca repita aqui o que já está em "inconsistencias".
+4. Indique municípios-âncora: experiência boa e comprovada que pode ser compartilhada, e em qual domínio.
+5. Liste no máximo 5 informações que faltam para planejar, em ordem de importância.
+Não proponha o plano de ação: ele será construído na oficina.
+
+Responda APENAS com JSON válido, sem texto antes ou depois:
+{"criticos":[{"dominio":"D1","justificativa":""}],"inconsistencias":[{"municipio":"","dominio":"D1","evidencia":"","pergunta":""}],"pontos_a_validar":[{"municipio":"","dominio":"D1","motivo":""}],"ancoras":[{"municipio":"","dominio":"D1","evidencia":""}],"lacunas":[""]}`;
+
+$("#prompt").textContent=PROMPT;
+$("#gab").innerHTML=`<p><b>Domínios críticos:</b> ${GAB.criticos.map(c=>c+" ("+DOMFULL[c]+")").join("; ")}: as três menores médias.</p><p style="margin-top:8px"><b>Contradições explícitas (6):</b></p><ul>${GAB.exp.map(g=>`<li>${esc(g[0])}, ${g[1]}: ${esc(g[2])}</li>`).join("")}</ul><p><b>Contradições sutis (2):</b></p><ul>${GAB.sut.map(g=>`<li>${esc(g[0])}, ${g[1]}: ${esc(g[2])}</li>`).join("")}</ul><p><b>Aceita sem ser exigida:</b> Ribeirão Claro de Minas, D3: ${esc(GAB.aceito[0][2])}.</p><p style="margin-top:8px"><b>Âncora:</b> Santo Antônio do Brejo em telessaúde (46 teleconsultorias e fluxo com a regulação).</p>`;
+$("#filters").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;filt=b.dataset.f;for(const x of $("#filters").children)x.classList.toggle("on",x===b);renderRun()});
+$("#runSel").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;cur=+b.dataset.r;for(const x of $("#runSel").children)x.classList.toggle("on",x===b);renderRun()});
+/* ===== Governança do projeto: dados e telas ===== */
+const GOV={
+principios:[
+ ["A IA prepara, não decide","Ela cruza os dados e levanta perguntas. O plano de ação segue pactuado entre os municípios."],
+ ["Toda saída é conferida","Nenhum apontamento vai à oficina sem conferência humana, com a evidência à vista."],
+ ["Dados protegidos","Só dados fictícios ou anonimizados, em ferramenta autorizada pela prefeitura."]],
+niveis:[
+ ["Estratégico","Coordenação do programa e regional",["Aprova o escopo, o uso de dados reais e a escala","Decide seguir, ajustar ou parar ao fim de cada fase"]],
+ ["Tático","Responsável pelo piloto (analista de saúde digital)",["Conduz o teste e mantém o comando e o registro","Confere os apontamentos e reporta os indicadores"]],
+ ["Operacional","Secretarias municipais e pontos focais",["Fornecem os dados e validam as perguntas","Usam a leitura na oficina e dão o parecer"]]],
+raci:{cols:["Coordenação","Responsável pelo piloto","Pontos focais","Encarregado de dados"],rows:[
+ ["Definir escopo e critérios de sucesso",["A","R","C","I"]],
+ ["Preparar e anonimizar os dados",["I","A","R","C"]],
+ ["Rodar as leituras e registrar as versões do comando",["I","A/R","–","–"]],
+ ["Conferir cada apontamento da IA",["I","A/R","C","–"]],
+ ["Aprovar o uso de dados reais",["A","R","C","C"]],
+ ["Conduzir a oficina de pactuação",["C","R","A","–"]],
+ ["Decidir escalar, ajustar ou parar",["A","R","C","C"]]]},
+fases:[
+ {n:1,t:"Preparar",s:"Concluída",c:"ok",k:"done",d:"Escopo na oportunidade A, dados fictícios de 8 municípios, critérios e gabarito escritos antes do teste.",p:[["Portão","Critérios e gabarito fixados antes de rodar a IA."]]},
+ {n:2,t:"Testar com dados fictícios",s:"Concluída em 23/11/2026",c:"ok",k:"done",d:"Três versões do comando; a versão 3 foi rodada 3 vezes.",p:[["Portão","6 critérios atingidos em todas as rodadas, sem erro numérico. Aprovado."]]},
+ {n:3,t:"Piloto com dados reais",s:"Próxima · aguarda autorização",c:"ex",k:"next",d:"Dados anonimizados de 2 microrregiões já trabalhadas, comparados com o que as oficinas levantaram.",p:[["Portão de entrada","Autorização da coordenação, parecer do encarregado de dados e ferramenta autorizada pela prefeitura."],["Portão de saída","Ao menos 80% dos problemas encontrados, sem erro numérico, e preparação de dias para horas."]]},
+ {n:4,t:"Decisão de escala",s:"Futura",c:"gr",k:"",d:"Levar à rotina das microrregiões, ajustar ou parar.",p:[["Portão","Resultado do piloto e parecer das equipes municipais."]]}],
+decisoes:[
+ ["D-01","Escolher a oportunidade A (leitura assistida) e deixar a B (rascunho do plano) para depois","A leitura não decide nada e preserva a pactuação entre os municípios","Responsável pelo piloto","nov/2026","Decidido"],
+ ["D-02","Fixar critérios e gabarito antes de cada versão","Evita ajustar o critério ao resultado","Responsável pelo piloto","nov/2026","Decidido"],
+ ["D-03","Conferência humana em toda saída da IA","A IA pode errar, e a decisão é dos municípios","Responsável pelo piloto","nov/2026","Decidido"],
+ ["D-04","Adotar a versão 3 do comando","6 critérios atingidos em 3 de 3 rodadas, sem erro numérico","Responsável pelo piloto","23/11/2026","Decidido"],
+ ["D-05","Limitar os pontos a validar a 5 por execução","A lista chegou a 12 itens nas rodadas da versão 3","Responsável pelo piloto","–","Em teste"],
+ ["D-06","Aplicar a leitura a dados reais anonimizados de 2 microrregiões","Medir contra o que as oficinas levantaram","Coordenação","–","Pendente"]],
+ritos:[
+ ["Checagem semanal","30 min","Responsável pelo piloto e pontos focais","Execuções da semana, erros e bloqueios","Registro das execuções e dos ajustes"],
+ ["Revisão quinzenal","1 h","Responsável pelo piloto e coordenação","Indicadores contra a meta, riscos e decisões pendentes","Decisão sobre ajustar o comando"],
+ ["Ponto de decisão","1 h, ao fim de cada fase","Coordenação, responsável, pontos focais e encarregado de dados","Critérios do portão da fase","Seguir, ajustar ou parar, no registro de decisões"]],
+indic:[
+ ["Domínios críticos iguais ao gabarito","3 de 3","Comparar com o gabarito","A cada execução","3 de 3 nas 3 rodadas","Medido"],
+ ["Contradições explícitas encontradas","Ao menos 5 de 6","Comparar com o gabarito","A cada execução","5 a 6 de 6","Medido"],
+ ["Contradições sutis encontradas","Ao menos 1 de 2","Comparar com o gabarito","A cada execução","2 de 2","Medido"],
+ ["Apontamentos fora do gabarito","No máximo 2","Conferir um a um","A cada execução","0 a 1","Medido"],
+ ["Erros numéricos","Zero","Refazer as contas citadas","A cada execução","0 nas 3 rodadas","Medido"],
+ ["Problemas reais encontrados pela IA","Ao menos 80%","Comparar com o que a oficina levantou","Ao fim do piloto","–","A medir"],
+ ["Tempo de preparação da oficina","De dias para horas","Cronometrar a equipe","A cada oficina","–","A medir"],
+ ["Confiança das equipes na leitura","A definir com a coordenação","Consulta curta após a oficina","A cada oficina","–","A medir"]],
+parar:[
+ ["Parar e revisar",["Erro numérico em dado real","Menos de 80% dos problemas das oficinas encontrados","Qualquer dado pessoal enviado à ferramenta","Equipes sem confiança na leitura"]],
+ ["Ajustar e repetir",["Mais de 5 pontos a validar por execução","Mais de 2 apontamentos fora do gabarito","Contradição explícita não encontrada em 2 rodadas seguidas"]]],
+riscos:[
+ ["R1","A IA faz conta errada",1,3,"A página calcula médias e contagens; a IA só usa números prontos","Qualquer erro numérico","Responsável pelo piloto","Mitigado"],
+ ["R2","Apontamento indevido (falso positivo)",2,2,"Dúvidas vão para “pontos a validar”, com limite de 5; revisão humana","Mais de 2 fora do gabarito","Responsável pelo piloto","Em controle"],
+ ["R3","A IA deixa passar uma contradição real",2,3,"Gabarito, 3 rodadas por versão e conferência humana","Menos de 5 explícitas, ou omissão repetida","Responsável pelo piloto","Em observação"],
+ ["R4","Dado pessoal enviado à ferramenta (LGPD)",1,3,"Só dados fictícios agora; anonimização e parecer do encarregado antes de dados reais","Qualquer dado identificável","Encarregado de dados","Controlado"],
+ ["R5","Dados e gabarito feitos pelo próprio autor (viés)",3,2,"Piloto com dados reais, comparado ao que as oficinas levantaram","Piloto não confirma o resultado","Coordenação","Aberto"],
+ ["R6","Resposta varia entre rodadas",2,2,"3 rodadas por versão; registro da data e da versão do comando","Rodadas divergentes nos critérios","Responsável pelo piloto","Em controle"],
+ ["R7","Equipes não confiam ou não usam a leitura",2,3,"Pontos focais validam as perguntas; cada apontamento mostra a evidência","Baixa adesão na oficina","Pontos focais","Aberto"],
+ ["R8","A leitura vira decisão automática ou plano pronto",1,3,"O comando proíbe propor plano; a oportunidade B só entra depois da pactuação","IA propondo plano ou decisão","Coordenação","Controlado"]],
+regras:[
+ "Só dados fictícios ou anonimizados.",
+ "Usar apenas a ferramenta de IA autorizada pela prefeitura.",
+ "Nenhuma saída vai à oficina sem conferência humana.",
+ "Cada execução registra a data e a versão do comando.",
+ "A IA não propõe o plano nem decide."],
+destrava:[
+ ["Autorização da coordenação para usar dados reais anonimizados","Coordenação"],
+ ["Parecer do encarregado de dados sobre a anonimização","Encarregado de dados"],
+ ["Ferramenta de IA autorizada pela prefeitura","Secretarias municipais"],
+ ["Duas microrregiões já trabalhadas escolhidas para o piloto","Responsável pelo piloto e coordenação"]]
+};
+const rLevel=r=>r[2]*r[3]>=6?["Alto","er","hh"]:r[2]*r[3]>=3?["Médio","ex","m"]:["Baixo","ok","l"];
+const stClass={"Decidido":"ok","Em teste":"ex","Pendente":"gr","Medido":"ok","A medir":"gr","Mitigado":"ok","Controlado":"ok","Em controle":"ok","Em observação":"ex","Aberto":"er"};
+function renderGov(){
+  $("#gPrinc").innerHTML=GOV.principios.map(p=>`<div class="card"><h3>${esc(p[0])}</h3><p class="small mute" style="margin-top:6px">${esc(p[1])}</p></div>`).join("");
+  $("#gNiveis").innerHTML=GOV.niveis.map(n=>`<div class="card"><span class="st ok">${esc(n[0])}</span><h3 style="margin-top:10px">${esc(n[1])}</h3><ul class="small" style="margin:8px 0 0;padding-left:18px;display:grid;gap:5px">${n[2].map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`).join("");
+  const cl=v=>v==="A"||v==="A/R"?"a":v==="R"?"r":v==="C"?"c":v==="I"?"i":"n";
+  $("#gRaci").innerHTML=`<thead><tr><th>Atividade</th>${GOV.raci.cols.map(c=>`<th>${esc(c)}</th>`).join("")}</tr></thead><tbody>`+GOV.raci.rows.map(r=>`<tr><td>${esc(r[0])}</td>${r[1].map(v=>`<td><span class="rc ${cl(v)}">${v}</span></td>`).join("")}</tr>`).join("")+`</tbody>`;
+  $("#gRaciLeg").innerHTML=`<span><b>A</b> responde e aprova</span><span><b>R</b> executa</span><span><b>C</b> é consultado</span><span><b>I</b> é informado</span>`;
+  $("#gFases").innerHTML=GOV.fases.map(f=>`<div class="step ${f.k}"><span class="no">Fase ${f.n}</span><h3>${esc(f.t)}</h3><span class="st ${f.c}" style="align-self:flex-start">${esc(f.s)}</span><p>${esc(f.d)}</p><dl>${f.p.map(x=>`<div><dt>${esc(x[0])}</dt><dd>${esc(x[1])}</dd></div>`).join("")}</dl></div>`).join("");
+  $("#gDec").innerHTML=`<thead><tr><th>Nº</th><th>Decisão</th><th>Motivo</th><th>Responsável</th><th>Data</th><th>Situação</th></tr></thead><tbody>`+GOV.decisoes.map(d=>`<tr><td><b>${d[0]}</b></td><td>${esc(d[1])}</td><td>${esc(d[2])}</td><td>${esc(d[3])}</td><td>${esc(d[4])}</td><td><span class="st ${stClass[d[5]]}">${d[5]}</span></td></tr>`).join("")+`</tbody>`;
+  $("#gRitos").innerHTML=GOV.ritos.map(r=>`<div class="card"><h3>${esc(r[0])}</h3><p class="mute small" style="margin-top:2px">${esc(r[1])}</p><dl class="small" style="margin:12px 0 0;display:grid;gap:8px"><div><dt class="mute">Quem</dt><dd style="margin:0">${esc(r[2])}</dd></div><div><dt class="mute">Pauta</dt><dd style="margin:0">${esc(r[3])}</dd></div><div><dt class="mute">Saída</dt><dd style="margin:0">${esc(r[4])}</dd></div></dl></div>`).join("");
+  $("#gInd").innerHTML=`<thead><tr><th>Indicador</th><th>Meta</th><th>Como medir</th><th>Frequência</th><th>Situação atual</th><th></th></tr></thead><tbody>`+GOV.indic.map(i=>`<tr><td>${esc(i[0])}</td><td>${esc(i[1])}</td><td>${esc(i[2])}</td><td>${esc(i[3])}</td><td><b>${esc(i[4])}</b></td><td><span class="st ${stClass[i[5]]}">${i[5]}</span></td></tr>`).join("")+`</tbody>`;
+  $("#gStop").innerHTML=GOV.parar.map((p,k)=>`<div class="card eval${k?"":" decide"}" style="${k?"":"background:var(--hs);border-color:color-mix(in srgb,var(--hot) 30%,transparent)"}"><h3><span class="dot" style="background:${k?"var(--amb)":"var(--hot)"}"></span>${esc(p[0])}</h3><ul>${p[1].map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`).join("");
+  const cells={};GOV.riscos.forEach(r=>{(cells[r[3]+"|"+r[2]]=cells[r[3]+"|"+r[2]]||[]).push(r[0])});
+  const imp=["","Baixo","Médio","Alto"],pro=["","Baixa","Média","Alta"];
+  let mx="";for(const i of [3,2,1]){mx+=`<div class="h">${imp[i]}</div>`;for(const p of [1,2,3]){const lv=i*p>=6?"hh":i*p>=3?"m":"l";mx+=`<div class="c ${lv}">${(cells[i+"|"+p]||[]).map(id=>`<span class="rid">${id}</span>`).join("")}</div>`}}
+  mx+=`<div></div>${[1,2,3].map(p=>`<div class="h">${pro[p]}</div>`).join("")}<div class="mxcap">Probabilidade (na horizontal) e impacto (na vertical)</div>`;
+  $("#gMx").innerHTML=mx;
+  $("#gRegras").innerHTML=GOV.regras.map(r=>`<li>${esc(r)}</li>`).join("");
+  $("#gRisk").innerHTML=`<thead><tr><th>Nº</th><th>Risco</th><th>Nível</th><th>O que já foi feito</th><th>Gatilho de alerta</th><th>Responsável</th><th>Situação</th></tr></thead><tbody>`+GOV.riscos.map(r=>{const L=rLevel(r);return `<tr><td><b>${r[0]}</b></td><td>${esc(r[1])}</td><td><span class="st ${L[1]}">${L[0]}</span></td><td>${esc(r[4])}</td><td>${esc(r[5])}</td><td>${esc(r[6])}</td><td><span class="st ${stClass[r[7]]}">${r[7]}</span></td></tr>`}).join("")+`</tbody>`;
+  // painel
+  const cnt=(a,i,v)=>a.filter(x=>x[i]===v).length;
+  const feitas=GOV.fases.filter(f=>f.k==="done").length,prox=GOV.fases.find(f=>f.k==="next");
+  const altos=GOV.riscos.filter(r=>rLevel(r)[0]==="Alto").length;
+  const st=[
+   ["Fases",`${feitas} de ${GOV.fases.length}`,`concluídas. Próxima: ${prox?prox.t.toLowerCase():"–"}`,"gov-fases"],
+   ["Decisões",`${cnt(GOV.decisoes,5,"Decidido")} decididas`,`${cnt(GOV.decisoes,5,"Em teste")} em teste · ${cnt(GOV.decisoes,5,"Pendente")} pendente`,"gov-fases"],
+   ["Indicadores",`${cnt(GOV.indic,5,"Medido")} medidos`,`${cnt(GOV.indic,5,"A medir")} dependem do piloto`,"gov-ritos"],
+   ["Riscos",`${GOV.riscos.length} mapeados`,`${altos} de nível alto, em acompanhamento`,"gov-riscos"]];
+  $("#pStatus").innerHTML=st.map(s=>`<a class="stat" href="#${s[3]}" data-go="${s[3]}"><span class="k">${s[0]}</span><strong>${s[1]}</strong><span class="d">${s[2]}</span></a>`).join("");
+  const pend=GOV.decisoes.find(d=>d[5]==="Pendente");
+  $("#pNext").innerHTML=pend?`<div><span class="k">Próxima decisão · ${esc(pend[0])}</span><b>${esc(pend[1])}</b><p>${esc(pend[2])}. Responsável: ${esc(pend[3])}.</p></div><a href="#gov-fases" data-go="gov-fases">Ver registro de decisões</a>`:"";
+  $("#pDestrava").innerHTML=GOV.destrava.map(d=>`<li><i aria-hidden="true"></i><span>${esc(d[0])}<small>${esc(d[1])}</small></span></li>`).join("");
+}
+renderGov();
+
+/* ===== Navegação: uma tela por vez ===== */
+const VIEWS=[...document.querySelectorAll(".view")].map(v=>v.id);
+function show(id,fromHash){
+  if(!VIEWS.includes(id))id="painel";
+  document.querySelectorAll(".view").forEach(v=>v.classList.toggle("on",v.id===id));
+  document.querySelectorAll("#nav a").forEach(a=>{const on=a.dataset.go===id;a.classList.toggle("on",on);on?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current");if(on&&a.scrollIntoView)try{a.scrollIntoView({block:"nearest",inline:"center"})}catch{}});
+  if(!fromHash){try{history.replaceState(null,"","#"+id)}catch{}}
+  window.scrollTo(0,0);
+  if(!fromHash){const h=document.getElementById(id+"-h");if(h){h.setAttribute("tabindex","-1");try{h.focus({preventScroll:true})}catch{}}}
+}
+document.addEventListener("click",e=>{const a=e.target.closest("[data-go]");if(!a)return;e.preventDefault();show(a.dataset.go)});
+addEventListener("hashchange",()=>show(location.hash.slice(1),true));
+show(location.hash.slice(1)||"painel",true);
+setTimeout(()=>window.scrollTo(0,0),60);
+
+renderAll();
+$("#status").textContent=runs.length?`Mostrando as ${runs.length} rodadas da versão 3, de 23/11/2026.`:"";
+
+let sample=null,db=null;
+function parseJSON(t){const a=t.indexOf("{"),b=t.lastIndexOf("}");if(a<0||b<a)throw new Error("A resposta não veio em JSON.");return JSON.parse(t.slice(a,b+1))}
+$("#run").addEventListener("click",async e=>{
+  const btn=e.currentTarget;
+  if(!sample){$("#status").textContent="Este visualizador não tem acesso à IA; o resultado salvo continua na página.";return}
+  btn.disabled=true;const fresh=[];
+  try{
+    for(let i=0;i<3;i++){
+      $("#status").textContent=`Rodada ${i+1} de 3: enviando…`;let t0=null;
+      const r=await sample(PROMPT,{modelTier:"default",cache:false,onText:({text})=>{if(t0===null)t0=performance.now();$("#status").textContent=`Rodada ${i+1} de 3: ${text.length} caracteres`}});
+      fresh.push({result:parseJSON(r.text),at:new Date().toISOString(),secs:t0===null?null:Math.round((performance.now()-t0)/1000)});
+    }
+    runs=fresh;cur=0;
+    if(db){try{await db.doc("bench/v3").set({runs:fresh,at:new Date().toISOString()});$("#status").textContent="Pronto: 3 rodadas salvas."}catch{$("#status").textContent="Pronto: 3 rodadas (não foi possível salvar)."}}
+    else $("#status").textContent="Pronto: 3 rodadas.";
+    renderAll();
+  }catch(err){$("#status").textContent=err?.code==="not_granted"?"Acesso à IA não autorizado.":err?.code==="rate_limited"?"Limite de uso atingido; tente mais tarde.":`Falhou: ${err?.message||err}`}
+  btn.disabled=false;
+});
+(async()=>{
+  try{db=await claude.use("db")}catch{db=null}
+  if(db&&!runs.length){try{const snap=await db.doc("bench/v3").get();const d=snap&&(typeof snap.data==="function"?snap.data():snap);if(d&&d.runs&&d.runs.length){runs=d.runs;renderAll();$("#status").textContent="Mostrando as rodadas salvas."}}catch{}}
+  try{sample=await claude.use("sample")}catch{sample=null}
+  if(!sample)$("#run").hidden=true;
+})();
+}
+</script>
+</body>
+</html>

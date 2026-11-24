@@ -1,0 +1,63 @@
+NEURODYNAMICS / CLEVIO - ARTEFATOS BAIXADOS (24/11/2026)
+
+COMO ABRIR
+- Documentos (.docx): abrem no Word ou no Google Docs. Os .pdf abrem em qualquer leitor.
+- Slides, carrossel, banners e capas: abra o PDF ou os PNG de cada pasta para ver.
+- Paginas web: abra o index.html de cada pasta no navegador.
+
+O QUE TEM EM CADA PASTA
+
+1_Slides
+  Clevio_Vida_Apos_a_Vida
+  MIT_Hacking_Medicine_NeuroDynamics
+  Conversa_com_Duane_NeuroDynamics
+  Cada uma tem: um PDF para visualizar, a pasta "project" (o codigo-fonte de cada slide,
+  em HTML) e a pasta "imagens".
+  ATENCAO: o PDF e uma imagem aproximada. Icones e alguns espacamentos podem sair diferentes
+  do original. A versao editavel de verdade continua no Claude, nos links dos artefatos.
+  Os arquivos HTML da pasta "project" nao abrem no PowerPoint.
+
+2_Carrossel_MIT
+  artes_PNG: as 6 artes do carrossel (1080x1350).
+  fonte_editavel: o codigo-fonte e as imagens do design.
+
+3_Documentos
+  7 documentos em Word (.docx) e 8 em PDF.
+  Os 8 em PDF nao vieram em Word nesta exportacao. Para ter em Word, use o menu Exportar
+  dentro do proprio documento no Claude.
+
+4_Paginas_web
+  Prototipos, one-pagers, FAQ e conferencia de gabarito. Cada pasta tem um index.html.
+  - Desafio_08_Leite_Humano_HubMG_GOV: so a pagina principal (836 KB). Os PDFs originais,
+    as imagens e os dados dessa pagina (cerca de 100 MB) nao foram baixados.
+  - Contratos_vigentes_UFMG_e_HC-UFMG: so a pagina. Os dados ficam no banco do artefato
+    e nao vieram.
+
+5_Banners_e_capas
+  Banners do LinkedIn (PNG) e capas de boas-vindas do LABBIO (PNG), com o codigo-fonte.
+
+6_Conversa_scripts_links
+  conversa_desde_28-10.md: todas as mensagens desta conversa a partir de 28/10 (suas e minhas,
+    com as dicas, textos de legenda, analises etc.).
+  resumo_da_parte_antiga_ate_28-10.md: o que ficou da parte anterior (proposta e termo da
+    Pedilar, deck do Vida Apos a Vida, regras combinadas). O texto completo dessa parte foi
+    compactado pelo sistema e nao existe mais.
+  links_de_todos_os_artefatos.md: os 39 artefatos da conta, com link.
+  links.md: outros links que apareceram na conversa (fontes, sites, Instagram).
+  scripts/: todos os comandos e codigos que rodei nesta fase.
+  edicoes_feitas_nos_arquivos.md: o antes e depois de cada edicao feita nos slides.
+
+7_Pauta_Fantastico_Jonatas
+  atual/: a versao final da pauta (PDF, HTML, e-mail para a Raisa, analise, prompt, fotos,
+    animacoes e videos), igual ao repositorio no GitHub.
+  versoes_antigas/: cada versao que foi substituida, com data e hora. Inclui os 4 PDFs
+    anteriores da pauta, os e-mails antigos e as versoes anteriores da analise e do prompt.
+
+NAO ESTA AQUI
+- Proposta da Pedilar (PDF) e termos de apoio (.docx): os arquivos desta sessao foram apagados.
+- Slides "NeuroDynamics x Pedilar" e "Untitled": nao tinham arquivos para baixar.
+- Design System: nao tinha arquivos de conteudo para baixar.
+- Pasta Opalina do repositorio (146 MB): sao os arquivos que voce mesmo enviou (PDFs de
+  reunioes, DHF, relatorio do InCor etc.). Continuam no GitHub: github.com/ccj33/Claude-Teste
+- Versoes anteriores dos artefatos no Claude (slides e documentos): aqui vai so a versao atual
+  de cada um. As anteriores ficam no historico de versoes do proprio artefato no Claude.

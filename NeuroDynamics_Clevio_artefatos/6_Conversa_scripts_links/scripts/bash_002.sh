@@ -1,0 +1,2 @@
+# 2026-10-28 11:00 - Shrink vav-1 image and its grid column
+cd /tmp/claude-0/-home-user-Claude-Teste/72f1d19b-8183-5f85-98cc-106ac2c334e3/scratchpad/artifact-files/7a245fe6-1e75-4035-96ca-a7c3d43e520f/project/slides && sed -i 's/width:640px;height:560px/width:560px;height:500px/; s/grid-template-columns:1fr 640px/grid-template-columns:1fr 560px/' vav-1.html && grep -o 'grid-template-columns:[^;]*' vav-1.html
