@@ -1,0 +1,388 @@
+A	B	C	E	F	G
+1
+TRACK 1 - Oncology
+2
+Pitch #	Name	Email	1-2 Sentence Pitch Description	PITCHED	SKIPPED
+3
+1	Harini Dantas Kurebayashi	dantasharini@gmail.com	Pessoas com câncer de intestino possuem dificuldade de se alimentar, gerando perda da qualidade de vida		
+4
+2	Felipe Abduch Lopes	felablopes@gmail.com	Como a vida social impacta na recuperação e tratamento de um paciente de câncer, relação mental ao impacto físico do paciente!		
+5
+3	Carolina Trigo	triggocarol@gmail.com	Acompanhamento do paciente oncológico fragmentado		
+6
+4	Iago	iago.almeida@hc.fm.usp.br	O paciente oncologico brasileiro tem uma qualidade de final de vida ruim, como podemos melhorar a compreensão da familia?		
+7
+5	Luiz Araujo	luiz.araujo@hc.fm.usp.br	A timeline of each step of patient care where they can monitor their biopsy results, next medical appointment, treatment start, adverse events and need of hospitalizations. Here they can bring their priorities, preserving their autonomy and decisions over the their journey, empowering them over their health.		
+8
+6	Monyke Ruppel	monyke.ruppel@gmail.com	Como podemos cuidar dos pacientes que já não temos mais chances de cura? Cuidado da longevidade daqueles que a única certeza é a morte.		
+9
+7	DAVID DRUMMOND WAINSTEIN	daviddwainstein@gmail.com	Melanoma is a very agressive skin câncer type that normalmente seems like a Spot on the skin.
+The majority of People think is just a spot and traição tô cover it with tatoos or longe clothes and lose precious time tô treat it		
+10
+8	Gustavo Guimarães Oliveira	gustavoguimaraesoliveira@gmail.com	Entre o diagnóstico e o início do tratamento, o paciente oncológico espera semanas sem acompanhamento e chega ao tratamento desnutrido, anêmico e descondicionado. Isso aumenta complicações e cirurgias de urgência, que têm mortalidade até 3 vezes maior que as eletivas.		
+11
+9	Luiz Rodolfo Egydio Cerqueira César	luizrodolfocc@gmail.com	Pacientes oncológicos com características específicas que cabem com estudo especifico com dificuldade de se ligar com os patrocinadores		
+12
+10	Carolina Trigo	triggocarol@gmail.com	Oncology symptoms prediction for personalized pacient healthcare		
+13
+11	Elisa	elisakrahlm@gmail.com	# jornada do paciente oncológico na palma da mão, onde o paciente centraliza todas as informações relacionadas a sua agenda, consultas, sintomas, lembretes, evitando fragmentação		
+14
+12	Marcelo Russo	mrusso@casadosinsights.com.br	I want to build something that keeps cancer survivors engaged in their follow-up, because a missed follow-up can mean finding a recurrence too late.		
+15
+13	Carolina Trigo	triggocarol@gmail.com	Data fragmentation in the oncology diagnostic (patient journey)		
+16
+14	Amanda Steil	amanda.steil@hotmail.com.br	Dona Maria é uma mulher de 50 anos que estava com perda de peso há 3 meses, realizou alguns exames solicitados pelo médico do posto e a TC de tórax apontou um nódulo suspeito. Maria mora em uma região periférica de São Paulo e não sabe muito bem o que fazer. No posto de saúde, o retorno dela ficou para daqui 3 meses. Ela está apavorada com o tempo até a consulta.		
+17
+15	Pedro Fernandes	pedropaulofernandes88@gmail.com	Humanizar a espera, a jornada do paciente integralizada, respeitada e acompanhada. A tecnologia como apoio e não barreira.		
+18
+16	Renato Rangel	renatorangelbomfim@gmail.com	EN: Finding an in-network provider who performs a specific procedure took me weeks, and for cancer patients every week lost searching is a week without treatment. We want to match each treatment plan to covered, available, procedure-specific providers in minutes. | PT: Levei semanas para achar, dentro do meu plano, um prestador que fizesse o procedimento de que eu precisava, e para quem tem câncer cada semana de busca é uma semana sem tratamento. Queremos conectar o plano de tratamento a prestadores cobertos, disponíveis e especializados no procedimento, em minutos.		
+19
+17	Vinícius Adrian Siqueira de Oliveira	vinicius97adrian@outlook.com	A jornada do paciente oncológico ainda é marcada pela fragmentação do cuidado, pela falta de integração entre profissionais e informações, pela dificuldade de coordenar consultas e exames e por atrasos que podem comprometer o início do tratamento. Como podemos garantir uma jornada contínua, coordenada e personalizada, reduzindo a burocracia e colocando as necessidades do paciente no centro de todas as decisões?		
+20
+18	Gerardo Armando Zeballos Ferreyra	gerardo.ferreyra20@gmail.com	Necessidade de criação de jornada oncológica 100% digitalizada, desde prevenção até os cuidados de fim de vida.		
+21
+19	Guilherme Jorge Costa	guibacosta03@gmail.com	Saude Mental após o diagnóstico clínico de câncer.		
+22
+20	João Pedro Urbano	joaopedrobarbosaurbano@gmail.com	When my grandfather was in palliative care for cancer, the hospital couldn't guide us on caring for him at home, and only a nurse close to our family taught us the essential care he needed. Not every family has a nurse to call, and that gap between hospital and home is what we want to solve.		
+23
+21	Gustavo Ferreira	gustavo@gustek.co	Most smokers won’t quit this year, and most lung cancers are found too late, so we built a companion that tracks screening, warning signs and risk, then turns an abnormal result into the next step: who to see and where to go.		
+24
+22	Hugo Amorim Martis	hugo.amartins.2019@gmail.com	Como paciente de oncologia quero diminuir os side effects do tratamento, focando na qualidade de vida e longevidade durante e pós tratamento		
+25
+23	Luiz Rodolfo Egydio Cerqueira César	luizrodolfocc@gmail.com	Transformar dados não estruturados de biópsia e mapeamentos genéticos em dados estruturados para melhor mapear o paciente		
+26
+24	ANDRE MATOS FELIX DE CARVALHO	andre.mfc@outlook.com	A ausência de mecanismos sistemáticos de identificação e convocação ativa de pessoas elegíveis para o rastreamento oncológico faz com que muitos indivíduos dependam da própria iniciativa para realizar exames preventivos. Essa abordagem pode resultar em baixa cobertura, exames realizados fora dos intervalos recomendados e oportunidades perdidas de detecção precoce, especialmente entre populações com menor acesso aos serviços de saúde.		
+27
+25	Natalia Koyama	ntkoyama@hotmail.com	Problema de resultado de exames descentralizados e em papel		
+28
+26	Pedro Henrique Fujinami Nishida	phfujinami@gmail.com	Cancer care fails between professionals, not within them: our platform makes sure that what matters about the patient, clinical and personal, is never lost when they move from one specialist to the next.		
+29
+27	Monyke Ruppel	monyke.ruppel@gmail.com	Como podemos explicar para crianças sobre o diagnóstico?		
+30
+28	Maria Eduarda Taveiros Martins Costa	dudatmcosta@icloud.com	Quando meu avô foi diagnosticado com câncer de pâncreas — após já ter enfrentado um câncer de próstata em sua juventude —, ele optou por recusar novos tratamentos para preservar sua qualidade de vida restante. Esse dilema entre a adesão terapêutica e a preservação do bem-estar afeta profundamente o paciente, sua família e todo o ecossistema farmacológico e hospitalar, que ainda falha ao não alinhar o cuidado oncológico à realidade humana de quem o recebe.		
+31
+29	Caio Badu N. Albuquerque	omelhoremaildocaio@gmail.com	Sincronização de atendimento e troca de dados/informações entre diferentes profissionais ao mesmo paciente		
+32
+30	Natalia Koyama	ntkoyama@hotmail.com	Resolver problema de compartilhamento de informacoes que se baseam em experiencia do paciente que seja uteis para quem esta nos estagios iniciais da jornada		
+33
+31	Nathália Macedo	nathi.silvabrandao@gmail.com	Paciente em tratamento oncológico tem fazer vários exames e consultas, as vezes em locais diferentes, e isso pode gerar muita informação decentralizada. Uma forma de unificar essas informações sem precisar do paciente levar vários exames e laudos entre os serviços.		
+34
+32	Caio Hênry Pereira Domingues	caiohenry.2606@gmail.com	Pacientes com câncer precisam coordenar o próprio cuidado quando não está claro qual equipe é responsável pela próxima etapa do atendimento. Essa falha entre serviços pode atrasar consultas e exames e sobrecarregar pacientes e familiares.		
+35
+33	Ronisson Salles Cabral	ronissonsalles@gmail.com	Simplifica AI guides cancer patients in remote Amazon communities, such as riverside and extractivist workers, from diagnosis to cure, translating medical guidance into plain language via voice and WhatsApp. Real-time prediction alerts care teams to clinical and dropout risks, ensuring treatment continuity.		
+36
+34	ANDRE MATOS FELIX DE CARVALHO	andre.mfc@outlook.com	Pacientes oncológicos frequentemente enfrentam dificuldades para compreender e seguir as orientações médicas entre consultas, especialmente em tratamentos complexos. A ausência de uma comunicação contínua, personalizada e alinhada ao plano terapêutico pode prejudicar a adesão, dificultar o reconhecimento oportuno de complicações e aumentar a sobrecarga das equipes de saúde.		
+37
+35	Guilherme Jorge Costa	guibacosta03@gmail.com	Saude Mental após o diagnóstico clínico de câncer		
+38
+36	Catharina Troiani	cattroiani@hotmail.com	My grandmother was diagnosed with colorectal cancer 7 years ago. From that time until now, she has undergone 12 surgeries, ending up with an ostomy, which would not have been necessary if she had received the diagnosis earlier. The diagnostic procedure for colorectal cancer is super invasive and complex: the colonoscopy. The recommendation for screening for colorectal cancer is to do a colonoscopy every 1 to 3 years starting at age 40. But I want this diagnostic process to be more simple and less invasive. I don’t want to be doing colonoscopy, which can cause all the consequences of surgery, when I reach 40.		
+39
+37	Maria Luisa Gonçalves Ferreira	maria.ferreira6@ufu.br	To move from treating the disease to caring for the person		
+40
+38	Ligia Souza	souzaligia95@gmail.com	this year I supported my father through his colorectal cancer journey.
+
+One thing I realized is how fragmented the journey from diagnosis to treatment can be. Without my sister, who is a physician, helping coordinate his care, my father would have faced significant delays in starting surgery and treatment.
+
+How might we better connect screenings, test results, specialists, and appointments to ensure patients start treatment at the right time, without having to navigate the healthcare system on their own?		
+41
+39	Laura	medica.lauracostasouza@gmail.com	I’m a physician, and this year I supported my father through his colorectal cancer treatment.
+
+One problem I want to address is the lack of coordination between diagnosis and treatment, which can lead to delays and place an unnecessary burden on patients.
+
+How might we ensure that tests, results, and appointments happen at the right time, without patients having to coordinate everything themselves?		
+42
+40	Rodrigo Maia Machado	rodrigomaiamachado1@gmail.com	Atualmente, muitos dados podem ser coletados de uma pessoa, mas nem todos são analisados em conjunto para melhorar o diagnóstico. O machine learning ainda não está totalmente integrado à prática clínica, e o uso de wearables para monitoramento contínuo ainda é pouco aplicado.		
+43
+41	Lívia Xavier	liviaxaviierp@gmail.com	The elderly population represents around 60% of oncology patients, facing the challenging process of diagnosis and treatment, they often face challenges in accessibility of understanding the next steps for their care, hurting their prognosis and quality of life.		
+44
+42	Enderson Oliveira Damião	endersonoliveira006@outlook.com	A gestão segura dos dados dos pacientes durante os processos de diagnóstico e consulta é fundamental para garantir a confidencialidade das informações, a integridade dos registros e a continuidade do atendimento. Com o avanço da tecnologia, a cibersegurança torna-se essencial para proteger dados sensíveis, evitar acessos não autorizados e fortalecer a confiança entre pacientes e instituições de saúde.		
+45
+43	Anita Grinberg	grinberganita@gmail.com	Muitos câncer como o de mama e de próstata, podem ser hereditários, uma vez que o paciente tenha a mutação é possível fazer uma prevenção para descobrir se os parentes possuem o gene, a partir da testagem genética. Tendo plano de saúde essas testagem acontece por direito até a 3 geração, mas no SUS ela depende que o paciente com câncer avise da mutação para os familiares. Meu questionamento é como fazer essa informação chegar aos familiares e transformar o histórico familiar em rastreamento e prevenção no sistema público.		
+46
+44	Luca Rodrigues Foggia	lucafogia@gmail.com	O paciente de câncer colorretal descobre câncer muito tarde e, por isso, a taxa de sobrevida global diminui drasticamente. O problema passa por todas as camadas da saúde, desde a camada do paciente até a camada econômica de quem paga.		
+47
+45	João Paulo Monteiro Rodrigues	joaop.montr@gmail.com	Pacientes oncológicos realizam múltiplas consultas e exames, com frequentes idas ao hospital para iniciar o tratamento e manter o acompanhamento, gerando perda de seguimento, filas e maiores custos.
+Ideia de criar um aplicativo de uso simples, no qual o paciente registra suas características, preferências e tem acesso ao resultado de exames, permitindo à equipe individualizar o cuidado e concentrar os atendimentos em menos visitas.		
+48
+46	ANDRE MATOS FELIX DE CARVALHO	andre.mfc@outlook.com	A fragmentação das informações clínicas e moleculares, associada à complexidade dos critérios de elegibilidade, dificulta a identificação e o encaminhamento de pacientes oncológicos para ensaios clínicos. Isso limita oportunidades de participação em pesquisas, especialmente para pacientes atendidos fora de grandes centros especializados.		
+49
+47	Danyllo Fujimoto	danyllofujimoto@gmail.com	Quem cuida do paciente com câncer entre uma consulta e outra?
+
+Durante o tratamento, surgem sintomas, dúvidas e necessidades que nem sempre recebem orientação no momento certo. Isso gera insegurança, fragmenta o cuidado e pode resultar em idas evitáveis ao pronto-socorro.
+
+Nossa proposta é criar um hub digital de cuidado oncológico que conecte pacientes, familiares, acompanhantes e equipes de saúde em uma jornada contínua e coordenada.
+
+Queremos antecipar necessidades, facilitar o acesso à orientação adequada e orquestrar o cuidado em todos os ambientes, do hospital à casa do paciente.
+
+Porque o paciente muda de ambiente, mas o cuidado não deveria perder a continuidade.		
+50
+48	Maria Luiza Gomes	malusbarros16@gmail.com	1 a cada 5 mulheres desenvolve linfedema durante a quimioterapia, mas, este problema só é tratado quando há suspeita dele. Logo, vê-se a necessidade de moldar um modelo preditivo contra esta problemática.		
+51
+49	ANDRE MATOS FELIX DE CARVALHO	andre.mfc@outlook.com	A complexidade da linguagem oncológica, caracterizada por siglas, classificações, estadiamentos e biomarcadores, dificulta a compreensão do diagnóstico e das condutas pelos pacientes e médicos fora da área. Essa barreira de comunicação pode prejudicar a participação nas decisões, a adesão às orientações e a continuidade do cuidado, especialmente entre pessoas com menor literacia em saúde.		
+52
+50	Vinicius Benedito do Espírito Santo	viniciusbenedito004@outlook.com	Imagine perceber sintomas de câncer, procurar o SUS e enfrentar meses de espera entre consultas, exames e encaminhamentos.
+
+E se essa jornada começasse pelo WhatsApp?
+
+Com inteligência artificial, o paciente poderia relatar seus sintomas, receber orientação inicial e ser conectado à unidade de saúde adequada. O sistema também acompanharia exames e encaminhamentos, evitando que pacientes se percam nas filas.
+
+Queremos usar tecnologia para antecipar o cuidado, acelerar diagnósticos e salvar vidas. Vamos transformar essa realidade?		
+53
+51	Stefany Mendes	stefanymendestt3@gmail.com	falta de rastreabilidade e condução de dados de pacientes oncológicos		
+54
+52	Matheus Marcondes	matheusmarcondes@ufmg.br	In Brazil, the healthcare system is split across labs, clinics, hospitals, insurers and referral centers that don’t share information. As a result, patients repeat exams, travel unnecessarily and wait for new authorizations at every step of their care.		
+55
+53	Raphael Veloso	raphaelcveloso@gmail.com	Problema: tempo de espera para atendimento, como otimizar a fila? Ou melhor, deixa-lo ciente da jornada completa com um app?		
+56
+54	Matheus Busnardo	matheus.busnardo@gmail.com	Apesar de o termo da crença em saúde ter sido citado na palestra de longevidade, no câncer ele pode ser igualmente importante. Hoje em dia, há preocupação com bem-estar no geral, mas pouca informação direta chega nas pessoas sobre quais são os hábitos mais relacionados ao câncer, como a ação no dia a dia pode ajudar a prevenir ele no futuro, e como iniciativas informativas podem ajudar pessoas ainda saudáveis a agirem de forma a minimizar o risco de câncer.		
+57
+55	Jhimmy Willian Silva dos Santos	Jhimmy104@gmail.com	Resolver a vida do profissional da navegação		
+58
+56	Manuela Resende	manuelaresende48@gmail.com	Pacientes em quimioterapia frequentemente voltam para casa sem saber como lidar com os efeitos adversos do tratamento, quais sintomas são esperados e quais representam sinais de alerta.		
+59
+57	Luiz Araujo	luiz.araujo@hc.fm.usp.br	Novas tecnologias e tratamentos, o paciente Oncológico vive cada vez mais. Quanto tempo dessa vida ele vive fora do hospital? Pensar em formas de efetivar a desospitalizacao e barreiras que precisam ser superadas.		
+60
+58	Elisa	elisakrahlm@gmail.com	# fragmentação de exames, prontuários de diferentes locais		
+61
+59	Ana Carolina Lopes Santos	seventycotoco@gmail.com	Quando um paciente recebe um diagnóstico de câncer precisar lidar com consultas, exames e diferentes profissionais em um momento muito difícil.
+Nesse percurso, etapas podem ficar pendentes, responsabilidades podem não estar claras e o paciente pode acabar tendo que coordenar o próprio cuidado.
+Como podemos identificar essas pendências, acompanhar sua resolução e entender por que elas acontecem?
+Além de acompanhar as pendências individuais, como podemos usar esses dados para que ajudem o hospital a identificar gargalos, entender por que eles acontecem e melhorar seus processos de assistência.		
+62
+60	Arthur Terra	arthurterra09@gmail.com	A importância do tratamento humanizado e individualizado do câncer, com o foco em acessibilidade nas propostas inspirado no trabalho feito nas Cms e CF no Rio e nas UBS aqui de São Paulo. Buscando um vínculo de confiança entre o paciente e o profissional		
+63
+61	Lucas Guesse	lucasguesse@gmail.com	Otimização da jornada do paciente no fluxo entre as equipes multidisciplinares no diagnóstico/tratamento oncologico		
+64
+62	Nátally Martins da Costa	natallymartinsdacosta@gmail.com	Meu nome é Nátally e eu estudo Informática Biomédica. O João tem 58 anos, fuma, bebe e acabou de descobrir um câncer de boca. Desde então, já passou por vários profissionais. Cada um cuidou de uma parte, mas ninguém teve uma conversa essencial com ele: como os hábitos dele afetam o tratamento. Meu foco é buscar integrar essa questão do hábito na trajetória oncológica do paciente		
+65
+63	Maelly Mesquita	maellyf.s.mesquita@gmail.com	A dificuldade de contrarreferência entre os profissionais e intregração de dados		
+66
+64	Gustavo Ferreira	gustavo@gustek.co	O Stockholm3 é um exame de sangue que acha mais tumores de próstata relevantes que o PSA, sem toque retal. Nosso produto faz a combinação: risco genético, agendamento do exame, lembretes por risco e acompanhamento até o profissional.		
+67
+65	Vinicius França de Assis Paulo	vini1fapaulo@gmail.com	Cada paciente enfrenta inúmeras possibilidades durante seu tratamento. Nosso motor matemático simula milhões de caminhos possíveis, considerando condições clínicas, financeiras e sociais, e apresenta ao médico e ao paciente os cenários mais promissores para uma decisão personalizada, reduzindo riscos e abandono do tratamento.		
+68
+66	Eduarda dos Santos Soares	eduardasoares0@usp.br	Otimizar a fragmentação dos dados clínicos e resultados de exames oncológicos: com ênfase no câncer de pulmão e colorretal para solucionar o diagnóstico tardio.		
+69
+67	Elisa	elisakrahlm@gmail.com	# temos muita dificuldade no recrutamento de pacientes na pesquisa clínica por falta de dados centralizados		
+70
+68	Laura Ruas Alkimim de Araujo	Laurinharuas@outlook.pt	Sistema de Agente Comunitário Online como ponte entre paciente, UBS e hospital		
+71
+69	Maria Clara Augusto	m.claraaugusto020@gmail.com	Desenvolver um aplicativo para todos como objetivo de acompanhar esses pacientes desde a infância integrando histórico familiar, quais possíveis doenças o paciente tende a desenvolver, histórico de exames e o ambiente em que ela vive.		
+72
+70	Luiz Megda	luizmb@gmail.com	Acompanhamento da jornada por paciente com agentes de inteligência artifical e motor matemático de possibilidades de desfecho
+
+
+
+A	B	C	E	F	G
+1
+TRACK 2 - Longevity
+2
+Pitch #	Name	Email	1-2 Sentence Pitch Description	PITCHED	SKIPPED
+3
+1	Lauren Penteado	lauuren.sp@gmail.com	O cuidado do envelhecimento atualmente é focado apenas em resolver a doença do paciente ao invés de uma coordenação global do cuidado		
+4
+2	Marcelo Kuwakino	marcelo.kuwakino@gmail.com	Homogeneizar todos os player da longevidade para melhor performar para o paciente		
+5
+3	Ana Claudia Campana	ana.claudia@mandic.com.br	Biomarkers to trial perimenopause issues and support advanced treatment decisions		
+6
+4	Bruno Barros	bruno.barros@me.com	1 in every 4 elderly people suffer at least one fall annually. Falls in the elderly drastically impact longevity.		
+7
+5	Lauren Penteado	lauuren.sp@gmail.com	O envelhecimento é focado apenas na doença e não no cuidado coordenado e globalizado		
+8
+6	Sophia	sophia7torquato@gmail.com	Prevenção e longevidade começam na infância		
+9
+7	Jakeline Souza Diniz	jakelinesouzadiniz@gmail.com	A falta de atenção aos hábitos construídos na infância e ao impacto que eles podem ter na saúde e na longevidade na vida adulta.		
+10
+8	Andrei de Faria	andrei@plannymarketing.com.br	Quando pensamos em longevidade, queremos viver mais e continuar fazendo o que importa: caminhar, trabalhar, sair com amigos e cuidar da própria vida.
+
+Para quem convive com dor persistente, como reconhecer, no dia a dia, sinais de que sua rotina está mudando, como dormir pior, ter menos disposição ou começar a evitar atividades? E como comunicar essas mudanças aos profissionais de saúde?
+
+Quero investigar se informações importantes sobre essa evolução estão se perdendo e como isso afeta a continuidade do cuidado.
+
+Como podemos ajudar essas pessoas a perceber e comunicar mudanças no cotidiano, apoiando sua autonomia ao longo do envelhecimento?
+11
+9	Nicole Lucas	nicolelucas076@gmail.com	Mariana tem 45 anos, trabalha muito, dorme mal e pratica pouca atividade física. Após descobrir alterações no colesterol e na glicose, recebeu orientações médicas para mudar seus hábitos, mas teve dificuldade para aplicá-las à sua rotina. Assim como Mariana, muitos pacientes não conseguem transformar recomendações médicas em hábitos sustentáveis, principalmente pela falta de acompanhamento entre consultas. Como conectar o cuidado médico à rotina do paciente para promover uma vida mais longa e saudável?		
+12
+10	Rafael Sender	rafasender2006@gmail.com	Wellness has gotten a lot of attention recently, but there's a balance between being healthy and being health obsessed. This has taken a toll on people's mental health and their ability to have a social circle, because of Eating Disorders and the feeling of guilt. How can this balance be found?		
+13
+11	Tobias Cherman	cherman.tobias@gmail.com	Corporate health insurance providers focus on reactive care. This approach doesn't address the root causes of an event, offering little help in protecting employees from future events.		
+14
+12	Etiene Soares Duque Pereira	etienesoares@ymail.com	Um idoso recebe alta hospitalar. Mas quem acompanha se ele está realmente recuperando sua autonomia?
+
+Trabalho com envelhecimento e sei que, após uma internação, dificuldades cognitivas e funcionais podem passar despercebidas.
+
+Por isso, proponho uma plataforma inteligente que acompanha a recuperação de idosos nos primeiros 30 dias após a alta.
+
+O idoso ou familiar responde a perguntas simples, participa de uma gamificação e a inteligência artificial organiza as informações e sinaliza mudanças para avaliação profissional.
+
+Busco médicos, enfermeiros, desenvolvedores e profissionais de negócios para transformar essa ideia em uma solução escalável.
+
+Porque a recuperação não termina na alta. Quem vem construir comigo?		
+15
+13	Ilka Benedet Lineburger	dra.ilka@icloud.com	Naviê
+Technology that teaches, guides, and connects.
+A solution that helps transform digital challenges for low digital literacy and older persons into simple, accessible experiences		
+16
+14	Edvaldo Felisberto	skateofficer@gmail.com	Computação quântica,celular,voto, Blockchain, Enthereum daos		
+17
+15	Pedro Gouveia Do Vale	pedro.gouveiavale@gmail.com	The challenge of treatment adherence and long-term patient follow-up.		
+18
+16	Maisy de Andrade Matos	maisyam@gmail.com	O Ovaris é uma plataforma preditiva de medicina de precisão que mapeia a senescência ovariana e o estresse mitocondrial em tempo real, transformando o futuro reprodutivo e sistêmico da mulher de reativo em antecipado.		
+19
+17	Raquel Brito	raquelbrito03@usp.br	Idosos brasileiros desejam manter sua independência e autonomia, realizando atividades cotidianas como fazer compras, ir a consultas e tomar seus medicamentos. A solução busca facilitar essa rotina por meio de tecnologias assistivas integradas,oferecendo mais segurança, praticidade e qualidade de vida para que possam envelhecer de forma ativa e independente.		
+20
+18	Bruna Ramos da Fonte	b.fonte@uol.com.br	Existe uma negligência muito grande quando se trata da sexualidade da pessoa em processo de envelhecimento, principalmente quando se trata de alguém em situação de vulnerabilidade econômica e social.
+A falta de atenção ao tema gera sintomas e doenças como depressão e ansiedade, além de expor a pessoa ao risco de contrair ISTs, como o HIV – uma preocupação crescente quando se fala no tema do envelhecimento.		
+21
+19	Thalissa Galvanin	thalissa.galvanin@einstein.br	Criar um app app que acompanha os testes funcionais do idoso (TUG, TC6 e preensão palmar) e os cruza com seus medicamentos para alertar o risco de queda antes que ela aconteça.		
+22
+20	Pedro Gouveia Do Vale	pedro.gouveiavale@gmail.com	The challenge of treatment adherence and long-term patient follow-up.		
+23
+21	Larissa Neves Araujo	larinevesaraujo@gmail.com	Crianças com doenças crônicas que chegam à vida adulta entram em um limbo no sistema de saúde causado pela falta de continuidade do cuidado comprometendo a longevidade do indivíduo		
+24
+22	Giovanna Felix dos Santos	dihsantos2502@gmail.com	Managing all your healthcare needs can sometimes be very confusing. Gamifying the process and integrating it with your doctors is a great way to make the journey more enjoyable.		
+25
+23	Thalissa Galvanin	thalissagalvanin@gmail.com	O Passo Seguro é um app que acompanha os testes funcionais do idoso (TUG, TC6 e preensão palmar) e os cruza com seus medicamentos para alertar o risco de queda antes que ela aconteça.		
+26
+24	Ana Carolina Schoueri	schoueri@hotmail.com	A mulher de 45-50 anos está no pico da carreira, com alta demanda na vida pessoal e profissional, filhos na adolescência e relacionamentos pra cuidar. Em uma questão de poucos anos, na perimenopausa, existe piora importante no sono, ganho de peso importante, fogachos, piora no colesterol, perfil glicêmico, lipídico, metabólico, com impactos na saúde mental, cognitiva no longo prazo, impactando longevidade. E faltam informações pra ela pra conseguir entender como lidar com a segunda metade da vida, como melhorar hábitos de vida e onde obter informações individualizadas pra poder promover o autocuidado nessa fase tão crítica.		
+27
+25	Ilka Benedet Aline	dra.ilka@icloud.com	Explica+: it is not enough to simply identify a medication. People need to understand what they are using, why they are using it, and how to take better care of their own health.		
+28
+26	Hélida C C Torres	helidacctorres@gmail.com	Mobility impact so much in longevity.		
+29
+27	Italo Silva	italohenrique.contatoautor@gmail.com	A functional-monitoring tool integrated into the Primary Healthcare Electronic Health Record, tracking mobility, muscle strength, balance, and daily activities to identify early signs of functional decline. By monitoring individual changes over time, it supports timely interventions to preserve autonomy and independence throughout aging.		
+30
+28	Luis Fernando Rizzi	luisfernandorizzi@hotmail.com	Fraturas de fragilidade tem uma alta morbimortalidade para o idoso, consequências invisíveis pra família e um alto custo para o plano de saúde, mas hoje não existe uma forma amplamente utilizada de fazer o rastreio de fragilidade antes da fratura acontecer.		
+31
+29	Ricardo Gomes de Queiroz	rgqueiroz@gmail.com	Dona Maria, 78 anos, ia sozinha à padaria. Por meses foi emagrecendo e saindo menos, e ninguém percebeu. Caiu, foi internada e voltou de andador. Cerca de 1 em 3 idosos sai do hospital com nova incapacidade. Planos e hospitais medem doenças e sinais vitais, mas ninguém acompanha a função do idoso ao longo do tempo, antes e depois da alta. A autonomia se perde nesse ponto cego.		
+32
+30	Natasha Ferreira Rodrigues	Tashaneris12@gmail.com	Maria é uma brasileira de 78 anos, que sente fraqueza em suas tarefas diárias. Maria tem baixa variabilidade alimentar, e baixa imunidade. Não só Maria, como sua neta Jéssica.
+Maria e Jéssica precisam repor vitaminas de forma rápida, efetiva e constante. Como podemos tornar a ingestão, barata, rápida e até divertida.		
+33
+31	Mauricio Olimpio	mauricio@orthus.com.br	Extreme Owner Gym is a community-driven lifestyle transformation app built around the Transtheoretical Model (TTM), supporting users through every stage of behavioral change. It combines personalized goals, peer accountability, gamification, and real financial rewards funded by voluntary monetary penalties for missed commitments, turning healthy habits into lasting lifestyle changes that improve healthspan.		
+34
+32	Christiane Maués	cdmaues@uol.com.br	Lab on a chip and connected app to warn about inflammatory blood markers disfunction		
+35
+33	Felipe Morais	felipejoaquim@gmail.com	Idosos usam werebles para monitorar parâmetros fisiológicos de saúde, porém esses dados coletados não são convertidos em tomadas de decisões de forma preditivas de antecipar possíveis problemas antes dele acontecer!		
+36
+34	Lara Rupp	lararupp15@gmail.com	My grandma constantly forgets is she did or did not took her medicine. It occurs she can take it twice or none.		
+37
+35	Henrique Martins	henriquemartins1406@gmail.com	My mom was recently diagnosed with a predisposition to thrombosis due to a tendency to form blood clots. She smokes regularly but is aware she needs to quit because of this recent diagnosis, though her busy schedule makes it difficult to adhere to this change.
+38
+36	Michel dos Santos Domingos	mdomingos@outlook.com	How can technology be used to adapt the Mediterranean diet to the local food availability and cultural realities of communities in the Amazon region?		
+39
+37	Marcelo maia	marcelomaias@hotmail.com	Olá, pessoal! Sou Marcelo, do Recife, Brasil.
+
+Quero apresentar um problema de saúde pública que afeta milhares de pessoas.
+
+Com o crescimento das plataformas digitais de entrega e transporte, cada vez mais motociclistas trabalham sob pressão por tempo, produtividade e renda.
+
+Isso aumenta a exposição a acidentes, lesões graves e mortes, especialmente entre trabalhadores jovens.
+
+O impacto vai além do motociclista: atinge famílias, sobrecarrega hospitais públicos e compromete anos de vida saudável.
+
+Minha pergunta é: como podemos reduzir os riscos enfrentados por esses motociclistas e preservar sua saúde e longevidade?
+
+Estou procurando pessoas interessadas em saúde pública, tecnologia, inteligência artificial e mobilidade para trabalhar nesse desafio.		
+40
+38	Lucas Zandonadi dos Santos	lucaszandonadidossantos@hotmail.com	Sou médico, residente de Fisiatria, com experiência em identificação de gaps de cuidados. Minha tese: o tratamento e reabilitação do cuidado é fragmentada, reativa e cara — dentro e fora do hospital — e isso custa autonomia, que é o que define longevidade de verdade. Vamos fechar essa lacuna com coordenação de cuidado e desfechos funcionais mensuráveis?		
+41
+39	Lucas Gabriel Silva Lopes	olucasgabriellopes@icloud.com	A dificuldade de transformar orientações preventivas em hábitos sustentáveis entre trabalhadores expostos a riscos ocupacionais.		
+42
+40	Mariana Bloj	mariana.bloj@gmail.com	My grandmother lived active, learning and happy until her last day, but that is still the exception. How can we turn years lived with disease into years lived with health and independence?		
+43
+41	Renan	reweac@hotmail.com	Pessoa hoje jovem, preocupada em manter hábitos de vida saudáveis, mas com dificuldades de conciliar a rotina com as atividades sociais, exercícios, etc. Como manter a pessoa engajada e propor automaticamente alternativas: evitar elevadores se não se exercitou ontem, por exemplo?		
+44
+42	Cristina Ota	cristina.ota@gmail.com	When we go tô the doutor we have tô talk about our habits and despiste havig it on devices, our mind forgets important information		
+45
+43	Luiza Fuliotto Anelli	luizaanelliacademico@gmail.com	Todos queremos envelhecer com saúde e independência, mas muitas vezes naturalizamos a perda muscular e o uso excessivo de medicamentos, sem perceber que estamos perdendo qualidade de vida e autonomia..
+46
+44	Angela Brustolin	aglbrus@gmail.com	Pacientes têm dificuldade de manter a adesão às mudanças de estilo de vida nos diferentes ambientes onde frequentam, principalmente ambiente de trabalho, e recebem informações equivocadas de fontes diferentes		
+47
+45	Nathan Lee	natnp.lee@gmail.com	My great grandfather doesn't take care of his health as seriously ever since my gruncle and his wife died. The problem I want to pitch is the impact of loneliness on senile citizens.		
+48
+46	Tiago Bandeira de Mello	tiagobm007@gmail.com	The obesity is a clear problem to people that impacts clearly the longevity and the quality of life.		
+49
+47	Narrimann Moretti	nif.moretti@gmail.com	More than 3.4 million deaths are attributed to diabetes every year. One way to encourage adherence to insulin treatment.		
+50
+48	Veronica de Padua Mello	vpadua@prefeitura.sp.gov.br	Pessoas que vão desacompanhadas nas consultas e não conseguem entender as orientações e transmitir para os familiares e cuidadores. Assim não conseguem fazem adesão ao tratamento de forma efetiva		
+51
+49	Daniel Suda Hatushikano	dansh2105@gmail.com	quitting is social		
+52
+is5855112@gmail.com	"Half of treatments fail due to low medication and lifestyle adherence, wasting billions. We predict patient dropout risks and use a personalized 3-touchpoint schedule in the first month (Day 1, 15, and 30) tailored to each patient’s cognitive needs, driving early retention and compliance."		
+53
+51	Lucca Romano	luccaromano200611@gmail.com	As life expectancy increases, millions of people are living longer but not necessarily healthier lives. Age-related diseases, cognitive decline, and the lack of early diagnosis are creating a growing global challenge: how can we ensure that longer lives also mean better lives?		
+54
+52	Pedro Silveira	peuhcsilveira@gmail.com	Low-income families caring for a relative with some kind of dementia, neurological deseas have no access to specialized care and don't know how to handle behavioral crises at home. This leads to constant emotional burnout, dangerous accidents, and unnecessary emergency room visits.		
+55
+53	Eric Hideki	Eric.fernandes@einstein.br	Renan, 28 anos - jovem adulto. Sedentario, adição de jogos digitais. Quer mudar de vida mas, o dia-a-dia se mantém preso nas telas.
+
+Se isso se mantiver, ele não terá uma vida longa. Gostaria de trabalhar com uma solução diária que permita incluir micro-habitos em seu dia-a-dia rumo a um futuro que começa hoje.		
+56
+54	Ana Carolina Schoueri	schoueri@hotmail.com	Obesidade: Um dos maiores fatores de risco cardiovasculares. O tratamento de primeira linha seria mudanças no estilo de vida, e mesmo com as novas canetas continua pilar essencial, mas difícil implantar. Como integrar dados de wearables e apps e exames de sangue, e melhorar hábitos que levam à obesidade - sedentarismo, compulsão alimentar, alimentacao não saudavel por recompensa		
+57
+55	Cecília Prioste	cecideluca13@gmail.com	limited social connections and reluctancy to chance		
+58
+56	Filiphe Zucchi	filiphe.zucchi@gmail.com	A secure digital vault where people can store, organize, and share their medical test results. Over time, our platform will grow into a system where doctors, with the patient’s permission, can access their history, record visits, and support ongoing care.		
+59
+57	Luanna Moreira da Mata	luannamdamata@gmail.com	My idea is to use AI to monitor childhood cancer survivors, predict complications, and promote healthier, longer lives.		
+60
+58	Luiz Cláudio Mendes Carvalho	lcmendescarvalho@unimedsantos.coop.br	Pessoas ao envelhecerem apresentam eventos sentinelas , perda funcional , cuidado fragmentado e ausência de coordenação de cuidado . A proposta é a criação de um concierge digital , com intuito de conhecer o paciente , orientar, conectar , acompanhar e antecipar eventos		
+61
+59	Eric Hideki	Eric.fernandes@einstein.br	Renan, 28 anos - jovem adulto. Sedentario, adição de jogos digitais. Quer mudar de vida mas, o dia-a-dia se mantém preso nas telas.
+
+Se isso se mantiver, ele não terá uma vida longa. Gostaria de trabalhar com uma solução diária que permita incluir micro-habitos em seu dia-a-dia rumo a um futuro que começa hoje.		
+62
+60	Rodolfo Henrique	rodolforhhr@gmail.com	Na pandemia, minha vizinha, de 70 anos, me fez um pedido: "conversa comigo todo dia?". Ela não tinha família.
+E eu conversei. Todo dia. E ali eu entendi, como médico: solidão não é só tristeza. É doença, e custa caro.
+A OMS associa a solidão a 871 mil mortes por ano. No Brasil, um em cada seis adultos acima de 50 anos diz se sentir sozinho sempre. E nos Estados Unidos, cada idoso isolado custa cerca de 1.600 dólares a mais por ano ao sistema de saúde.
+O Prosa é aquela conversa diária: um assistente que fala com o idoso por áudio no WhatsApp, com a voz que ele escolher.
+E a conversa é a porta de entrada. Conectado a relógios, oxímetros e sensores de queda, o Prosa avisa a família ou a equipe de saúde quando algo sai do padrão ou quando o idoso não adere ao tratamento.
+Prosa. Companhia que cuida, e que custa menos que a solidão.		
+63
+61	Luís Guilherme Espinosa e Souza	luissouzaespinosa@gmail.com	Chronic diseases progress for years before diagnosis, and EHRs capture signals along the way, but irregularly across patients. My work investigates whether deep learning can use the full EHR history to predict when a disease will emerge, with reliable risk estimates, so we can intervene earlier and preserve healthy years.		
+64
+62	Victor Seid	seidvictor@hotmail.com	A tool to promote the engagement of patient in taking care of theirself using a method to reward the patient by the heath assistent provider in accordance to the level of engagement per month		
+65
+63	Hélida C C Torres	helidacctorres@gmail.com	Project: Active Option		
+66
+64	Hélida C C Torres	helidacctorres@gmail.com	Project: Doctors Athletes		
+67
+65	Yana Natal Menezes Coelho	menezesyana844@gmail.com	Meu projeto busca avaliar individualmente a microbiota intestinal para desenvolver estratégias nutricionais personalizadas, acompanhadas longitudinalmente, visando à prevenção de doenças e à promoção da longevidade.		
+68
+66	Giovanna Machado	giovannamachs@gmail.com	Cardiovascular diseases mainly affect older adults and have proven treatments, yet patients keep being readmitted and dying because nearly one in three Brazilians doesn't take their chronic medication properly. How might we help older patients stay on the treatments that protect their healthy years?		
+69
+67	Rafaela Yumi Teixeira Tabuti	rafaela.tabuti@gmail.com	João, 72y, lives in a riverside community in the Amazon, takes 6 pills he can’t read and stopped his blood pressure medications cuz he felt fine, until his stroke. Like half of chronic patients worldwide, his non-adherence was invisible to the health system until it was too late. How might we make adherence visible and actionable to all and specially where access is limited - vulnerable communities?		
+70
+68	Tshimbalanga Merite	tmerite34@gmail.com	Today, older adults receive prescriptions from multiple specialists, often without an integrated view of their treatment. The result? Medication-related risks that can compromise patient safety and quality of life.
+Our solution is an artificial intelligence platform that reconciles medication lists, identifies potential risks, and supports safer clinical decision-making, while keeping healthcare professionals at the center of every decision.
+
+Business model: A B2B platform for health insurance providers, aiming to improve prevention and healthcare efficiency.
+Growing old should not mean facing greater risks from medications.
+71
+69	Rodolfo henrique	rodolforhhr@gmail.com	Na pandemia, minha vizinha, de 70 anos, me fez um pedido: "conversa comigo todo dia?". Ela não tinha família.
+E eu conversei. Todo dia. E ali eu entendi, como médico: solidão não é só tristeza. É doença, e custa caro.
+A OMS associa a solidão a 871 mil mortes por ano. No Brasil, um em cada seis adultos acima de 50 anos diz se sentir sozinho sempre. E nos Estados Unidos, cada idoso isolado custa cerca de 1.600 dólares a mais por ano ao sistema de saúde.
+O Prosa é aquela conversa diária: um assistente que fala com o idoso por áudio no WhatsApp, com a voz que ele escolher.
+E a conversa é a porta de entrada. Conectado a relógios, oxímetros e sensores de queda, o Prosa avisa a família ou a equipe de saúde quando algo sai do padrão ou quando o idoso não adere ao tratamento.
+Prosa. Companhia que cuida, e que custa menos que a solidão.		
+72
+70	Vânia de Souza Severino Santos	vaniasssantosmed@gmail.com	Pessoas com 60 anos ou mais, vivendo em casa ou em instituições, podem começar a precisar de mais ajuda para levantar, caminhar e realizar atividades diárias, sem que essas mudanças sejam acompanhadas e comunicadas de forma organizada. Como reconhecer precocemente os sinais de perda de independência e identificar quem precisa de avaliação profissional antes que a dificuldade se agrave?		
+73
+71	Gabriela mello	91mellsam@gmail.com	Como podemos conectar a autonomia do paciente ao seu próprio cuidado, utilizando soluções inovadoras para facilitar o acesso às unidades de saúde e ampliar a adesão aos rastreamentos e exames preventivos?		
+74
+72	Victor Edmond Seid	seidvictor@hotmail.com	To creat a tool to improve the engagement of the patients to take care of theirselves monitoring same specific variables and reward ( a real reward ) the patient regarding the level of engagement		
+75
+73	Tshimbalanga Merite	tmerite34@gmail.com	Today, older adults receive prescriptions from multiple specialists, often without an integrated view of their treatment. The result? Medication-related risks that can compromise patient safety and quality of life.
+Our solution: an artificial intelligence platform that reconciles medication lists, identifies potential risks, and supports safer clinical decision-making, while keeping healthcare professionals at the center of every decision.
+Business model? A B2B platform for health insurance providers, aiming to improve prevention and healthcare efficiency.
+
+Growing old should not mean facing greater risks from medications
+76
+74	Gustavo Mauro	gustavo.frug.mauro@gmail.com	A way to motivate adults to do their medical procedures or take their pills or complete their phisioterapy		
+77
+75	Luís Fernando Rizzi	luisfernandorizzi@gmail.com	Fraturas de fragilidade tem uma alta morbimortalidade para o idoso, consequências invisíveis pra família e um alto custo para o plano de saúde, mas hoje não existe uma forma amplamente utilizada de fazer o rastreio de fragilidade antes da fratura acontecer. (Português)		
+78
+76	Michel dos Santos Domingos	mdomingos@outlook.com	Currently, we don't have a non-invasive method to improve blood flow to the extremities. Could we use technology to develop a method to increase peripheral perfusion?		
+79
+77	Daniel de Souza Curado	daniel.souza.curado@usp.br	Verificar se os tratamentos de rejuvenescimento celular estão funcionando usando o próprio celular para verificar isso.

@@ -1,0 +1,349 @@
+- 6:29pm -
+
+Speaker A: Nós estamos tentando resolver o problema de fragmentação de dados na jornada do paciente. O que o mentor nos deu foi que o cenário que pensamos que tínhamos no país não é o que realmente é e nós temos um problema muito maior com a fragmentação de dados e nós criamos uma nova ideia baseada no que o mentor nos deu, mas não estamos certos sobre a visibilidade dessa ideia. Nós não pensamos que isso pode ser uma solução comercial. Nós não podemos alcançar. No final, quem vai pagar por isso?
+
+- 6:30pm -
+
+Speaker B: Ela é uma medicina. Então parece que você identificou um problema. Você identificou problemas?
+
+Speaker A: Antes da nossa primeira ideia, sim, nós tínhamos a mapa de empatia e o canvas delimitado quase pintados, mas depois da primeira sessão de mentoramento,
+
+- 6:31pm -
+
+Speaker B: Sim,
+
+Speaker C: eu acho que nós vamos trabalhar com um aeroscope, então nós vamos tentar... Então você vai ter que, se você não tiver essa informação específica, você vai ter que procurar e tentar encontrar algo novo. Eu
+
+Speaker B: acho que eu vou passar pela minha lista de coisas para pensar quando você tiver uma nova ideia, porque eu acho que as outras são apenas coisas ajudantes para saber. Você tem que pensar em pool, fundamento, investimento, algo que já está na linha. o tamanho do mercado geral, qual é o mercado objetivo, qual é o mercado que você quer vender, ou pelo menos o tempo de implementação, como você vai trazer o que você quiser, e depois com os competitores que estão começando o mercado, o que faz com que você tenha um bom impacto. Eu queria saber se você já conseguiu encontrar isso. E se você tiver alguma dúvida sobre a interpretação...
+
+- 6:32pm -
+
+Speaker D: Ok... Tipo, as frutas da praia?
+
+Speaker B: Sim, sim! Tipo, tem alguma coisa... Tipo, eu sei que muitos estão perguntando se isso é inglês, ou tipo, quanto tempo é isso,
+
+Speaker C: ou alguma estrutura... Você explica bem claramente, eu acho. A apresentação, a entrevista, os 14 pontos... Sim, uma vez que a gente entrar em contato com o mercado.
+
+- 6:33pm -
+
+Speaker B: Sim, deixe-nos saber. Eu vou ligar para você.
+
+Speaker A: Você tem alguma recomendação de mentor que pode ser mais atendida ao mercado?
+
+Speaker B: Eu colocaria uma requesta para o mentor. E perguntaria se ele tinha um background em negócios. E talvez ele tivesse algo específico. Ok,
+
+Speaker A: eu faço isso.
+
+Speaker E: Obrigado.
+
+Speaker D: Hoje
+
+- 6:34pm -
+
+Speaker E: é só pra ser final pra gente, né?
+
+Speaker C: Não, é porque a partida... De daqui a meia hora ia começar o treino pro pitch. É até as 10 da noite.
+
+Speaker E: Pra ir refinando, né?
+
+Speaker B: Eu não sei se tipo a janta
+
+Speaker C: vai acabar e a gente se fugiu, tá ligado? Deixa eu ver, não sei se tá com... Ah, tem gente comendo aqui dentro. Só pegar o negócio e trazer pra cá. É a moça que a gente tá conversando.
+
+Speaker D: Só pegar o negócio.
+
+Speaker C: É, às vezes a gente só pega, né? Já vai estar frio mesmo.
+
+Speaker E: O mento é o quê? O mento é da onde?
+
+Speaker A: Acho que todo mundo sabe.
+
+Speaker C: Não, aqui ele tá falando que é até as sete. Mas assim, se quiser já pegar também.
+
+Speaker D: Os mentos são velhos dele.
+
+- 6:35pm -
+
+Speaker C: Não tem mento que fala inglês, entendeu?
+
+Speaker D: Eu acho que só eu que sei mais.
+
+Speaker E: Eu só tô mandando em inglês.
+
+Speaker C: Vai. Mas eu falo assim, é um pouco compreensível. Podia passar, mas não é tão importante, quem tá vendo sozinho não sabe.
+
+Speaker A: Cara, antes eles passaram as informações, falaram que o evento todo ia ser, particularmente em português, na primeira faixa do dia.
+
+Speaker C: E eles não falaram inglês, cadê a sério? Não falaram inglês não, só falaram inglês.
+
+Speaker E: Ah, mas mano, a gente tá no evento.
+
+Speaker C: Não, foi assim, foi muito bom, foi super normal. Como ela falou, ela ia para os Estados Unidos.
+
+- 6:36pm -
+
+Speaker E: O Maia fala também, né?
+
+Speaker D: Ela fala muito, muito, muito, assim, tanto que quando ela tá mais nova, ela fala igual.
+
+Speaker E: Mas você esperava o que do evento do MIT?
+
+Speaker A: Não, mas cara, eles botaram.
+
+Speaker C: É acessível a todos os portugueses.
+
+Speaker A: É acessível a todos os falantes da língua estrangeira.
+
+Speaker D: Brasil soberano acima de tudo.
+
+Speaker C: o que que eu pensei é independente do oi oi oi oi oi oi
+
+- 6:37pm -
+
+Speaker D: Boa noite, pessoal.
+
+Speaker A: Boa noite.
+
+Speaker E: Tudo bem?
+
+Speaker D: Tudo bem.
+
+Speaker A: Ah, bom. Pedrão, contextualiza.
+
+Speaker C: Então, a gente tá mal. É, a gente tá na pivotagem. A gente desenvolveu um problema que, chamando o mentor da saúde, a gente descobriu que realmente era inviável de implementar. A gente tinha imaginado em geral um sistema que integraria especificamente em redes de hospital privadas, seria mais o foco, integraria os dados, que é uma coisa que já existe, mas aí teria alguns diferenciais, principalmente relacionado a mostrar o histórico de consultas, internações, a jornada e tanto quanto expectativas de resto do prazo de tratamento oncológico. Assim como integrar esse banco de dados, dados pessoais, que nos problemas é realmente num tratamento personalizado, de acordo com como foi dado o exemplo, uma pessoa preocupada com fertilidade, uma pessoa preocupado com algumas outras questões físicas, né? Mas acabou que não teve diferencial suficiente e a gente também não conseguia pegar os dados que a gente desejava, porque ela falou, a mentora falou que muitos dos dados, por exemplo, de consulta simplesmente é privado, se ela quiser ela nem tá no sistema do hospital em si, então a gente teve que desistir. Aí a questão seria Se tem algo pra aproveitar, se você acha que alguma parte da ideia é aproveitável, se a gente teria que sair no zero realmente e fazer um projeto completo novo.
+
+- 6:38pm -
+
+Speaker D: Qual é o maior problema que vocês pensaram em resolver? A primeira dor.
+
+- 6:39pm -
+
+Speaker A: O problema inicial era a falta do contato do paciente com as informações que estão lá. Então as informações elas estão jogadas, então eles iniciam o tratamento, passou para outro médico. só é considerado o que ele levar no protuário dele, no papel dele, não há registro. O que a gente pensou inicialmente era ter, por exemplo, em uma rede, vamos supor, seja o SUS, seja uma rede da Unimed, seja uma rede do Albert Einstein, cada pessoa tem um médico da família, igual já funciona na atenção primária do SUS, que seria responsável por acompanhar toda aquela trajetória do paciente, não necessariamente os tratamentos, mas dar o suporte e deixar claro, traduzir os requisitos do paciente em requisitos clínicos. O que a nossa leitura mostra pra gente é que isso já é muito próximo do que tem no sistema básico, o que tem de medicina familiar do SUS. E o que ela comentou é que isso é muito difícil de fazer, porque os sistemas não conversam. O sistema, um prontuário eletrônico muito diferente do outro, e ela tentou voltar muito a gente para uma solução, que a gente chegou a tenturar mais ou menos, seria uma alternativa de prontuário eletrônico. e o diferencial seria que a gente teria APIs que conectam diferentes, então se você usa o CERN aqui no Albert Einstein, você consegue importar, a gente tem uma tabela padrão.
+
+- 6:40pm -
+
+Speaker C: Você joga uma segunda ideia.
+
+Speaker A: Isso, aí a gente, baseado no feedback que ela passou, O que a gente entendeu, mais ou menos, o que seria uma necessidade era isso. Então, a gente tem um sistema que ele é capaz de importar e de mostrar. Então, o paciente, ele tem um registro único, seja o CPF, por exemplo. Se ele vai no médico novo, tudo que ele já buscou, então o paciente, ele teria que ter esse esforço de pedir para o médico dele, olha, coloca as informações no meu CPF aí, por favor. Então, iria para lá. A partir do momento que ele vai no médico novo, ele consegue dar acesso ao médico, o médico busca o CPF dele, o paciente seleciona o que o médico teria acesso ou não, e a gente teria a trajetória unificada. Toda essa questão a gente buscaria conectar através de APIs com esses bancos de dados diferentes e unificar em uma tabela única do banco de dados e utilizar, por exemplo, LLMs para facilitar a comunicação entre se o médico preenche a mão o relatório no paciente, Ou o paciente, por exemplo, se ele tem dúvidas, se ele quer saber alguma coisa, ele vai acessar o prontuário com o prontuário. Muito mais fácil ele ter um chat, onde ele vai pesquisar exclusivamente das informações que ele tem lá no sistema. Mas quem seria o pagador disso? A gente não tem isso.
+
+- 6:41pm -
+
+Speaker D: É, e assim, os sistemas não serem integráveis tem um motivo. O Einstein não quer compartilhar dados de pacientes com o residório. A DASA não quer compartilhar com o FLURIA. O único que vai falar integra é o SUS, por força de lei, que é o Open Finance. Você só tem Open Finance hoje porque o governo falou, tem que acontecer e acabou. O paciente vai ter uma dificuldade de falar, cara, médico, coloca aí. Aí o cara... Tá, mas pro médico não tem um valor assim tão grande, pro paciente tem um super valor, do cara sair de uma consulta e sei lá, ele tá fazendo tratamento aqui, mas ele não mora aqui, tem uma emergência lá na cidade dele, quando ele for atendido pela emergência lá, o pessoal saber que ele tem um histórico todo, mas você também pedir pro paciente executar isso, é uma carga a mais em cima do que ele já tá fazendo ali no dia a dia. Agora, quem paga isso também, aí o paciente fala, pô, eu já tô pagando um tratamento caro, eu já tô sofrendo ali um negócio invisível, já não estou com cabeça pra mais nada e ainda preciso pagar a mais e ainda preciso para imputar os meus lados da vida, para levar as minhas informações. O que a gente vê, e aí o que eu já vi de diferença, assim, tem outros grupos pensando isso também, e outros mentores médicos estão falando. Galera, nenhuma instituição de saúde privada vai compartilhar dados uns com os outros. Porque eles não... A gente que é paciente do lado de casa fala, pô, mas é meu dado, é eu paciente. Para uma instituição médica, esse dado vale absurdamente mais do que só o seu histórico. O que pra você é uma comodidade, pra eles é uma massa de dados de pesquisa, de simulação, de uma série de outras coisas que não vamos abrir. E eu quero que o meu paciente seja só meu. Então, se eu abro informação para lá, até histórico de exame. Tem alguns exames que tem uma Recomendo que você faça esse exame na mesma máquina, porque o resultado pode variar de uma máquina de tomografia pra outra, pode não sincronizar. Assim, pô, sinto muito que você fez uma tomografia lá na Editor, mas a máquina do Einstein, pra eu comparar a evolução, eu preciso de dois exames na máquina do Einstein. Faz aqui. Então, as instituições ganham por ter dados segmentados. Agora, o que falta é, por exemplo, que a gente não viu ainda é, a pessoa chega no médico, faz lá, o oncologista explica tudo, a pessoa sai e esqueceu tudo, ou não entende, ou não lembra, ou não tá emocionalmente pronto pra entender aquilo. Então, a minha esposa fez um tratamento aqui no Einstein de oncológico, a gente gravava a consumo inteiro. Fala assim, cara, explica o que você precisa. E também, a gente tem a família, os filhos todos, cada um num canto, todo mundo desesperado, em pânico. Ah, mas tá bem? Não tá bem? O que aconteceu? A gente gravava. Uma hora de consulta, ele explicando tudo, falando tudo, etc. Eu mandava o áudio para os filhos e falava, galera, escuta aí. Puxa vida, é verdade. A gente entendeu que do jeito que ele explicou não é assim, é esperado. É um caminho. Não são os dados médicos. O paciente chega lá, fala, eu vou gravar a consulta, você me explica. E isso gera um material para o paciente compartilhar com a família, para o paciente compartilhar com outros. é menos crítico. E assim, médico, você autoriza que eu gravo? Autoriza, dado seu, é direito seu, você grava. E aí, com base nisso, ele cria ali um histórico pra aula. Não são meus exames médicos, porque isso vai ser difícil, não é meu pontuário inteiro, mas tem algumas informações aqui. O problema é, quem paga? O paciente vai pagar? Pra ter isso a família, talvez?
+
+- 6:46pm -
+
+Speaker A: Isso o médico barrar a gravação.
+
+Speaker D: Acabou também. Agora a família pode ter interesse nisso.
+
+Speaker C: As ferramentas já existem também. Se for partir do paciente, quer dizer, se não for algo que vai ser implementado, oferecido pelo hospital, já existe ferramenta.
+
+Speaker E: Mas existe o próprio Unimed Hub lá, eles têm justamente uma IA, que é o médico que deixa lá rodando, ele faz toda a transcrição para ajudar a preencher depois, entendeu?
+
+Speaker D: Sim, é, uma transcrição.
+
+Speaker E: É, aí ele vai e preenche, isso já existe.
+
+Speaker D: Agora, se os dados não são compartilhados entre as instituições, o problema é que isso calma. que é a pessoa, vou lá no outro médico e não tenho resultado de exame. E por que que a pessoa iria em dois lugares? Talvez. O que que leva uma pessoa a fazer uma parte de exames num lugar e uma parte de exame no outro? Talvez pode ter um caminho aí pra tirar as segmentações. Falar, eu tentei fazer no Einstein, no Einstein não tinha esse exame. E eu fiz lá, não tinha agenda, tava com pressa, o outro é mais perto. Pode ser um caminho pra Ou o que a gente está sugerindo para alguns outros grupos é pense em compartilhar informações dentro da instituição. Ao invés do Einstein compartilhar com o Redditor, você já fez um exame médico por causa do oncologista, você fez pelo gastro, você fez por alguns outros, como que isso se fala de um jeito melhor?
+
+- 6:47pm -
+
+Speaker E: Deixa eu só explorar uma ideia que eu já cansei de falar com eles e vou falar de novo. Imagina que a gente tem um estado, que ele tem a rede nacional, né? Imagina que tem a rede do estado de dados, que ele vai integrar parte pública e privada já, dessas informações. Você acha que vale a pena explorar essa rede, por exemplo, que seria no caso a mineira, para a gente tentar criar funcionalidades, esses dados já vão ser feitos, já vão estar ali normalizados, integrados na base única, mostrar que funciona, de alguma forma usar como case e trazer consumição para outra coisa?
+
+- 6:48pm -
+
+Speaker D: Lá o que que é? Os dados do SUS e da rede privada já estão no...
+
+Speaker E: A Unimed, por exemplo, está começando a integrar com essa rede. Mas a parte pública também está sendo... Os municípios estão aderindo aos poucos.
+
+Speaker D: E quem que é o dono dessa rede?
+
+Speaker E: Minas Gerais.
+
+Speaker D: É o Estado. É o Sistema Público de Saúde do Estado que forçou as empresas a colocar os dados ali dentro.
+
+Speaker E: Sim.
+
+Speaker D: Quem paga é o Estado.
+
+Speaker E: Sim. É que, na verdade, a adesão é gratuita. Então, o cara tem que apertar o botão e aceitar.
+
+Speaker D: O paciente não paga.
+
+Speaker E: No caso ali, por enquanto, está a nível município e operador, os TAIS.
+
+- 6:49pm -
+
+Speaker C: Não, eu achei que ele quer dizer, tipo, esse sistema que você falou já está implementado pelos TAIS, o que você vai fazer em cima disso?
+
+Speaker E: Não, mas é isso que eu estou perguntando pra ele.
+
+Speaker C: Você está perguntando se fazer qualquer coisa vale a pena?
+
+Speaker E: Não, eu estou perguntando se vale a pena essa base já que vai estar... estruturado, pra gente pensar em correlações de prevenção, que seja relacionado à ecologia, por exemplo. Se a gente conseguir provar, por exemplo, em Minas Gerais, a gente pode explorar outros mercados no Brasil. A gente vai estar com aquela rede normalizada de dados que, teoricamente, é igual pra todas as questões.
+
+Speaker D: Eu acho que o que se aprende é assim, cara, esse tipo de coisa só funciona se o governo forçar.
+
+Speaker E: É que nem a rede nacional, você acha que não é questão de tempo? Lógico, o tempo é muito relativo, quanto tempo vai demorar. De todas essas bases serem obrigadas a interoperar em algum momento, graças à rede nacional de dados de saúde? E essas políticas de saúde tal também?
+
+- 6:50pm -
+
+Speaker D: Eu acho que em algum momento o Ministério da Saúde vai começar a exigir isso, igual a gente tem o ESUS, vai começar a exigir porque do ponto de vista de governo é importante você ter dados unificados. mas vai ter briga para evitar isso. As redes particulares vão evitar compartilhar dados porque abre...
+
+Speaker E: É isso que eu estou tentando explicar e perguntar, na verdade. Se tentar usar como case Minas Gerais para ver quais são as contras e prós e validar essas informações no caso.
+
+Speaker D: Não sei se isso reforça o problema de falar, Minas Gerais só deu certo porque foram obrigados, nada garante que isso expanda para outros casos. Agora, sem esse compartilhamento de dados, o problema que tem é falta de... o cor do problema é diagnóstico, é o diagnóstico ser incompleto. ou a pessoa começar o diagnóstico em uma rede e terminar em outra e se perder algo no caminho. Se não for compartilhar dados, o que vocês fariam para resolver isso?
+
+- 6:51pm -
+
+Speaker E: Igual eu estava comentando com a doutora aqui no caso da... Porque 50% dos pacientes que começam a fazer a questão do tratamento de câncer, diagnóstico, eles não voltam, ou por algum momento eles não têm esse contato contínuo. Eu falei com eles que a minha ideia era fazer algo automatizado, pra fazer esse... já pegar, porque alguns já são digitalizados, né? A gente pega, meio que automatiza todas as questões do escolar. Enfermeiro tem que voltar em contato com as pessoas e só vai dar assente caso tenha digitalizado lá outra parte do diagnóstico, etc. Fazer essa série de coisas assim, né? Que a gente ia pensar inicialmente, porque é a questão de prevenção. Se você consegue, inicialmente, já minar esse avanço da doença, do câncer, por exemplo, você, lá na frente, já tem muito valor que você poderia gastar tratando esse câncer que você não tratou no início. Então, seria essa a questão de prevenção, né?
+
+- 6:52pm -
+
+Speaker D: É, porque se você conseguir evitar que a pessoa saia da rede, que ela mude de uma área para outra, é uma forma de resolver isso também. Ao invés de eu tentar fazer o Einstein compartilhar dados com a rede DOOR, que não vai acontecer, a menos que o SUS obrigue, o que eu faço para que, mesmo dentro do Einstein, ou só dentro da rede DOOR, ou dentro do SUS, isso flua sem perdas? No SUS, então, é muito mais distribuído, porque a pessoa tem, você tem muito mais dados, mas você tem, a pessoa fez um tratamento, a pessoa tem as vacinas, a pessoa tem outros exames que ela fez, ela tem uma emergência, ela tem o SAMU, ela tem várias outras fontes de dados que às vezes se perdem. O Einstein vai ter isso muito fácil, muito claro, mas é livre o que está acontecendo.
+
+- 6:53pm -
+
+Speaker E: A minha dúvida antes foi, todo mundo está trabalhando na integração de dados, integração de dados. Aí eu acho que é uma coisa que está igual para todo mundo.
+
+Speaker D: Tem vários grupos tentando fazer um prontuário unificado de dados médicos.
+
+Speaker E: Aí seguindo a orientação da doutora, eu pensei em algo de prevenção, algo, sei lá, até preditivo se fosse o caso também. Tentar utilizar esses dados para alguma coisa, seria a minha cabeça.
+
+Speaker D: Eu acho que tem vários grupos falando de integração de dados e todo mundo tá recebendo essa mesma mensagem, eu até imagino quem seja a doutora. Agora, o que talvez seja interessante é, você pega esses exames todos que a pessoa fez, o histórico, identifica gaps. Legal, você fez um exame, um hemograma completo, faz dois anos. Você fez um exame e um mapa de pressão, há quatro anos. E ele fala, ó, você tem esses exames, estão faltando alguns aqui, você sugere. Fala, ó, já tá na hora de você fazer um hemograma aí, ó. Já tá na hora de você fazer um exame de fezes, tá na hora de você fazer um eletrocardiograma. Isso pode ser algo que independente de qual lugar você faz, mas ele é algo preventivo. O hospital que você fizer que pegar isso, já te dá um. Porque a gente tem as rotinas, mamografia todo ano, o exame de próstata a cada dois anos, a cada três anos. Mas e os outros? Ah, é um exame de sangue.
+
+- 6:54pm -
+
+Speaker E: Só pra finalizar também, pra não julgar você muito, tem outras questões também, a gente vai pegar uma folha, tirar foto, a CR, junto com sei o quê, só que eu não sei se é o trato mais adequado, não sei quão complexo é pra fazer essa identificação dos dados assim, sabe?
+
+- 6:55pm -
+
+Speaker D: Tem alguns laboratórios que já dão isso digital. Você já baixa lá o PDF que já vem pronto. Outros dão impresso. Mas eu não sei se... Depende do quão vital pra solução como um todo é você ter isso. Por exemplo, se eu só estou fazendo exames de rotina, ao invés de você fazer um check-up uma vez por ano com tudo, eu ir distribuindo de acordo com os resultados ali, te sugerindo, falar, ó, você fez um exame de colesterol que tava não sei de que jeito. Passou um tempo, a sua I.A. valida assim, ó. Ele fez esse exame de colesterol, tava alta. Ele fez esse hemograma, tava faltando isso. Daqui uns seis meses eu sugiro de novo e falo, ó, faz esse daqui de complemento. Você não faz um check-up inteiro. Repete um hemograma e evita outros. Pode ter vantagens de quem paga. Porque aí, se é digital, se não é, não importa. Eu estou fazendo a pessoa fazer exame. Não é qualquer exame, são exames que estão faltando dentro dessa rede aqui dele. Ele faz um hemograma todo ano, mas o exame dele não é completo. Não fez o exame de urina. O plano de saúde pode ter interesse em pagar uma parte dessa, que é melhor eu mandar você ir lá e fazer um exame preventivo simples, que é meia hora, você vai lá, do que Você tem um problema, o médico fala, você tem um problema tão grande que eu não sei o que é e o plano de saúde tem que te pagar uns 20 exames de uma vez porque tem que pagar. Pro paciente também fica legal assim, se ele não tem plano. Ao invés de eu pagar um checkup de 5 mil reais com vários exames, Você cria pra mim um conjuntinho de exames médicos que eu preciso fazer, que fazem sentido pra minha realidade, e de acordo com os meus resultados, o que eu preciso falar? Cara, todo ano você faz hemograma, todo ano tá normal, faz a cada dois anos, você tem 30 anos de idade. Ah, você tem colesterol altíssimo, esse você tem que fazer a cada seis meses.
+
+- 6:57pm -
+
+Speaker E: Mas isso aí é mais para o consumidor, então, no caso, que está economizando dinheiro.
+
+Speaker D: Pode ser para o consumidor se ele paga sozinho, pode ser para o plano. Caso ele está... Porque aí o plano fala assim, é melhor eu reembolsar um exame seu de colesterol ou a pessoa tem propensão a diabetes. Vamos fazer um exame de diabetes de acompanhamento a cada seis meses, é melhor. do que se o paciente tem um pico aí de emergência, o plano de saúde tem que pagar uma remoção, tem que pagar uma internação, tem que pagar uma série de coisas. Paguei 5 mil reais ali de um paciente, que se eu tivesse mandado ele fazer exames preventivos, o médico tinha dado um remédio, o negócio não tinha expandido, o plano pode ter interesse em evitar. O paciente também pode ter, se ele paga sozinho um check-up, tem o cara que vai todo ano, tira uma semana e faz exame de tudo, e o médico fala assim, não precisava fazer esse monte de exame. Não tem comorbidades, não tem propensão. Facilita. Você sai disso de tentar compartilhar vários dados, fala com os dados que você tem aqui, e o que faz sentido. E o que está faltando? Para você se cuidar. É preventivo.
+
+- 6:58pm -
+
+Speaker A: Para uma coisa só dentro da rede.
+
+Speaker D: Dentro da rede.
+
+Speaker A: E aí vamos supor, a ideia seria um solo. que o cliente final ali é a rede, seja a rede Albert Einstein ou uma rede de cooperativas da Unimed.
+
+Speaker D: Ou o próprio paciente, ele só vai lá e fala, fiz esse exame, tá aqui meu resultado, põe pra dentro.
+
+Speaker A: Mas por exemplo, a gente poderia ter um chatbot que vai instruir ele a fazer isso, a gente tem lá em cima médicos da rede que vão falar, olha, Para esse perfil de paciente, esses são os exames recomendados. Para esse perfil de paciente, são esses exames. E aí o próprio algoritmo vai lembrando o paciente, ó, você fez não sei quantos anos, tá na hora de tomar vacina de herpes zoster.
+
+- 6:59pm -
+
+Speaker D: Você já tomou?
+
+Speaker A: Você quer agendar?
+
+Speaker D: Eu acho que o plano de saúde é o melhor. Porque o plano sabe onde você tá indo. Você não precisa compartilhar o resultado, o dado médio. mas você precisa falar, o que você tá fazendo, o que aconteceu, aí o LLM fala, tá na hora de você fazer um exame desse. Você fala, mas por quê? Porque você tem...
+
+Speaker A: Pensando, por exemplo, no caso de quem opera uma rede, como o Albert Einstein, seria vantajoso, porque através disso ele já pode direcionar a pessoa, não só pelo benefício de fazer o exame, mas fazer o exame aqui e já controlar a fila. Então a gente teria, por exemplo, para quem tem pré-disposição de câncer, olha, dá uma olhada, porque você passa lá no Câncer Center do Einstein, Porque as vezes a gente consegue fazer o One Stop Shop e a gente já agenda tudo que você precisaria no dia. E aí, já é uma ida só.
+
+Speaker D: Sim, sim. É vantajoso, se tá dentro da própria rede, você consegue compartilhar o resultado dos exames que foram feitos, porque tá dentro de casa. Se é o plano de saúde que não tem acesso a esses dados, ele sabe a frequência disso, de quando tá acontecendo. E aí ele sabe quais exames estão faltando pra criar um diagnóstico preciso. Se o Einstein tá vendo todos os seus resultados de pressão e de hemograma, o Einstein pode falar, tá faltando uma coisa aqui. Ou tem uma condição que tá piorando, ele te avisa, vem pra cá. O plano de saúde vai olhar assim, olha, Se ele não fizer um hemograma logo, ele pode ter alguma doença que a gente não sabe, que ele não sabe, e isso pode evoluir pra algum momento. Eu plano ter que pagar um negócio muito grande. Então eu plano, já vou pra ele e falo, amigão, faz dois anos que você não faz esse exame, se você quiser eu já agendo pra você na rede credenciada. E aí eu sei a rede credenciada, aonde tá mais fácil de agendar, aonde tá mais perto da sua casa. No plano fala, cara, paguei um hemograma e não paguei 50 exames.
+
+- 7:01pm -
+
+Speaker A: E, por exemplo, um sistema assim, dependendo, poderia ter funcionalidades que hoje são do médico ou da família. Claro que não contou o médico, mas, por exemplo, o check-up e as perguntas seriam as mesmas. Depois isso tá registrado, pode mandar pro plano, pode mandar pra rede, mas a pessoa sentiria esse contato ali com o profissional Então ela meio que, olha, se eu passar uma coisa muito alarmante, depois o pessoal vai ligar pra mim e vai pedir pra eu marcar uma consulta.
+
+Speaker E: Sim.
+
+Speaker A: Então ele teria essa visão de valor em cima do sistema.
+
+Speaker D: Sim, sim, teria. Que aí a hora que ele vai também pra esse médico dele de família, ele leva esse roadmap. Ó, esses aqui são os exames que eu fiz recentemente. Esses aqui são os que o app já me mandou organizar pra fazer daqui, dentro dos próximos seis meses. E o médico olha e fala, cadê seus resultados? Ah, estão aqui. Tá bom, você fez os resultados, não estão alarmantes mesmo, nos próximos seis meses, beleza. Se você tá dentro do Einstein, um resultado que saiu fora ali, que você já fez, você já tá acompanhado, ele já tá vendo a evolução ali, o seu colesterol pulou demais de um mês pro outro. Mas tem já tido...
+
+- 7:02pm -
+
+Speaker A: Isso hoje funciona, por exemplo, acompanha com base nos prontuários ou é uma coisa completamente mecânica? Depende do médico ou da pessoa estar acompanhando os resultados?
+
+Speaker D: Ou tem uma análise por trás? Eu acho que quando o paciente é oncológico, isso está acompanhado. Porque aí você tem ali o navegador, você tem o oncologista, antes de cada sessão eles medem tudo de novo, enfim. Mas essa questão preventiva, É assim, é a seu critério. A menos que você vá lá e fale, eu vou fazer uma consulta com o meu ontologista todo ano e vou pedir pra ele me dar os exames. Você vai lá, ele te dá a lista de exames, você faz, ele volta e fala, você não precisava ter feito nada disso. Mas aí o paciente oncológico vai falar, mas eu precisava dessa tranquilidade que não tinha mesmo. Mas é a critéria de cada um. Não tem esse assim de falar, ao invés de você ficar fazendo esses, faz esse aqui no primeiro semestre, depois você faz um daquele, depois tá faltando um aqui que faz muito tempo que você não faz. O hemograma mesmo, durante a quimioterapia, você faz hemograma toda semana. depois você só faz hemograma se alguém pede. E aí... Se não pediu, você esqueceu. Se não pediu você esqueceu. E aí, de repente, tem uma necessidade lá de falar, faz um hemograma de novo, faz um outro exame aí de colesterol.
+
+- 7:03pm -
+
+Speaker A: O paciente se sentir acompanhado, né, e não esquecido.
+
+Speaker D: E não esquecido.
+
+Speaker E: Mas o fato desses dados estarem já na rede, eles são permitidos de fazer essa análise de prevenção, etc., ou tem que ter alguma autorização também?
+
+Speaker D: Eu acho que se você estiver dentro da própria rede, é você vender o modelo de negócio só para o operador. E aí para o Einstein vai ser, olha, a gente tem como garantir a continuidade do atendimento da pessoa para ele não se sentir abandonado ou para ele ter retornos e continuar consumindo consultas, continuar fazendo exames periodicamente e confiança na rede, não sair. E para o plano de saúde é, se esse cara parar de se cuidar, ou você reembolsa um hemograma de 100 reais, ou ele tem um problema que podia ser previsto e não foi, e você vai ter que reembolsar 50 exames e mais uma internação e etc. Esses dois são bons pagadores para uma solução dessas. E evita esse problema de você ter que compartilhar dados entre as duas. Isso acontece. só se forem obrigados. Pensem aí, pensem. Delimitando. Mas às vezes é melhor. Assim, vocês vão ter três minutos, né? É um minuto pro problema, e aí você tem que reduzir bem o problema pra falar, o nosso problema é esse. Falta de exames ou diagnósticos que não são feitos a tempo, porque exames simples que podiam ter sido encaixados ali na rotina não aconteceram e ninguém teve comparação. Por exemplo, a minha esposa mesmo, depois que ela terminou, a gente fez depois com o clínico e ele falou, olha, tem um dos exames aqui que você devia ter feito já antes.
+
+- 7:05pm -
+
+Speaker A: Mas ninguém pediu.
+
+Speaker D: Ninguém pediu. Ele falou, vamos começar agora então. Aí ela saiu de lá com 50 exames pra fazer. Aí ele falou, ó, dos 50, 45 não deram nada. Beleza, não foi problema. Mas esses 5 aqui a gente precisa acompanhar. Vamos fazer esses 5 aqui a cada 6 meses? Desses 5, 3 são sempre normais. Esses 2 aqui a gente repete. Mas precisou ter isso tudo. Precisou ter um cara extremamente exigente falando, vamos fazer tudo, vamos fazer tudo. Agora, o plano médico pagou 50, por exemplo, uma vez. Tá, uma ciência, agora sendo assim. Exames que faltam, complementos, sugestões que você vai fazendo aos pouquinhos, encaixa na rotina da pessoa. E aí como vocês vão solucionar e o modelo de negócio. Quem paga e o que você ganha pelo que você tá pagando. O pessoal fala dos piques lá de quem paga. Tá, mas o que você ganha? Quem está pagando está recebendo o quê? O Einstein está pagando por essa solução para quê? Para ter continuidade do paciente consumindo serviços médicos. O plano de saúde está pagando para quê? Para evitar ter um gasto gigante com esse paciente.
+
+- 7:06pm -
+
+Speaker A: Mas, por exemplo, aí não poderia entrar na conta do plano de saúde. Olha, a gente quer buscar manter a continuidade, mas a partir de um certo momento manter a continuidade do tratamento não é vantajoso para quem lucra com, assim, lucra menos com a pessoa usando mais o serviço.
+
+- 7:07pm -
+
+Speaker D: Sim, o plano de saúde é se o exame preventivo e o custo dele de exame preventivo é muito pequeno perto de uma emergência. Então é melhor você ir pagando o exame, ir forçando o seu paciente a executar exames pontuais pra criar um diagnóstico, do que você chegar num momento que você tem que fazer muitos exames pra descobrir o que tá acontecendo, sem saber por onde começar, gastar uma furtura de uma vez ou uma internação. A pessoa teve um ABC. Mas por quê? Tinha pressão alta, tinha colesterol, A gente pediu, não, um mapa de 24 horas de pressão custa 200 reais. Um hemograma de colesterol custa 50. Poderia ter feito cinco desses. O cara teve um AVC, foi removido pela ambulância, pagou 10 mil reais da ambulância, ficou internado 15 dias, ficou 3 dias de UTI. 200 mil reais. Aí o plano de saúde fala. Podia ter pago. Não estou pra mentir, nada. O governo teve. Pro Einstein vai ser... Poderia ter evitado ou poderia ter criado essa participação aqui do paciente o tempo todo.
+
+- 7:08pm -
+
+Speaker A: O aumento do engajamento do paciente.
+
+Speaker D: Aí ele tem... Se eu tô fazendo exame de... Esses exames, eu tô garantindo pelo menos uma consulta com cada um desses. Tem uma consulta com o cardiologista, tem uma consulta com oncologista.
+
+Speaker E: Isso aí é bom até pra previsão de renda também, né?
+
+Speaker D: Que a pessoa já tem uma questão... Também, também.
+
+Speaker A: E fora que isso aumenta o valor para a entidade que tá pagando, seja a seguradora, operadora de saúde ou a rede, mas pro paciente, às vezes a gente sabe que quem tá ali atrás é só uma máquina e ele pode ter um sentimento de, pô, os caras tão me mandando mensagem aqui pra entregar o exame. Então dá uma visão de valor maior.
+
+Speaker D: Dá uma proximidade ali de, ó, estou sendo cuidado, que é exatamente esse ponto aí. Cara, durante o tratamento oncológico, Tem um momento porque não tem como você não ser cuidado o tempo todo, isso é impedido. Mas o preventivo já não é mais urgente. Então já fica meio assim, os médicos falam, vem aqui a cada seis meses, tá aqui o tratamento. Mas você não tá mais em risco. Então, eles decaem um pouco. Então, você criar essa proximidade e falar, você é um paciente meu, eu sei tudo o que aconteceu. Faz esses exames aqui pra gente ir acompanhando. Sugira isso daqui. Consulta já com o médico assim que os exames saírem. O paciente fala, cara, tão cuidando. Ninguém falou nada, tá cuidando. E o plano de saúde é, enquanto tá cuidando, eu tenho risco de vir uma surpresa do nada Só de ter...
+
+- 7:09pm -
+
+Speaker A: a gente sabe que a preventiva é melhor do que a corretiva. E só de ter um bote não médico fazendo a preventiva já sai mais barato também.
+
+Speaker E: Só uma... não te alugando mais, né? Você acha que a gente tenta delimitar só pra parte privada? Porque eu falo isso porque na última, o último ganhador, ele meio que mexeu com a parte... com os fluidos um pouquinho do privado também, eu acho. Você acha que o maior ganho pra tentar fazer essa interseção dos dois é só pegar um problema mesmo e delimitar?
+
+- 7:10pm -
+
+Speaker D: Quanto menor, quanto mais definido o problema, é mais fácil. Eu acho que atender os dois é difícil. Atender tanto o privado quanto o SUS é difícil. Escolhe um. Escolhe um deles. O que talvez seja difícil é vender o modelo de negócio para quando é público. Porque você vai cair naquele assim, quem que paga? O SUS. Mas por que que o SUS pagaria? O que o SUS ganha por isso?
+
+Speaker A: Não tem médicos pra fazer isso.
+
+Speaker D: É mais difícil um modelo de negócio.
+
+Speaker E: Eu até vi agora do Wysen recentemente que eles fizeram tipo uma aceleradora pro SUS, relacionada inclusive a oncologia. O que vocês estavam, não sei se você vai saber dizer, mas o que vocês estavam pesquisando?
+
+- 7:11pm -
+
+Speaker D: Não, eu não tava nesse do SUS não, ia acompanhar, mas eu sei que eles gerenciam algumas coisas pro SUS também, mas é metodologia. Eu acho que é mais fácil a rede privada de defender modelo de negócio. Tem mais burocracia com o SUS. Por outro lado, vai ter muita gente, vai ter pouca gente falando de SUS por isso também. É um bagulho super espinhoso. Então, se vocês estiverem confortáveis em criar um modelo para o SUS, que seja para o SUS, ganha do ineditismo. Não vão ter várias pessoas. O risco de você estar dando uma ideia que outros deram é menor. Mas é muito mais difícil. Então é risco e benefício. Até onde a gente quer inovar e até onde dá pra ir. Dá pra ir no que tá confortável.
+
+Speaker E: Mas eu tô demais já. Já deu uma luz já.
+
+Speaker D: Vou deixar vocês pensando aí.
+
+Speaker E: Você tá aqui amanhã também?
+
+Speaker D: Amanhã eu tô aqui.
+
+Speaker E: Só na parte de amanhã? É que a testagem já é a apresentação.
+
+- 7:12pm -
+
+Speaker D: Mas eu tô aí. Amanhã eu tô aqui de novo.
+
+Speaker E: O caso, muito obrigado.
+
+Speaker D: Valeu, valeu pessoal.
+
+Speaker E: Boa sorte.
+
+Speaker A: Bom trabalho. Valeu.
+
+Speaker D: É isso, é isso. Não, eles vão trazer.

@@ -1,0 +1,239 @@
+- 5:13pm -
+
+Speaker A: Vocês têm tipo de pontuário?
+
+Speaker B: Só você tem acesso?
+
+Speaker C: Lá no meu consultório privado, só eu tenho acesso.
+
+Speaker D: E o perfil de um paciente, ele não é compartilhado. Não é compartilhado?
+
+Speaker C: Não, porque eu ponho no meu pontuário.
+
+Speaker B: Mas isso é por conta de alguma política da casa ou é decisão do médico?
+
+Speaker C: Eu posso permitir que o meu pontuário seja aqui. em vez do meu pontuário que eu faço para o meu paciente, mas é o pontuário da minha consulta. Da internação dentro do hospital, esse apelido é o mais caro, você precisa fazer esse apelido. Só que também eu não posso assim, eu estou lá fazendo uma cirurgia ginecológica e eu vou ver lá com a cirurgia que você fez. Eu não vou ter acesso a ficar me mexendo lá no hotel. Então eu falei que talvez alguma coisa que baixasse algumas informações que o paciente precisa permitir. Ou seja, eu não quero que você veja o que eu fiz quando eu nasci lá na ginecologia. O que seria isso, se é internação, se é pontuário unificado de consulta, que migraria, se migraria tudo? alguns antecedentes, algum uso de medicação, antecedentes. Isso faz uma interface com todo mundo. Qual é o antecedente cirúrgico, qual é o antecedente familiar, qual medicação que o paciente usa.
+
+- 5:14pm -
+
+Speaker A: Perfeito.
+
+Speaker B: Só pra concluir a ideia que eu acho que isso vai agregar também na outra parte rapidinho que eu vou mostrar pra você. Então, pensa nisso, claro que dentro das limitações que você colocou.
+
+Speaker C: Então, que é internado. Veio aqui no hospital, fez uma cirurgia, fez o diagnóstico.
+
+- 5:15pm -
+
+Speaker B: E aí você, por exemplo, agora vai entregar um diagnóstico. Vai falar, ó, acho que é interessante olhar isso, fazer o upload dos documentos. Por exemplo, ah, vou prescrever você é um remédio. Tá aqui. Então, o próximo médico, quando for lá no futuro, dia X, do X de 20X, vai ver o que você deixou. Eu deixei no caso. E comentários adicionais, então estará aqui também.
+
+Speaker C: Então tem que ser uma coisa que isso migre automático? Sim.
+
+Speaker B: E aí você conclui. E aí o cliente teria acesso também a tudo isso no aplicativo. Então eu abro meu telefone e eu vou ver lá. Você vai ver. Eu tive isso, isso e isso. Tive que tomar um remédio aqui. Tive que receber uma tal recomendação, porque como você falou, o paciente não se esquece. E aí ele vai ter tudo isso aqui encaminhado.
+
+Speaker C: Então é isso que eu estava falando lá pra ele. A gente tem que entender, então, que dentro de todas as consultas, de todos os especialistas, de todas as internações, e aí se a gente tá falando só de Aidson, se a gente tá falando de um gerente, que isso vai de alguma maneira migrar pra um relatório médico do paciente. Porque se não, pelo que? O que o paciente foi lá na minha consulta que eu descrevi? Não vai migrar. Não tem como migrar, né? Se eu tiver no meu prontuário, que não tem interface com ninguém, ele não vai migrar. Quem é que vai colocar nesse lugar aqui? Naquele anterior ponto. Como é que vai pra cá um dado da minha consulta, do meu prontuário? Então tem que ser pontuado, tem que ter alguns campos que eu preencha, né, vai ser...
+
+- 5:16pm -
+
+Speaker D: O que eu imagino que funcione é, por exemplo, a pessoa terminou um tratamento, interrompeu um tratamento aqui e chegou no outro. O médico vai ter, por exemplo, o CRM dele. E o paciente vai ter, por exemplo, a gente pode atrelar o CPF. O médico vai falar, ó, me passe o seu CPF, por favor, pra eu ver se você tá aqui no banco de dados. Digitou lá, chega uma solicitação no aplicativo do paciente, ou chega no e-mail e tal. Falando, ó, você autoriza compartilhamento de quais registros com o seu médico?
+
+- 5:17pm -
+
+Speaker C: Aí tem o pontuário desses profissionais, tem que ter uma interface pra migrar essas informações que o paciente tá permitindo compartilhamento, porque cada um usa um prontuário diferente, cada um usa uma plataforma diferente. Eu estou falando, eu estou bem e tudo mais, mas o meu consultório aqui é o prontuário do cockpit, o prontuário do passagem de vinhado, o Serner Millennium, o sítio. Eu, por segundo o consultor, eu não tenho o que tá lá, que fez a internação. Eu não tenho esses dados.
+
+Speaker D: Porque os bancos de dados não conversam.
+
+Speaker C: Não conversam, por isso que eu falei. Então tem que ser plataformas que migrem ou que a gente permita que algumas informações que são relevantes pra todos migrem pra isso daqui, ó. Senão tudo que eu colocar lá, entendeu? Desculpa, como é que vai migrar daqui pra lá?
+
+- 5:18pm -
+
+Speaker B: Sim.
+
+Speaker C: Tem que ter uma interface. Então, ó, eu uso o cockpit. O que eu colocar lá de antecedentes, de medicamento, automaticamente migra pra isso. Quando o paciente internar aqui no hospital, migra pra isso, senão, quem alimenta esse banco de dados aqui? Isso daqui ó, tem que ser alguma coisa que migre. Eu tô tentando entender o que eu tô entendendo, mas eu quero contar pra vocês que senão vocês vão esperar isso aqui de quê? Esse banco de dados.
+
+Speaker B: Mas em termos de quais são as informações que realmente ficam públicas e vão para a quantidade no hospital de uma consulta? Quais informações?
+
+Speaker C: O paciente tem não culpa em nós que tem nas consultas que ele fez, as internações que ele fez com a consulta, não. Ele não tem. Não sei o que ele peça, e aí peça e tem que pedir um relatório pra mim. Fiz dar consulta e eu tenho que gerar um relatório. Ele não tem acesso ao que eu pus na minha consulta escrita.
+
+- 5:19pm -
+
+Speaker B: E da internação, quais informações tem?
+
+Speaker C: Ele tem esse Open Notes, ele tem abertura pra tudo.
+
+Speaker D: Open Notes?
+
+Speaker C: nas internações. Se alguém preencher bonitinho a internação, vai alimentar o seu banco aqui. Se ele nunca foi internado, onde você vai pegar esse banco?
+
+Speaker D: Mas, por exemplo, sabe o que é legal que a gente consegue fazer com isso também? O sistema, ele lê tudo. Ele pode não mostrar para o médico se o paciente não autorizar. Então, olha, vamos supor que eu fiz uma cirurgia, eu fiz uma cirurgia cerebral, em um determinado momento lá, e eu não autorizo o compartilhamento dessas informações. Se em um determinado momento, beleza, isso não tá pro médico, mas isso tá no sistema, porque o sistema puxou essas informações. O médico, ele vai receitar alguma medicação, ele vai receitar alguma coisa que possa ter alguma interferência. uma internação que possa ter alguma interferência. O sistema, hoje, com algoritmos de A, a gente já conseguiria falar, ó, mostra um aviso para ele, opa, dá uma conferida com o seu paciente.
+
+- 5:20pm -
+
+Speaker C: Mas você pode dizer que essas plataformas, plataformas muito diferentes, tipo computário médico, né, mas precisariam se conversar, né, precisar ter uma interface das plataformas. Vocês entendem mais do que eu, que eu não entendo disso. Só aqui em São Paulo, no meu caso aqui, o São Luís Osatazinho, Não, não foi invertido. Não foi invertido. Chato, caralho. Um tazinho. O Weinstein usa Cerner Millenium. O ProMatri usa Metro. Nenhuma conversa toda. Então, se eu tive o primeiro bebê meu no São Luís, depois eu peguei o ProMatri...
+
+Speaker A: Doutora, eu queria explorar uma outra possibilidade também, porque eu trabalho... Dá pra você entender. Na Secretaria de Saúde. Lá, eu estou ajudando a implementar a rede nacional de dados. Só que lá, os trabalhos são muito gerais. Lá foi criada a rede mineira de dados de saúde.
+
+- 5:21pm -
+
+Speaker C: Para o serviço público.
+
+Speaker A: Isso. O que essa rede mineira vai fazer? Vai pegar esses dados públicos e vai desempregá-los. unificar a base com a questão do LGBT, etc. Mas quando dá a API, você vai pegar esses dados e jogar na API. Só tem alguns dados ali que vocês vão colocar uma base unificada. A questão é que a RNES está sendo implementada ainda. ganho, você tem que pensar a longo prazo, que é uma oportunidade que tem agora, mas vai ser curto.
+
+Speaker C: Por isso que foi a primeira coisa que eu lembro, um protocolo unificado, porque se não as plataformas não se conversam.
+
+Speaker A: Aí tem esses dados unificados, né? Aí a minha ideia era o seguinte, eu dava uma pesquisada, que uns gargalos que tem, a pessoa começa a fazer o tratamento de câncer, tem a questão ele tem um laudo lá da biópsia, só que de repente, em algum momento, ele se perde esse contato de volta, tanto que aqui falam que até 51% dos pacientes brasileiros não tem essa prerogativa respeitada, ou seja, ele tem esse laudo, mas acaba que acontece uma coisa, ele não consegue voltar pra continuar o tratamento. O que isso implica? Se você conseguir tratar cedo, você evita de isso estender mais e gastar mais na frente. Então qual que era a minha ideia? pegar essas informações que o disco de laudo vai jogar no sistema. Aí a gente lê essas informações e tem alguns de ação obrigatoriamente digitalizadas. A gente lê, cria e põe no disco, ah, esse aqui automaticamente vai ser direcionado pra alguém pra ele começar a fazer esse contato com qualquer pessoa. Só pode ser aceito e finalizado esse contato caso esse laudo queijo no sistema, pra dar conseguimento com as devidas questões. Aí, outra questão em relação à RMDS que eu citei. Porque, apesar de, através disso, jogar esse dado na rede, você consegue fazer tudo que é sentido de localidade entre os pais. Então, se você consegue acompanhar uma pessoa que está em situação de confronto e ver se ela fez ou não lá no meio do meio. Era mais ou menos uma ideia que eu estava tentando estruturar. Eu queria ver o que você acha disso.
+
+- 5:23pm -
+
+Speaker C: Você está cuidando do serviço como?
+
+Speaker A: público e privado, porque o ICE também se beneficia disso, porque, por exemplo, tem a questão que eu te falei, que tem a integração dos dados públicos e privados.
+
+Speaker C: Então você... O paciente que fizer o exame, o diagnóstico, o diagnóstical, Imagina que ele teve
+
+Speaker A: um lado de câncer. Isso, aí vai digitalizar automaticamente e já vai definir que aconteceram os próximos acompanhamentos diretamente.
+
+- 5:24pm -
+
+Speaker C: Ou seja, agendamento.
+
+Speaker A: Isso, isso. Já vai definir todo mundo. Olha, essa pessoa vai ter que se contratar com outra pessoa. Se faltar 10 dias, a gente vai ter que se contratar com a Região Médica de Salud. Exato. De novo, a gente tem que caminhar muito direito. Isso é uma ideia que eu estou explorando.
+
+Speaker B: Eu acho que é por isso que
+
+Speaker C: eu perguntei a você, gente.
+
+Speaker B: Por isso, né?
+
+Speaker C: Porque, na verdade, esse paciente, ele tem poucos. Não sei se fosse uma paciente minha que vem aqui, fazendo uma mamografia, e eles acharam uma suspeita na mamografia. Mas se me liga. Me liga. Se eu tomo a sua paciente aqui e tem uma suspeita de um tumor aqui, vai ter que pedir uma. É assim que funciona aqui no AIS. A gente liga, tá? A gente aqui, médico, e eu também, eu tô no trabalho, fazendo exame, a gente liga com o médico, com o paciente, porque no AIS tem a coisa mais rápida. No serviço público de São Paulo, por isso que eu não sei a realidade de mim, esse paciente público, E a gente tem um gap aqui, mas tem um público muito comum na infinidade, que é o nosso universo maior, porque aquele problema é o paciente. Às vezes não tem um médico que segue, porque ele tem um médico de um ambulatório que troca, aquele paciente sai para fazer um exame, tem um diagnóstico, aí ele tem que reagendar, E aí talvez isso resolva, porque depois o diagnóstico já dispara que esse cara tem que ir para cá. Então é essa a maior parte desse convênio, convenião, vamos chamar assim. Agora, eu não moro em São Paulo. O paciente tá vinculado ao OMS. Como é que eu consigo, né? Eu não sou do OMS, então eu não sei o que é isso. O paciente sai do OMS, você chegou lá, uma queixa intestinal, eu pedi pra você um colonoscópio. O colonoscópio ia fazer o diagnóstico. Você vai lá, faz a biose, e depois a biose, depois a biose. Esse paciente tem que voltar. para o UBS, porque é o UBS que gera o encaminhamento que vai para o próximo hospital para agendar, para você continuar o seu serviço. O que eu quero entender ali é onde a gente... Se na hora que ele fizer o diagnóstico, lá no meu laboratório, DEC é um câncer, e aqui do lado, o Joãozinho tem um câncer. O aplicativo vai falar, mostra, promessa. A gente não sabe de promessa. Você não sabe.
+
+- 5:26pm -
+
+Speaker A: Sim. Era mais ou menos essa ideia.
+
+Speaker C: Ou esse públicozão aqui. Tô pensando, Joãozinho, tô colocando pra cá. desse convenião, que é a maior parte, que fica mais perdido, alguma coisa que dispare pra esses... Mas é o médico, no dia seguinte eu já tô sabendo, já tô chamando, já tô marcando a cirurgia...
+
+- 5:27pm -
+
+Speaker B: Doutora, desculpe, eu peço a pergunta...
+
+Speaker C: Não, nós estamos aqui em um brainstorm aqui, ó...
+
+Speaker B: Eu queria saber sua visão de negócio a respeito dessa solução que a gente vai fazer, assim, as nossas ajustes, mas um dos argumentos nossos para beneficiar o hospital, é que a partir do momento que ele vai ter um tracking, um acompanhamento contextualizado dentro da rede, isso é um diferencial, porque ele vai conversar com profissional A, profissional B, profissional C, dentro da rede, por exemplo, Albert Einstein. E ali dentro, ele vai ter tudo conectado, se talvez ele for no limite
+
+Speaker A: ele não vai ter.
+
+Speaker B: Então ser uma estratégia de retenção, entendeu? Como se fosse uma vantagem punk dele estar com o Albert Einstein ou não, ou com o Silvio Libanese ou não, ou com outra rede, porque Ele vai ter esse apontamento direto.
+
+- 5:28pm -
+
+Speaker C: Lembre do profissional privado, que não faz nada fácil com ninguém. No meu prontuário, lembre de todas as informações que eu tenho. Então, só se o paciente souber falar. Se tiver confusão, nenhum vai saber o que ela me contou. Não vai ter. Mesmo sem o dente do Einstein.
+
+Speaker D: Só te perguntar, de outros modelos que você conhece, além do MEVO, Quais mais modelos de software, de protocolório eletrônico?
+
+Speaker C: Mevi.
+
+Speaker A: Mevi?
+
+Speaker C: Mevi não é o Mevo, o Mevo é o que faz receita.
+
+Speaker D: É, eu procurei e encontrei o Mevo.
+
+Speaker C: O Mevo é... O Mevo é do produto. Tasi, T-A-S-I, Y, Tasi.
+
+Speaker D: Tasi.
+
+Speaker C: O Einstein que tem o próprio Kewserner Millenium, que funciona para a ideia dele quando o paciente vem para a internação. Se ele só vem para o consultório, pode ter informação desse consultório no consultório. Onde está?
+
+- 5:29pm -
+
+Speaker D: Entrada A. MEV escreve como?
+
+Speaker C: MEV.
+
+Speaker B: Também não existe nenhuma política da casa que te força a registrar, que te...
+
+Speaker C: Não, não, é porque eu sou usando o cockpit.
+
+Speaker B: Ah, entendi.
+
+Speaker C: O cockpit é outro. E aí tem um monte de serviço público, só de São Paulo. Cada área de São Paulo tem um prontuário, às vezes, diferente. Então tem o BestMedic, tem o SigaPet, tem o Boost. Nenhum fala com nenhum. E aí, o que é o antecedente, que é o comum, se o paciente vier no Cerne Millenium, Ele vai falar assim, eu já respondi que eu fumo lá pro outro, tem aí no meu antecedente. Aí eu fiz a cirurgia de apêndice, já tá aí no meu prontuário. Porque tá no cérebro milênio. Eu fiz a pência, que eu fui, que eu tive dois filhos, mas o que ela respondeu no meu quinto ano, que vocês viram, ela não migra.
+
+- 5:30pm -
+
+Speaker B: Então, você recomenda pra nós o direcionamento de tirar o papel, ou o principal impacto no dia a dia do médico, mas no dia a dia do paciente.
+
+Speaker C: Pro paciente, se talvez algumas informações que ele permitisse, migrar-se pro sistema médico.
+
+Speaker B: Eu pensei em uma coisa aqui, depois vou discutir com a equipe, mas é muito bom saber isso, porque eu acho que...
+
+Speaker C: Não vocês vão criar o que é uma ferramenta bacana? Por isso que foi a primeira pergunta que eu fiz, do unificado, porque os sistemas, mesmo sendo do Einstein, se o paciente vier internado 10 milhões de vezes, vai aparecer lá nos antecedentes, o produtório do Einstein tem um alerta de alergia, Tem um alerta ali de interação medicamentosa? Tem. O Serner Millenium tem isso tudo, tá? Então, se eu colocar ali que eu vou passar uma morfina pro meu paciente oncológico, mas ele tem aqui uma substância renal que não pode usar aquele remédio, o Serner Millenium, Ele aponta isso? Ele aponta. Mas se eu falei, se ele falou alguma coisa lá no meu procurador ou pessoal, que ficou lá numa informação, ou se nunca foi internado, como é que você tem o antecedente? Você vai ter na primeira internação dele. Então, todas essas interfaces aí você faz só consulta. E o paciente que faz exame nuclear? Chega no meu consultório, uma parte do exame nuclear e outra parte do exame normal. Uma parte exame no alta, um ano faz no alta, outro ano faz no priori, não me envolveu em lugar nenhum. Ficou só lá. É por isso que eu colidei com a interação dos políticos.
+
+- 5:31pm -
+
+Speaker A: Você acha que vale a pena explorar um pouco mais essa questão? Porque o que eu vejo legal de Minas Gerais, que são 86 países que interviem aqui, Se essa questão for resolvida lá, resolvemos com a gente. Essa questão de integração.
+
+- 5:32pm -
+
+Speaker C: É o protocolo unificador. E aí o paciente tem que permitir a todas as plataformas conversarem em DC.
+
+Speaker A: É que essa rede mineira, ela é um pouco mais discutível porque ela já faz isso lá. integração automática, de forma gratuita, da parte privada.
+
+Speaker C: E aí o preenche vai vir em algum lugar?
+
+Speaker A: Isso, já unificado a base. Essa é a questão que eu vejo, porque se resolver isso, já era. Porque pelo que eu entendi do aíndice também...
+
+Speaker C: Quando eu fiz, eu fiz gestão, eu fiz GV, fiz gestão. E era, então, a história de fazer um procurário unificado.
+
+Speaker A: Mas não é só o procurário, Rosco, tem o painel gestor. Por exemplo, qual a diferença da rede nacional pra essa mineira? A nacional já tem poucos dados, essa mineira já vai ter mais dados, que ela é saúde, imunidade, vacina, o gestor de saúde vai olhar. Vocês falam de gestor de saúde, mas pode ser uma parte do governo também, que tem os dados que seriam, sabe, internação ou o que seja.
+
+- 5:33pm -
+
+Speaker C: Mas aí é feito pelo procurário unificado. E algumas informações, pelo menos, unificadas.
+
+Speaker A: E como é algo novo, eu acho que o pessoal não sabe, eu não acho que tá ficando muito. Você acha que vale a pena fazer algo novo?
+
+Speaker C: E aí resolve outro problema, o problema é que é financeiro. Você vai, em mim, eu peço um anagrama, Daqui a um mês, quando ele pede outro programa, o sistema unificado fala assim, você já fez.
+
+Speaker A: O que eu entendi lá também, é que o evento incentiva você a usar treinamentos de lado e facilita essa adoção. Por isso que eu estava propondo isso.
+
+Speaker C: E eu coloquei mais uma noção, que a realidade é que você depende do computador. sem alguma coisa que não vale para quem não usa. Então tem que ter essa interface em todas as plataformas de que o médico, onde o médico passa, ele tem que permitir esses dados virarem para ele poder ter acolhida.
+
+- 5:34pm -
+
+Speaker B: Sim, eu só queria amarrar para uma última questão. Primeiro, uma pergunta. Como é a aderência de médicos assistentes? Não tem paciência, tem que mexer em muitos, tanto o clínico quanto aquele que inseriu?
+
+Speaker C: Você está falando com uma médica velha?
+
+Speaker B: Mas eu digo assim, às vezes você
+
+Speaker C: sente a iluminação, sabe?
+
+Speaker A: Hoje eu pergunto também, só pra...
+
+Speaker C: Eu faço corzinha, eu ponho cachorrinha, e aí não tá na rede.
+
+Speaker A: O senhor pergunta pra liberar a senhora também. Você acha que algum processo do SUS trava essa questão ecológica da rede privada? De quais poderia ser otimizado?
+
+Speaker C: O processo do SUS?
+
+- 5:35pm -
+
+Speaker A: É, esse processo aqui ele demora, o pessoal deixa de fazer, é opelacionado, assim. Eu acho que o maior problema é
+
+Speaker C: a produção de leite.
+
+Speaker A: Sim, claro, só de leite.
+
+Speaker C: Lógico que o paciente já chega tarde para fazer assim de leite. Porque ele não tem escolha mentira. Ele já chega pra...
+
+Speaker A: Mas isso é um pouquinho o que eu te falei, porque se você entender isso cedo, você evita dele...
+
+Speaker C: Exato, ele é atuado na prevenção. Conhecer o paciente, isso aí já foi falado. Conhecer pacientes, antecedentes dele, a sua teoria de risco, e atuar na prevenção, é isso mesmo.
+
+Speaker A: É, porque isso evita ele prolongar.
+
+Speaker C: Que daí você atua na prevenção que você conhece todos os dados. Você pode gerar um protesto, sinalizar que você é antipovissário, visitas periódicas, com pacientes não chegando, para o tratamento de síndrome, para a presença de pacientes.
+
+- 5:36pm -
+
+Speaker A: Muito obrigado. Boa sorte para vocês.
